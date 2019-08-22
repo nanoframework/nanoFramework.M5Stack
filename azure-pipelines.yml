@@ -1,0 +1,59 @@
+trigger:
+  branches:
+    include:
+    - master
+    - develop
+    - release-/*
+    - refs/tags/*
+  paths:
+    exclude:
+    - CHANGELOG.md
+    - /*.md
+    - .gitignore
+    - appveyor.yml
+  # waiting for feature to become available
+  # tags:
+  #   include:
+  #   - v/*
+
+pr:
+  branches:
+    include:
+    - master
+    - develop
+    - release/*
+  autoCancel: true
+
+# add nf-tools repo to resources (for Azure Pipelines templates)
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: nanoframework/nf-tools
+      endpoint: nanoframework
+
+pool:
+  vmImage: 'VS2017-Win2016'
+
+variables:
+  solution: '**/source/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  nugetPackageName: 'nanoFramework.M5Stack'
+  repoName: 'lib-nanoFramework.M5Stack'
+
+steps:
+
+# step from template @ nf-tools repo
+# all build, update and publish steps
+- template: azure-pipelines-templates/class-lib-build.yml@templates
+  parameters:
+    sonarCloudProject: 'nanoframework_nanoFramework.M5Stack'
+
+# step from template @ nf-tools repo
+# report error
+- template: azure-pipelines-templates/discord-webhook-task.yml@templates  
+  parameters:
+    status: 'failure'
+    webhookUrl: '$(DiscordWebhook)'
+    message: ''

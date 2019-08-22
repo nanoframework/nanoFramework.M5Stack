@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.M5Stack.DELIVERABLES</id>
+    <version>$version$</version>
+    <title>nanoFramework.nanoFramework.M5Stack.DELIVERABLES</title>
+    <authors>nanoFramework project contributors</authors>
+    <owners>nanoFramework project contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>
+    </releaseNotes>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework/lib-nanoFramework.M5Stack</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
+    <copyright>Copyright (c) 2019 The nanoFramework project contributors</copyright>
+    <description>** DON'T REFERENCE THIS PACKAGE ** Not meant for development. This package includes the deliverable artifacts of the nanoFramework.M5Stack assembly for nanoFramework. These are for testing purposes and for updating the native code base of the library.</description>
+    <summary>nanoFramework.M5Stack.DELIVERABLES is not meant for development.</summary>
+    <tags>
+    </tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.2.6-preview.16" />
+      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.1.4-preview.22" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="nanoFramework.M5Stack\bin\Release\Stubs\*.*" target="content\Stubs\" />
+    <file src="nanoFramework.M5Stack\obj\Release\*.txt" target="content\txt\" />
+    <file src="nanoFramework.M5Stack\obj\Release\*.dump" target="content\dump\" />
+    <file src="nanoFramework.M5Stack\obj\Release\*.strings" target="content\dump\" />
+    <file src="nanoFramework.M5Stack\obj\Release\*.resources" target="content\resources\" />
+    <file src="nanoFramework.M5Stack\obj\Release\*.il" target="content\disasm\" />
+  </files>
+</package>
