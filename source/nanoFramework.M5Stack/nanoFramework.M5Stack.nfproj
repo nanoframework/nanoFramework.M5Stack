@@ -11,8 +11,7 @@
     <ProjectGuid>{2c78d035-dbda-4c38-ab58-8adc22d763c3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace>nanoFramework.M5Stack</RootNamespace>
     <AssemblyName>nanoFramework.M5Stack</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <NF_IsCoreLibrary>True</NF_IsCoreLibrary>
@@ -44,6 +43,11 @@
     <NFMDP_CMD_LINE_OUTPUT>false</NFMDP_CMD_LINE_OUTPUT>
     <Name>nanoFramework.M5Stack</Name>
   </PropertyGroup>
+  <PropertyGroup Label="nanoFramework">
+    <NFMDP_DAT_FILES>true</NFMDP_DAT_FILES>
+    <NFMDP_DUMP_FILES>true</NFMDP_DUMP_FILES>
+    <NFMDP_XML_FILES>true</NFMDP_XML_FILES>
+  </PropertyGroup>
   <ItemGroup>
     <NFMDP_PE_ExcludeClassByName Include="ThisAssembly">
       <InProject>false</InProject>
@@ -59,21 +63,23 @@
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="Lcd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="key.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib, Version=1.2.6.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.CoreLibrary.1.2.6-preview.19\lib\mscorlib.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.CoreLibrary.1.2.6-preview.16\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
-    <Reference Include="Windows.Devices.Spi, Version=1.1.4.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Windows.Devices.Spi.1.1.4-preview.22\lib\Windows.Devices.Spi.dll</HintPath>
+    <Reference Include="Windows.Devices.Spi, Version=1.0.0.16, Culture=neutral, PublicKeyToken=6df87852110734f7">
+      <HintPath>..\packages\nanoFramework.Windows.Devices.Spi.1.0.0-preview016\lib\Windows.Devices.Spi.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
