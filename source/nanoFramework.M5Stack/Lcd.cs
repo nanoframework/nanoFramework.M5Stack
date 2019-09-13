@@ -24,7 +24,7 @@ namespace nanoFramework.M5Stack
         {
             // TODO inits and configs
             begin();
-        }       
+        }
 
         /// <summary>
         /// Switch the display to energy saving mode.
@@ -32,10 +32,8 @@ namespace nanoFramework.M5Stack
         /// <remarks>
         /// Call <see cref="Wakeup"/> to wake up the display.
         /// </remarks>
-        public void Sleep()
-        {
-            sleep();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void Sleep();
 
         /// <summary>
         /// Restore the display from energy saving mode.
@@ -43,10 +41,8 @@ namespace nanoFramework.M5Stack
         /// <remarks>
         /// Since the LCD backlight of M5Stack is controlled separately, please adjust it with SetBrightness() if necessary.
         /// </remarks>
-        public void Wakeup()
-        {
-            wakeup();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void Wakeup();
 
         /// <summary>
         /// Adjust the display backlight.
@@ -56,10 +52,8 @@ namespace nanoFramework.M5Stack
         /// 1) The backlight is controlled by PWM (44.1 KHz).
         /// 2) Many backlights have a direct effect on battery consumption.
         /// </remarks>
-        public void SetBrightness(uint brightness)
-        {
-            setBrightness(brightness);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetBrightness(uint brightness);
 
         /// <summary>
         /// Display a bar that shows the progress.
@@ -74,7 +68,7 @@ namespace nanoFramework.M5Stack
         /// <param name="progress">progress(0-100%)</param>
         /// <param name="color">Color of the bar</param>
         /// <param name="backgroundColor">Color of the Background</param>        
-        public void ProgressBar(uint x, uint y, uint w, uint h, uint progress, Color color = Color.White, Color backgroundColor = Color.Black)
+        public static void ProgressBar(uint x, uint y, uint w, uint h, uint progress, Color color = Color.White, Color backgroundColor = Color.Black)
         {
             fillRect(x, y, w, h, backgroundColor);
             progressBar(x, y, w, h, progress, color);
@@ -91,10 +85,8 @@ namespace nanoFramework.M5Stack
         /// <param name="y">Coordinate Y(left corner)</param>
         /// <param name="width">width (px)</param>
         /// <param name="version">QR code version</param>
-        public void QRCode(string text, uint x, uint y, uint width, int version)
-        {
-            qrcode(text, x, y, width, version);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void QRCode(string text, uint x, uint y, uint width, int version);
 
         /// <summary>
         /// Draw a bitmap
@@ -107,10 +99,8 @@ namespace nanoFramework.M5Stack
         /// <param name="width">width (px)</param>
         /// <param name="height">height(px</param>
         /// <param name="data">image data</param>
-        public void DrawBitmap(uint x, uint y, uint width, uint height, uint[] data)
-        {
-            drawBitmap(x, y, width, height, data);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawBitmap(uint x, uint y, uint width, uint height, uint[] data);
 
         /// <summary>
         /// Draw a bitmap
@@ -124,10 +114,8 @@ namespace nanoFramework.M5Stack
         /// <param name="height">height(px</param>
         /// <param name="data">image data</param>
         /// <param name="transparent">Transparent color code</param>
-        public void DrawBitmap(uint x, uint y, uint width, uint height, uint[] data, Color transparent)
-        {
-            drawBitmap(x, y, width, height, data, transparent);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawBitmap(uint x, uint y, uint width, uint height, uint[] data, Color transparent);
       
         /// <summary>
         /// Defines the scale of a JPEG
@@ -171,75 +159,59 @@ namespace nanoFramework.M5Stack
         /// <param name="offX">offset X (px)</param>
         /// <param name="offY">offset Y (px)</param>
         /// <param name="scale">scale</param>
-        public void DrawJpg(byte[] jpg_data, uint jpg_len, uint x = 0, uint y = 0, uint maxWidth = 0, uint maxHeight = 0, uint offX = 0, uint offY = 0, JpegDivider scale = JpegDivider.JPEG_DIV_NONE)
-        {
-            drawJpg(jpg_data, jpg_len, x, y, maxWidth, maxHeight, offX, offY, scale);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawJpg(byte[] jpg_data, uint jpg_len, uint x = 0, uint y = 0, uint maxWidth = 0, uint maxHeight = 0, uint offX = 0, uint offY = 0, JpegDivider scale = JpegDivider.JPEG_DIV_NONE);
 
         /// <summary>
         /// Fill the entire screen with the specified color.
         /// </summary>
         /// <param name="color">the color to be filled</param>
-        public void FillScreen(Color color)
-        {
-            fillScreen(color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillScreen(Color color);
 
         /// <summary>
         /// Set the foreground color and background color of the displayed text.
         /// </summary>
         /// <param name="color">the color of text</param>
         /// <param name="backgroundColor">the background color of text</param>
-        public void SetTextColor(Color color, Color backgroundColor)
-        {
-            setTextColor(color, backgroundColor);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetTextColor(Color color, Color backgroundColor);
 
         /// <summary>
         /// Move the cursor to (x0, y0).
         /// </summary>
         /// <param name="x">Coordinate X</param>
         /// <param name="y">Coordinate Y</param>
-        public void SetCursor(uint x, uint y)
-        {
-            setCursor(x, y);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetCursor(uint x, uint y);
 
         /// <summary>
         /// Get the cursor of x
         /// </summary>
         /// <returns>Coordinate X</returns>
-        public uint GetCursorX()
-        {
-            return getCursorX();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint GetCursorX();
 
         /// <summary>
         /// Get the cursor of y
         /// </summary>
         /// <returns>Coordinate Y</returns>
-        public uint GetCursorY()
-        {
-            return getCursorY();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint GetCursorY();
 
         /// <summary>
         /// Set the Size of Text.
         /// </summary>
         /// <param name="size">Size of the text</param>
-        public void SetTextSize(uint size)
-        {
-            setTextSize(size);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetTextSize(uint size);
 
         /// <summary>
         /// Fill color use of clear screen.
         /// </summary>
         /// <param name="color">Color</param>
-        public void Clear(Color color)
-        {
-            clear(color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void Clear(Color color);
 
         /// <summary>
         /// Draw a point at position (x, y).
@@ -247,10 +219,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x">Coordinate X</param>
         /// <param name="y">Coordinate Y</param>
         /// <param name="color">Color of the pixel</param>
-        public void DrawPixel(uint x, uint y, Color color)
-        {
-            drawPixel(x, y, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawPixel(uint x, uint y, Color color);
 
         /// <summary>
         /// Blend foreground and background and return new colour.
@@ -259,10 +229,8 @@ namespace nanoFramework.M5Stack
         /// <param name="foregound">Foreground color</param>
         /// <param name="background">Background color</param>
         /// <returns></returns>
-        public Color AlphaBlend(uint alpha, Color foregound, Color background)
-        {
-            return alphaBlend(alpha, foregound, background);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static Color AlphaBlend(uint alpha, Color foregound, Color background);
 
         /// <summary>
         /// Draws a character of the specified color from the specified start point and size
@@ -273,10 +241,8 @@ namespace nanoFramework.M5Stack
         /// <param name="color">Drawing color</param>
         /// <param name="background">Background color</param>
         /// <param name="size">Character size</param>
-        public void DrawChar(uint x, uint y, char c, Color color, Color background, uint size)
-        {
-            drawChar(x, y, c, color, background, size);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawChar(uint x, uint y, char c, Color color, Color background, uint size);
 
         /// <summary>
         /// Draws a character of the specified color from the specified start point
@@ -285,10 +251,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x">Coordinate X (upper left)</param>
         /// <param name="y">Coordinate Y (upper left)</param>
         /// <param name="font">** tbc Character size or referenced font ?**</param>
-        public void DrawChar(char c, uint x, uint y, uint font)
-        {
-            drawChar(c, x, y, font);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawChar(char c, uint x, uint y, uint font);
 
         /// <summary>
         /// Draw a long integer.
@@ -296,10 +260,8 @@ namespace nanoFramework.M5Stack
         /// <param name="number">Number</param>
         /// <param name="x">Coordinate of X</param>
         /// <param name="y">Coordinate of Y</param>
-        public void DrawNumber(long number, uint x, uint y)
-        {
-            drawNumber(number, x, y);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawNumber(long number, uint x, uint y);
 
         /// <summary>
         /// DrawFloat, prints 7 non zero digits maximum
@@ -309,10 +271,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x">Coordinate of X</param>
         /// <param name="y">Coordinate of Y</param>
         /// <returns>tbd</returns>
-        public uint DrawFloat(float number, uint dp, uint x, uint y)
-        {
-            return drawFloat(number, dp, x, y);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint DrawFloat(float number, uint dp, uint x, uint y);
 
         /// <summary>
         /// Draw a vertical line from X to Y.
@@ -321,10 +281,8 @@ namespace nanoFramework.M5Stack
         /// <param name="y">Y position of start point</param>
         /// <param name="length">line length</param>
         /// <param name="color">Line color</param>
-        public void DrawFastVLine(uint x, uint y, uint length, Color color)
-        {
-            drawFastVLine(x, y, length, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawFastVLine(uint x, uint y, uint length, Color color);
 
         /// <summary>
         /// Draw a horizontal line from X to Y.
@@ -333,10 +291,8 @@ namespace nanoFramework.M5Stack
         /// <param name="y">Y position of start point</param>
         /// <param name="length">line length</param>
         /// <param name="color">Line color</param>
-        public void DrawFastHLine(uint x, uint y, uint length, Color color)
-        {
-            drawFastHLine(x, y, length, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawFastHLine(uint x, uint y, uint length, Color color);
 
         /// <summary>
         /// Draw the line from point (x,y) to point (x1,y1).
@@ -346,10 +302,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x1">X position of end point</param>
         /// <param name="y1">Y position of end point</param>
         /// <param name="color">Line color</param>
-        public void DrawLine(uint x0, uint y0, uint x1, uint y1, Color color)
-        {
-            drawLine(x0, y0, x1, y1, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawLine(uint x0, uint y0, uint x1, uint y1, Color color);
 
         /// <summary>
         /// Number of the quater
@@ -382,10 +336,8 @@ namespace nanoFramework.M5Stack
         /// <param name="r">Radius</param>
         /// <param name="cornername">QuaterCorn</param>
         /// <param name="color">Quater color</param>
-        public void DrawCircleHelper(uint x0, uint y0, uint r, QuaterCorn cornername, Color color)
-        {
-            drawCircleHelper(x0, y0, r, cornername, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawCircleHelper(uint x0, uint y0, uint r, QuaterCorn cornername, Color color);
 
         /// <summary>
         ///  Draw a circle with the center at the point x0 and y0
@@ -394,10 +346,8 @@ namespace nanoFramework.M5Stack
         /// <param name="y">Centerpoint Y</param>
         /// <param name="r">Raduis</param>
         /// <param name="color">Circle color</param>
-        public void DrawCircle(uint x, uint y, uint r, Color color)
-        {
-            drawCircle(x, y, r, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawCircle(uint x, uint y, uint r, Color color);
 
         /// <summary>
         /// Draw a filled circle on point(x0, y0)
@@ -406,10 +356,8 @@ namespace nanoFramework.M5Stack
         /// <param name="y">Centerpoint Y</param>
         /// <param name="r">Radius</param>
         /// <param name="color">Circle color</param>
-        public void FillCircle(uint x, uint y, uint r, Color color)
-        {
-            fillCircle(x, y, r, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillCircle(uint x, uint y, uint r, Color color);
 
         /// <summary>
         /// Draw a triangel between points (x,y), (x1,y1) and (x2,y2).
@@ -421,10 +369,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x2">X position of third point</param>
         /// <param name="y2">Y position of third point</param>
         /// <param name="color">Color</param>
-        public void DrawTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color)
-        {
-            drawTriangle(x0, y0, x1, y1, x2, y2, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color);
 
         /// <summary>
         /// Fill the triangel between points (x,y), (x1,y1) and (x2,y2).
@@ -436,10 +382,8 @@ namespace nanoFramework.M5Stack
         /// <param name="x2">X position of third point</param>
         /// <param name="y2">Y position of third point</param>
         /// <param name="color">Color</param>
-        public void FillTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color)
-        {
-            fillTriangle(x0, y0, x1, y1, x2, y2, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color);
 
         /// <summary>
         /// Draw the rectangle from the upper left point at (x,y) and width and height.
@@ -449,10 +393,8 @@ namespace nanoFramework.M5Stack
         /// <param name="width">Width of rectangle</param>
         /// <param name="height">Height of rectangle</param>
         /// <param name="color">Color</param>
-        public void DrawRect(uint x, uint y, uint width, uint height, Color color)
-        {
-            drawRect(x, y, width, height, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawRect(uint x, uint y, uint width, uint height, Color color);
 
         /// <summary>
         /// Draw a filled rectangle from the upper left point at (x,y) and width and height.
@@ -462,10 +404,8 @@ namespace nanoFramework.M5Stack
         /// <param name="width">Width of rectangle</param>
         /// <param name="height">Height of rectangle</param>
         /// <param name="color">Color</param>
-        public void FillRect(uint x, uint y, uint width, uint height, Color color)
-        {
-            fillRect(x, y, width, height, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillRect(uint x, uint y, uint width, uint height, Color color);
 
         /// <summary>
         /// Draw the rectangle with rounded corners from the upper left point at (x,y) and width and height. Corner radius is given by radius argument.
@@ -476,10 +416,8 @@ namespace nanoFramework.M5Stack
         /// <param name="height">Height of rectangle</param>
         /// <param name="radius">Radius of the corner circle</param>
         /// <param name="color">Color</param>
-        public void DrawRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color)
-        {
-            drawRoundRect(x, y, width, height, radius, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color);
 
         /// <summary>
         /// Draw the filled rectangle with rounded corners from the upper left point at (x,y) and width and height. Corner radius is given by radius argument.
@@ -490,10 +428,8 @@ namespace nanoFramework.M5Stack
         /// <param name="height">Height of rectangle</param>
         /// <param name="radius">Radius of the corner circle</param>
         /// <param name="color">Color</param>
-        public void FillRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color)
-        {
-            fillRoundRect(x, y, width, height, radius, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color);
 
         /// <summary>
         /// Draw an ellipse with the top left point (x, y) and the width and height.
@@ -503,10 +439,8 @@ namespace nanoFramework.M5Stack
         /// <param name="rx">Width of circle</param>
         /// <param name="ry">Height of circle</param>
         /// <param name="color">Circle color</param>
-        public void DrawEllipse(uint x, uint y, uint rx, uint ry, Color color)
-        {
-            drawEllipse(x, y, rx, ry, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void DrawEllipse(uint x, uint y, uint rx, uint ry, Color color);
 
         /// <summary>
         /// Draw a filled ellipse with the top left point (x, y) and the width and height.
@@ -516,10 +450,8 @@ namespace nanoFramework.M5Stack
         /// <param name="rx">Width of circle</param>
         /// <param name="ry">Height of circle</param>
         /// <param name="color">Circle color</param>
-        public void FillEllipse(uint x, uint y, uint rx, uint ry, Color color)
-        {
-            fillEllipse(x, y, rx, ry, color);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void FillEllipse(uint x, uint y, uint rx, uint ry, Color color);
 
         /// <summary>
         /// Rotate Definition
@@ -540,39 +472,31 @@ namespace nanoFramework.M5Stack
         /// Rotate the screen.
         /// </summary>
         /// <param name="rotate">Rotatation enum</param>
-        public void SetRotation(Rotate rotate)
-        {
-            setRotation(rotate);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetRotation(Rotate rotate);
 
         /// <summary>
         /// Reverse the screen color in negative / positive.
         /// </summary>
         /// <param name="invert">Inverted</param>
-        public void InvertDisplay(bool invert)
-        {
-            invertDisplay(invert);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void InvertDisplay(bool invert);
 
         /// <summary>
         /// Load a font
         /// </summary>
         /// <param name="fontFileName"></param>
         /// <param name="stream"></param>
-        public void LoadFont(string fontFileName, Stream stream)
-        {
-            loadFont(fontFileName, stream);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void LoadFont(string fontFileName, Stream stream);
 
         /// <summary>
         /// Whether to automatically wrap the display
         /// </summary>
         /// <param name="wrapX">X direction</param>
         /// <param name="wrapY">Y direction</param>
-        public void SetTextWrap(bool wrapX, bool wrapY)
-        {
-            setTextWrap(wrapX, wrapY);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetTextWrap(bool wrapX, bool wrapY);
 
         /// <summary>
         /// 
@@ -645,184 +569,48 @@ namespace nanoFramework.M5Stack
         /// Set the text position reference datum
         /// </summary>
         /// <param name="textPosition">Text plotting alignment </param>
-        public void SetTextDatum(TextPosition textPosition)
-        {
-            setTextDatum(textPosition);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetTextDatum(TextPosition textPosition);
 
         /// <summary>
         /// Text background padding some pixel to over-write the old text
         /// </summary>
         /// <param name="x_width">Blanked area will be width of pixels</param>
-        public void SetTextPadding(uint x_width)
-        {
-            setTextPadding(x_width);
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static void SetTextPadding(uint x_width);
 
         /// <summary>
         /// Return the rotation value (as used by setRotation())
         /// </summary>
         /// <returns>Rotation</returns>
-        public uint GetRotation()
-        {
-            return getRotation();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint GetRotation();
 
         /// <summary>
         /// Return the pixel width of display (per current rotation)
         /// </summary>
         /// <returns>Width</returns>
-        public uint GetWidth()
-        {
-            return getWidth();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint GetWidth();
 
         /// <summary>
         /// Return the pixel height of display (per current rotation)
         /// </summary>
         /// <returns>Height</returns>
-        public uint GetHeight()
-        {
-            return getHeight();
-        }
+        [MethodImpl(MethodImplOptions.InternalCall)]
+        public extern static uint GetHeight();
 
         #region native handlers
 
         [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void sleep();
+        private static extern void begin(); 
 
         [MethodImpl(MethodImplOptions.InternalCall)]
-        private static extern void begin();
+        private extern static void progressBar(uint x, uint y, uint w, uint h, uint progress, Color color);
 
         [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void wakeup();
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setBrightness(uint brightness);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void progressBar(uint x, uint y, uint w, uint h, uint progress, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void qrcode(string text, uint x, uint y, uint width, int version);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawBitmap(uint x, uint y, uint width, uint height, uint[] data, Color transparent);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawBitmap(uint x, uint y, uint width, uint height, uint[] data);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawJpg(byte[] jpg_data, uint jpg_len, uint x, uint y, uint maxWidth, uint maxHeight, uint offX, uint offY, JpegDivider scale);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillScreen(Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setTextColor(Color color, Color backgroundColor);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setCursor(uint x, uint y);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint getCursorX();
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint getCursorY();
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setTextSize(uint size);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawPixel(uint x, uint y, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern Color alphaBlend(uint alpha, Color foregound, Color background);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void clear(Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawChar(uint x, uint y, char c, Color color, Color background, uint size);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawChar(char c, uint x, uint y, uint font);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawNumber(long number, uint x, uint y);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint drawFloat(float number, uint dp, uint x, uint y);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawFastVLine(uint x, uint y, uint length, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawFastHLine(uint x, uint y, uint length, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawLine(uint x0, uint y0, uint x1, uint y1, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawCircleHelper(uint x0, uint y0, uint r, QuaterCorn cornername, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawCircle(uint x, uint y, uint r, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillCircle(uint x, uint y, uint r, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillTriangle(uint x0, uint y0, uint x1, uint y1, uint x2, uint y2, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawRect(uint x, uint y, uint width, uint height, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillRect(uint x, uint y, uint width, uint height, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillRoundRect(uint x, uint y, uint width, uint height, uint radius, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void drawEllipse(uint x, uint y, uint rx, uint ry, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void fillEllipse(uint x, uint y, uint rx, uint ry, Color color);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setRotation(Rotate rotate);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void invertDisplay(bool invert);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void loadFont(string fontFileName, Stream stream);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setTextWrap(bool wrapX, bool wrapY);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setTextDatum(TextPosition textPosition);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern void setTextPadding(uint x_width);
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint getRotation();
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint getWidth();
-
-        [MethodImpl(MethodImplOptions.InternalCall)]
-        private extern uint getHeight();
-
+        private extern static void fillRect(uint x, uint y, uint width, uint height, Color color);
+       
         #endregion
     }
 }
