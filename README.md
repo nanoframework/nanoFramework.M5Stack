@@ -10,8 +10,8 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.M5Stack | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoframework.lib-nanoFramework.M5Stack?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=7?branchName=master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.nanoFramework.M5Stack.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.nanoFramework.M5Stack/) |
-| nanoFramework.M5Stack (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoframework.lib-nanoFramework.M5Stack?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=7?branchName=develop) | [![](https://badgen.net/badge/NuGet/preview/D7B023?icon=https://simpleicons.now.sh/azuredevops/fff)](https://dev.azure.com/nanoframework/feed/_packaging?_a=package&feed=sandbox&package=nanoFramework.nanoFramework.M5Stack&protocolType=NuGet&view=overview) |
+| nanoFramework.M5Stack | [![Build Status](https://dev.azure.com/nanoframework/M5Stack/_apis/build/status/nanoframework.lib-nanoFramework.M5Stack?branchName=master)](https://dev.azure.com/nanoframework/M5Stack/_build/latest?definitionId=52&branchName=master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.nanoFramework.M5Stack.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.nanoFramework.M5Stack/) |
+| nanoFramework.M5Stack (preview) | [![Build Status](https://dev.azure.com/nanoframework/M5Stack/_apis/build/status/nanoframework.lib-nanoFramework.M5Stack?branchName=develop)](https://dev.azure.com/nanoframework/M5Stack/_build/latest?definitionId=52&branchName=develop) | [![](https://badgen.net/badge/NuGet/preview/D7B023?icon=https://simpleicons.now.sh/azuredevops/fff)](https://dev.azure.com/nanoframework/feed/_packaging?_a=package&feed=sandbox&package=nanoFramework.nanoFramework.M5Stack&protocolType=NuGet&view=overview) |
 
 ## Feedback and documentation
 
