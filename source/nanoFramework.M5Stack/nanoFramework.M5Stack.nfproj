@@ -28,19 +28,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <!-- override default options for MetaDataProcessor -->
-    <!-- generate PE: TRUE -->
-    <NFMDP_PE_SKIP>false</NFMDP_PE_SKIP>
-    <NFMDP_PE_Verbose>true</NFMDP_PE_Verbose>
-    <NFMDP_PE_VerboseMinimize>true</NFMDP_PE_VerboseMinimize>
-    <!-- generate STUBS: TRUE -->
-    <NFMDP_STUB_SKIP>false</NFMDP_STUB_SKIP>
-    <NFMDP_STUB_Verbose>true</NFMDP_STUB_Verbose>
-    <!-- this is one is absolutely mandatory for base class libraries -->
-    <NFMDP_STUB_SkeletonWithoutInterop>true</NFMDP_STUB_SkeletonWithoutInterop>
-    <NFMDP_STUB_VerboseMinimize>true</NFMDP_STUB_VerboseMinimize>
-    <NFMDP_STUB_GenerateSkeletonFile>Stubs\nf_m5stack_native</NFMDP_STUB_GenerateSkeletonFile>
-    <NFMDP_STUB_GenerateSkeletonProject>nf_m5stack</NFMDP_STUB_GenerateSkeletonProject>
-    <NFMDP_CMD_LINE_OUTPUT>false</NFMDP_CMD_LINE_OUTPUT>
+    <NF_GenerateStubsDirectory>bin\$(Configuration)\Stubs</NF_GenerateStubsDirectory>
+    <NF_GenerateSkeletonProjectName>nf_m5stack_native</NF_GenerateSkeletonProjectName>
     <Name>nanoFramework.M5Stack</Name>
   </PropertyGroup>
   <PropertyGroup Label="nanoFramework">

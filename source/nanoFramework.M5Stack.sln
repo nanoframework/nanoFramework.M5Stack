@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Stack", "nanoFramework.M5Stack\nanoFramework.M5Stack.nfproj", "{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A689EB3-86E0-448E-99F4-3D644EC3D8C5}"
+	ProjectSection(SolutionItems) = preProject
+		nanoFramework.M5Stack.DELIVERABLES.nuspec = nanoFramework.M5Stack.DELIVERABLES.nuspec
+		nanoFramework.M5Stack.nuspec = nanoFramework.M5Stack.nuspec
+		NuGet.Config = NuGet.Config
+		version.json = version.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
