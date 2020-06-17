@@ -74,7 +74,7 @@
     </ProjectCapabilities>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.0.25\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.0.25\build\Nerdbank.GitVersioning.targets'))" />
+    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.1.91\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.1.91\build\Nerdbank.GitVersioning.targets'))" />
   </Target>
-  <Import Project="..\packages\Nerdbank.GitVersioning.3.0.25\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.0.25\build\Nerdbank.GitVersioning.targets')" />
+  <Import Project="..\packages\Nerdbank.GitVersioning.3.1.91\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.1.91\build\Nerdbank.GitVersioning.targets')" />
 </Project>

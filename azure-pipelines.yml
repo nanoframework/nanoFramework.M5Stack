@@ -1,28 +1,12 @@
 trigger:
   branches:
-    include:
-    - master
-    - develop
-    - release-/*
-    - refs/tags/*
+    include: [master, develop, "release-*" ]
   paths:
-    exclude:
-    - CHANGELOG.md
-    - /*.md
-    - .gitignore
-    - appveyor.yml
-  # waiting for feature to become available
-  # tags:
-  #   include:
-  #   - v/*
+    exclude: ["*.md", .gitignore]
+  tags:
+    include: ["v*"]
 
-pr:
-  branches:
-    include:
-    - master
-    - develop
-    - release/*
-  autoCancel: true
+# PR always trigger build
 
 # add nf-tools repo to resources (for Azure Pipelines templates)
 resources:
@@ -36,6 +20,7 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   solution: '**/source/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
