@@ -1,7 +1,5 @@
 ﻿using System;
 
-using System.Text;
-
 namespace nanoFramework.M5Stack
 {
     /// <summary>
