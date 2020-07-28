@@ -21,7 +21,7 @@ pool:
 
 variables:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-  solution: '**/source/*.sln'
+  solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   nugetPackageName: 'nanoFramework.M5Stack'
