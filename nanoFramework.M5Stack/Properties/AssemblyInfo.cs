@@ -6,7 +6,7 @@
 [assembly: AssemblyTitle("nanoFramework.M5Stack")]
 [assembly: AssemblyCompany("nanoFramework Contributors")]
 [assembly: AssemblyProduct("nanoFramework.M5Stack")]
-[assembly: AssemblyCopyright("Copyright © nanoFramework Contributors 2019")]
+[assembly: AssemblyCopyright("Copyright (c) .NET Foundation and Contributors")]
 
 ////////////////////////////////////////////////////////////////
 // update this whenever the native assembly signature changes //
