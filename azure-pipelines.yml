@@ -25,7 +25,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   nugetPackageName: 'nanoFramework.M5Stack'
-  repoName: 'lib-nanoFramework.M5Stack'
+  repoName: 'nanoFramework.M5Stack'
 
 steps:
 
