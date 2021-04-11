@@ -1,5 +1,5 @@
 user=nanoframework
-project=lib-nanoFramework.M5Stack
+project=nanoFramework.M5Stack
 issues=false
 add_issues_wo_labels=false
 add_pr_wo_labels=false

@@ -10,7 +10,7 @@
     <releaseNotes>
     </releaseNotes>
     <developmentDependency>false</developmentDependency>
-    <projectUrl>https://github.com/nanoframework/lib-nanoFramework.M5Stack</projectUrl>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.M5Stack</projectUrl>
     <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>** DON'T REFERENCE THIS PACKAGE ** Not meant for development. This package includes the deliverable artifacts of the nanoFramework.M5Stack assembly for nanoFramework. These are for testing purposes and for updating the native code base of the library.</description>

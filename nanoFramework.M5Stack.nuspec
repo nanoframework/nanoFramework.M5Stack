@@ -5,23 +5,24 @@
     <version>$version$</version>
     <title>nanoFramework.M5Stack</title>
     <authors>nanoFramework project contributors</authors>
-    <owners>nanoFramework project contributors</owners>
+    <owners>nanoFramework,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">Apache-2.0</license>
+    <license type="file">LICENSE.md</license>
     <releaseNotes>
     </releaseNotes>
     <developmentDependency>false</developmentDependency>
-    <projectUrl>https://github.com/nanoframework/lib-nanoFramework.M5Stack</projectUrl>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.M5Stack</projectUrl>
     <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
-    <repository type="git" url="https://github.com/nanoframework/lib-nanoFramework.M5Stack" commit="$commit$" />
+    <icon>images\nf-logo.png</icon>
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the nanoFramework.M5Stack assembly for nanoFramework C# projects.
-This package requires a target with nanoFramework.M5Stack v$nativeVersion$.</description>
+This package requires a target with nanoFramework.M5Stack v$nativeVersion$ (checksum $checksum$).</description>
     <summary>nanoFramework.M5Stack assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Stack</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.10.3-preview.7" />
-      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.1.4-preview.22" />
+      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.4.1-preview.33" />
     </dependencies>
   </metadata>
   <files>
@@ -30,7 +31,8 @@ This package requires a target with nanoFramework.M5Stack v$nativeVersion$.</des
     <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pdbx" target="lib\nanoFramework.M5Stack.pdbx" />
     <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pe" target="lib\nanoFramework.M5Stack.pe" />
     <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.xml" target="lib\nanoFramework.M5Stack.xml" />
-    <!-- readme -->
-    <file src="readme.txt" target="readme.txt" />
+    <file src="assets\readme.txt" target="" />
+    <file src="assets\nf-logo.png" target="images\" />
+    <file src="LICENSE.md" target="" />
   </files>
 </package>

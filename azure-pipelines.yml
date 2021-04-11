@@ -1,8 +1,8 @@
 trigger:
   branches:
-    include: [master, develop, "release-*" ]
+    include: [main, develop, "release-*" ]
   paths:
-    exclude: ["*.md", .gitignore]
+    exclude: [README.md, LICENSE.md, CHANGELOG.md, version.json, "*.md", .gitignore]
   tags:
     include: ["v*"]
 
@@ -17,7 +17,7 @@ resources:
       endpoint: nanoframework
 
 pool:
-  vmImage: 'VS2017-Win2016'
+  vmImage: 'windows-2019'
 
 variables:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
