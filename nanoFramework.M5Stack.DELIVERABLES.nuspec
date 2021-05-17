@@ -5,7 +5,7 @@
     <version>$version$</version>
     <title>nanoFramework.nanoFramework.M5Stack.DELIVERABLES</title>
     <authors>nanoFramework project contributors</authors>
-    <owners>nanoFramework project contributors</owners>
+    <owners>nanoFramework project contributors,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
     </releaseNotes>
