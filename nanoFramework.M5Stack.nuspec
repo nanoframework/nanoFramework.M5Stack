@@ -22,7 +22,7 @@ This package requires a target with nanoFramework.M5Stack v$nativeVersion$ (chec
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Stack</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.10.4-preview.11" />
-      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.4.1-preview.33" />
+      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.4.1-preview.42" />
     </dependencies>
   </metadata>
   <files>
