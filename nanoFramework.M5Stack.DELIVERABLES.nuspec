@@ -19,7 +19,7 @@
     </tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.10.5-alpha.145.6" />
-      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.4.1-preview.42" />
+      <dependency id="nanoFramework.Windows.Devices.Spi" version="1.4.1-preview.44" />
     </dependencies>
   </metadata>
   <files>
