@@ -1,8 +1,8 @@
 # Changelog
 
-## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
+## [v1.0.0-preview.54](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.54) (2021-06-01)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.53...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.53...v1.0.0-preview.54)
 
 **Documentation and other chores:**
 
