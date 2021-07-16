@@ -46,7 +46,7 @@
     <NFMDP_PE_LoadHints Include="..\packages\nanoFramework.CoreLibrary.1.10.5\lib\mscorlib.dll">
       <InProject>false</InProject>
     </NFMDP_PE_LoadHints>
-    <NFMDP_PE_LoadHints Include="..\packages\nanoFramework.Windows.Devices.Spi.1.4.1-preview.48\lib\Windows.Devices.Spi.dll">
+    <NFMDP_PE_LoadHints Include="..\packages\nanoFramework.Windows.Devices.Spi.1.4.1\lib\Windows.Devices.Spi.dll">
       <InProject>false</InProject>
     </NFMDP_PE_LoadHints>
   </ItemGroup>
@@ -65,8 +65,8 @@
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.10.5\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Windows.Devices.Spi, Version=1.4.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Windows.Devices.Spi.1.4.1-preview.48\lib\Windows.Devices.Spi.dll</HintPath>
+    <Reference Include="Windows.Devices.Spi, Version=1.4.1.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Windows.Devices.Spi.1.4.1\lib\Windows.Devices.Spi.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
