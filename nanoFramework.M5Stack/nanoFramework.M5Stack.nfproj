@@ -42,14 +42,6 @@
       <InProject>false</InProject>
     </NFMDP_PE_ExcludeClassByName>
   </ItemGroup>
-  <ItemGroup>
-    <NFMDP_PE_LoadHints Include="..\packages\nanoFramework.CoreLibrary.1.10.5\lib\mscorlib.dll">
-      <InProject>false</InProject>
-    </NFMDP_PE_LoadHints>
-    <NFMDP_PE_LoadHints Include="..\packages\nanoFramework.Windows.Devices.Spi.1.4.2-preview.3\lib\Windows.Devices.Spi.dll">
-      <InProject>false</InProject>
-    </NFMDP_PE_LoadHints>
-  </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
     <Compile Include="Color.cs" />
