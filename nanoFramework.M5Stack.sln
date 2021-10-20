@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Stack", "nanoFramework.M5Stack\nanoFramework.M5Stack.nfproj", "{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}"
 EndProject
@@ -12,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.Config = NuGet.Config
 		version.json = version.json
 	EndProjectSection
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5StackTestApp", "Tests\M5StackTestApp\M5StackTestApp.nfproj", "{90A94170-2C6B-4B22-BAA5-8212AC22219B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +26,12 @@ Global
 		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

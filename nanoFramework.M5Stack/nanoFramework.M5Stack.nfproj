@@ -44,22 +44,144 @@
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="Color.cs" />
-    <Compile Include="Lcd.cs" />
+    <Compile Include="M5Stack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="key.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Iot.Device.Bmm150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.0.218\lib\Iot.Device.Bmm150.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Iot.Device.Button, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.0.218\lib\Iot.Device.Button.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Iot.Device.Ip5306, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.0.218\lib\Iot.Device.Ip5306.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Iot.Device.Mpu6886, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.218\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
     <Reference Include="mscorlib, Version=1.10.5.4, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.10.5\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Windows.Devices.Spi, Version=1.4.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Windows.Devices.Spi.1.4.2-preview.3\lib\Windows.Devices.Spi.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics, Version=1.0.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.1.0.1-preview.7\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.3.4.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.3.4-preview.5\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.ResourceManager, Version=1.1.2.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.ResourceManager.1.1.2\lib\nanoFramework.ResourceManager.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.Runtime.Events, Version=1.9.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Runtime.Events.1.9.2-preview.5\lib\nanoFramework.Runtime.Events.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.Runtime.Native, Version=1.5.1.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Runtime.Native.1.5.1\lib\nanoFramework.Runtime.Native.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.System.Collections, Version=1.2.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Collections.1.2.0\lib\nanoFramework.System.Collections.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Buffers.Binary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.0.160\lib\System.Buffers.Binary.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.Dac, Version=1.4.1.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Dac.1.4.1\lib\System.Device.Dac.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.Gpio, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Gpio.1.0.2-preview.5\lib\System.Device.Gpio.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.I2c, Version=1.0.1.2, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.I2c.1.0.1\lib\System.Device.I2c.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.System.Device.Model.1.0.176\lib\System.Device.Model.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Device.Spi, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Spi.1.0.2-preview.11\lib\System.Device.Spi.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Diagnostics.Stopwatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.System.Diagnostics.Stopwatch.1.0.160\lib\System.Diagnostics.Stopwatch.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.IO.FileSystem.1.0.2-preview.10\lib\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.IO.Ports, Version=1.0.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.0.1-preview.13\lib\System.IO.Ports.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Math, Version=1.4.1.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Math.1.4.1\lib\System.Math.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Numerics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.System.Numerics.1.0.160\lib\System.Numerics.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="UnitsNet.ElectricCurrent, Version=4.102.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnitsNet.nanoFramework.ElectricCurrent.4.102.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="UnitsNet.Frequency, Version=4.102.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnitsNet.nanoFramework.Frequency.4.102.0\lib\UnitsNet.Frequency.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="UnitsNet.Temperature, Version=4.102.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.4.102.0\lib\UnitsNet.Temperature.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Windows.Devices.Adc, Version=1.5.1.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Windows.Devices.Adc.1.5.1\lib\Windows.Devices.Adc.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
     </Reference>
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
