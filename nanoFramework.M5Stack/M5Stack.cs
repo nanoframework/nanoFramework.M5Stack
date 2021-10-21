@@ -1,5 +1,5 @@
 ﻿using Iot.Device.Button;
-//using Iot.Device.Buzzer;
+using Iot.Device.Buzzer;
 using Iot.Device.Ip5306;
 using Iot.Device.Magnetometer;
 using Iot.Device.Mpu6886;
@@ -25,7 +25,7 @@ namespace nanoFramework.M5Stack
         private static Bmm150 _bmm150;
         private static Mpu6886AccelerometerGyroscope _mpu6886;
         private static SerialPort _serialPort;
-        //private static Buzzer _buzzer;
+        private static Buzzer _buzzer;
         private static DacChannel _dac1;
         private static DacChannel _dac2;
         private static Screen _screen;
@@ -88,24 +88,24 @@ namespace nanoFramework.M5Stack
         /// </summary>
         public static GpioController GpioController => _gpio;
 
-        ///// <summary>
-        ///// Gets the Buzzer.
-        ///// </summary>
-        //public static Buzzer Buzzer
-        //{
-        //    get
-        //    {
-        //        // We do this in case you prefer to use the DAC channels which are using the same pins
-        //        if (_buzzer == null)
-        //        {
-        //            // Setup buzzer
-        //            Configuration.SetPinFunction(25, DeviceFunction.PWM1);
-        //            _buzzer = new(25);
-        //        }
+        /// <summary>
+        /// Gets the Buzzer.
+        /// </summary>
+        public static Buzzer Buzzer
+        {
+            get
+            {
+                // We do this in case you prefer to use the DAC channels which are using the same pins
+                if (_buzzer == null)
+                {
+                    // Setup buzzer
+                    Configuration.SetPinFunction(25, DeviceFunction.PWM1);
+                    _buzzer = new(25);
+                }
 
-        //        return _buzzer;
-        //    }
-        //}
+                return _buzzer;
+            }
+        }
 
         /// <summary>
         /// Gets DAC1 which is GPIO 25.
@@ -154,6 +154,7 @@ namespace nanoFramework.M5Stack
                 if (_screen == null)
                 {
                     _screen = new();
+                    Screen.Font = Resource.GetFont(Resource.FontResources.arial_regular_16);
                 }
 
                 return _screen;
