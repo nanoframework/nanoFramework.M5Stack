@@ -48,7 +48,12 @@ namespace nanoFramework
         /// <summary>
         /// Clears the screen.
         /// </summary>
-        public static void Clear() => DisplayControl.Clear();
+        public static void Clear()
+        {
+            DisplayControl.Clear();
+            CursorLeft = 0;
+            CursorTop = 0;
+        }
 
         /// <summary>
         /// Resets the colors to their default, White for the foreground and Black for the background.
@@ -72,20 +77,19 @@ namespace nanoFramework
             ushort width = (ushort)(DisplayControl.ScreenWidth - CursorLeft * Font.MaxWidth);
             if (text.Length < width / Font.MaxWidth)
             {
-                DisplayControl.Write(text, (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - CursorTop * Font.Height - 1), Font, ForegroundColor, BackgroundColor);
+                DisplayControl.Write(text, (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorLeft += text.Length;
             }
             else
             {
-                DisplayControl.Write(text.Substring(0, width / Font.MaxWidth), (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - CursorTop * Font.Height - 1), Font, ForegroundColor, BackgroundColor);
+                DisplayControl.Write(text.Substring(0, width / Font.MaxWidth), (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorTop++;
                 string newTxt = text.Substring(width / Font.MaxWidth);
-                DisplayControl.Write(newTxt, 0, (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 2), (ushort)(DisplayControl.ScreenHeight - CursorTop * Font.Height - 1), Font, ForegroundColor, BackgroundColor);
+                DisplayControl.Write(newTxt, 0, (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - Font.MaxWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorLeft = newTxt.Length % WindowWidth;
                 CursorTop += newTxt.Length / WindowWidth;
                 CursorTop = CursorTop > WindowHeight ? WindowHeight : CursorTop;
             }
-
         }
 
         public static void WriteLine(string text)

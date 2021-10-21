@@ -10,24 +10,46 @@ namespace nanoFramework.M5Stack
     /// </summary>
     public class Screen
     {
+        private const int BackLightPin = 32;
+        private const int ChipSelect = 14;
+        private const int DataCommand = 27;
+        private const int Reset = 33;
+        private const int MemoryAllocationBitmap = 1024;
+
         private static GpioController _gpio;
+        private static bool _enabled;
+        
 
         static Screen()
         {
-            int backLightPin = 32;
-            int chipSelect = 14;
-            int dataCommand = 27;
-            int reset = 33;
             _gpio = new();
-            _gpio.OpenPin(backLightPin, PinMode.Output);
-            _gpio.Write(backLightPin, PinValue.High);
-            DisplayControl.Initialize(new SpiConfiguration(2, chipSelect, dataCommand, reset, backLightPin), new ScreenConfiguration(0, 0, 320, 240), 1024);
+            _gpio.OpenPin(BackLightPin, PinMode.Output);
+            Enabled = true;
+            DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), MemoryAllocationBitmap);
+        }
+
+        /// <summary>
+        /// MAximum buffer size for a Bitmap on the native side.
+        /// </summary>
+        public static int MaxBitmapSize = (MemoryAllocationBitmap - 100) / 3;
+
+        /// <summary>
+        /// Enabled or disable the screen.
+        /// </summary>
+        public static bool Enabled
+        {
+            get => _enabled;
+            set
+            {
+                _enabled = value;
+                _gpio.Write(BackLightPin, _enabled);
+            }
         }
 
         /// <summary>
         /// Clears the screen.
         /// </summary>
-        public void Clear() => DisplayControl.Clear();
+        public static void Clear() => DisplayControl.Clear();
 
         /// <summary>
         /// Write a text on the screen
@@ -37,7 +59,7 @@ namespace nanoFramework.M5Stack
         /// <param name="width">The width of the area to display.</param>
         /// <param name="height">The height of the area to display</param>
         /// <param name="colors">A 16 bits color.</param>
-        public void Write(ushort x, ushort y, ushort width, ushort height, ushort[] colors)
+        public static void Write(ushort x, ushort y, ushort width, ushort height, ushort[] colors)
             => DisplayControl.Write(x, y, width, height, colors);
 
         /// <summary>
@@ -51,7 +73,7 @@ namespace nanoFramework.M5Stack
         /// <param name="font">The font to use.</param>
         /// <param name="foreground">Foreground color.</param>
         /// <param name="background">Background color.</param>
-        public void Write(string text, ushort x, ushort y, ushort width, ushort height, Font font, Color foreground, Color background)
+        public static void Write(string text, ushort x, ushort y, ushort width, ushort height, Font font, Color foreground, Color background)
             => DisplayControl.Write(text, x, y, width, height, font, foreground, background);
 
         /// <summary>
@@ -60,6 +82,6 @@ namespace nanoFramework.M5Stack
         /// <param name="x">The x coordinate.</param>
         /// <param name="y">The y coordinate.</param>
         /// <param name="color">The 16 bits color.</param>
-        public void WritePoint(ushort x, ushort y, ushort color) => DisplayControl.WritePoint(x, y, color);
+        public static void WritePoint(ushort x, ushort y, ushort color) => DisplayControl.WritePoint(x, y, color);
     }
 }
