@@ -44,6 +44,7 @@
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="Console.cs" />
     <Compile Include="M5Stack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.Designer.cs">
@@ -54,10 +55,9 @@
     <Compile Include="Screen.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="key.snk" />
     <None Include="packages.config" />
-    <None Include="Resources\arial-regular-16.tinyfnt" />
+    <None Include="Resources\consolas_regular_16.tinyfnt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Bmm150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">

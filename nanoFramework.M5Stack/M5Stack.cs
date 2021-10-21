@@ -71,7 +71,8 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Right button.
         /// </summary>
-        public static GpioButton ButtonRight {
+        public static GpioButton ButtonRight
+        {
             get
             {
                 if (_right == null)
@@ -145,19 +146,14 @@ namespace nanoFramework.M5Stack
         /// Gets the screen.
         /// </summary>
         /// <remarks>The screen initialization takes a little bit of time, if you need the screen consider using it as early as possible in your code.</remarks>
-        public static Screen Screen
+        public static void InitilazeScreen()
         {
-            get
+            // If the screen is not needed, it's not going to be created
+            // Note: initialization may take a little bit of time
+            if (_screen == null)
             {
-                // If the screen is not needed, it's not going to be created
-                // Note: initialization may take a little bit of time
-                if (_screen == null)
-                {
-                    _screen = new();
-                    Screen.Font = Resource.GetFont(Resource.FontResources.arial_regular_16);
-                }
-
-                return _screen;
+                _screen = new();
+                Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
             }
         }
 
@@ -200,7 +196,7 @@ namespace nanoFramework.M5Stack
 
             // Setup buttons
             _gpio = new();
-            
+
             // Setup SPI1
             Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
             Configuration.SetPinFunction(19, DeviceFunction.SPI1_MISO);
@@ -322,7 +318,7 @@ namespace nanoFramework.M5Stack
         {
             get
             {
-                // We do this to avoid having to load the Accelerometer if not needed ornot connected
+                // We do this to avoid having to load the Accelerometer if not needed or not connected
                 if (_mpu6886 == null)
                 {
                     _mpu6886 = new(GetI2cDevice(0x68));

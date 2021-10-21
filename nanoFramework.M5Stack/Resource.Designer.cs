@@ -32,7 +32,7 @@ namespace nanoFramework.M5Stack
         [System.SerializableAttribute()]
         internal enum FontResources : short
         {
-            arial_regular_16 = -1033,
+            consolas_regular_16 = 10023,
         }
     }
 }
