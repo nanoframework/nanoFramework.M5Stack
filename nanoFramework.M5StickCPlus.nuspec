@@ -40,7 +40,7 @@ This package requires a target with nanoFramework.M5StickCPlus v$nativeVersion$ 
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.1" />
       <dependency id="nanoFramework.System.Device.Pwm" version="1.0.0-preview.14" />
       <dependency id="nanoFramework.System.Device.Model" version="1.0.176" version="1.10.5" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.160" />
       <dependency id="nanoFramework.System.Math" version="1.4.1" />
       <dependency id="nanoFramework.System.Numerics" version="1.0.160" />
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.102.0" />
