@@ -1,3 +1,6 @@
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
 using System;
 using System.Device.Gpio;
 using System.Diagnostics;
@@ -22,8 +25,8 @@ Console.BackgroundColor = Color.Yellow;
 Console.ForegroundColor = Color.RoyalBlue;
 Console.WriteLine("And this is really ugly but it's like that");
 Console.ResetColor();
-Console.Write("*ù$+=}");
-Console.WriteLine("*ù$+=}");
+Console.Write("*ï¿½$+=}");
+Console.WriteLine("*ï¿½$+=}");
 Console.WriteLine("");
 Console.WriteLine("1 line empty before");
 Console.WriteLine("Press left button to continue");

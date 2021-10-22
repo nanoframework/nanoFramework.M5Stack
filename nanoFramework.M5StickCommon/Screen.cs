@@ -1,4 +1,7 @@
-﻿using Iot.Device.Axp192;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+using Iot.Device.Axp192;
 using nanoFramework.M5Stack;
 using nanoFramework.UI;
 using System;

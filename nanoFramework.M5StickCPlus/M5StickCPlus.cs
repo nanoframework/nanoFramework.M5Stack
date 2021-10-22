@@ -1,4 +1,7 @@
-﻿using Iot.Device.Buzzer;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+using Iot.Device.Buzzer;
 using nanoFramework.Hardware.Esp32;
 using System;
 
