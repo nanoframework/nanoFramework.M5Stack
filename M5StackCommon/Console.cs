@@ -68,13 +68,14 @@ namespace nanoFramework
         }
 
         /// <summary>
-        /// Write a text on the screen at the cursor position.
+        /// Writes a text on the screen at the cursor position.
         /// Cursor position will automatically increase.
         /// </summary>
         /// <remarks>No new line character will be recognized, use WriteLine instead.</remarks>
-        /// <param name="text"></param>
+        /// <param name="text">The text to display.</param>
         public static void Write(string text)
         {
+            // NOTE: Some work needs to be adjusted on the native side to properly handle the character display. Once done, adjustments will be needed.
             // Make the math for the lines, it's based out the Max width of the character and won't be perfect
             // Console is recommended with fixed size fonts
             ushort width = (ushort)(DisplayControl.ScreenWidth - CursorLeft * Font.MaxWidth);
@@ -95,6 +96,10 @@ namespace nanoFramework
             }
         }
 
+        /// <summary>
+        /// Writes a text on the screen at the cursor position and goes to the next line.
+        /// </summary>
+        /// <param name="text">The text to display.</param>
         public static void WriteLine(string text)
         {
             Write(text);

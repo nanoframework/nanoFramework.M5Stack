@@ -13,16 +13,16 @@ namespace nanoFramework.M5Stack
     /// </summary>
     public abstract class ScreenBase
     {
-        internal static int MemoryAllocationBitmap = 1024;
+        internal static int MemoryAllocationBitmap;
 
         internal static int BackLightPin;
-        internal static GpioController Controller;
+        internal static readonly GpioController Controller;
         internal static bool IsEnabled;
 
         /// <summary>
-        /// MAximum buffer size for a Bitmap on the native side.
+        /// Maximum buffer size for a Bitmap on the native side.
         /// </summary>
-        public static int MaxBitmapSize = (MemoryAllocationBitmap - 100) / 3;
+        public static int MaxBitmapSize { get => (MemoryAllocationBitmap - 100) / 3; }
 
         /// <summary>
         /// Enabled or disable the screen.
@@ -50,7 +50,7 @@ namespace nanoFramework.M5Stack
 
             set
             {
-                Enabled = value > 50 ? true : false;
+                Enabled = value > 50;
             }
         }
 

@@ -159,8 +159,6 @@ namespace nanoFramework.M5Stick
             // Bat charge voltage to 4.2, Current 100MA
             _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
             // Depending on configuration enable LDO2, LDO3, DCDC1, DCDC3.
-            // byte data = I2cRead(Register.SwitchControleDcDC1_3LDO2_3);
-            // data = (byte)((data & 0xEF) | 0x4D);
             _power.LdoDcPinsEnabled = LdoDcPinsEnabled.All;
             // 128ms power on, 4s power off
             _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms64, ShutdownTiming.S10);

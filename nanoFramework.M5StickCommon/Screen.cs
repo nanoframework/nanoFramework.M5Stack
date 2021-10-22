@@ -22,6 +22,7 @@ namespace nanoFramework.M5Stick
 
         static Screen()
         {
+            MemoryAllocationBitmap = 1024;
             // Not used in Stick versions, AXP is doing this
             BackLightPin = -1;            
 #if M5STICKC

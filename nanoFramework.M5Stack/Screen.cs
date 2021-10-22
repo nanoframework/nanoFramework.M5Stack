@@ -19,6 +19,7 @@ namespace nanoFramework.M5Stack
 
         static Screen()
         {
+            MemoryAllocationBitmap = 1024;
             BackLightPin = 32;
             Controller = new();
             Controller.OpenPin(BackLightPin, PinMode.Output);
