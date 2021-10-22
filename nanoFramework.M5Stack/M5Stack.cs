@@ -146,7 +146,7 @@ namespace nanoFramework.M5Stack
         /// Gets the screen.
         /// </summary>
         /// <remarks>The screen initialization takes a little bit of time, if you need the screen consider using it as early as possible in your code.</remarks>
-        public static void InitilazeScreen()
+        public static void InitializeScreen()
         {
             // If the screen is not needed, it's not going to be created
             // Note: initialization may take a little bit of time
@@ -268,7 +268,7 @@ namespace nanoFramework.M5Stack
         /// </summary>
         /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
         /// <returns>The I2cDevice.</returns>
-        public static I2cDevice GetGroveA(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
+        public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
 
         /// <summary>
         /// Gets an SPI Device.

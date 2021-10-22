@@ -11,7 +11,7 @@ using System.Numerics;
 
 Debug.WriteLine("Hello from nanoFramework!");
 
-M5Stack.InitilazeScreen();
+M5Stack.InitializeScreen();
 Console.Clear();
 
 // Test the console display
