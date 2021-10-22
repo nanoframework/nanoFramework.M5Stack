@@ -15,6 +15,7 @@
     <RootNamespace>nanoFramework.M5StickCPlus</RootNamespace>
     <AssemblyName>nanoFramework.M5StickCPlus</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <DocumentationFile>bin\$(Configuration)\nanoFramework.M5StickCPlus.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>

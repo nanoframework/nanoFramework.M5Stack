@@ -26,12 +26,6 @@
   <PropertyGroup>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
-  <PropertyGroup>
-    <!-- override default options for MetaDataProcessor -->
-    <NF_GenerateStubsDirectory>bin\$(Configuration)\Stubs</NF_GenerateStubsDirectory>
-    <NF_GenerateSkeletonProjectName>nf_m5stack_native</NF_GenerateSkeletonProjectName>
-    <Name>nanoFramework.M5Stack</Name>
-  </PropertyGroup>
   <PropertyGroup Label="nanoFramework">
     <NFMDP_DAT_FILES>true</NFMDP_DAT_FILES>
     <NFMDP_DUMP_FILES>true</NFMDP_DUMP_FILES>
