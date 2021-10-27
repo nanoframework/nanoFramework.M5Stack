@@ -79,17 +79,17 @@ namespace nanoFramework
             // Make the math for the lines, it's based out the Max width of the character and won't be perfect
             // Console is recommended with fixed size fonts
             ushort width = (ushort)(DisplayControl.ScreenWidth - CursorLeft * Font.MaxWidth);
-            if (text.Length < width / Font.MaxWidth)
+            if (text.Length <= width / Font.MaxWidth)
             {
                 DisplayControl.Write(text, (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorLeft += text.Length;
             }
             else
             {
-                DisplayControl.Write(text.Substring(0, width / Font.MaxWidth), (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
+                DisplayControl.Write(text.Substring(0, width / Font.MaxWidth + 1), (ushort)(CursorLeft * Font.MaxWidth), (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorTop++;
-                string newTxt = text.Substring(width / Font.MaxWidth);
-                DisplayControl.Write(newTxt, 0, (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - Font.MaxWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
+                string newTxt = text.Substring(width / Font.MaxWidth + 1);
+                DisplayControl.Write(newTxt, 0, (ushort)(CursorTop * Font.Height), (ushort)(DisplayControl.ScreenWidth - 1), (ushort)(DisplayControl.ScreenHeight - 1), Font, ForegroundColor, BackgroundColor);
                 CursorLeft = newTxt.Length % WindowWidth;
                 CursorTop += newTxt.Length / WindowWidth;
                 CursorTop = CursorTop > WindowHeight ? WindowHeight : CursorTop;

@@ -82,7 +82,7 @@ while (true)
     accVal = acc.GetAccelerometer();
     gyroVal = acc.GetGyroscope();
     magVal = mag.ReadMagnetometer();
-    var head_dir = Math.Atan2(magVal.X, magVal.Y) * 180.0 / Math.PI;
+    var headDir = Math.Atan2(magVal.X, magVal.Y) * 180.0 / Math.PI;
     Console.ForegroundColor = Color.Green;
     Console.CursorLeft = 0;
     Console.CursorTop = 1;
@@ -110,7 +110,7 @@ while (true)
     Console.Write($"  z={magVal.Z:N2}   ");
     Console.CursorLeft = Console.WindowWidth / 2 - 2;
     Console.CursorTop++;
-    Console.Write($"  h={head_dir:N2}  ");
+    Console.Write($"  h={headDir:N2}  ");
     Console.ForegroundColor = Color.DarkBlue;
     Console.CursorLeft = Console.WindowWidth / 2 - 2;
     Console.CursorTop = 6;

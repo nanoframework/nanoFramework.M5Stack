@@ -52,7 +52,7 @@ Screen.Write(69, 149, 10, 10, toSend);
 Console.CursorTop = 1;
 Console.Write("Press the main M5 button");
 
-while(!M5StickC.M5Button.IsPressed)
+while(!M5StickC.ButtonM5.IsPressed)
 {
     Thread.Sleep(10);
 }
@@ -63,38 +63,45 @@ Console.Write("this is a long line which will go over");
 Console.WriteLine("");
 Console.Write("Press the right button");
 
-while (!M5StickC.RightButton.IsPressed)
+while (!M5StickC.ButtonRight.IsPressed)
 {
     Thread.Sleep(10);
 }
 
 Console.Clear();
-Console.Write("Click any button to check, double click M5 to exit");
+Console.Write("Click any button to check, hold M5 to exit");
 
 bool nextDemo = false;
-M5StickC.M5Button.DoublePress += (sender, e) =>
+M5StickC.ButtonM5.IsHoldingEnabled = true;
+M5StickC.ButtonM5.Holding += (sender, e) =>
 {
     nextDemo = true;
 };
 
-M5StickC.RightButton.Press += (sender, e) =>
+M5StickC.ButtonRight.Press += (sender, e) =>
 {
+    Console.ForegroundColor = Color.Green;
     Console.CursorLeft = 0;
-    Console.CursorTop = 2;
+    Console.CursorTop = 4;
     Console.Write("Right pressed");
 };
 
 
-M5StickC.M5Button.Press += (sender, e) =>
+M5StickC.ButtonM5.Press += (sender, e) =>
 {
+    Console.ForegroundColor = Color.Pink;
     Console.CursorLeft = 0;
-    Console.CursorTop = 2;
+    Console.CursorTop = 4;
     Console.Write("M5 pressed    ");
 };
 
-while(!nextDemo)
+while (!nextDemo)
 {
-    Thread.Sleep(100);
+    Thread.Sleep(10);
 }
+
+
+Console.Clear();
+Console.Write("End of demo");
 
 Thread.Sleep(Timeout.Infinite);

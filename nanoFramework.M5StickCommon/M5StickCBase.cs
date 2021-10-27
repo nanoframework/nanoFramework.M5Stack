@@ -29,8 +29,8 @@ namespace nanoFramework.M5Stick
 #endif
     {
         private static Axp192 _power;
-        private static GpioButton _m5Button;
-        private static GpioButton _rightButton;
+        private static GpioButton _buttonM5;
+        private static GpioButton _buttonRight;
         private static GpioController _gpio;
         private static GpioPin _led;
         private static TransmitterChannel _irLed;
@@ -46,32 +46,32 @@ namespace nanoFramework.M5Stick
         /// <summary>
         /// Gets the button marked M5 below the screen
         /// </summary>
-        public static GpioButton M5Button
+        public static GpioButton ButtonM5
         {
             get
             {
-                if (_m5Button == null)
+                if (_buttonM5 == null)
                 {
-                    _m5Button = new(37, _gpio, false);
+                    _buttonM5 = new(37, _gpio, false);
                 }
 
-                return _m5Button;
+                return _buttonM5;
             }
         }
 
         /// <summary>
         /// Gets the button on the right side.
         /// </summary>
-        public static GpioButton RightButton
+        public static GpioButton ButtonRight
         {
             get
             {
-                if (_rightButton == null)
+                if (_buttonRight == null)
                 {
-                    _rightButton = new(39, _gpio, false);
+                    _buttonRight = new(39, _gpio, false);
                 }
 
-                return _rightButton;
+                return _buttonRight;
             }
         }
 

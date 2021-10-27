@@ -16,7 +16,7 @@ namespace nanoFramework.M5Stack
         internal static int MemoryAllocationBitmap;
 
         internal static int BackLightPin;
-        internal static readonly GpioController Controller;
+        internal static GpioController Controller;
         internal static bool IsEnabled;
 
         /// <summary>
