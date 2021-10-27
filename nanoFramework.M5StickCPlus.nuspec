@@ -5,7 +5,7 @@
     <version>$version$</version>
     <title>nanoFramework.M5StickCPlus</title>
     <authors>nanoFramework project contributors</authors>
-    <owners>nanoFramework,dotnetfoundation</owners>
+    <owners>nanoFramework project contributors,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.md</license>
     <releaseNotes>
@@ -16,7 +16,7 @@
     <icon>images\nf-logo.png</icon>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
-    <description>This package includes the nanoFramework.M5StickCPlus assembly for nanoFramework C# projects.</description>
+    <description>This package includes the nanoFramework.M5StickCPlus assembly for .NET nanoFramework C# projects.</description>
     <summary>nanoFramework.M5StickCPlus assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5StickCPlus</tags>
     <dependencies>
