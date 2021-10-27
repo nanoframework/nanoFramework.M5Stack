@@ -22,6 +22,7 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Maximum buffer size for a Bitmap on the native side.
         /// </summary>
+        // A bitmap stores colors on 3 bytes and there is an initial structure taking maximum 100 bytes
         public static int MaxBitmapSize { get => (MemoryAllocationBitmap - 100) / 3; }
 
         /// <summary>

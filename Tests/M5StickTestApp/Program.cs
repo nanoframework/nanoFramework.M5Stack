@@ -68,6 +68,7 @@ while (!M5StickC.ButtonRight.IsPressed)
     Thread.Sleep(10);
 }
 
+M5StickC.Led.Toggle();
 Console.Clear();
 Console.Write("Click any button to check, hold M5 to exit");
 
