@@ -20,20 +20,124 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-  solution: '**/*.sln'
+  DOTNET_NOLOGO: true
+  solution: 'nanoFramework.M5Stack.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   nugetPackageName: 'nanoFramework.M5Stack'
-  repoName: 'nanoFramework.M5Stack'
 
 steps:
 
 # step from template @ nf-tools repo
-# all build, update and publish steps
-- template: azure-pipelines-templates/class-lib-build.yml@templates
+# build steps only
+- template: azure-pipelines-templates/class-lib-build-only.yml@templates  
   parameters:
     sonarCloudProject: 'nanoframework_lib-nanoFramework.M5Stack'
+
+# package steps
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5Stack'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5StickC'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5StickCPlus'
+
+- template: azure-pipelines-templates/class-lib-publish.yml@templates  
+
+# need to push remaining packages to NuGet individually because the template above can only push one package (happens on tag builds for any branch)
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    allowPackageConflicts: true
+    packagesToPush: 
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickC.$(MY_NUGET_VERSION).nupkg
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickC.$(MY_NUGET_VERSION).snupkg
+    publishFeedCredentials: 'AzureArtifacts-$(System.TeamProject)'
+    includeSymbols: true
+  condition: and( succeeded(), ne( variables['StartReleaseCandidate'], true ) )
+  continueOnError: true
+  displayName: Push "nanoFramework.M5StickC" variant NuGet package to Azure Artifacts
+
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    allowPackageConflicts: true
+    packagesToPush: 
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickCPlus.$(MY_NUGET_VERSION).nupkg
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickCPlus.$(MY_NUGET_VERSION).snupkg
+    publishFeedCredentials: 'AzureArtifacts-$(System.TeamProject)'
+    includeSymbols: true
+  condition: and( succeeded(), ne( variables['StartReleaseCandidate'], true ) )
+  continueOnError: true
+  displayName: Push "nanoFramework.M5StickCPlus" variant NuGet package to Azure Artifacts
+
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    allowPackageConflicts: true
+    packagesToPush: 
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickC.$(MY_NUGET_VERSION).nupkg
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickC.$(MY_NUGET_VERSION).snupkg
+    publishFeedCredentials: 'NuGet-$(System.TeamProject)'
+    includeSymbols: true
+  condition: and( succeeded(), ne(variables['Build.Reason'], 'PullRequest'), ne( variables['StartReleaseCandidate'], true ) )
+  continueOnError: true
+  displayName: Push "nanoFramework.M5StickC" variant NuGet package to NuGet
+
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    allowPackageConflicts: true
+    packagesToPush: 
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickCPlus.$(MY_NUGET_VERSION).nupkg
+      $(Build.ArtifactStagingDirectory)/nanoFramework.M5StickCPlus.$(MY_NUGET_VERSION).snupkg
+    publishFeedCredentials: 'NuGet-$(System.TeamProject)'
+    includeSymbols: true
+  condition: and( succeeded(), ne(variables['Build.Reason'], 'PullRequest'), ne( variables['StartReleaseCandidate'], true ) )
+  continueOnError: true
+  displayName: Push "nanoFramework.M5StickCPlus" variant NuGet package to NuGet
+
+# create or update GitHub release
+- task: GithubRelease@1
+  condition: and( succeeded(), eq(variables['System.PullRequest.PullRequestId'], ''), not( startsWith(variables['Build.SourceBranch'], 'refs/tags/v') ), ne( variables['StartReleaseCandidate'], true ) )
+  displayName: Create/Update GitHub PREVIEW release
+  inputs:
+    gitHubConnection: 'github.com_nano-$(System.TeamProject)'
+    tagSource: userSpecifiedTag
+    tag: v$(MY_NUGET_VERSION)
+    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
+    releaseNotesSource: inline
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [.NET (client API only)](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [.NET (server API only)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
+    assetUploadMode: replace
+    isPreRelease: true
+    addChangeLog: false
+
+# create or update GitHub release ON tags from release or main branches
+- task: GithubRelease@1
+  condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v'), not(contains(variables['Build.SourceBranch'], 'preview') ), ne( variables['StartReleaseCandidate'], true ) )
+  displayName: Create/Update GitHub stable release
+  inputs:
+    action: edit
+    gitHubConnection: 'github.com_nano-$(System.TeamProject)'
+    tagSource: userSpecifiedTag
+    tag: v$(MY_NUGET_VERSION)
+    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
+    releaseNotesSource: inline
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [.NET (client API only)](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [.NET (server API only)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
+    assetUploadMode: replace
+    isPreRelease: false
+    addChangeLog: false
 
 # step from template @ nf-tools repo
 # report error

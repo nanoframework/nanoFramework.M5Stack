@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>nanoFramework.M5Stack</id>
+    <id>nanoFramework.M5StickC</id>
     <version>$version$</version>
-    <title>nanoFramework.M5Stack</title>
+    <title>nanoFramework.M5StickC</title>
     <authors>nanoFramework project contributors</authors>
     <owners>nanoFramework,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,19 +16,19 @@
     <icon>images\nf-logo.png</icon>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
-    <description>This package includes the nanoFramework.M5Stack assembly for nanoFramework C# projects.</description>
-    <summary>nanoFramework.M5Stack assembly for nanoFramework C# projects</summary>
-    <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Stack</tags>
+    <description>This package includes the nanoFramework.M5StickC assembly for nanoFramework C# projects.</description>
+    <summary>nanoFramework.M5StickC assembly for nanoFramework C# projects</summary>
+    <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5StickC</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.10.5" />
       <dependency id="nanoFramework.Graphics" version="1.0.1-preview.8" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.3.4-preview.8" />
       <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="1.2.1-preview.5" />
-      <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.0.218" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.218" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.218" />
-      <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.0.218" />
-      <dependency id="nanoFramework.Iot.Device.Ip5306" version="1.0.218" />
+      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.224" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.225" />
       <dependency id="nanoFramework.ResourceManager" version="1.1.2" />
       <dependency id="nanoFramework.Runtime.Events" version="1.9.2-preview.8" />
       <dependency id="nanoFramework.Runtime.Native" version="1.5.1" />
@@ -37,24 +37,21 @@
       <dependency id="nanoFramework.System.Device.Gpio" version="1.0.2-preview.7" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.1" />
       <dependency id="nanoFramework.System.Device.Model" version="1.0.176" />
-      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.0-preview.14" />
-      <dependency id="nanoFramework.System.Device.Spi" version="1.0.2-preview.11" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.160" />
-      <dependency id="nanoFramework.System.IO.Ports" version="1.0.1-preview.13" />
       <dependency id="nanoFramework.System.Math" version="1.4.1" />
       <dependency id="nanoFramework.System.Numerics" version="1.0.160" />
-      <dependency id="nanoFramework.Windows.Devices.Adc" version="1.5.1" />
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.102.0" />
-      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.102.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.102.0" />      
+      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.102.0" />
+      <dependency id="UnitsNet.nanoFramework.Power" version="4.102.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.102.0" />    
     </dependencies>
   </metadata>
   <files>
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.dll" target="lib\nanoFramework.M5Stack.dll" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pdb" target="lib\nanoFramework.M5Stack.pdb" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pdbx" target="lib\nanoFramework.M5Stack.pdbx" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pe" target="lib\nanoFramework.M5Stack.pe" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.xml" target="lib\nanoFramework.M5Stack.xml" />
+    <file src="nanoFramework.M5StickC\bin\Release\nanoFramework.M5StickC.dll" target="lib\nanoFramework.M5StickC.dll" />
+    <file src="nanoFramework.M5StickC\bin\Release\nanoFramework.M5StickC.pdb" target="lib\nanoFramework.M5StickC.pdb" />
+    <file src="nanoFramework.M5StickC\bin\Release\nanoFramework.M5StickC.pdbx" target="lib\nanoFramework.M5StickC.pdbx" />
+    <file src="nanoFramework.M5StickC\bin\Release\nanoFramework.M5StickC.pe" target="lib\nanoFramework.M5StickC.pe" />
+    <file src="nanoFramework.M5StickC\bin\Release\nanoFramework.M5StickC.xml" target="lib\nanoFramework.M5StickC.xml" />
     <file src="assets\readme.txt" target="" />
     <file src="assets\nf-logo.png" target="images\" />
     <file src="LICENSE.md" target="" />
