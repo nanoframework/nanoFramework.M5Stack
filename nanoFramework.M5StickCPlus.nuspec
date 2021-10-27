@@ -27,7 +27,7 @@
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.218" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.218" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.0.218" />
-      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" />
+      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.0.160" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.224" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.225" />
       <dependency id="nanoFramework.ResourceManager" version="1.1.2" />
