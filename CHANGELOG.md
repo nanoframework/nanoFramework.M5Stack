@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.0-preview.75](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.75) (2021-10-27)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.72...v1.0.0-preview.75)
+
 ## [v1.0.0-preview.72](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.72) (2021-09-11)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.70...v1.0.0-preview.72)
