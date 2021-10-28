@@ -45,7 +45,7 @@
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.102.0" />
       <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.102.0" />
       <dependency id="UnitsNet.nanoFramework.Power" version="4.102.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.102.0" />    
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.102.0" />
     </dependencies>
   </metadata>
   <files>
