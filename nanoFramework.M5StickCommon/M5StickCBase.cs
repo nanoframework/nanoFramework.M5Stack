@@ -165,7 +165,7 @@ namespace nanoFramework.M5Stick
             // Set RTC voltage to 3.3V
             _power.PinOutputVoltage = PinOutputVoltage.V3_3;
             // Set GPIO0 to LDO
-            _power.SetGPIO0(Gpio0Behavior.LowNoiseLDO, 0);
+            _power.Gpio0Behavior = Gpio0Behavior.LowNoiseLDO;
             // Disable vbus hold limit
             _power.SetVbusSettings(true, false, VholdVoltage.V4_0, false, VbusCurrentLimit.MilliAmper500);
             // Set temperature protection
