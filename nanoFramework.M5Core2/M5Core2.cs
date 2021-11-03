@@ -16,6 +16,8 @@ namespace nanoFramework.M5Stack
     {
         private static Pcf8563 _rtc;
         private static Axp192 _power;
+        private static bool _powerLed;
+        private static bool _vibrate;
 
         /// <summary>
         /// Gets the power management of the M5Core2.
@@ -36,7 +38,12 @@ namespace nanoFramework.M5Stack
         /// </summary>
         public static bool PowerLed
         {
-            set => _power.EnableLDO2(value);
+            get => _powerLed;
+            set
+            {
+                _powerLed = value;
+                _power.EnableLDO2(_powerLed);
+            }
         }
 
         /// <summary>
@@ -44,7 +51,12 @@ namespace nanoFramework.M5Stack
         /// </summary>
         public static bool Vibrate
         {
-            set => Power.EnableLDO3(value);
+            get => _vibrate;
+            set
+            {
+                _vibrate = value;
+                _power.EnableLDO3(_vibrate);
+            }
         }
 
         static M5Core2()
