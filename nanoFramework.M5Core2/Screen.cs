@@ -26,7 +26,6 @@ namespace nanoFramework.M5Core2
             // We're allocating anough memory for the full screen as this is a SPRAM board
             MemoryAllocationBitmap = 320 * 240 * 4;
             BackLightPin = -1;
-            Enabled = true;
             _power = M5Stack.M5Core2.Power;
             // Enable the screen
             Enabled = true;
