@@ -132,11 +132,11 @@ namespace nanoFramework.M5Stack
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
 
             DateTime dt;
-            var sysDt = DateTime.UtcNow;
+            var sysDtcore = DateTime.UtcNow;
             try
             {
                 dt = _rtc.DateTime;
-                if (sysDt < dt)
+                if (sysDtcore < dt)
                 {
                     Rtc.SetSystemTime(dt);
                 }
@@ -144,9 +144,9 @@ namespace nanoFramework.M5Stack
             catch (Exception)
             {
 
-                if (sysDt.Year < 2021)
+                if (sysDtcore.Year < 2021)
                 {
-                    dt = new DateTime(2021, 11, 01, 12, 00, 00);
+                    dt = new DateTime(2021, 11, 03, 12, 00, 00);
                     _rtc.DateTime = dt;
                     Rtc.SetSystemTime(dt);
                 }
