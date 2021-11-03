@@ -83,7 +83,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Graphics, Version=1.0.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Graphics.1.0.1-preview.7\lib\nanoFramework.Graphics.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Graphics.1.0.1-preview.8\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
