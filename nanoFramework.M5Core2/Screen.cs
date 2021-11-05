@@ -20,9 +20,18 @@ namespace nanoFramework.M5Core2
         private const int Reset = -1;
         private static Axp192 _power;
         private static byte _lumi;
+        private static bool _isInitialized = false;
 
-        static Screen()
+        /// <summary>
+        /// Initializes the screen
+        /// </summary>
+        public Screen()
         {
+            if(_isInitialized)
+            {
+                return;
+            }
+
             // We're allocating anough memory for the full screen as this is a SPRAM board
             MemoryAllocationBitmap = 320 * 240 * 4;
             BackLightPin = -1;
@@ -41,6 +50,7 @@ namespace nanoFramework.M5Core2
             // 3.0V for the screen            
             LuminosityPercentage = 100;
             _power.EnableDCDC3(true);
+            _isInitialized = true;
         }
 
         /// <summary>

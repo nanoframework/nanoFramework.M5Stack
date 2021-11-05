@@ -20,12 +20,21 @@ namespace nanoFramework.M5Stick
         private const int Reset = 18;
         private static Axp192 _power;
         private static byte _lumi;
-
-        static Screen()
+        private static bool _isInitialized = false;
+        
+        /// <summary>
+        /// Initializes the screen
+        /// </summary>
+        public Screen()
         {
+            if (_isInitialized)
+            {
+                return;
+            }
+
             MemoryAllocationBitmap = 1024;
             // Not used in Stick versions, AXP is doing this
-            BackLightPin = -1;            
+            BackLightPin = -1;
 #if M5STICKC
             _power = M5StickC.Power;
             DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(26, 1, 80, 160), (uint)MemoryAllocationBitmap);
@@ -38,6 +47,7 @@ namespace nanoFramework.M5Stick
             // For M5Stick, values from 2.6 to 3V are working fine
             LuminosityPercentage = 100;
             _power.EnableLDO3(true);
+            _isInitialized = true;
         }
 
         /// <summary>

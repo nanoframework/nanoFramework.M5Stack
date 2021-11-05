@@ -14,15 +14,25 @@ namespace nanoFramework.M5Stack
         private const int ChipSelect = 14;
         private const int DataCommand = 27;
         private const int Reset = 33;
+        private static bool _isInitialized = false;
 
-        static Screen()
+        /// <summary>
+        /// Initializes the screen
+        /// </summary>
+        public Screen()
         {
+            if (_isInitialized)
+            {
+                return;
+            }
+
             MemoryAllocationBitmap = 1024;
             BackLightPin = 32;
             Controller = new();
             Controller.OpenPin(BackLightPin, PinMode.Output);
             Enabled = true;
             DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), (uint)MemoryAllocationBitmap);
+            _isInitialized = true;
         }
     }
 }

@@ -114,7 +114,6 @@ namespace nanoFramework.M5Stack
             }
         }
 
-
         /// <summary>
         /// Gets the power management of the M5 Stack.
         /// </summary>

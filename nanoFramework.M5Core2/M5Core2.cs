@@ -4,6 +4,7 @@
 using Iot.Device.Axp192;
 using Iot.Device.Rtc;
 using nanoFramework.Hardware.Esp32;
+using nanoFramework.M5Core2;
 using nanoFramework.Runtime.Native;
 using System;
 using System.Device.Adc;
@@ -56,6 +57,21 @@ namespace nanoFramework.M5Stack
             {
                 _vibrate = value;
                 _power.EnableLDO3(_vibrate);
+            }
+        }
+
+        /// <summary>
+        /// Gets the screen.
+        /// </summary>
+        /// <remarks>The screen initialization takes a little bit of time, if you need the screen consider using it as early as possible in your code.</remarks>
+        public static void InitializeScreen()
+        {
+            // If the screen is not needed, it's not going to be created
+            // Note: initialization may take a little bit of time
+            if (_screen == null)
+            {
+                _screen = new();
+                Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
             }
         }
 
