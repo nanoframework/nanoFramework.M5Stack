@@ -154,12 +154,7 @@ namespace nanoFramework.M5Stack
             // Setup buttons
             _gpio = new();
 
-            // Setup SPI1
-            Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
-            Configuration.SetPinFunction(19, DeviceFunction.SPI1_MISO);
-            Configuration.SetPinFunction(8, DeviceFunction.SPI1_CLOCK);
-
-            // Setup the screen with SP2 and SD Card
+            // Config GPIOs for SPI (screen and SD Card)
             Configuration.SetPinFunction(23, DeviceFunction.SPI2_MOSI);
             Configuration.SetPinFunction(19, DeviceFunction.SPI2_MISO);
             Configuration.SetPinFunction(18, DeviceFunction.SPI2_CLOCK);
