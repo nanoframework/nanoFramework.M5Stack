@@ -19,7 +19,7 @@ namespace nanoFramework.M5Stick
         private const int DataCommand = 23;
         private const int Reset = 18;
         private static Axp192 _power;
-        private static byte _lumi;
+        private static int _lumi;
         private static bool _isInitialized = false;
         
         /// <summary>
@@ -53,7 +53,7 @@ namespace nanoFramework.M5Stick
         /// <summary>
         /// Enables or disables the screen.
         /// </summary>
-        public static new bool Enabled
+        public new static bool Enabled
         {
             get => IsEnabled;
 
@@ -68,7 +68,7 @@ namespace nanoFramework.M5Stick
         /// Sets or gets the screen luminosity.
         /// </summary>
         /// <remarks> On M5Stick, anything less than 20% will be fully black</remarks>
-        public static new byte LuminosityPercentage
+        public new static int LuminosityPercentage
         {
             get => _lumi;
 
@@ -76,8 +76,8 @@ namespace nanoFramework.M5Stick
             {
                 // For M5Stick, values from 8 to 12 are working fine
                 // 2.5 V = dark, 3.0 V full luminosity
-                _lumi = (byte)(value > 100 ? 100 : _lumi);
-                _power.LDO3OutputVoltage = ElectricPotential.FromVolts((byte)(_lumi * 0.5 / 100.0 + 2.5));
+                _lumi = value > 100 ? 100 : value;
+                _power.LDO3OutputVoltage = ElectricPotential.FromVolts(_lumi * 0.5 / 100.0 + 2.5);
             }
         }
     }
