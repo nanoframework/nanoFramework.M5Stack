@@ -1,5 +1,17 @@
 # Changelog
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.88...HEAD)
+
+**Fixed bugs:**
+
+- Change type of LuminosityPercentage to int from byte [\#36](https://github.com/nanoframework/nanoFramework.M5Stack/pull/36)
+
+## [v1.0.0-preview.88](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.88) (2021-11-09)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.86...v1.0.0-preview.88)
+
 ## [v1.0.0-preview.86](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.86) (2021-11-03)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.83...v1.0.0-preview.86)
