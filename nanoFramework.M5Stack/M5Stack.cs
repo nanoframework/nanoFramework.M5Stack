@@ -15,24 +15,17 @@ using System.Device.I2c;
 using System.Device.Spi;
 using System.IO.Ports;
 using UnitsNet;
-using Windows.Devices.Adc;
+using System.Device.Adc;
 
 namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// M5Stack board
     /// </summary>
-    public static class M5Stack
+    public static partial class M5Stack
     {
         private static Ip5306 _power;
-        private static Bmm150 _bmm150;
-        private static Mpu6886AccelerometerGyroscope _mpu6886;
-        private static SerialPort _serialPort;
-        private static Buzzer _buzzer;
-        private static DacChannel _dac1;
-        private static DacChannel _dac2;
-        private static Screen _screen;
-        private static GpioController _gpio;
+        private static Buzzer _buzzer;        
         private static GpioButton _left;
         private static GpioButton _center;
         private static GpioButton _right;
@@ -88,11 +81,6 @@ namespace nanoFramework.M5Stack
         }
 
         /// <summary>
-        /// Gets the main GPIO Controller.
-        /// </summary>
-        public static GpioController GpioController => _gpio;
-
-        /// <summary>
         /// Gets the Buzzer.
         /// </summary>
         public static Buzzer Buzzer
@@ -108,40 +96,6 @@ namespace nanoFramework.M5Stack
                 }
 
                 return _buzzer;
-            }
-        }
-
-        /// <summary>
-        /// Gets DAC1 which is GPIO 25.
-        /// </summary>
-        public static DacChannel Dac1
-        {
-            get
-            {
-                // We are creating it on demand
-                if (_dac1 == null)
-                {
-                    _dac1 = DacController.GetDefault().OpenChannel(0);
-                }
-
-                return _dac1;
-            }
-        }
-
-        /// <summary>
-        /// Gets DAC1 which is GPIO 26.
-        /// </summary>
-        public static DacChannel Dac2
-        {
-            get
-            {
-                // We are creating it on demand
-                if (_dac2 == null)
-                {
-                    _dac2 = DacController.GetDefault().OpenChannel(1);
-                }
-
-                return _dac2;
             }
         }
 
@@ -217,112 +171,45 @@ namespace nanoFramework.M5Stack
         /// <returns>An AdcChannel</returns>
         public static AdcChannel GetAdcGpio(int gpioNumber)
         {
+            if(_adc == null)
+            {
+                _adc = new();
+            }
+
             switch (gpioNumber)
             {
                 case 35:
                     Configuration.SetPinFunction(35, DeviceFunction.ADC1_CH7);
-                    return AdcController.GetDefault().OpenChannel(7);
+                    return _adc.OpenChannel(7);
                 case 36:
                     Configuration.SetPinFunction(36, DeviceFunction.ADC1_CH0);
-                    return AdcController.GetDefault().OpenChannel(0);
+                    return _adc.OpenChannel(0);
                 case 2:
                     Configuration.SetPinFunction(2, DeviceFunction.ADC1_CH12);
-                    return AdcController.GetDefault().OpenChannel(12);
+                    return _adc.OpenChannel(12);
                 case 12:
                     Configuration.SetPinFunction(12, DeviceFunction.ADC1_CH15);
-                    return AdcController.GetDefault().OpenChannel(15);
+                    return _adc.OpenChannel(15);
                 case 15:
                     Configuration.SetPinFunction(15, DeviceFunction.ADC1_CH13);
-                    return AdcController.GetDefault().OpenChannel(13);
+                    return _adc.OpenChannel(13);
                 case 25:
                     Configuration.SetPinFunction(25, DeviceFunction.ADC1_CH18);
-                    return AdcController.GetDefault().OpenChannel(18);
+                    return _adc.OpenChannel(18);
                 case 26:
                     Configuration.SetPinFunction(26, DeviceFunction.ADC1_CH19);
-                    return AdcController.GetDefault().OpenChannel(19);
+                    return _adc.OpenChannel(19);
                 case 13:
                     Configuration.SetPinFunction(13, DeviceFunction.ADC1_CH14);
-                    return AdcController.GetDefault().OpenChannel(14);
+                    return _adc.OpenChannel(14);
                 case 0:
                     Configuration.SetPinFunction(0, DeviceFunction.ADC1_CH11);
-                    return AdcController.GetDefault().OpenChannel(11);
+                    return _adc.OpenChannel(11);
                 case 34:
                     Configuration.SetPinFunction(34, DeviceFunction.ADC1_CH6);
-                    return AdcController.GetDefault().OpenChannel(6);
+                    return _adc.OpenChannel(6);
                 default:
                     throw new ArgumentException(nameof(gpioNumber));
-            }
-        }
-
-        /// <summary>
-        /// Gets an I2C device.
-        /// </summary>
-        /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
-        /// <returns>The I2cDevice.</returns>
-        public static I2cDevice GetI2cDevice(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
-
-        /// <summary>
-        /// Gets an I2C device.
-        /// </summary>
-        /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
-        /// <returns>The I2cDevice.</returns>
-        public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
-
-        /// <summary>
-        /// Gets an SPI Device.
-        /// </summary>
-        /// <param name="chipSelect">The chip select of the device, needs to be any valid GPIO.</param>
-        /// <returns>An SpiDevice.</returns>
-        public static SpiDevice GetSpiDevice(int chipSelect) => new(new SpiConnectionSettings(1, chipSelect));
-
-        /// <summary>
-        /// Gets the second serial port RX2/TX2
-        /// </summary>
-        public static SerialPort SerialPort
-        {
-            get
-            {
-                // We do this so the COM port is used only if needed
-                if (_serialPort == null)
-                {
-                    _serialPort = new("COM2");
-                }
-
-                return _serialPort;
-            }
-        }
-
-        /// <summary>
-        /// Gets the Magnetometer.
-        /// </summary>
-        public static Bmm150 Magnetometer
-        {
-            get
-            {
-                // We do this to avoid having to load the magnetometer if not needed or not connected
-                if (_bmm150 == null)
-                {
-                    _bmm150 = new(GetI2cDevice(0x10));
-                }
-
-                return _bmm150;
-            }
-        }
-
-        /// <summary>
-        /// Gets the Accelerometer and Gyroscope.
-        /// </summary>
-        public static Mpu6886AccelerometerGyroscope AccelerometerGyroscope
-        {
-            get
-            {
-                // We do this to avoid having to load the Accelerometer if not needed or not connected
-                if (_mpu6886 == null)
-                {
-                    _mpu6886 = new(GetI2cDevice(0x68));
-                }
-
-                return _mpu6886;
             }
         }
     }

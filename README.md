@@ -4,7 +4,7 @@
 
 -----
 
-### Welcome to the **nanoFramework** M5Stack Library repository!
+# Welcome to the **nanoFramework** M5Stack Library repository!
 
 ## Build status
 
@@ -16,10 +16,12 @@
 | nanoFramework.M5Stick (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5StickC.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickC/) |
 | nanoFramework.M5StickCPlus | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
 | nanoFramework.M5StickCPlus (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
+| nanoFramework.M5Core2 | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
+| nanoFramework.M5Core2 (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
 
 ## Usage
 
-Those 3 nugets provide a support for the [M5Stack](https://docs.m5stack.com/en/products?id=core), [M5StickC](https://docs.m5stack.com/en/core/m5stickc) and [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus).
+Those 3 nugets provide a support for the [M5Stack](https://docs.m5stack.com/en/products?id=core), [M5StickC](https://docs.m5stack.com/en/core/m5stickc), [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) and [M5Core2](https://docs.m5stack.com/en/core/core2).
 
 They bring support for the screens as well and require to be flashed with the proper image:
 
@@ -85,6 +87,8 @@ Console.Write("This is white on black again and on 9th line");
 
 > Note: You can change the default font as well, you need to provide it as a property. The Cursor positions are calculated with the largest possible character.
 
+M5Core2 has SPRAM, so you can get a full screen buffer as well. Refer to the [Graphics samples](https://github.com/nanoframework/Samples#graphics-for-screens) to understand all you can do with it.
+
 ### Buttons
 
 The main buttons except the power buttons are exposed.
@@ -116,11 +120,13 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
+> Note: The M5Core2 has touch screen and the buttons are part of it. So far .NET nanoFramework does not have the support for them and thus, they are not supported yet. PR to improve this situation welcome!
+
 ### Power management
 
 Both M5Stack and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
 
-Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Stack.
+Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Stack.
 
 ### Accelerometer and Gyroscope
 
@@ -157,7 +163,7 @@ Console.WriteLine($"h={headDir:N2}  ");
 
 ### SerialPort
 
-The M5Stack can provide a Serial Port, just get it like this:
+The M5Stack and M5Core2 can provide a Serial Port, just get it like this:
 
 ```csharp
 // You can access any of the Serial Port feature
@@ -200,7 +206,7 @@ SpiDevice mySpi = M5Stack.GetSpiDevice(5);
 
 ### GPIO Controller
 
-Similar as previously, you can get the `GpioController` on any of the M5Stack and M5StickC/CPlus:
+Similar as previously, you can get the `GpioController` on any of the M5Stack, M5Core2 and M5StickC/CPlus:
 
 ```csharp
 // This will open the GPIO 36 as output

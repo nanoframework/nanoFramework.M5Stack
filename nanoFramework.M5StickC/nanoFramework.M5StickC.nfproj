@@ -30,7 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.0.218\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.0.235\lib\Iot.Device.Axp192.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
@@ -151,6 +151,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="key.snk" />
     <None Include="packages.config" />
     <None Include="Resources\consolas_regular_8.tinyfnt" />
   </ItemGroup>

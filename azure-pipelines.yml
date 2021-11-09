@@ -47,6 +47,10 @@ steps:
   parameters:
     nugetPackageName: 'nanoFramework.M5StickCPlus'
 
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5Core2'
+
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
 # create or update GitHub release
@@ -59,7 +63,7 @@ steps:
     tag: v$(MY_NUGET_VERSION)
     title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
     releaseNotesSource: inline
-    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [.NET (client API only)](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [.NET (server API only)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
     assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
     assetUploadMode: replace
     isPreRelease: true
@@ -76,7 +80,7 @@ steps:
     tag: v$(MY_NUGET_VERSION)
     title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
     releaseNotesSource: inline
-    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [.NET (client API only)](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [.NET (server API only)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
     assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
     assetUploadMode: replace
     isPreRelease: false
