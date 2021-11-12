@@ -6,7 +6,7 @@
                                                                                
 ===================================================================================
 
-API docs: https://docs.nanoframework.net/api/nanoFramework.M5Stack.html
+API docs: https://docs.nanoframework.net/api/
 
 Browse our samples repository: https://github.com/nanoframework/samples
 
