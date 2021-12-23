@@ -32,12 +32,12 @@
       <dependency id="nanoFramework.Runtime.Native" version="1.5.2" />
       <dependency id="nanoFramework.System.Buffers.Binary.BinaryPrimitives" version="1.0.259" />
       <dependency id="nanoFramework.System.Collections" version="1.3.0" />
-      <dependency id="nanoFramework.System.Device.Adc" version="1.0.0-preview.13" />
+      <dependency id="nanoFramework.System.Device.Adc" version="1.0.1" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.2" />
       <dependency id="nanoFramework.System.Device.Gpio" version="1.0.2" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.2" />
       <dependency id="nanoFramework.System.Device.Model" version="1.0.259" />
-      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.0-preview.20" />
+      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.0" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.2" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.259" />
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.2" />
