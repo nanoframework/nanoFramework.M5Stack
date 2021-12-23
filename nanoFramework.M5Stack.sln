@@ -1,0 +1,98 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Stack", "nanoFramework.M5Stack\nanoFramework.M5Stack.nfproj", "{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A689EB3-86E0-448E-99F4-3D644EC3D8C5}"
+	ProjectSection(SolutionItems) = preProject
+		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
+		nanoFramework.M5Stack.nuspec = nanoFramework.M5Stack.nuspec
+		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
+		nanoFramework.M5StickCPlus.nuspec = nanoFramework.M5StickCPlus.nuspec
+		NuGet.Config = NuGet.Config
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5StackTestApp", "Tests\M5StackTestApp\M5StackTestApp.nfproj", "{90A94170-2C6B-4B22-BAA5-8212AC22219B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5972CDE6-43B4-42F0-9276-6B70B7EF6437}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "M5StackCommon", "M5StackCommon\M5StackCommon.shproj", "{00E23322-2401-4087-ABAE-24F90C8A0422}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5StickC", "nanoFramework.M5StickC\nanoFramework.M5StickC.nfproj", "{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5StickCPlus", "nanoFramework.M5StickCPlus\nanoFramework.M5StickCPlus.nfproj", "{3D7119D0-557F-480F-A1CB-3540C71101AB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "nanoFramework.M5StickCommon", "nanoFramework.M5StickCommon\nanoFramework.M5StickCommon.shproj", "{1F49B255-573D-4D02-87DA-08C4A95744B0}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5StickTestApp", "Tests\M5StickTestApp\M5StickTestApp.nfproj", "{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Core2", "nanoFramework.M5Core2\nanoFramework.M5Core2.nfproj", "{08C2EFD2-2812-456E-9D27-606AE88B3C1B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "nanoFramework.M5StackCore", "nanoFramework.M5StackCore\nanoFramework.M5StackCore.shproj", "{11C92E50-70F6-473B-91F8-488AC7E4C39D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared projects", "Shared projects", "{FFF3F871-7600-480E-B378-95AD0F9FC0F1}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		M5StackCommon\M5StackCommon.projitems*{00e23322-2401-4087-abae-24f90c8a0422}*SharedItemsImports = 13
+		nanoFramework.M5StackCore\nanoFramework.M5StackCore.projitems*{11c92e50-70f6-473b-91f8-488ac7e4c39d}*SharedItemsImports = 13
+		nanoFramework.M5StickCommon\nanoFramework.M5StickCommon.projitems*{1f49b255-573d-4d02-87da-08c4a95744b0}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FD3FBA-95B3-4228-BC7B-9A6F6CED7E4B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7119D0-557F-480F-A1CB-3540C71101AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90A94170-2C6B-4B22-BAA5-8212AC22219B} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{00E23322-2401-4087-ABAE-24F90C8A0422} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
+		{1F49B255-573D-4D02-87DA-08C4A95744B0} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
+		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{11C92E50-70F6-473B-91F8-488AC7E4C39D} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,97 @@
+trigger:
+  branches:
+    include: [main, develop, "release-*" ]
+  paths:
+    exclude: [README.md, LICENSE.md, NuGet.Config, .github_changelog_generator, .gitignore]
+  tags:
+    include: ["v*"]
+
+# PR always trigger build
+pr:
+  autoCancel: true
+
+# add nf-tools repo to resources (for Azure Pipelines templates)
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: nanoframework/nf-tools
+      endpoint: nanoframework
+
+pool:
+  vmImage: 'windows-2019'
+
+variables:
+  DOTNET_NOLOGO: true
+  solution: 'nanoFramework.M5Stack.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  nugetPackageName: 'nanoFramework.M5Stack'
+
+steps:
+
+# step from template @ nf-tools repo
+# build steps only
+- template: azure-pipelines-templates/class-lib-build-only.yml@templates  
+  parameters:
+    sonarCloudProject: 'nanoframework_lib-nanoFramework.M5Stack'
+
+# package steps
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5Stack'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5StickC'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5StickCPlus'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.M5Core2'
+
+- template: azure-pipelines-templates/class-lib-publish.yml@templates  
+
+# create or update GitHub release
+- task: GithubRelease@1
+  condition: and( succeeded(), eq(variables['System.PullRequest.PullRequestId'], ''), not( startsWith(variables['Build.SourceBranch'], 'refs/tags/v') ), ne( variables['StartReleaseCandidate'], true ) )
+  displayName: Create/Update GitHub PREVIEW release
+  inputs:
+    gitHubConnection: 'github.com_nano-$(System.TeamProject)'
+    tagSource: userSpecifiedTag
+    tag: v$(MY_NUGET_VERSION)
+    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
+    releaseNotesSource: inline
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
+    assetUploadMode: replace
+    isPreRelease: true
+    addChangeLog: false
+
+# create or update GitHub release ON tags from release or main branches
+- task: GithubRelease@1
+  condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v'), not(contains(variables['Build.SourceBranch'], 'preview') ), ne( variables['StartReleaseCandidate'], true ) )
+  displayName: Create/Update GitHub stable release
+  inputs:
+    action: edit
+    gitHubConnection: 'github.com_nano-$(System.TeamProject)'
+    tagSource: userSpecifiedTag
+    tag: v$(MY_NUGET_VERSION)
+    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
+    releaseNotesSource: inline
+    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [.NET](https://www.nuget.org/packages/$(nugetPackageName)/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
+    assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
+    assetUploadMode: replace
+    isPreRelease: false
+    addChangeLog: false
+
+# step from template @ nf-tools repo
+# report error
+- template: azure-pipelines-templates/discord-webhook-task.yml@templates  
+  parameters:
+    status: 'failure'
+    webhookUrl: '$(DiscordWebhook)'
+    message: ''
