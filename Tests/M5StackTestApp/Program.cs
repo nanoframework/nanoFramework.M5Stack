@@ -11,6 +11,7 @@ using nanoFramework.UI;
 using nanoFramework.Presentation.Media;
 using nanoFramework;
 using System.Numerics;
+using Console = nanoFramework.Console;
 
 Debug.WriteLine("Hello from nanoFramework!");
 

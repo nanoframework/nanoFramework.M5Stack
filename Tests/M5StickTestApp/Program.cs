@@ -7,7 +7,7 @@ using nanoFramework.Presentation.Media;
 using System;
 using System.Diagnostics;
 using System.Threading;
-
+using Console = nanoFramework.Console;
 
 Debug.WriteLine("Hello M5Stick from nanoFramework!");
 
