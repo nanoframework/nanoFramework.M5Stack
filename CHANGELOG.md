@@ -1,5 +1,25 @@
 # Changelog
 
+## [v1.0.0-preview.99](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.99) (2021-12-23)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.98...v1.0.0-preview.99)
+
+**Documentation and other chores:**
+
+- Update 2 nuget dependencies [\#38](https://github.com/nanoframework/nanoFramework.M5Stack/pull/38)
+
+## [v1.0.0-preview.98](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.98) (2021-12-23)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.94...v1.0.0-preview.98)
+
+**Documentation and other chores:**
+
+- Update 34 nuget dependencies [\#37](https://github.com/nanoframework/nanoFramework.M5Stack/pull/37)
+
+## [v1.0.0-preview.94](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.94) (2021-11-12)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.91...v1.0.0-preview.94)
+
 ## [v1.0.0-preview.91](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.0-preview.91) (2021-11-09)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.0-preview.88...v1.0.0-preview.91)
