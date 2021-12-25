@@ -10,6 +10,8 @@ using System;
 using System.Device.Adc;
 using System.Device.I2c;
 using UnitsNet;
+using System.Device.Gpio;
+using System.IO.Ports;
 
 namespace nanoFramework.M5Stack
 {   
@@ -209,7 +211,7 @@ namespace nanoFramework.M5Stack
             {
                 //On Core2 GPIO 32 is external I2C port A PA_SDA and GPIO 33 PA_SCL , therefore corresponding case 32 deleted
                 
-                //On Core2 GPIO39 is used as INT output from Touch pannel FT6336U chip , , therefore corresponding case 39 deleted
+                //On Core2 GPIO 39 is used as INT output from Touch pannel FT6336U chip , , therefore corresponding case 39 deleted
                     
                 case 0:
                     Configuration.SetPinFunction(0, DeviceFunction.ADC1_CH11);
