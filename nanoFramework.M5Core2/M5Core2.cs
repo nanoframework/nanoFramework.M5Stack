@@ -4,6 +4,7 @@
 using Iot.Device.Axp192;
 using Iot.Device.Rtc;
 using nanoFramework.Hardware.Esp32;
+using nanoFramework.M5Stack;
 using nanoFramework.M5Core2;
 using nanoFramework.Runtime.Native;
 using System;
@@ -12,6 +13,7 @@ using System.Device.I2c;
 using UnitsNet;
 using System.Device.Gpio;
 using System.IO.Ports;
+using Iot.Device.Button;
 
 namespace nanoFramework.M5Stack
 {   
