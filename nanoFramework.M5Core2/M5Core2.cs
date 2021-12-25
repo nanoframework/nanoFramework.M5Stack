@@ -12,13 +12,14 @@ using System.Device.I2c;
 using UnitsNet;
 
 namespace nanoFramework.M5Stack
-{
+{   
     public static partial class M5Core2
     {
         private static Pcf8563 _rtc;
         private static Axp192 _power;
         private static bool _powerLed;
         private static bool _vibrate;
+        private static GpioButton _touchPanel;
 
         /// <summary>
         /// Gets the power management of the M5Core2.
@@ -72,6 +73,23 @@ namespace nanoFramework.M5Stack
             {
                 _screen = new();
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
+            }
+        }
+        /// <summary>
+        /// Gets the TouchPanel.
+        /// </summary>
+        /// <remarks>Core2 TouchPanel is firstly just treated as a whole button i.e. exactly as the Core LeftButton as the Touch chip FT6336U INT output uses de same GPIO 39.The pooling or event handling when the TouchPanel has been pressing to extract the X-Y coordinates from the FT6336U via I2C bus (1) must be handled somewhere else</remarks>
+        public static GpioButton TouchPanel
+        {
+            get
+            {
+                if (_touchPanel == null)
+                {
+                    _touchPanel = new(39, _gpio, false);
+                    
+                }
+
+                return _touchPanel;
             }
         }
 
@@ -149,12 +167,6 @@ namespace nanoFramework.M5Stack
             // Second serial port
             Configuration.SetPinFunction(13, DeviceFunction.COM2_RX);
             Configuration.SetPinFunction(14, DeviceFunction.COM2_TX);
-            
-            //TO-DO: Core 2 GPIO39 must be configured as INTERRUPT input as is used as INT output from Touch pannel FT6336U chip
-            
-            //TO-DO: implement ISR to get interrupts from Core2 Touch pannel FT6336U chip
-            
-            //TO-DO: Implement function to reset the  Touch pannel FT6336U chip (LCD_RST = GPIO4 on https://docs.m5stack.com/en/core/core2 schematics )
 
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
@@ -195,12 +207,10 @@ namespace nanoFramework.M5Stack
 
             switch (gpioNumber)
             {
-                //case 32:  //On Core2 GPIO 32 is external I2C port A PA_SDA and GPIO 33 PA_SCL
-                    //Configuration.SetPinFunction(32, DeviceFunction.ADC1_CH4);
-                    //return _adc.OpenChannel(4);
-                //case 39: //On Core 2 GPIO39 is used as INT output from Touch pannel FT6336U chip
-                    //Configuration.SetPinFunction(39, DeviceFunction.ADC1_CH3);
-                    //return _adc.OpenChannel(3);
+                //On Core2 GPIO 32 is external I2C port A PA_SDA and GPIO 33 PA_SCL , therefore corresponding case 32 deleted
+                
+                //On Core2 GPIO39 is used as INT output from Touch pannel FT6336U chip , , therefore corresponding case 39 deleted
+                    
                 case 0:
                     Configuration.SetPinFunction(0, DeviceFunction.ADC1_CH11);
                     return _adc.OpenChannel(11);
