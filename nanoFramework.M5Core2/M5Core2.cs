@@ -80,10 +80,16 @@ namespace nanoFramework.M5Stack
             // Setup first the I2C bus
             Configuration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);
             Configuration.SetPinFunction(21, DeviceFunction.I2C1_DATA);
+            
+            //Setup the external I2C bus (Port A on Core2)
+            Configuration.SetPinFunction(33, DeviceFunction.I2C2_CLOCK);
+            Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);
 
             // Create the energy management device
             I2cDevice i2c = new(new I2cConnectionSettings(1, Axp192.I2cDefaultAddress));
             _power = new(i2c);
+            
+            //TO-DO, create a new I2cDevice also for Core2 I2C Port A
 
             // Configuration for M5Core2
             // AXP Vbus limit off
@@ -143,6 +149,12 @@ namespace nanoFramework.M5Stack
             // Second serial port
             Configuration.SetPinFunction(13, DeviceFunction.COM2_RX);
             Configuration.SetPinFunction(14, DeviceFunction.COM2_TX);
+            
+            //TO-DO: Core 2 GPIO39 must be configured as INTERRUPT input as is used as INT output from Touch pannel FT6336U chip
+            
+            //TO-DO: implement ISR to get interrupts from Core2 Touch pannel FT6336U chip
+            
+            //TO-DO: Implement function to reset the  Touch pannel FT6336U chip (LCD_RST = GPIO4 on https://docs.m5stack.com/en/core/core2 schematics )
 
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
@@ -183,12 +195,12 @@ namespace nanoFramework.M5Stack
 
             switch (gpioNumber)
             {
-                case 32:
-                    Configuration.SetPinFunction(32, DeviceFunction.ADC1_CH4);
-                    return _adc.OpenChannel(4);
-                case 39:
-                    Configuration.SetPinFunction(39, DeviceFunction.ADC1_CH3);
-                    return _adc.OpenChannel(3);
+                //case 32:  //On Core2 GPIO 32 is external I2C port A PA_SDA and GPIO 33 PA_SCL
+                    //Configuration.SetPinFunction(32, DeviceFunction.ADC1_CH4);
+                    //return _adc.OpenChannel(4);
+                //case 39: //On Core 2 GPIO39 is used as INT output from Touch pannel FT6336U chip
+                    //Configuration.SetPinFunction(39, DeviceFunction.ADC1_CH3);
+                    //return _adc.OpenChannel(3);
                 case 0:
                     Configuration.SetPinFunction(0, DeviceFunction.ADC1_CH11);
                     return _adc.OpenChannel(11);
