@@ -44,7 +44,7 @@ nanoff --target M5StickCPlus --update --preview --serialport COM3 --baud 115200
 # For the M5Core2:
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
-NOTE3: If the nanoff commands fail, make sure you did what is written on NOTE1.
+NOTE3: If the nanoff commands fails, make sure you have followed instruction from NOTE1 above.
 
 Once you have the nugets, you can then enjoy accessing the screen, the accelerometer, get a Grove I2C connecter, add events on the buttons. And you don't even need to think about anything, all is done for you in the most transparent way!
 
