@@ -141,7 +141,7 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
-> Note: The M5Core2 has touch screen and the buttons are "virtual"". At the time of this writting the .NET nanoFramework distributed team is already implementing and testing the touch-screen (touch-panel) functionality (will be released soon).  
+> Note: The M5Core2 has touch screen and the buttons are "virtual"". At the time of this writing the .NET nanoFramework team is implementing and testing the touch-screen (touch-panel) functionality (will be released soon).
 
 ### Power management
 
