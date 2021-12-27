@@ -61,9 +61,16 @@ using nanoFramework;
 
 The only thing you need to do to access the screen is to initialize it; nevetheless this is also target specific e.g.:
 
+For Core:
+
 ```csharp
-For Core use: M5Stack.InitializeScreen();
-For StickCPlus use: nanoFramework.M5Stick.M5StickCPlus.InitializeScreen();
+M5Stack.InitializeScreen();
+```
+
+For StickCPlus:
+
+```csharp
+M5StickCPlus.InitializeScreen();
 ```
 
 Once you've initialized it, you can access both a `Screen` static class and a `Console` static class.
