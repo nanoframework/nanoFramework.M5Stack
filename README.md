@@ -21,7 +21,11 @@
 
 ## Usage
 
-Those 4 nugets provide a support for the M5 Stack's Core (gray) [M5Stack](https://docs.m5stack.com/en/products?id=core), [M5StickC](https://docs.m5stack.com/en/core/m5stickc), [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) and [M5Core2](https://docs.m5stack.com/en/core/core2).
+These NuGet packages provide a support for M5Stack products: 
+- [Core (gray)](https://docs.m5stack.com/en/products?id=core)
+- [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
+- [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) 
+- [M5Core2](https://docs.m5stack.com/en/core/core2).
 
 IMPORTANT: The M5Stack NuGet Package must only be used for application targeting the M5 Stack's Core (gray); the other 3 NuGets must be used individually depending on your target according its name.
 NOTE1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to https://api.nuget.org/v3/index.json , otherwise add it.
