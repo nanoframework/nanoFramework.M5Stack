@@ -34,7 +34,7 @@ NOTE2: When invoking VS > Project > Manage NuGet Packages make sure that in the 
 The NuGets bring support for the screens as well and require to be flashed with the proper image (using dotnet CLI):
 
 ```shell
-# Replace the com port number by your COM port (on WIndows check it with the Device Manager) 
+# Replace `COM3` with the appropriate number of the COM port to which your device is connected. (on Windows you can check this in the Device Manager).
 # For the M5Stack:
 nanoff --target M5Stack --update --preview --serialport COM3
 # For the M5StickC:
