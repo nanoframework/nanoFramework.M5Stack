@@ -84,7 +84,7 @@ for (int i = 0; i < toSend.Length; i++)
 Screen.Write(0, 0, 10, 10, toSend);
 ```
 
-The Console class works in a similar way as the classic `System.Console` i.e. it writes to the remote Debbuger output on the host (VS):
+The Console class works in a similar way as the classic `System.Console`. In order to use it you have to reference it using the fully qualified name of the methods, like this:
 
 e.g. Debug.WriteLine("Hello from nanoFramework 1!");
 and Console.Write("Hello from nanoFramework 2!"); will both write on the Debugger output , not on the target device screen; in order to do that
