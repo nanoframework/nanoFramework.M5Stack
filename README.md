@@ -29,7 +29,7 @@ These NuGet packages provide a support for M5Stack products:
 
 IMPORTANT: The M5Stack NuGet Package must only be used for application targeting the M5 Stack's Core (gray); the other 3 NuGets must be used individually depending on your target according its name.
 NOTE1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to https://api.nuget.org/v3/index.json , otherwise add it.
-NOTE2: When invoking VS > Project > Manage NuGet Packages ... make sure that the "include prerelease" checkbox is clicked/selected and that in the Package source drop-down menu (right upper corner) "nuget.org" is selected.  
+NOTE2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
 
 The NuGets bring support for the screens as well and require to be flashed with the proper image (using dotnet CLI):
 
