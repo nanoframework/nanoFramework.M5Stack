@@ -21,12 +21,20 @@
 
 ## Usage
 
-Those 3 nugets provide a support for the [M5Stack](https://docs.m5stack.com/en/products?id=core), [M5StickC](https://docs.m5stack.com/en/core/m5stickc), [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) and [M5Core2](https://docs.m5stack.com/en/core/core2).
+These NuGet packages provide a support for M5Stack products: 
+- [Core (gray)](https://docs.m5stack.com/en/products?id=core)
+- [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
+- [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) 
+- [M5Core2](https://docs.m5stack.com/en/core/core2).
 
-They bring support for the screens as well and require to be flashed with the proper image:
+IMPORTANT: The M5Stack NuGet Package must only be used for application targeting the M5 Stack's Core (gray); the other 3 NuGets must be used individually depending on your target according its name.
+NOTE1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to https://api.nuget.org/v3/index.json , otherwise add it.
+NOTE2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
+
+The NuGets bring support for the screens as well and require to be flashed with the proper image (using dotnet CLI):
 
 ```shell
-# Replace the com port number by your COM port
+# Replace `COM3` with the appropriate number of the COM port to which your device is connected. (on Windows you can check this in the Device Manager).
 # For the M5Stack:
 nanoff --target M5Stack --update --preview --serialport COM3
 # For the M5StickC:
@@ -36,6 +44,7 @@ nanoff --target M5StickCPlus --update --preview --serialport COM3 --baud 115200
 # For the M5Core2:
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
+NOTE3: If the nanoff commands fails, make sure you have followed instruction from NOTE1 above.
 
 Once you have the nugets, you can then enjoy accessing the screen, the accelerometer, get a Grove I2C connecter, add events on the buttons. And you don't even need to think about anything, all is done for you in the most transparent way!
 
@@ -43,12 +52,25 @@ Once you have the nugets, you can then enjoy accessing the screen, the accelerom
 
 In the samples below, we'll use either M5Stack, either M5Stick as examples, they are all working in a very similar way.
 
+### namespaces
+
+Make sure you add the proper namespaces reference to your C# program header e.g.
+using nanoFramework;
+
 ### Screen
 
-The only thing you need to do to access the screen is to initialize it:
+The only thing you need to do to access the screen is to initialize it (please note that `InitializeScreen()` it's target specific) e.g.:
+
+For Core:
 
 ```csharp
 M5Stack.InitializeScreen();
+```
+
+For StickCPlus:
+
+```csharp
+M5StickCPlus.InitializeScreen();
 ```
 
 Once you've initialized it, you can access both a `Screen` static class and a `Console` static class.
@@ -69,22 +91,22 @@ for (int i = 0; i < toSend.Length; i++)
 Screen.Write(0, 0, 10, 10, toSend);
 ```
 
-The Console class works in a similar way as the classic `System.Console`:
+The Console class works in a similar way as the classic `System.Console`. In order to use it you have to reference it using the fully qualified name of the methods, like this:
 
 ```csharp
-Console.Clear();
+nanoFramework.Console.Clear();
 
 // Test the console display
-Console.Write("This is a short text. ");
-Console.ForegroundColor = Color.Red;
-Console.WriteLine("This one displays in red after the previous one and is already at the next line.");
-Console.BackgroundColor = Color.Yellow;
-Console.ForegroundColor = Color.RoyalBlue;
-Console.WriteLine("And this is blue on yellow background");
-Console.ResetColor();
-Console.CursorLeft = 0;
-Console.CursorTop = 8;
-Console.Write("This is white on black again and on 9th line");
+nanoFramework.Console.Write("This is a short text. ");
+nanoFramework.Console.ForegroundColor = nanoFramework.Presentation.Media.Color.Red;
+nanoFramework.Console.WriteLine("This one displays in red after the previous one and is already at the next line.");
+nanoFramework.Console.BackgroundColor = nanoFramework.Presentation.Media.Color.Yellow;
+nanoFramework.Console.ForegroundColor = nanoFramework.Presentation.Media.Color.RoyalBlue;
+nanoFramework.Console.WriteLine("And this is blue on yellow background");
+nanoFramework.Console.ResetColor();
+nanoFramework.Console.CursorLeft = 0;
+nanoFramework.Console.CursorTop = 8;
+nanoFramework.Console.Write("This is white on black again and on 9th line");
 ```
 
 > Note: You can change the default font as well, you need to provide it as a property. The Cursor positions are calculated with the largest possible character.
@@ -122,11 +144,11 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
-> Note: The M5Core2 has touch screen and the buttons are part of it. So far .NET nanoFramework does not have the support for them and thus, they are not supported yet. PR to improve this situation welcome!
+> Note: The M5Core2 has touch screen and the buttons are "virtual"". At the time of this writing the .NET nanoFramework team is implementing and testing the touch-screen (touch-panel) functionality (will be released soon).
 
 ### Power management
 
-Both M5Stack and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
+The M5Stack (Core) and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
 
 Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Stack.
 
