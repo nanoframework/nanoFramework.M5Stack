@@ -9,6 +9,6 @@
     <Import_RootNamespace>nanoFramework.M5StackCore</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)M5StackBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)M5CoreBase.cs" />
   </ItemGroup>
 </Project>

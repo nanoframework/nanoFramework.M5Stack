@@ -1,18 +1,18 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+using Iot.Device.Magnetometer;
+using Iot.Device.Mpu6886;
 using System.Device.Adc;
 using System.Device.Dac;
 using System.Device.Gpio;
 using System.Device.I2c;
 using System.Device.Spi;
 using System.IO.Ports;
-using Iot.Device.Magnetometer;
-using Iot.Device.Mpu6886;
 
 namespace nanoFramework.M5Stack
 {
-#if M5CORE
+#if M5CORE2
     /// <summary>
     /// M5Core2 board
     /// </summary>
@@ -21,7 +21,7 @@ namespace nanoFramework.M5Stack
     /// <summary>
     /// M5Stack board
     /// </summary>
-    public static partial class M5Stack
+    public static partial class M5Core
 #endif
     {
         private static Bmm150 _bmm150;
@@ -29,8 +29,8 @@ namespace nanoFramework.M5Stack
         private static GpioController _gpio;
         private static DacChannel _dac1;
         private static DacChannel _dac2;
-#if M5CORE
-        private static nanoFramework.M5Core2.Screen _screen;
+#if M5CORE2
+        private static nanoFramework.M5Stack.Screen _screen;
 #else
         private static nanoFramework.M5Stack.Screen _screen;
 #endif

@@ -4,14 +4,14 @@
 
 -----
 
-# Welcome to the .NET **nanoFramework** M5Stack Library repository
+# Welcome to the .NET **nanoFramework** M5Stack Libraries repository
 
 ## Build status
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.M5Stack | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Stack.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Stack/) |
-| nanoFramework.M5Stack (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Stack.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Stack/) |
+| nanoFramework.M5Core | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Core.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Stack/) |
+| nanoFramework.M5Core (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Core.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Stack/) |
 | nanoFramework.M5Stick | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5StickC.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickC/) |
 | nanoFramework.M5Stick (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5StickC.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickC/) |
 | nanoFramework.M5StickCPlus | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
@@ -21,38 +21,52 @@
 
 ## Usage
 
-These NuGet packages provide a support for M5Stack products: 
-- [Core (gray)](https://docs.m5stack.com/en/products?id=core)
-- [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
-- [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus) 
-- [M5Core2](https://docs.m5stack.com/en/core/core2).
+These NuGet packages provide a support for M5Stack products:
 
-IMPORTANT: The M5Stack NuGet Package must only be used for application targeting the M5 Stack's Core (gray); the other 3 NuGets must be used individually depending on your target according its name.
+- [Core (gray) and Basic](https://docs.m5stack.com/en/products?id=core)
+- [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
+- [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
+- [M5Core2](https://docs.m5stack.com/en/core/core2)
+
 NOTE1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to https://api.nuget.org/v3/index.json , otherwise add it.
 NOTE2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
 
-The NuGets bring support for the screens as well and require to be flashed with the proper image (using dotnet CLI):
+The NuGets bring support for the screens as well and require to be flashed with the proper image (using [`nanoff`](https://github.com/nanoframework/nanoFirmwareFlasher) dotnet CLI).
+On the examples below replace `COM3` with the appropriate number of the COM port to which your device is connected. (on Windows you can check this in the Device Manager).
+
+For the M5Core:
 
 ```shell
-# Replace `COM3` with the appropriate number of the COM port to which your device is connected. (on Windows you can check this in the Device Manager).
-# For the M5Stack:
-nanoff --target M5Stack --update --preview --serialport COM3
-# For the M5StickC:
+nanoff --target M5Core --update --preview --serialport COM3
+```
+
+For the M5StickC:
+
+```shell
 nanoff --target M5StickC --update --preview --serialport COM3 --baud 115200
-# For the M5StickCPlus:
-nanoff --target M5StickCPlus --update --preview --serialport COM3 --baud 115200
-# For the M5Core2:
+```
+
+For the M5StickCPlus:
+
+```shell
+nanoff --target M5StickCPlus --update --preview --serialport COM3
+```
+
+For the M5Core2:
+
+```shell
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
-NOTE3: If the nanoff commands fails, make sure you have followed instruction from NOTE1 above.
 
-Once you have the nugets, you can then enjoy accessing the screen, the accelerometer, get a Grove I2C connecter, add events on the buttons. And you don't even need to think about anything, all is done for you in the most transparent way!
+NOTE3: If the `nanoff` commands fails, make sure you have followed instruction from NOTE1 above.
+
+Once you have the NuGets, you can then enjoy accessing the screen, the accelerometer, get a Grove I2C connecter, add events on the buttons. And you don't even need to think about anything, all is done for you in the most transparent way!
 
 > Note: All the classes that you'll have access are all using the Lazy pattern to be instantiated including the screen. This have the advantage to use as little memory and setup time as possible.
 
-In the samples below, we'll use either M5Stack, either M5Stick as examples, they are all working in a very similar way.
+In the samples below, we'll use either M5Core or M5Stick as examples, they are all working in a very similar way.
 
-### namespaces
+### Namespaces
 
 Make sure you add the proper namespaces reference to your C# program header e.g.
 using nanoFramework;
@@ -64,7 +78,7 @@ The only thing you need to do to access the screen is to initialize it (please n
 For Core:
 
 ```csharp
-M5Stack.InitializeScreen();
+M5Core.InitializeScreen();
 ```
 
 For StickCPlus:
@@ -75,7 +89,7 @@ M5StickCPlus.InitializeScreen();
 
 Once you've initialized it, you can access both a `Screen` static class and a `Console` static class.
 
-THe `Screen` one brings primitives to write directly on the screen points or scare of colors as well as writing a text.
+THe `Screen` one brings primitives to write directly on the screen points or scare of colours as well as writing a text.
 
 For example, you can write a blue square of 10x10 at the position 0, 0 like this:
 
@@ -148,17 +162,17 @@ M5StickC.M5Button.Holding += (sender, e) =>
 
 ### Power management
 
-The M5Stack (Core) and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
+The M5Core and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
 
-Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Stack.
+Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Core.
 
 ### Accelerometer and Gyroscope
 
 You can get access to the Accelerometer and Gyroscope like this:
 
 ```csharp
-var ag = M5Stack.AccelerometerGyroscope;
-// Do not move the M5Stack/M5Stick during the calibration
+var ag = M5Core.AccelerometerGyroscope;
+// Do not move the M5Core/M5Stick during the calibration
 ag.Calibrate(100);
 var acc = ag.GetAccelerometer();
 var gyr = ag.GetGyroscope();
@@ -170,12 +184,12 @@ Refer to the [MPU6886 documentation](https://github.com/nanoframework/nanoFramew
 
 ### Magnetometer
 
-The M5Stack has a magnetometer, you can access it as well:
+The M5Core has a magnetometer, you can access it as well:
 
 ```csharp
-var mag = M5Stack.Magnetometer;
+var mag = M5Core.Magnetometer;
 // It is more than strongly recommended to calibrate the magnetometer.
-// Move the M5Stack in all directions to have a proper calibration.
+// Move the M5Core in all directions to have a proper calibration.
 mag.CalibrateMagnetometer(100);
 var magVal = mag.ReadMagnetometer();
 Console.WriteLine($"x={magVal.X:N2}   ");
@@ -187,24 +201,24 @@ Console.WriteLine($"h={headDir:N2}  ");
 
 ### SerialPort
 
-The M5Stack and M5Core2 can provide a Serial Port, just get it like this:
+The M5Core and M5Core2 can provide a Serial Port, just get it like this:
 
 ```csharp
 // You can access any of the Serial Port feature
-M5Stack.SerialPort.Open(115200);
+M5Core.SerialPort.Open(115200);
 // Do anything else you need
-M5Stack.SerialPort.Close();
+M5Core.SerialPort.Close();
 ```
 
 Refer to the [SerialPort documentation](https://github.com/nanoframework/System.IO.Ports) for more information.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Stack, access them like this:
+ADC Channels are pre setup on the M5Core, access them like this:
 
 ```csharp
 // This will give you the ADC1 channel 7 which is on pin 35
-AdcChannel myChannel = M5Stack.GetAdcGpio(35);
+AdcChannel myChannel = M5Core.GetAdcGpio(35);
 ```
 
 Refer to the M5Stack documentation to have the mapping of the ADC channels and the pins.
@@ -215,22 +229,22 @@ You can get an I2cDevice/Grove like this:
 
 ```csharp
 // In this example, the I2C address of the device is 0x42:
-I2cDevice myDevice = M5Stack.GetGrove(0x42);
+I2cDevice myDevice = M5Core.GetGrove(0x42);
 // replacing GetGrove by GetI2cDevice will have the same impact
 ```
 
 ### SPI Device
 
-The M5Stack provides as well an SPiDevice:
+The M5Core provides as well an SpiDevice:
 
 ```csharp
 // In this case GPIO5 will be used as chip select:
-SpiDevice mySpi = M5Stack.GetSpiDevice(5);
+SpiDevice mySpi = M5Core.GetSpiDevice(5);
 ```
 
 ### GPIO Controller
 
-Similar as previously, you can get the `GpioController` on any of the M5Stack, M5Core2 and M5StickC/CPlus:
+Similar as previously, you can get the `GpioController` on any of the M5Core, M5Core2 and M5StickC/CPlus:
 
 ```csharp
 // This will open the GPIO 36 as output
@@ -239,7 +253,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Stack exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 

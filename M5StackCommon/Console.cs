@@ -3,9 +3,8 @@
 
 using nanoFramework.Presentation.Media;
 using nanoFramework.UI;
-using System;
 
-namespace nanoFramework
+namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// Console class to display text on screens

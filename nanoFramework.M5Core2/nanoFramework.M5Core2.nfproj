@@ -15,7 +15,7 @@
     <RootNamespace>nanoFramework.M5Core2</RootNamespace>
     <AssemblyName>nanoFramework.M5Core2</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
-    <DefineConstants>$(DefineConstants);M5CORE</DefineConstants>
+    <DefineConstants>$(DefineConstants);M5CORE2</DefineConstants>
     <DocumentationFile>bin\$(Configuration)\nanoFramework.M5Core2.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />

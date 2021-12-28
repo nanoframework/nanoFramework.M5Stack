@@ -17,7 +17,7 @@ using nanoFramework.M5StickC;
 #else
 using nanoFramework.M5StickCPlus;
 #endif
-namespace nanoFramework.M5Stick
+namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// The base class for both M5STickC and M5StickCPlus
