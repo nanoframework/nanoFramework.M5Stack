@@ -59,7 +59,7 @@ using nanoFramework;
 
 ### Screen
 
-The only thing you need to do to access the screen is to initialize it; nevetheless this is also target specific e.g.:
+The only thing you need to do to access the screen is to initialize it (please note that `InitializeScreen()` it's target specific) e.g.:
 
 For Core:
 
