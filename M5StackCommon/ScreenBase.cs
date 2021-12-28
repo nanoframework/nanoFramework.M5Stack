@@ -3,7 +3,6 @@
 
 using nanoFramework.Presentation.Media;
 using nanoFramework.UI;
-using System;
 using System.Device.Gpio;
 
 namespace nanoFramework.M5Stack

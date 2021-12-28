@@ -4,25 +4,18 @@
 using Iot.Device.Button;
 using Iot.Device.Buzzer;
 using Iot.Device.Ip5306;
-using Iot.Device.Magnetometer;
-using Iot.Device.Mpu6886;
 using nanoFramework.Hardware.Esp32;
-using nanoFramework.UI;
 using System;
-using System.Device.Dac;
-using System.Device.Gpio;
-using System.Device.I2c;
-using System.Device.Spi;
-using System.IO.Ports;
-using UnitsNet;
 using System.Device.Adc;
+using System.Device.I2c;
+using UnitsNet;
 
 namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// M5Stack board
     /// </summary>
-    public static partial class M5Stack
+    public static partial class M5Core
     {
         private static Ip5306 _power;
         private static Buzzer _buzzer;        
@@ -122,7 +115,7 @@ namespace nanoFramework.M5Stack
 
         #endregion
 
-        static M5Stack()
+        static M5Core()
         {
             // Setup first the I2C bus
             Configuration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);

@@ -3,9 +3,8 @@
 
 using Iot.Device.Buzzer;
 using nanoFramework.Hardware.Esp32;
-using System;
 
-namespace nanoFramework.M5Stick
+namespace nanoFramework.M5Stack
 {
     public static partial class M5StickCPlus
     {

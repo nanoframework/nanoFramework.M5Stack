@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>nanoFramework.M5Stack</id>
+    <id>nanoFramework.M5Core</id>
     <version>$version$</version>
-    <title>nanoFramework.M5Stack</title>
+    <title>nanoFramework.M5Core</title>
     <authors>nanoFramework project contributors</authors>
     <owners>nanoFramework,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,8 +16,8 @@
     <icon>images\nf-logo.png</icon>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
-    <description>This package includes the nanoFramework.M5Stack assembly for .NET nanoFramework C# projects.</description>
-    <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Stack</tags>
+    <description>This package includes the nanoFramework.M5Core assembly for .NET nanoFramework C# projects.</description>
+    <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Core</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.11.7" />
       <dependency id="nanoFramework.Graphics" version="1.0.1" />
@@ -49,11 +49,11 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.dll" target="lib\nanoFramework.M5Stack.dll" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pdb" target="lib\nanoFramework.M5Stack.pdb" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pdbx" target="lib\nanoFramework.M5Stack.pdbx" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.pe" target="lib\nanoFramework.M5Stack.pe" />
-    <file src="nanoFramework.M5Stack\bin\Release\nanoFramework.M5Stack.xml" target="lib\nanoFramework.M5Stack.xml" />
+    <file src="nanoFramework.M5Core\bin\Release\nanoFramework.M5Core.dll" target="lib\nanoFramework.M5Core.dll" />
+    <file src="nanoFramework.M5Core\bin\Release\nanoFramework.M5Core.pdb" target="lib\nanoFramework.M5Core.pdb" />
+    <file src="nanoFramework.M5Core\bin\Release\nanoFramework.M5Core.pdbx" target="lib\nanoFramework.M5Core.pdbx" />
+    <file src="nanoFramework.M5Core\bin\Release\nanoFramework.M5Core.pe" target="lib\nanoFramework.M5Core.pe" />
+    <file src="nanoFramework.M5Core\bin\Release\nanoFramework.M5Core.xml" target="lib\nanoFramework.M5Core.xml" />
     <file src="assets\readme.txt" target="" />
     <file src="README.md" target="docs\" />
     <file src="assets\nf-logo.png" target="images\" />
