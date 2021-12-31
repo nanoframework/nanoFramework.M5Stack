@@ -39,10 +39,10 @@
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.259" />
       <dependency id="nanoFramework.System.Numerics" version="1.0.259" />
       <dependency id="nanoFramework.System.Math" version="1.4.3" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.111.0" />
-      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.111.0" />
-      <dependency id="UnitsNet.nanoFramework.Power" version="4.111.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.111.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.112.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.112.0" />
+      <dependency id="UnitsNet.nanoFramework.Power" version="4.112.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.112.0" />
     </dependencies>
   </metadata>
   <files>
