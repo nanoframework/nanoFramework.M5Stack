@@ -43,9 +43,9 @@
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.4" />
       <dependency id="nanoFramework.System.Numerics" version="1.0.259" />
       <dependency id="nanoFramework.System.Math" version="1.4.3" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.110.0" />
-      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.110.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.110.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.111.0" />
+      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.111.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.111.0" />
     </dependencies>
   </metadata>
   <files>
