@@ -25,7 +25,9 @@ namespace nanoFramework.M5Stack
         private static bool _powerLed;
         private static bool _vibrate;
         private static Ft6xx6x _touchController;
-        private static Thread _touchThrad;
+        private static Thread _callbackThread;
+        private static CancellationTokenSource _cancelThread;
+        private static CancellationTokenSource _startThread;
 
         /// <summary>
         /// Touch event handler for the touch event.
@@ -109,7 +111,9 @@ namespace nanoFramework.M5Stack
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
                 _touchController.SetInterruptMode(false);
-                _touchThrad = new(ThreadTouchCallback);
+                _startThread = new();
+                _callbackThread = new(ThreadTouchCallback);
+                _callbackThread.Start();
                 _gpio.OpenPin(TouchPinInterrupt, PinMode.Input);
                 _gpio.RegisterCallbackForPinValueChangedEvent(TouchPinInterrupt, PinEventTypes.Rising | PinEventTypes.Falling, TouchCallback);
             }
@@ -119,26 +123,27 @@ namespace nanoFramework.M5Stack
         {
             if (pinValueChangedEventArgs.ChangeType == PinEventTypes.Falling)
             {
-                if (_touchThrad.ThreadState == ThreadState.Unstarted)
-                {
-                    _touchThrad.Start();
-                }
-                else
-                {
-                    _touchThrad.Resume();
-                }
+                _cancelThread = new();
+                _startThread.Cancel();
             }
             else
             {
-                _touchThrad.Suspend();
+                _startThread = new();
+                _cancelThread.Cancel();
                 var point = _touchController.GetPoint(true);
-                var touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown) | TouchEventCategory.LiftUp;                
+                var touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown) | TouchEventCategory.LiftUp;
                 TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
             }
         }
 
         private static void ThreadTouchCallback()
         {
+        start:
+            while (!_startThread.IsCancellationRequested)
+            {
+                _startThread.Token.WaitHandle.WaitOne(1000, true);
+            }
+
             int touchNumber;
             TouchEventCategory touchCategory;
             do
@@ -148,7 +153,7 @@ namespace nanoFramework.M5Stack
                 {
                     var point = _touchController.GetPoint(true);
                     touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown);
-                    touchCategory  = point.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
+                    touchCategory = point.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
                     TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
                 }
                 else if (touchNumber == 2)
@@ -164,8 +169,9 @@ namespace nanoFramework.M5Stack
 
                 // This is necessary to give time to the touch sensor
                 // In theory, the wait should be calculated with the period
-                Thread.Sleep(10);
-            } while (true);
+                _cancelThread.Token.WaitHandle.WaitOne(10, true);
+            } while (!_cancelThread.IsCancellationRequested);
+            goto start;
         }
 
         private static TouchEventCategory CheckIfInButtons(int x, int y, TouchEventCategory touchCategory)
