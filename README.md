@@ -28,8 +28,8 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
 
-NOTE1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to https://api.nuget.org/v3/index.json , otherwise add it.
-NOTE2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
+> Note 1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to <https://api.nuget.org/v3/index.json> , otherwise add it.
+> Note 2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
 
 The NuGets bring support for the screens as well and require to be flashed with the proper image (using [`nanoff`](https://github.com/nanoframework/nanoFirmwareFlasher) dotnet CLI).
 On the examples below replace `COM3` with the appropriate number of the COM port to which your device is connected. (on Windows you can check this in the Device Manager).
@@ -58,11 +58,11 @@ For the M5Core2:
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
 
-NOTE3: If the `nanoff` commands fails, make sure you have followed instruction from NOTE1 above.
+> Note 3: If the `nanoff` commands fails, make sure you have followed instruction from Note 1 above.
 
 Once you have the NuGets, you can then enjoy accessing the screen, the accelerometer, get a Grove I2C connecter, add events on the buttons. And you don't even need to think about anything, all is done for you in the most transparent way!
 
-> Note: All the classes that you'll have access are all using the Lazy pattern to be instantiated including the screen. This have the advantage to use as little memory and setup time as possible.
+> Note 4: All the classes that you'll have access are all using the Lazy pattern to be instantiated including the screen. This have the advantage to use as little memory and setup time as possible.
 
 In the samples below, we'll use either M5Core or M5Stick as examples, they are all working in a very similar way.
 
@@ -158,7 +158,82 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
-> Note: The M5Core2 has touch screen and the buttons are "virtual"". At the time of this writing the .NET nanoFramework team is implementing and testing the touch-screen (touch-panel) functionality (will be released soon).
+> Note: The M5Core2 has touch screen and the buttons are "virtual"". See next section to see how to use them.
+
+### M5Core2 touch panel and buttons
+
+The touch panel comes with the screen. Both are initialized and activated at the same time. To get the touch events, you'll have to register to the `TouchEvent` event:
+
+```csharp
+M5Core2.InitializeScreen();
+M5Core2.TouchEvent += TouchEventCallback;
+```
+
+Here is an example on how to check if you are on a button or not and get the various elements:
+
+```csharp
+void TouchEventCallback(object sender, TouchEventArgs e)
+{
+    const string StrLB = "LEFT BUTTON PRESSED  ";
+    const string StrMB = "MIDDLE BUTTON PRESSED  ";
+    const string StrRB = "RIGHT BUTTON PRESSED  ";
+    const string StrXY1 = "TOUCHED at X= ";
+    const string StrXY2 = ",Y= ";
+    const string StrID = ",Id= ";
+    const string StrDoubleTouch = "Double touch. ";
+    const string StrMove = "Moving... ";
+    const string StrLiftUp = "Lift up. ";
+
+    Debug.WriteLine($"Touch Panel Event Received Category= {e.EventCategory} Subcategory= {e.TouchEventCategory}");
+    Console.CursorLeft = 0;
+    Console.CursorTop = 0;
+
+    Debug.WriteLine(StrXY1 + e.X + StrXY2 + e.Y + StrID + e.Id);
+    Console.WriteLine(StrXY1 + e.X + StrXY2 + e.Y + StrID + e.Id + "  ");
+
+    if ((e.TouchEventCategory & TouchEventCategory.LeftButton) == TouchEventCategory.LeftButton)
+    {
+        Debug.WriteLine(StrLB);
+        Console.WriteLine(StrLB);
+    }
+    else if ((e.TouchEventCategory & TouchEventCategory.MiddleButton) == TouchEventCategory.MiddleButton)
+    {
+        Debug.WriteLine(StrMB);
+        Console.WriteLine(StrMB);
+    }
+    else if ((e.TouchEventCategory & TouchEventCategory.RightButton) == TouchEventCategory.RightButton)
+    {
+        Debug.WriteLine(StrRB);
+        Console.WriteLine(StrRB);
+    }
+
+    if ((e.TouchEventCategory & TouchEventCategory.Moving) == TouchEventCategory.Moving)
+    {
+        Debug.WriteLine(StrMove);
+        Console.Write(StrMove);
+    }
+
+    if ((e.TouchEventCategory & TouchEventCategory.LiftUp) == TouchEventCategory.LiftUp)
+    {
+        Debug.WriteLine(StrLiftUp);
+        Console.Write(StrLiftUp);
+    }
+
+    if ((e.TouchEventCategory & TouchEventCategory.DoubleTouch) == TouchEventCategory.DoubleTouch)
+    {
+        Debug.WriteLine(StrDoubleTouch);
+        Console.Write(StrDoubleTouch);
+    }
+
+    Console.WriteLine("                                    ");
+    Console.WriteLine("                                    ");
+    Console.WriteLine("                                    ");
+}
+```
+
+The `TouchEventCategory` enum is a flag and can combine buttons and states. The buttons are mutually exclusive, so you can only have the Left, Middle or Right button, the states are `Moving` and `LiftUp`. `Moving` is happening when a contact has already been made and the touch point is moving. `LiftUp` will appear when the contact is released.
+
+`DoubleTouch` is a specific that let you know there is another contact point happening. Each contact point will receive this flag. The event will be raised 2 times, one for each point. In a double touch context, you may not get the second point `LiftUp` event but you'll get the change with the disappearance of the DoubleTouch flag and the final `LiftUp` on the first point.
 
 ### Power management
 

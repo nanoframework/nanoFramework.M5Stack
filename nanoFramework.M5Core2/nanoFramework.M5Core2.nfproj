@@ -20,6 +20,7 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="TouchEventCategory.cs" />
     <Compile Include="M5Core2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.Designer.cs">
@@ -28,6 +29,7 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Screen.cs" />
+    <Compile Include="TouchEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -45,6 +47,9 @@
     <Reference Include="Iot.Device.Common.NumberHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.0.259\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Iot.Device.Ft6xx6x">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ft6xx6x.1.0.1\lib\Iot.Device.Ft6xx6x.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.272\lib\Iot.Device.Mpu6886.dll</HintPath>
