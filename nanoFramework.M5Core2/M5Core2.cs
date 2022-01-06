@@ -171,7 +171,13 @@ namespace nanoFramework.M5Stack
                 // In theory, the wait should be calculated with the period
                 _cancelThread.Token.WaitHandle.WaitOne(10, true);
             } while (!_cancelThread.IsCancellationRequested);
-            goto start;
+
+            // If both token are cancelled, we exit. This is in case this won't become static and will have a dispose.
+            // Now, with the current logic, it will always run.
+            if (!(_cancelThread.IsCancellationRequested && _startThread.IsCancellationRequested))
+            {
+                goto start;
+            }
         }
 
         private static TouchEventCategory CheckIfInButtons(int x, int y, TouchEventCategory touchCategory)
