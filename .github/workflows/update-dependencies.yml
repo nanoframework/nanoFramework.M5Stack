@@ -20,7 +20,7 @@ jobs:
   update-dotnet-preview:
     name: Update .NET nanoFramework dependencies
     timeout-minutes: 30 # Non default because this solution has lots of projects to update!
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       GITHUB_TOKEN: ${{ github.token }}
     steps:
