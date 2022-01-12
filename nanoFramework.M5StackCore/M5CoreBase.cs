@@ -29,11 +29,7 @@ namespace nanoFramework.M5Stack
         private static GpioController _gpio;
         private static DacChannel _dac1;
         private static DacChannel _dac2;
-#if M5CORE2
-        private static nanoFramework.M5Stack.Screen _screen;
-#else
-        private static nanoFramework.M5Stack.Screen _screen;
-#endif
+        private static Screen _screen;
         private static SerialPort _serialPort;
         private static AdcController _adc;
 

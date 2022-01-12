@@ -40,7 +40,7 @@
       <dependency id="nanoFramework.System.Device.Pwm" version="1.0.0" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.3-preview.3" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.259" />
-      <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.4" />
+      <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.6" />
       <dependency id="nanoFramework.System.Numerics" version="1.0.259" />
       <dependency id="nanoFramework.System.Math" version="1.4.3" />
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.112.0" />

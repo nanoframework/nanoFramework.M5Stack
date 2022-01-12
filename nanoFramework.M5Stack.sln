@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared projects", "Shared p
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "nanoFramework.M5StackCore", "nanoFramework.M5StackCore\nanoFramework.M5StackCore.shproj", "{E2A94F3C-EE7F-4075-A98A-A19CABE82C0F}"
 EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5Core2TestApp", "Tests\M5Core2TestApp\M5Core2TestApp.nfproj", "{20266750-53F3-46D5-8626-1438AC985033}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		M5StackCommon\M5StackCommon.projitems*{00e23322-2401-4087-abae-24f90c8a0422}*SharedItemsImports = 13
@@ -81,6 +83,12 @@ Global
 		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{08C2EFD2-2812-456E-9D27-606AE88B3C1B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +99,7 @@ Global
 		{1F49B255-573D-4D02-87DA-08C4A95744B0} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 		{E2A94F3C-EE7F-4075-A98A-A19CABE82C0F} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
+		{20266750-53F3-46D5-8626-1438AC985033} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}
