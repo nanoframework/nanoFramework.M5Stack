@@ -104,8 +104,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Ports, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.IO.Ports.1.0.3-preview.4\lib\System.IO.Ports.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.IO.Ports.1.0.3-preview.6\lib\System.IO.Ports.dll</HintPath>
       <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="System.Math, Version=1.4.3.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Math.1.4.3\lib\System.Math.dll</HintPath>
