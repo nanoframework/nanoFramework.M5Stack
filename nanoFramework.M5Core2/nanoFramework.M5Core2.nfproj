@@ -156,7 +156,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="key.snk" />
     <None Include="packages.config" />
     <None Include="Resources\consolas_regular_16.tinyfnt" />
