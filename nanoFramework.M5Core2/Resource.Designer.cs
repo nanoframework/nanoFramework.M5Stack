@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nanoFramework.M5Core2
+namespace nanoFramework.M5Stack
 {
     
     internal partial class Resource
