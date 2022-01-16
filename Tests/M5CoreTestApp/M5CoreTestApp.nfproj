@@ -20,11 +20,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Bmm150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -128,12 +123,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\segoeuiregular12.tinyfnt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources.resx">
-      <Generator>nFResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\nanoFramework.M5Core\nanoFramework.M5Core.nfproj" />
