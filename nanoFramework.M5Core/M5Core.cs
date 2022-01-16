@@ -103,7 +103,11 @@ namespace nanoFramework.M5Stack
             if (_screen == null)
             {
                 _screen = new();
+#if M5CORE2
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
+#else
+                Console.Font = ResourceCore.GetFont(ResourceCore.FontResources.consolas_regular_16);
+#endif
             }
         }
 
@@ -113,7 +117,7 @@ namespace nanoFramework.M5Stack
         /// <remarks>Please make sure to read the documentation before adjusting any element.</remarks>
         public static Ip5306 Power { get => _power; }
 
-        #endregion
+#endregion
 
         static M5Core()
         {

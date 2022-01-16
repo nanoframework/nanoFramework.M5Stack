@@ -11,21 +11,21 @@
 namespace nanoFramework.M5Stack
 {
     
-    internal partial class Resource
+    internal partial class ResourceCore
     {
         private static System.Resources.ResourceManager manager;
         internal static System.Resources.ResourceManager ResourceManager
         {
             get
             {
-                if ((Resource.manager == null))
+                if ((ResourceCore.manager == null))
                 {
-                    Resource.manager = new System.Resources.ResourceManager("nanoFramework.M5Stack.Resource", typeof(Resource).Assembly);
+                    ResourceCore.manager = new System.Resources.ResourceManager("nanoFramework.M5Core.ResourceCore", typeof(ResourceCore).Assembly);
                 }
-                return Resource.manager;
+                return ResourceCore.manager;
             }
         }
-        internal static nanoFramework.UI.Font GetFont(Resource.FontResources id)
+        internal static nanoFramework.UI.Font GetFont(ResourceCore.FontResources id)
         {
             return ((nanoFramework.UI.Font)(nanoFramework.Runtime.Native.ResourceUtility.GetObject(ResourceManager, id)));
         }

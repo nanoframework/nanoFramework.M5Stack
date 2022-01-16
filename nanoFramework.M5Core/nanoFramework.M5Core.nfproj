@@ -35,10 +35,10 @@
   <ItemGroup>
     <Compile Include="M5Core.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource.Designer.cs">
+    <Compile Include="ResourceCore.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>ResourceCore.resx</DependentUpon>
     </Compile>
     <Compile Include="Screen.cs" />
   </ItemGroup>
@@ -159,9 +159,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resource.resx">
+    <EmbeddedResource Include="ResourceCore.resx">
       <Generator>nFResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>ResourceCore.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\M5StackCommon\M5StackCommon.projitems" Label="Shared" />
