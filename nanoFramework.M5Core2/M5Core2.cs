@@ -28,6 +28,7 @@ namespace nanoFramework.M5Stack
         private static Thread _callbackThread;
         private static CancellationTokenSource _cancelThread;
         private static CancellationTokenSource _startThread;
+        private static Point _lastPoint;
 
         /// <summary>
         /// Touch event handler for the touch event.
@@ -111,6 +112,8 @@ namespace nanoFramework.M5Stack
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
                 _touchController.SetInterruptMode(false);
+                _lastPoint = new();
+                _cancelThread = new();
                 _startThread = new();
                 _callbackThread = new(ThreadTouchCallback);
                 _callbackThread.Start();
@@ -130,9 +133,13 @@ namespace nanoFramework.M5Stack
             {
                 _startThread = new();
                 _cancelThread.Cancel();
-                var point = _touchController.GetPoint(true);
-                var touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown) | TouchEventCategory.LiftUp;
-                TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
+                var point = _touchController.GetPoint(true);                
+                if ((_lastPoint.X != point.X) && (_lastPoint.Y != point.Y))
+                {
+                    _lastPoint = point;
+                    var touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown) | TouchEventCategory.LiftUp;
+                    TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
+                }
             }
         }
 
@@ -152,6 +159,7 @@ namespace nanoFramework.M5Stack
                 if (touchNumber == 1)
                 {
                     var point = _touchController.GetPoint(true);
+                    _lastPoint = point;
                     touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown);
                     touchCategory = point.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
                     TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });

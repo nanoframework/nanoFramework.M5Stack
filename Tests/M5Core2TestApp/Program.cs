@@ -3,6 +3,7 @@
 
 using nanoFramework.M5Core2;
 using nanoFramework.M5Stack;
+using nanoFramework.Networking;
 using nanoFramework.Runtime.Native;
 using System;
 using System.Diagnostics;
@@ -12,6 +13,21 @@ using Console = nanoFramework.M5Stack.Console;
 M5Core2.InitializeScreen();
 
 Debug.WriteLine("Hello from M5Core2!");
+
+const string Ssid = "SSID";
+const string Password = "YourWifiPassword";
+// Give 60 seconds to the wifi join to happen
+CancellationTokenSource cs = new(60000);
+var success = WiFiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
+if (!success)
+{
+    // Something went wrong, you can get details with the ConnectionError property:
+    Debug.WriteLine($"Can't connect to the network, error: {WiFiNetworkHelper.Status}");
+    if (WiFiNetworkHelper.HelperException != null)
+    {
+        Debug.WriteLine($"ex: {WiFiNetworkHelper.HelperException}");
+    }
+}
 
 M5Core2.TouchEvent += TouchEventCallback;
 
