@@ -15,7 +15,7 @@ M5Core2.InitializeScreen();
 Debug.WriteLine("Hello from M5Core2!");
 
 const string Ssid = "SSID";
-const string Password = "YourWifiPassword";
+const string Password = "YourWifiPasswordHere";
 // Give 60 seconds to the wifi join to happen
 CancellationTokenSource cs = new(60000);
 var success = WiFiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
