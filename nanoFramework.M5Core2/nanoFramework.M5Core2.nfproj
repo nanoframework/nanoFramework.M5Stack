@@ -49,7 +49,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Ft6xx6x, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ft6xx6x.1.0.21-preview.1\lib\Iot.Device.Ft6xx6x.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ft6xx6x.1.0.21-preview.2\lib\Iot.Device.Ft6xx6x.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -67,7 +67,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Graphics, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Graphics.1.0.2-preview.5\lib\nanoFramework.Graphics.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Graphics.1.0.2-preview.6\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32, Version=1.3.5.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -86,8 +86,8 @@
       <HintPath>..\packages\nanoFramework.Runtime.Native.1.5.3-preview.4\lib\nanoFramework.Runtime.Native.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nanoFramework.System.Collections, Version=1.3.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Collections.1.3.0\lib\nanoFramework.System.Collections.dll</HintPath>
+    <Reference Include="nanoFramework.System.Collections, Version=1.4.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Collections.1.4.0-preview.7\lib\nanoFramework.System.Collections.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Buffers.Binary.BinaryPrimitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -119,7 +119,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.Spi, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Device.Spi.1.0.3-preview.7\lib\System.Device.Spi.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.System.Device.Spi.1.0.3-preview.9\lib\System.Device.Spi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Diagnostics.Stopwatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -127,7 +127,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Ports, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.0.3-preview.8\lib\System.IO.Ports.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.0.3-preview.10\lib\System.IO.Ports.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Math, Version=1.4.4.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -139,7 +139,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Threading, Version=1.0.4.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Threading.1.0.4-preview.6\lib\System.Threading.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.System.Threading.1.0.4-preview.8\lib\System.Threading.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UnitsNet.ElectricCurrent, Version=4.113.0.0, Culture=neutral, PublicKeyToken=null">
