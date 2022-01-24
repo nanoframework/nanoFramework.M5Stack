@@ -32,7 +32,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Button, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Button.1.0.288-preview.1\lib\Iot.Device.Button.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Button.1.0.288-preview.3\lib\Iot.Device.Button.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper">
@@ -91,8 +91,9 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.Dac.1.4.3-preview.4\lib\System.Device.Dac.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Device.Gpio">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Gpio.1.0.3-preview.3\lib\System.Device.Gpio.dll</HintPath>
+    <Reference Include="System.Device.Gpio, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Device.Gpio.1.0.3-preview.6\lib\System.Device.Gpio.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.I2c, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Device.I2c.1.0.3-preview.4\lib\System.Device.I2c.dll</HintPath>
@@ -106,7 +107,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.Spi, Version=1.0.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Spi.1.0.3-preview.9\lib\System.Device.Spi.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Device.Spi.1.0.3-preview.11\lib\System.Device.Spi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.WiFi, Version=1.4.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
