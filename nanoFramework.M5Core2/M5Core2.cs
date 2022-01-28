@@ -133,7 +133,7 @@ namespace nanoFramework.M5Stack
             {
                 _startThread = new();
                 _cancelThread.Cancel();
-                var point = _touchController.GetPoint(true);                
+                var point = _touchController.GetPoint(true);
                 if ((_lastPoint.X != point.X) && (_lastPoint.Y != point.Y))
                 {
                     _lastPoint = point;
@@ -286,6 +286,12 @@ namespace nanoFramework.M5Stack
             // Second serial port
             Configuration.SetPinFunction(13, DeviceFunction.COM2_RX);
             Configuration.SetPinFunction(14, DeviceFunction.COM2_TX);
+
+            // Setup second I2C bus (port A) 
+            Configuration.SetPinFunction(33, DeviceFunction.I2C2_CLOCK);
+            Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);
+            // The portA is the second I2C
+            _portANumber = 2;
 
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
