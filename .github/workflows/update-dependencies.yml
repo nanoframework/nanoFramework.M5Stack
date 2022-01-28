@@ -7,8 +7,9 @@ name: Daily update dependencies
 
 on:
   schedule:
-  # At 00:00 UTC every Mon, Wed and Friday.
-  - cron:  '00 00 * * 1,3,5'
+  # At 03:00 UTC daily.
+  # This has to run after the automated updated in IoT bindings as it depends from several bindings there.
+  - cron:  '00 03 * * *'
   repository_dispatch:
     types: update-dependencies
 
