@@ -61,7 +61,7 @@ namespace nanoFramework.M5Stack
                 // We do this to avoid having to load the Accelerometer if not needed or not connected
                 if (_mpu6886 == null)
                 {
-                    _mpu6886 = new(GetI2cDevice(0x68));
+                    _mpu6886 = new(new(new I2cConnectionSettings(1, 0x68)));
                 }
 
                 return _mpu6886;
