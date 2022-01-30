@@ -27,6 +27,7 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
+- [M5AtomLite](https://docs.m5stack.com/en/core/atom_lite)
 
 > Note 1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to <https://api.nuget.org/v3/index.json> , otherwise add it.
 > Note 2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
@@ -56,6 +57,12 @@ For the M5Core2:
 
 ```shell
 nanoff --target M5Core2 --update --preview --serialport COM3
+```
+
+For the M5AtomLite:
+
+```shell
+nanoff --target ESP32_PICO --update --preview --serialport COM3
 ```
 
 > Note 3: If the `nanoff` commands fails, make sure you have followed instruction from Note 1 above.

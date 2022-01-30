@@ -6,6 +6,7 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Core", "nan
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A689EB3-86E0-448E-99F4-3D644EC3D8C5}"
 	ProjectSection(SolutionItems) = preProject
+		nanoFramework.M5AtomLite.nuspec = nanoFramework.M5AtomLite.nuspec
 		nanoFramework.M5Core.nuspec = nanoFramework.M5Core.nuspec
 		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
 		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
