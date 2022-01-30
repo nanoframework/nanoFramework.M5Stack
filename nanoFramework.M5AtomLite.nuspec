@@ -28,6 +28,7 @@
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3-preview.6" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2-preview.6" />
 	  <dependency id="nanoFramework.System.Device.I2c" version="1.0.3-preview.4" />
+	  <dependency id="nanoFramework.System.Device.Spi" version="1.0.3-preview.17" />
     </dependencies>
   </metadata>
   <files>

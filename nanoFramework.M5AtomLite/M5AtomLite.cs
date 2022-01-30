@@ -6,6 +6,7 @@ using System.Device.Adc;
 using nanoFramework.Hardware.Esp32.Rmt;
 using System.Device.I2c;
 using nanoFramework.Hardware.Esp32;
+using System.Device.Spi;
 
 namespace nanoFramework.M5AtomLite
 {
@@ -16,6 +17,7 @@ namespace nanoFramework.M5AtomLite
         private static RgbLed _rgbLed;
         private static GpioController _gpio;
         private static DacChannel _dac1;
+        private static DacChannel _dac2;
         private static AdcController _adc;
         private static TransmitterChannel _irLed;
 
@@ -75,6 +77,24 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
+        /// Gets DAC1 which is GPIO 26.
+        /// </summary>
+        public static DacChannel Dac2
+        {
+            get
+            {
+                // We are creating it on demand
+                if (_dac2 == null)
+                {
+
+                    _dac2 = DacController.GetDefault().OpenChannel(1);
+                }
+
+                return _dac2;
+            }
+        }
+
+        /// <summary>
         /// Gets an I2C device.
         /// </summary>
         /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
@@ -97,12 +117,19 @@ namespace nanoFramework.M5AtomLite
             {
                 if (_irLed == null)
                 {
-                    _irLed = new(9);
+                    _irLed = new(12);
                 }
 
                 return _irLed;
             }
         }
+
+        /// <summary>
+        /// Gets an SPI Device.
+        /// </summary>
+        /// <param name="chipSelect">The chip select of the device, needs to be any valid GPIO.</param>
+        /// <returns>An SpiDevice.</returns>
+        public static SpiDevice GetSpiDevice(int chipSelect) => new(new SpiConnectionSettings(1, chipSelect));
 
         /// <summary>
         /// Gets an ADC channel
