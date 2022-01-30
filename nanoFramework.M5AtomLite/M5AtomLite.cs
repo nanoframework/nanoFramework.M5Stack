@@ -1,4 +1,7 @@
-﻿using Iot.Device.Button;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+
+using Iot.Device.Button;
 using System;
 using System.Device.Gpio;
 using System.Device.Dac;
@@ -10,9 +13,11 @@ using System.Device.Spi;
 
 namespace nanoFramework.M5AtomLite
 {
+    /// <summary>
+    /// The M5AtomLite B=board
+    /// </summary>
     public static class M5AtomLite
     {
-
         private static GpioButton _button;
         private static RgbLed _rgbLed;
         private static GpioController _gpio;
@@ -156,17 +161,14 @@ namespace nanoFramework.M5AtomLite
             }
         }
 
-
         static M5AtomLite()
         {
             // Setup first the I2C bus
             Configuration.SetPinFunction(32, DeviceFunction.I2C1_CLOCK);
             Configuration.SetPinFunction(26, DeviceFunction.I2C1_DATA);
 
-
             // Setup buttons
             _gpio = new();
-
         }
     }
 }
