@@ -124,6 +124,8 @@ namespace nanoFramework.M5Stack
             // Setup first the I2C bus
             Configuration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);
             Configuration.SetPinFunction(21, DeviceFunction.I2C1_DATA);
+            // Same for PortA than for the internal one
+            _portANumber = 1;
 
             // Create the energy management device
             I2cDevice i2c = new(new I2cConnectionSettings(1, Ip5306.SecondaryI2cAddress));

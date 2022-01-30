@@ -32,6 +32,7 @@ namespace nanoFramework.M5Stack
         private static Screen _screen;
         private static SerialPort _serialPort;
         private static AdcController _adc;
+        private static int _portANumber;
 
         /// <summary>
         /// Gets the Magnetometer.
@@ -60,7 +61,7 @@ namespace nanoFramework.M5Stack
                 // We do this to avoid having to load the Accelerometer if not needed or not connected
                 if (_mpu6886 == null)
                 {
-                    _mpu6886 = new(GetI2cDevice(0x68));
+                    _mpu6886 = new(new(new I2cConnectionSettings(1, 0x68)));
                 }
 
                 return _mpu6886;
@@ -113,14 +114,14 @@ namespace nanoFramework.M5Stack
         /// </summary>
         /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
         /// <returns>The I2cDevice.</returns>
-        public static I2cDevice GetI2cDevice(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
+        public static I2cDevice GetI2cDevice(int i2cDeviceAddress) => new(new I2cConnectionSettings(_portANumber, i2cDeviceAddress));
 
         /// <summary>
         /// Gets an I2C device.
         /// </summary>
         /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
         /// <returns>The I2cDevice.</returns>
-        public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
+        public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(_portANumber, i2cDeviceAddress));
 
         /// <summary>
         /// Gets an SPI Device.

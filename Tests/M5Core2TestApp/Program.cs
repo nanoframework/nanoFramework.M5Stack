@@ -29,6 +29,8 @@ if (!success)
     }
 }
 
+var mpu = M5Core2.AccelerometerGyroscope;
+
 M5Core2.TouchEvent += TouchEventCallback;
 
 Thread.Sleep(Timeout.Infinite);
