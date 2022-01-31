@@ -173,15 +173,15 @@ M5AtomLite.Button.Press +=> (sender, e)
     var color = M5AtomLite.NeoPixel.GetColor();
     if(color.R > 0)
     {
-        M5AtomLite.NeoPixel.SetColor(new Color(0, 255, 0));
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 255, 0));
     }
     else if (color.G > 0)
     {
-        M5AtomLite.NeoPixel.SetColor(new Color(0, 0, 255));
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 0, 255));
     }
     else
     {
-        M5AtomLite.NeoPixel.SetColor(new Color(255, 0, 0));
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 255, 0, 0));
     }
 };
 ```
@@ -318,7 +318,7 @@ Refer to the [SerialPort documentation](https://github.com/nanoframework/System.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Core and M5AtomLite, access them like this:
+ADC Channels are pre setup on the M5Core, M5Core2 and M5AtomLite, access them like this:
 
 ```csharp
 // This will give you the ADC1 channel 7 which is on pin 35 of M5Core
@@ -357,7 +357,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Core and M5AtomLite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core, M5Core2 and M5AtomLite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 
@@ -378,7 +378,7 @@ The M5AtomLite exposes a rgb led. You can access it thru the `NeoPixel` property
 
 ```csharp
 // This will set NeoPixel to green:
-M5AtomLite.NeoPixel.SetColor(new Color(0,255,0));
+M5AtomLite.NeoPixel.SetColor(Color.Green);
 ```
 
 ## Feedback and documentation
