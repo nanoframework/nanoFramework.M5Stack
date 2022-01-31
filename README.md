@@ -318,7 +318,7 @@ Refer to the [SerialPort documentation](https://github.com/nanoframework/System.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Core, M5Core2 and M5AtomLite, access them like this:
+ADC Channels are pre setup on the M5Core, M5Core2 and Atom Lite, access them like this:
 
 ```csharp
 // This will give you the ADC1 channel 7 which is on pin 35 of M5Core
