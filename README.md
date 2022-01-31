@@ -339,7 +339,7 @@ I2cDevice myDevice = M5Core.GetGrove(0x42);
 
 ### SPI Device
 
-The M5Core, M5Core2 and M5AtomLite provides as well an SpiDevice:
+The M5Core, M5Core2 and Atom Lite provides as well an `SpiDevice`:
 
 ```csharp
 // In this case GPIO5 will be used as chip select:
