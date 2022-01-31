@@ -165,7 +165,7 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
-On the M5AtomLite it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
+On the Atom Lite it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
 
 ```csharp
 M5AtomLite.Button.Press +=> (sender, e)
