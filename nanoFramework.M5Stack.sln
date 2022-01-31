@@ -1,11 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5Core", "nanoFramework.M5Core\nanoFramework.M5Core.nfproj", "{2C78D035-DBDA-4C38-AB58-8ADC22D763C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A689EB3-86E0-448E-99F4-3D644EC3D8C5}"
 	ProjectSection(SolutionItems) = preProject
+		nanoFramework.M5AtomLite.nuspec = nanoFramework.M5AtomLite.nuspec
 		nanoFramework.M5Core.nuspec = nanoFramework.M5Core.nuspec
 		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
 		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
@@ -35,6 +36,10 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "nanoFramework.M5StackCore", "nanoFramework.M5StackCore\nanoFramework.M5StackCore.shproj", "{E2A94F3C-EE7F-4075-A98A-A19CABE82C0F}"
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5Core2TestApp", "Tests\M5Core2TestApp\M5Core2TestApp.nfproj", "{20266750-53F3-46D5-8626-1438AC985033}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5AtomLite", "nanoFramework.M5AtomLite\nanoFramework.M5AtomLite.nfproj", "{C20734A9-C944-4B2A-9CEA-A9B3F855B132}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5AtomLiteTestApp", "Tests\M5AtomLiteTestApp\M5AtomLiteTestApp.nfproj", "{7533C164-9D3E-461B-BEED-888C91AC640B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -89,6 +94,18 @@ Global
 		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20266750-53F3-46D5-8626-1438AC985033}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20734A9-C944-4B2A-9CEA-A9B3F855B132}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +117,7 @@ Global
 		{48E3FD52-1D13-422D-AF3F-B6AEA2C72800} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 		{E2A94F3C-EE7F-4075-A98A-A19CABE82C0F} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 		{20266750-53F3-46D5-8626-1438AC985033} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{7533C164-9D3E-461B-BEED-888C91AC640B} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}

@@ -27,6 +27,7 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
+- [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
 
 > Note 1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to <https://api.nuget.org/v3/index.json> , otherwise add it.
 > Note 2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
@@ -56,6 +57,12 @@ For the M5Core2:
 
 ```shell
 nanoff --target M5Core2 --update --preview --serialport COM3
+```
+
+For the M5AtomLite:
+
+```shell
+nanoff --target ESP32_PICO --update --preview --serialport COM3
 ```
 
 > Note 3: If the `nanoff` commands fails, make sure you have followed instruction from Note 1 above.
@@ -157,6 +164,28 @@ M5StickC.M5Button.Holding += (sender, e) =>
     Console.Write("M5 button hold long.");
 };
 ```
+
+On the Atom Lite it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
+
+```csharp
+M5AtomLite.Button.Press +=> (sender, e)
+{
+    var color = M5AtomLite.NeoPixel.GetColor();
+    if(color.R > 0)
+    {
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 255, 0));
+    }
+    else if (color.G > 0)
+    {
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 0, 255));
+    }
+    else
+    {
+        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 255, 0, 0));
+    }
+};
+```
+
 
 > Note: The M5Core2 has touch screen and the buttons are "virtual"". See next section to see how to use them.
 
@@ -289,10 +318,10 @@ Refer to the [SerialPort documentation](https://github.com/nanoframework/System.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Core, access them like this:
+ADC Channels are pre setup on the M5Core, M5Core2 and Atom Lite, access them like this:
 
 ```csharp
-// This will give you the ADC1 channel 7 which is on pin 35
+// This will give you the ADC1 channel 7 which is on pin 35 of M5Core
 AdcChannel myChannel = M5Core.GetAdcGpio(35);
 ```
 
@@ -310,7 +339,7 @@ I2cDevice myDevice = M5Core.GetGrove(0x42);
 
 ### SPI Device
 
-The M5Core provides as well an SpiDevice:
+The M5Core, M5Core2 and Atom Lite provides as well an `SpiDevice`:
 
 ```csharp
 // In this case GPIO5 will be used as chip select:
@@ -328,7 +357,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Core exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core, M5Core2 and Atom Lite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 
@@ -341,7 +370,16 @@ M5StickC.Led.Toggle();
 
 ### Infrared Led
 
-The M5StickC/CPlus exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
+The M5StickC/CPlus and M5AtomLite exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
+
+### NeoPixel
+
+The M5AtomLite exposes a rgb led. You can access it thru the `NeoPixel` property:
+
+```csharp
+// This will set NeoPixel to green:
+M5AtomLite.NeoPixel.SetColor(Color.Green);
+```
 
 ## Feedback and documentation
 
