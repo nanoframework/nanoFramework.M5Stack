@@ -12,10 +12,10 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>nanoFramework.M5AtomLite</RootNamespace>
-    <AssemblyName>nanoFramework.M5AtomLite</AssemblyName>
+    <RootNamespace>nanoFramework.AtomLite</RootNamespace>
+    <AssemblyName>nanoFramework.AtomLite</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
-    <DocumentationFile>bin\$(Configuration)\nanoFramework.M5AtomLite.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\nanoFramework.AtomLite.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -28,7 +28,7 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="M5AtomLite.cs" />
+    <Compile Include="AtomLite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RgbLed.cs" />
   </ItemGroup>

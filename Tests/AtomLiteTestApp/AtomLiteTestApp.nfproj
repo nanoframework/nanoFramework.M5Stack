@@ -12,17 +12,14 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>M5AtomLiteTestApp</RootNamespace>
-    <AssemblyName>M5AtomLiteTestApp</AssemblyName>
+    <RootNamespace>AtomLiteTestApp</RootNamespace>
+    <AssemblyName>AtomLiteTestApp</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\nanoFramework.M5AtomLite\nanoFramework.M5AtomLite.nfproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -51,6 +48,9 @@
     <Reference Include="System.Drawing">
       <HintPath>..\..\packages\nanoFramework.System.Drawing.1.0.288-preview.20\lib\System.Drawing.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\nanoFramework.AtomLite\nanoFramework.AtomLite.nfproj" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>
