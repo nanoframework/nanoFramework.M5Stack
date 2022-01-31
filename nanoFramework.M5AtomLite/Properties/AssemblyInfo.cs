@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("nanoFramework.AtomLite")]
 [assembly: AssemblyCompany("nanoFramework Contributors")]
 [assembly: AssemblyCopyright("Copyright(c).NET Foundation and Contributors")]
-[assembly: AssemblyTitle("nanoFramework.AtomLite")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
