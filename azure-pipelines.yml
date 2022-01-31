@@ -53,6 +53,10 @@ steps:
   parameters:
     nugetPackageName: 'nanoFramework.M5Core2'
 
+- template: azure-pipelines-templates/class-lib-package.yml@templates  
+  parameters:
+    nugetPackageName: 'nanoFramework.AtomLite'
+  
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
 # create or update GitHub release

@@ -2,21 +2,21 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using Iot.Device.Button;
-using System;
-using System.Device.Gpio;
-using System.Device.Dac;
-using System.Device.Adc;
-using nanoFramework.Hardware.Esp32.Rmt;
-using System.Device.I2c;
 using nanoFramework.Hardware.Esp32;
+using nanoFramework.Hardware.Esp32.Rmt;
+using System;
+using System.Device.Adc;
+using System.Device.Dac;
+using System.Device.Gpio;
+using System.Device.I2c;
 using System.Device.Spi;
 
-namespace nanoFramework.M5AtomLite
+namespace nanoFramework.AtomLite
 {
     /// <summary>
-    /// The M5AtomLite B=board
+    /// The AtomLite Board.
     /// </summary>
-    public static class M5AtomLite
+    public static class AtomLite
     {
         private static GpioButton _button;
         private static RgbLed _rgbLed;
@@ -43,7 +43,7 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
-        /// RGB NeoPixel led
+        /// RGB NeoPixel led.
         /// </summary>
         public static RgbLed NeoPixel
         {
@@ -60,12 +60,12 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
-        /// Gets the main GPIO Controller.
+        /// Gets the main <see cref="GpioController"/>.
         /// </summary>
         public static GpioController GpioController => _gpio;
 
         /// <summary>
-        /// Gets DAC1 which is GPIO 25.
+        /// Gets <see cref="DacChannel"/> connected to GPIO 25.
         /// </summary>
         public static DacChannel Dac1
         {
@@ -82,7 +82,7 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
-        /// Gets DAC1 which is GPIO 26.
+        /// Gets <see cref="DacChannel"/> connected to GPIO 26.
         /// </summary>
         public static DacChannel Dac2
         {
@@ -100,16 +100,16 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
-        /// Gets an I2C device.
+        /// Gets an <see cref="I2cDevice"/>.
         /// </summary>
-        /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
+        /// <param name="i2cDeviceAddress">The address of the <see cref="I2cDevice"/> on the bus.</param>
         /// <returns>The I2cDevice.</returns>
         public static I2cDevice GetI2cDevice(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
 
         /// <summary>
-        /// Gets an I2C device.
+        /// Gets an <see cref="I2cDevice"/>.
         /// </summary>
-        /// <param name="i2cDeviceAddress">The I2C device address on the bus.</param>
+        /// <param name="i2cDeviceAddress">The address of the <see cref="I2cDevice"/> on the bus.</param>
         /// <returns>The I2cDevice.</returns>
         public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
 
@@ -130,16 +130,16 @@ namespace nanoFramework.M5AtomLite
         }
 
         /// <summary>
-        /// Gets an SPI Device.
+        /// Gets an <see cref="SpiDevice"/>.
         /// </summary>
         /// <param name="chipSelect">The chip select of the device, needs to be any valid GPIO.</param>
         /// <returns>An SpiDevice.</returns>
         public static SpiDevice GetSpiDevice(int chipSelect) => new(new SpiConnectionSettings(1, chipSelect));
 
         /// <summary>
-        /// Gets an ADC channel
+        /// Gets an <see cref="AdcChannel"/>
         /// </summary>
-        /// <param name="gpioNumber">The GPIO pin number</param>
+        /// <param name="gpioNumber">The GPIO pin number where the <see cref="AdcChannel"/> is connected to.</param>
         /// <returns>An AdcChannel</returns>
         public static AdcChannel GetAdcGpio(int gpioNumber)
         {
@@ -161,7 +161,7 @@ namespace nanoFramework.M5AtomLite
             }
         }
 
-        static M5AtomLite()
+        static AtomLite()
         {
             // Setup first the I2C bus
             Configuration.SetPinFunction(32, DeviceFunction.I2C1_CLOCK);

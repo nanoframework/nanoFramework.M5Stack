@@ -18,6 +18,8 @@
 | nanoFramework.M5StickCPlus (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
 | nanoFramework.M5Core2 | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
 | nanoFramework.M5Core2 (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
+| nanoFramework.AtomLite | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
+| nanoFramework.AtomLite (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 
 ## Usage
 
@@ -59,7 +61,7 @@ For the M5Core2:
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
 
-For the M5AtomLite:
+For the Atom Lite:
 
 ```shell
 nanoff --target ESP32_PICO --update --preview --serialport COM3
@@ -168,20 +170,20 @@ M5StickC.M5Button.Holding += (sender, e) =>
 On the Atom Lite it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
 
 ```csharp
-M5AtomLite.Button.Press +=> (sender, e)
+AtomLite.Button.Press +=> (sender, e)
 {
-    var color = M5AtomLite.NeoPixel.GetColor();
+    var color = AtomLite.NeoPixel.GetColor();
     if(color.R > 0)
     {
-        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 255, 0));
+        AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 255, 0));
     }
     else if (color.G > 0)
     {
-        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 0, 255));
+        AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 0, 255));
     }
     else
     {
-        M5AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 255, 0, 0));
+        AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 255, 0, 0));
     }
 };
 ```
@@ -370,15 +372,15 @@ M5StickC.Led.Toggle();
 
 ### Infrared Led
 
-The M5StickC/CPlus and M5AtomLite exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
+The M5StickC/CPlus and Atom Lite exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
 
 ### NeoPixel
 
-The M5AtomLite exposes a rgb led. You can access it thru the `NeoPixel` property:
+The Atom Lite exposes a rgb led. You can access it thru the `NeoPixel` property:
 
 ```csharp
 // This will set NeoPixel to green:
-M5AtomLite.NeoPixel.SetColor(Color.Green);
+AtomLite.NeoPixel.SetColor(Color.Green);
 ```
 
 ## Feedback and documentation

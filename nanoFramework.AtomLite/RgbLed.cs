@@ -4,7 +4,7 @@
 using nanoFramework.Hardware.Esp32.Rmt;
 using System.Drawing;
 
-namespace nanoFramework.M5AtomLite
+namespace nanoFramework.AtomLite
 {
     /// <summary>
     /// The RGB Led controller for M5Stack Atom Lite. 
