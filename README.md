@@ -357,7 +357,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Core, M5Core2 and M5AtomLite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core, M5Core2 and Atom Lite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 
