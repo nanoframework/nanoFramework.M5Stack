@@ -56,7 +56,11 @@ steps:
 - template: azure-pipelines-templates/class-lib-package.yml@templates  
   parameters:
     nugetPackageName: 'nanoFramework.AtomLite'
-  
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates
+  parameters:
+    nugetPackageName: 'nanoFramework.AtomMatrix'
+    
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
 # create or update GitHub release

@@ -20,6 +20,8 @@
 | nanoFramework.M5Core2 (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
 | nanoFramework.AtomLite | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 | nanoFramework.AtomLite (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
+| nanoFramework.AtomMatrix | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomMatrix.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomMatrix/) |
+| nanoFramework.AtomMatrix (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.AtomMatrix.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomMatrix/) |
 
 ## Usage
 
@@ -30,6 +32,7 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
 - [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
+- [Atom Matrix](https://docs.m5stack.com/en/core/atom_matrix)
 
 > Note 1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to <https://api.nuget.org/v3/index.json> , otherwise add it.
 > Note 2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected. Also if you're using preview version the "include prerelease" checkbox should be clicked/selected as well.  
@@ -61,7 +64,7 @@ For the M5Core2:
 nanoff --target M5Core2 --update --preview --serialport COM3
 ```
 
-For the Atom Lite:
+For the Atom Lite and Matrix:
 
 ```shell
 nanoff --target ESP32_PICO --update --preview --serialport COM3
@@ -167,7 +170,7 @@ M5StickC.M5Button.Holding += (sender, e) =>
 };
 ```
 
-On the Atom Lite it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
+On the Atom Lite/Matrix it's called `Button`. You can get access to the status of the button, the events and everything you need. For example:
 
 ```csharp
 AtomLite.Button.Press +=> (sender, e)
@@ -187,7 +190,6 @@ AtomLite.Button.Press +=> (sender, e)
     }
 };
 ```
-
 
 > Note: The M5Core2 has touch screen and the buttons are "virtual"". See next section to see how to use them.
 
@@ -320,7 +322,7 @@ Refer to the [SerialPort documentation](https://github.com/nanoframework/System.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Core, M5Core2 and Atom Lite, access them like this:
+ADC Channels are pre setup on the M5Core, M5Core2 and Atom Lite/Matrix, access them like this:
 
 ```csharp
 // This will give you the ADC1 channel 7 which is on pin 35 of M5Core
@@ -341,7 +343,7 @@ I2cDevice myDevice = M5Core.GetGrove(0x42);
 
 ### SPI Device
 
-The M5Core, M5Core2 and Atom Lite provides as well an `SpiDevice`:
+The M5Core, M5Core2 and Atom Lite/Matrix provides as well an `SpiDevice`:
 
 ```csharp
 // In this case GPIO5 will be used as chip select:
@@ -359,7 +361,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Core, M5Core2 and Atom Lite exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core, M5Core2 and Atom Lite/Matrix exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 
@@ -372,7 +374,7 @@ M5StickC.Led.Toggle();
 
 ### Infrared Led
 
-The M5StickC/CPlus and Atom Lite exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
+The M5StickC/CPlus and Atom Lite/Matrix exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
 
 ### NeoPixel
 
@@ -381,6 +383,26 @@ The Atom Lite exposes a rgb led. You can access it thru the `NeoPixel` property:
 ```csharp
 // This will set NeoPixel to green:
 AtomLite.NeoPixel.SetColor(Color.Green);
+```
+
+### RGB LED matrix
+
+The Atom Matrix has a matrix of 25 RGB LEDs.
+The position of the LEDs in the array follows their placement in the matrix, being 0 the one at the top left corner, growing left to right, top to bottom.
+
+You can access it thru the `LedMatrix` property, like this:
+
+```csharp
+// This will set the RGB LED at position 0 to green
+AtomMatrix.LedMatrix.SetColor(0, Color.Green);
+```
+
+After you're done with updating all the LEDs that you want to change, flush the updated to the LEDs, like this:
+
+```csharp
+// This will update all RGB LED 
+AtomMatrix.LedMatrix.Update();
+
 ```
 
 ## Feedback and documentation
