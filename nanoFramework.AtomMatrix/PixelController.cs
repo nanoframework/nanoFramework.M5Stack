@@ -40,13 +40,20 @@ namespace nanoFramework.AtomMatrix
         }
 
         /// <summary>
-        /// Set specific color (RGB Format) on pixel at position
+        /// Set specific color (RGB Format) on pixel the given index.
         /// </summary>
-        /// <param name="index"></param>
-        /// <param name="r"></param>
-        /// <param name="g"></param>
-        /// <param name="b"></param>
+        /// <param name="index">Index of the LED to set the <see cref="Color"/>.</param>
+        /// <param name="r"><see cref="Color.R"/> value to set.</param>
+        /// <param name="g"><see cref="Color.G"/> value to set.</param>
+        /// <param name="b"><see cref="Color.B"/> value to set.</param>
         public void SetColor(short index, byte r, byte g, byte b) => Pixels[index] = Color.FromArgb(r, g, b);
+
+        /// <summary>
+        /// Set specific color on LED at the given index.
+        /// </summary>
+        /// <param name="index">Index of the LED to set the <see cref="Color"/>.</param>
+        /// <param name="color"><see cref="Color"/> value to set.</param>
+        public void SetColor(short index, Color color) => Pixels[index] = color;
 
         /// <summary>
         /// Update all pixels.
@@ -78,11 +85,26 @@ namespace nanoFramework.AtomMatrix
         {
             for (uint pixel = 0; pixel < Pixels.Length; pixel++)
             {
-                Pixels[pixel] = Color.FromArgb(0, 0, 0);
+                Pixels[pixel] = Color.Black;
             }
 
             Update();
         }
+
+        /// <summary>
+        /// Fill in all LEDs with a color.
+        /// </summary>
+        /// <param name="color"><see cref="Color"/> to fill in the LEDs.</param>
+        public void FillColor(Color color)
+        {
+            for (uint pixel = 0; pixel < Pixels.Length; pixel++)
+            {
+                Pixels[pixel] = color;
+            }
+
+            Update();
+        }
+
 
         private void SerialiseColor(byte b, TransmitterChannel transmitter)
         {
