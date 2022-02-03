@@ -7,6 +7,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A689EB3-86E0-448E-99F4-3D644EC3D8C5}"
 	ProjectSection(SolutionItems) = preProject
 		nanoFramework.AtomLite.nuspec = nanoFramework.AtomLite.nuspec
+		nanoFramework.AtomMatrix.nuspec = nanoFramework.AtomMatrix.nuspec
 		nanoFramework.M5Core.nuspec = nanoFramework.M5Core.nuspec
 		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
 		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
@@ -41,10 +42,17 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.AtomLite", "n
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "AtomLiteTestApp", "Tests\AtomLiteTestApp\AtomLiteTestApp.nfproj", "{7533C164-9D3E-461B-BEED-888C91AC640B}"
 EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.AtomMatrix", "nanoFramework.AtomMatrix\nanoFramework.AtomMatrix.nfproj", "{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "AtomMatrixTestApp", "Tests\AtomMatrixTestApp\AtomMatrixTestApp.nfproj", "{88F1D73A-1ADF-4444-A031-024E570945CC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AtomCommon", "AtomCommon\AtomCommon.shproj", "{79F09006-AB5D-4E3E-AD12-2EFBEE536CA9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		M5StackCommon\M5StackCommon.projitems*{00e23322-2401-4087-abae-24f90c8a0422}*SharedItemsImports = 13
 		nanoFramework.M5StickCommon\nanoFramework.M5StickCommon.projitems*{1f49b255-573d-4d02-87da-08c4a95744b0}*SharedItemsImports = 13
+		AtomCommon\AtomCommon.projitems*{79f09006-ab5d-4e3e-ad12-2efbee536ca9}*SharedItemsImports = 13
 		nanoFramework.M5StackCore\nanoFramework.M5StackCore.projitems*{e2a94f3c-ee7f-4075-a98a-a19cabe82c0f}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +114,18 @@ Global
 		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7533C164-9D3E-461B-BEED-888C91AC640B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47BE27B-028D-493A-85DD-7D5C24EE6EB7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F1D73A-1ADF-4444-A031-024E570945CC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +138,8 @@ Global
 		{E2A94F3C-EE7F-4075-A98A-A19CABE82C0F} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 		{20266750-53F3-46D5-8626-1438AC985033} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 		{7533C164-9D3E-461B-BEED-888C91AC640B} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{88F1D73A-1ADF-4444-A031-024E570945CC} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{79F09006-AB5D-4E3E-AD12-2EFBEE536CA9} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}
