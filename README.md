@@ -402,7 +402,6 @@ After you're done with updating all the LEDs that you want to change, flush the 
 ```csharp
 // This will update all RGB LED 
 AtomMatrix.LedMatrix.Update();
-
 ```
 
 ## Feedback and documentation

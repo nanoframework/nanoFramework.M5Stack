@@ -20,35 +20,19 @@ namespace AtomMatrixTestApp
             _ledMatrix = AtomMatrix.LedMatrix;
 
             // diagonal green line
-            _ledMatrix.SetColor(0, 0, 255, 0);
-            _ledMatrix.SetColor(5 + 1, 0, 255, 0);
-            _ledMatrix.SetColor(10 + 2, 0, 255, 0);
-            _ledMatrix.SetColor(15 + 3, 0, 255, 0);
-            _ledMatrix.SetColor(20 + 4, 0, 255, 0);
-            _ledMatrix.Update();
-
+            DrawDiagonalLine(Color.Green);
             Thread.Sleep(1000);
+
             _ledMatrix.TurnOff();
 
             // diagonal blue line
-            _ledMatrix.SetColor(0, 0, 0, 255);
-            _ledMatrix.SetColor(5 + 1, 0, 0, 255);
-            _ledMatrix.SetColor(10 + 2, 0, 0, 255);
-            _ledMatrix.SetColor(15 + 3, 0, 0, 255);
-            _ledMatrix.SetColor(20 + 4, 0, 0, 255);
-            _ledMatrix.Update();
-
+            DrawDiagonalLine(Color.Blue);
             Thread.Sleep(1000);
+
             _ledMatrix.TurnOff();
 
             // diagonal red line
-            _ledMatrix.SetColor(0, 255, 0, 0);
-            _ledMatrix.SetColor(5 + 1, 255, 0, 0);
-            _ledMatrix.SetColor(10 + 2, 255, 0, 0);
-            _ledMatrix.SetColor(15 + 3, 255, 0, 0);
-            _ledMatrix.SetColor(20 + 4, 255, 0, 0);
-            _ledMatrix.Update();
-
+            DrawDiagonalLine(Color.Red);
             Thread.Sleep(1000);
 
             // clear LEDs
@@ -60,6 +44,16 @@ namespace AtomMatrixTestApp
             Debug.WriteLine("Hello from nanoFramework!");
 
             Thread.Sleep(Timeout.Infinite);
+        }
+
+        private static void DrawDiagonalLine(Color color)
+        {
+            _ledMatrix.SetColor(0, color);
+            _ledMatrix.SetColor(5 + 1, color);
+            _ledMatrix.SetColor(10 + 2, color);
+            _ledMatrix.SetColor(15 + 3, color);
+            _ledMatrix.SetColor(20 + 4, color);
+            _ledMatrix.Update();
         }
 
         private static void Button_ButtonUp(object sender, EventArgs e)
