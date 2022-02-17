@@ -1,10 +1,28 @@
+# Copyright (c) .NET Foundation and Contributors
+# See LICENSE file in the project root for full license information.
+
 trigger:
   branches:
-    include: [main, develop, "release-*" ]
+    include:
+      - main
+      - develop
+      - release-*
   paths:
-    exclude: [README.md, LICENSE.md, NuGet.Config, .github_changelog_generator, .gitignore]
+    exclude:
+      - .github_changelog_generator
+      - .gitignore
+      - CHANGELOG.md
+      - CODE_OF_CONDUCT.md
+      - LICENSE.md
+      - README.md
+      - NuGet.Config
+      - assets/*
+      - config/*
+      - .github/*
+
   tags:
-    include: ["v*"]
+    include: 
+      - v*
 
 # PR always trigger build
 pr:
@@ -19,7 +37,7 @@ resources:
       endpoint: nanoframework
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-latest'
 
 variables:
   DOTNET_NOLOGO: true
@@ -65,7 +83,13 @@ steps:
 
 # create or update GitHub release
 - task: GithubRelease@1
-  condition: and( succeeded(), eq(variables['System.PullRequest.PullRequestId'], ''), not( startsWith(variables['Build.SourceBranch'], 'refs/tags/v') ), ne( variables['StartReleaseCandidate'], true ) )
+  condition: >-
+    and(
+      succeeded(),
+      eq(variables['System.PullRequest.PullRequestId'], ''),
+      not(startsWith(variables['Build.SourceBranch'], 'refs/tags/v')),
+      ne(variables['StartReleaseCandidate'], true )
+    )
   displayName: Create/Update GitHub PREVIEW release
   inputs:
     gitHubConnection: 'github.com_nano-$(System.TeamProject)'
@@ -81,7 +105,13 @@ steps:
 
 # create or update GitHub release ON tags from release or main branches
 - task: GithubRelease@1
-  condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v'), not(contains(variables['Build.SourceBranch'], 'preview') ), ne( variables['StartReleaseCandidate'], true ) )
+  condition: >-
+    and(
+      succeeded(),
+      startsWith(variables['Build.SourceBranch'], 'refs/tags/v'),
+      not(contains(variables['Build.SourceBranch'], 'preview')),
+      ne(variables['StartReleaseCandidate'], true)
+    )
   displayName: Create/Update GitHub stable release
   inputs:
     action: edit

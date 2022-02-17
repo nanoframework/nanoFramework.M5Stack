@@ -4,8 +4,7 @@
     <id>nanoFramework.M5Core</id>
     <version>$version$</version>
     <title>nanoFramework.M5Core</title>
-    <authors>nanoFramework project contributors</authors>
-    <owners>nanoFramework,dotnetfoundation</owners>
+    <authors>nanoframework</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.md</license>
     <releaseNotes>
@@ -17,7 +16,7 @@
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the nanoFramework.M5Core assembly for .NET nanoFramework C# projects.</description>
-    <tags>nanoFramework C# csharp netmf netnf nanoFramework.M5Core</tags>
+    <tags>nanoFramework C# csharp netmf netnf m5stack M5Core</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.12.0-preview.5" />
       <dependency id="nanoFramework.Graphics" version="1.0.2-preview.11" />
