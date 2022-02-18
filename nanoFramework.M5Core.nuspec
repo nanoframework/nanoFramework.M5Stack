@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>nanoFramework.M5Core</id>
@@ -34,7 +34,7 @@
       <dependency id="nanoFramework.System.Device.Gpio" version="1.0.3-preview.8" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.3-preview.6" />
       <dependency id="nanoFramework.System.Device.Model" version="1.0.259" />
-      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.6" />
+      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.8" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.3-preview.24" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289-preview.25" />
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.29" />
