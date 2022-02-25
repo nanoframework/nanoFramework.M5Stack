@@ -27,7 +27,7 @@
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3-preview.8" />
       <dependency id="nanoFramework.System.Device.Gpio" version="1.0.3-preview.8" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.3-preview.6" />
-      <dependency id="nanoFramework.System.Device.Spi" version="1.0.3-preview.24" />
+      <dependency id="nanoFramework.System.Device.Spi" version="1.0.4-preview.1" />
       <dependency id="nanoFramework.System.Drawing" version="1.0.288-preview.64" />
       <dependency id="UnitsNet.nanoFramework.Temperature" version="4.121.0" />
     </dependencies>
