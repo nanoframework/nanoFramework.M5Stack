@@ -18,6 +18,8 @@
 | nanoFramework.M5StickCPlus (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
 | nanoFramework.M5Core2 | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
 | nanoFramework.M5Core2 (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
+| nanoFramework.Fire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Fire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Fire/) |
+| nanoFramework.Fire (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Fire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Fire/) |
 | nanoFramework.AtomLite | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 | nanoFramework.AtomLite (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 | nanoFramework.AtomMatrix | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomMatrix.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomMatrix/) |
@@ -31,6 +33,7 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
+- [Fire](https://docs.m5stack.com/en/core/fire)
 - [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
 - [Atom Matrix](https://docs.m5stack.com/en/core/atom_matrix)
 
@@ -58,7 +61,7 @@ For the M5StickCPlus:
 nanoff --target M5StickCPlus --update --preview --serialport COM3
 ```
 
-For the M5Core2:
+For the M5Core2 and Fire:
 
 ```shell
 nanoff --target M5Core2 --update --preview --serialport COM3
@@ -137,13 +140,13 @@ nanoFramework.Console.Write("This is white on black again and on 9th line");
 
 > Note: You can change the default font as well, you need to provide it as a property. The Cursor positions are calculated with the largest possible character.
 
-M5Core2 has SPRAM, so you can get a full screen buffer as well. Refer to the [Graphics samples](https://github.com/nanoframework/Samples#graphics-for-screens) to understand all you can do with it.
+M5Core2 and Fire have SPRAM, so you can get a full screen buffer as well. Refer to the [Graphics samples](https://github.com/nanoframework/Samples#graphics-for-screens) to understand all you can do with it.
 
 ### Buttons
 
 The main buttons except the power buttons are exposed.
 
-On the M5Stack they are called `ButtonLeft`, `ButtonCenter` and `ButtonRight`. You can get access to the events as well. For example:
+On the M5Stack and Fire they are called `ButtonLeft`, `ButtonCenter` and `ButtonRight`. You can get access to the events as well. For example:
 
 ```csharp
 M5Stack.ButtonLeft.Press += (sender, e) =>
@@ -272,7 +275,7 @@ The `TouchEventCategory` enum is a flag and can combine buttons and states. The 
 
 The M5Core and M5StickC/CPlus are exposing their power management elements. It is not recommended to change any default value except if you know what you are doing.
 
-Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Core.
+Please refer to the detailed examples for the [AXP192](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Axp192/README.md) used in the M5StickC/CPlus; M5Core2 and [IP5306](https://github.com/nanoframework/nanoFramework.IoT.Device/blob/develop/devices/Ip5306/README.md) for the M5Core and Fire.
 
 ### Accelerometer and Gyroscope
 
@@ -322,7 +325,7 @@ Refer to the [SerialPort documentation](https://github.com/nanoframework/System.
 
 ### ADC Channels
 
-ADC Channels are pre setup on the M5Core, M5Core2 and Atom Lite/Matrix, access them like this:
+ADC Channels are pre setup on the M5Core, M5Core2, Fire and Atom Lite/Matrix, access them like this:
 
 ```csharp
 // This will give you the ADC1 channel 7 which is on pin 35 of M5Core
@@ -343,7 +346,7 @@ I2cDevice myDevice = M5Core.GetGrove(0x42);
 
 ### SPI Device
 
-The M5Core, M5Core2 and Atom Lite/Matrix provides as well an `SpiDevice`:
+The M5Core, M5Core2, Fire and Atom Lite/Matrix provides as well an `SpiDevice`:
 
 ```csharp
 // In this case GPIO5 will be used as chip select:
@@ -352,7 +355,7 @@ SpiDevice mySpi = M5Core.GetSpiDevice(5);
 
 ### GPIO Controller
 
-Similar as previously, you can get the `GpioController` on any of the M5Core, M5Core2 and M5StickC/CPlus:
+Similar as previously, you can get the `GpioController` on any of the M5Core, M5Core2, Fire and M5StickC/CPlus:
 
 ```csharp
 // This will open the GPIO 36 as output
@@ -361,7 +364,7 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 ### DAC
 
-The M5Core, M5Core2 and Atom Lite/Matrix exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
+The M5Core, M5Core2, Fire and Atom Lite/Matrix exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### Led
 
