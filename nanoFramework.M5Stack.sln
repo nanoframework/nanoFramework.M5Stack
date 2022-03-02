@@ -48,7 +48,7 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "AtomMatrixTestApp", "Tests\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AtomCommon", "AtomCommon\AtomCommon.shproj", "{79F09006-AB5D-4E3E-AD12-2EFBEE536CA9}"
 EndProject
-Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "FiteTestApp", "Tests\FiteTestApp\FiteTestApp.nfproj", "{5FF00F7C-8ED8-4468-9959-497CE8C5B1AF}"
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "FireTestApp", "Tests\FireTestApp\FireTestApp.nfproj", "{5FF00F7C-8ED8-4468-9959-497CE8C5B1AF}"
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Fire", "nanoFramework.Fire\nanoFramework.Fire.nfproj", "{2550D7FC-BBA7-4173-9071-8606DD600A2C}"
 EndProject
