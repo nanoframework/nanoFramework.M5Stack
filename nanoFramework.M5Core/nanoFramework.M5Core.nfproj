@@ -57,7 +57,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Buzzer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.0.288-preview.86\lib\Iot.Device.Buzzer.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.0.288-preview.90\lib\Iot.Device.Buzzer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Ip5306, Version=0.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
