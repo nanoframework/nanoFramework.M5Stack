@@ -123,5 +123,3 @@ while (true)
     Console.Write($"  Full {power.IsBatteryFull} ");
     Thread.Sleep(20);
 }
-
-Thread.Sleep(Timeout.Infinite);
