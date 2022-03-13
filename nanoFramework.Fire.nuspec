@@ -59,4 +59,4 @@
     <file src="assets\nf-logo.png" target="images\" />
     <file src="LICENSE.md" target="" />
   </files>
-</package>
+</dependency>
