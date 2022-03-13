@@ -264,7 +264,7 @@ namespace nanoFramework.M5Stack
             _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
             // Enable bat detection
             _power.SetShutdownBatteryDetectionControl(false, true, ShutdownBatteryPinFunction.HighResistance, true, ShutdownBatteryTiming.S2);
-            // Set Power off voltage 3.0v            
+            // Set Power off voltage 3.0v
             _power.VoffVoltage = VoffVoltage.V3_0;
             // This part of the code will handle the button behavior
             _power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
