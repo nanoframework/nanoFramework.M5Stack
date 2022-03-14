@@ -17,6 +17,11 @@ namespace nanoFramework.M5Stack
     /// M5Core2 board
     /// </summary>
     public static partial class M5Core2
+#elif FIRE
+    /// <summary>
+    /// Fire board
+    /// </summary>
+    public static partial class Fire
 #else
     /// <summary>
     /// M5Stack board

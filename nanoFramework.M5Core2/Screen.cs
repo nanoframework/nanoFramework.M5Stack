@@ -27,7 +27,7 @@ namespace nanoFramework.M5Stack
         /// </summary>
         public Screen()
         {
-            if(_isInitialized)
+            if (_isInitialized)
             {
                 return;
             }
