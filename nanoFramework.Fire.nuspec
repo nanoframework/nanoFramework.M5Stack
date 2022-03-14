@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<dependency xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>nanoFramework.Fire</id>
     <version>$version$</version>
@@ -59,4 +59,4 @@
     <file src="assets\nf-logo.png" target="images\" />
     <file src="LICENSE.md" target="" />
   </files>
-</dependency>
+</package>
