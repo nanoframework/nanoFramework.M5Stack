@@ -56,9 +56,8 @@
       <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.288-preview.95\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Rtc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.1.0.288-preview.86\lib\Iot.Device.Rtc.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Rtc">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.1.0.288-preview.96\lib\Iot.Device.Rtc.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.12.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.12.0-preview.18\lib\mscorlib.dll</HintPath>
@@ -116,10 +115,8 @@
       <HintPath>..\packages\nanoFramework.System.Device.Model.1.0.288-preview.92\lib\System.Device.Model.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Device.Pwm, Version=1.0.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Device.Pwm.1.0.1-preview.8\lib\System.Device.Pwm.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
+    <Reference Include="System.Device.Pwm">
+      <HintPath>..\packages\nanoFramework.System.Device.Pwm.1.0.1-preview.11\lib\System.Device.Pwm.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Spi, Version=1.0.4.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Device.Spi.1.0.4-preview.7\lib\System.Device.Spi.dll</HintPath>
