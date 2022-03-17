@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>nanoFramework.M5StickC</id>
@@ -18,9 +18,9 @@
     <description>This package includes the nanoFramework.M5StickC assembly for .NET nanoFramework C# projects.</description>
     <tags>nanoFramework C# csharp netmf netnf m5stack M5StickC</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.12.0-preview.18" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.12.0-preview.19" />
       <dependency id="nanoFramework.Graphics" version="1.0.2-preview.16" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.3.5-preview.9" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.3.5-preview.10" />
       <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="1.2.2-preview.9" />
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.288-preview.93" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.288-preview.93" />
