@@ -30,7 +30,7 @@
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.100" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2-preview.13" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3-preview.13" />
-      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.11" />
+      <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.13" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.4-preview.11" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289-preview.60" />
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.39" />
