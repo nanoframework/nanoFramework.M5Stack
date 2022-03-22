@@ -28,7 +28,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Bmm150, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Bmm150.1.0.288-preview.100\lib\Iot.Device.Bmm150.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Bmm150.1.0.288-preview.104\lib\Iot.Device.Bmm150.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Button, Version=0.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -40,7 +40,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.288-preview.103\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.288-preview.104\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Rtc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -80,7 +80,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Buffers.Binary.BinaryPrimitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.0.288-preview.99\lib\System.Buffers.Binary.BinaryPrimitives.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.0.288-preview.103\lib\System.Buffers.Binary.BinaryPrimitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.Adc, Version=1.0.2.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
