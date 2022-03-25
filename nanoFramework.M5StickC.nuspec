@@ -22,11 +22,11 @@
       <dependency id="nanoFramework.Graphics" version="1.0.2-preview.18" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.3.5-preview.10" />
       <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="1.2.2-preview.10" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.288-preview.103" />
-      <dependency id="nanoFramework.Iot.Device.Button" version="1.0.289-preview.1" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.288-preview.106" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.112" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289-preview.60" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.288-preview.113" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="1.0.289-preview.6" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.288-preview.114" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.114" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289-preview.74" />
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.126.0" />
       <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.126.0" />
       <dependency id="UnitsNet.nanoFramework.Power" version="4.126.0" />
