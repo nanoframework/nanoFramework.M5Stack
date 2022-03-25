@@ -24,10 +24,10 @@
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.0.288-preview.103" />
       <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.0.288-preview.106" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.289-preview.1" />
-      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.0.288-preview.99" />
+      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.0.289-preview.1" />
       <dependency id="nanoFramework.Iot.Device.Ft6xx6x" version="1.0.21-preview.102" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.288-preview.106" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.103" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.112" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2-preview.13" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3-preview.13" />
       <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.13" />

@@ -26,7 +26,7 @@
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.289-preview.1" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.0.288-preview.103" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.288-preview.106" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.103" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.0.288-preview.112" />
       <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1-preview.8" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289-preview.60" />
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.126.0" />
