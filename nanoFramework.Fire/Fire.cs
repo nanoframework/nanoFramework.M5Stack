@@ -4,31 +4,25 @@
 using Iot.Device.Button;
 using Iot.Device.Buzzer;
 using Iot.Device.Ip5306;
-using Iot.Device.Magnetometer;
-using Iot.Device.Mpu6886;
+using nanoFramework.Fire;
 using nanoFramework.Hardware.Esp32;
-using nanoFramework.UI;
 using System;
-using System.Device.Dac;
-using System.Device.Gpio;
-using System.Device.I2c;
-using System.Device.Spi;
-using System.IO.Ports;
-using UnitsNet;
 using System.Device.Adc;
+using System.Device.I2c;
+using UnitsNet;
 
 namespace nanoFramework.M5Stack
 {
     /// <summary>
-    /// M5Stack board
+    /// Fire board
     /// </summary>
-    public static partial class M5Stack
+    public static partial class Fire
     {
-        private static Ip5306 _power;
-        private static Buzzer _buzzer;        
+        private static readonly Ip5306 _power;
         private static GpioButton _left;
         private static GpioButton _center;
         private static GpioButton _right;
+        private static Buzzer _buzzer;
 
         #region properties
 
@@ -81,6 +75,12 @@ namespace nanoFramework.M5Stack
         }
 
         /// <summary>
+        /// Gets the power management of the M5 Stack.
+        /// </summary>
+        /// <remarks>Please make sure to read the documentation before adjusting any element.</remarks>
+        public static Ip5306 Power { get => _power; }
+
+        /// <summary>
         /// Gets the Buzzer.
         /// </summary>
         public static Buzzer Buzzer
@@ -99,6 +99,8 @@ namespace nanoFramework.M5Stack
             }
         }
 
+        #endregion
+
         /// <summary>
         /// Gets the screen.
         /// </summary>
@@ -114,19 +116,13 @@ namespace nanoFramework.M5Stack
             }
         }
 
-        /// <summary>
-        /// Gets the power management of the M5 Stack.
-        /// </summary>
-        /// <remarks>Please make sure to read the documentation before adjusting any element.</remarks>
-        public static Ip5306 Power { get => _power; }
-
-        #endregion
-
-        static M5Stack()
+        static Fire()
         {
             // Setup first the I2C bus
             Configuration.SetPinFunction(22, DeviceFunction.I2C1_CLOCK);
             Configuration.SetPinFunction(21, DeviceFunction.I2C1_DATA);
+            // Same for PortA than for the internal one
+            _portANumber = 1;
 
             // Create the energy management device
             I2cDevice i2c = new(new I2cConnectionSettings(1, Ip5306.SecondaryI2cAddress));
@@ -171,7 +167,7 @@ namespace nanoFramework.M5Stack
         /// <returns>An AdcChannel</returns>
         public static AdcChannel GetAdcGpio(int gpioNumber)
         {
-            if(_adc == null)
+            if (_adc == null)
             {
                 _adc = new();
             }

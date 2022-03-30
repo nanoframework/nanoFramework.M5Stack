@@ -1,21 +1,17 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-using System;
-using System.Device.Gpio;
-using System.Diagnostics;
-using System.Threading;
-using M5StackTestApp;
 using nanoFramework.M5Stack;
-using nanoFramework.UI;
 using nanoFramework.Presentation.Media;
-using nanoFramework;
+using System;
+using System.Diagnostics;
 using System.Numerics;
-using Console = nanoFramework.Console;
+using System.Threading;
+using Console = nanoFramework.M5Stack.Console;
 
 Debug.WriteLine("Hello from nanoFramework!");
 
-M5Stack.InitializeScreen();
+M5Core.InitializeScreen();
 Console.Clear();
 
 // Test the console display
@@ -32,7 +28,7 @@ Console.WriteLine("");
 Console.WriteLine("1 line empty before");
 Console.WriteLine("Press left button to continue");
 
-while (!M5Stack.ButtonLeft.IsPressed)
+while (!M5Core.ButtonLeft.IsPressed)
 {
     Thread.Sleep(10);
 }
@@ -40,14 +36,14 @@ while (!M5Stack.ButtonLeft.IsPressed)
 Console.Clear();
 
 Console.WriteLine("Calibrating the accelerator, do not touch it!");
-var acc = M5Stack.AccelerometerGyroscope;
+var acc = M5Core.AccelerometerGyroscope;
 acc.Calibrate(100);
 Console.WriteLine("");
 Console.WriteLine("Calibrating the magnetometer, please move it all around");
-var mag = M5Stack.Magnetometer;
+var mag = M5Core.Magnetometer;
 mag.CalibrateMagnetometer(100);
 
-M5Stack.ButtonLeft.Press += (sender, e) =>
+M5Core.ButtonLeft.Press += (sender, e) =>
 {
     Console.ForegroundColor = Color.Yellow;
     Console.CursorLeft = 0;
@@ -55,7 +51,7 @@ M5Stack.ButtonLeft.Press += (sender, e) =>
     Console.Write($"Left Pressed  ");
 };
 
-M5Stack.ButtonCenter.Press += (sender, e) =>
+M5Core.ButtonCenter.Press += (sender, e) =>
 {
     Console.ForegroundColor = Color.Yellow;
     Console.CursorLeft = 0;
@@ -63,7 +59,7 @@ M5Stack.ButtonCenter.Press += (sender, e) =>
     Console.Write($"Center Pressed");
 };
 
-M5Stack.ButtonRight.Press += (sender, e) =>
+M5Core.ButtonRight.Press += (sender, e) =>
 {
     Console.ForegroundColor = Color.Yellow;
     Console.CursorLeft = 0;
@@ -73,7 +69,7 @@ M5Stack.ButtonRight.Press += (sender, e) =>
 
 Console.Clear();
 
-var power = M5Stack.Power;
+var power = M5Core.Power;
 Vector3 accVal;
 Vector3 gyroVal;
 Vector3 magVal;

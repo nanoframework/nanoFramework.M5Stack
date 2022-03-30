@@ -26,7 +26,11 @@ namespace nanoFramework.M5Stack
                 return;
             }
 
+#if M5CORE2 || FIRE
+            MemoryAllocationBitmap = 2 * 1024 * 1024;
+#else
             MemoryAllocationBitmap = 1024;
+#endif
             BackLightPin = 32;
             Controller = new();
             Controller.OpenPin(BackLightPin, PinMode.Output);

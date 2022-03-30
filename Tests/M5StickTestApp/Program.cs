@@ -1,13 +1,12 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-using nanoFramework;
-using nanoFramework.M5Stick;
+using nanoFramework.M5Stack;
 using nanoFramework.Presentation.Media;
 using System;
 using System.Diagnostics;
 using System.Threading;
-using Console = nanoFramework.Console;
+using Console = nanoFramework.M5Stack.Console;
 
 Debug.WriteLine("Hello M5Stick from nanoFramework!");
 

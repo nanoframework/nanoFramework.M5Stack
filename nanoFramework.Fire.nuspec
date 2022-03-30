@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.Fire</id>
+    <version>$version$</version>
+    <title>nanoFramework.Fire</title>
+    <authors>nanoframework</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <releaseNotes>
+    </releaseNotes>
+    <readme>docs\README.md</readme>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.M5Stack</projectUrl>
+    <icon>images\nf-logo.png</icon>
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
+    <description>This package includes the nanoFramework.Fire assembly for .NET nanoFramework C# projects.</description>
+    <tags>nanoFramework C# csharp netmf netnf m5stack Fire</tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.12.0-preview.19" />
+      <dependency id="nanoFramework.Graphics" version="1.0.2-preview.18" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.3.5-preview.10" />
+      <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.0.288-preview.106" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="1.0.288-preview.99" />
+      <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.0.288-preview.103" />
+      <dependency id="nanoFramework.Iot.Device.Ip5306" version="1.0.288-preview.103" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.288-preview.106" />
+      <dependency id="nanoFramework.System.Device.Adc" version="1.0.2-preview.13" />
+      <dependency id="nanoFramework.System.Device.Dac" version="1.4.3-preview.13" />
+      <dependency id="nanoFramework.System.Device.Spi" version="1.0.4-preview.11" />
+      <dependency id="nanoFramework.System.IO.Ports" version="1.0.3-preview.39" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.126.0" />
+      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.126.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.126.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="nanoFramework.Fire\bin\Release\nanoFramework.Fire.dll" target="lib\nanoFramework.Fire.dll" />
+    <file src="nanoFramework.Fire\bin\Release\nanoFramework.Fire.pdb" target="lib\nanoFramework.Fire.pdb" />
+    <file src="nanoFramework.Fire\bin\Release\nanoFramework.Fire.pdbx" target="lib\nanoFramework.Fire.pdbx" />
+    <file src="nanoFramework.Fire\bin\Release\nanoFramework.Fire.pe" target="lib\nanoFramework.Fire.pe" />
+    <file src="nanoFramework.Fire\bin\Release\nanoFramework.Fire.xml" target="lib\nanoFramework.Fire.xml" />
+    <file src="assets\readme.txt" target="" />
+    <file src="README.md" target="docs\" />
+    <file src="assets\nf-logo.png" target="images\" />
+    <file src="LICENSE.md" target="" />
+  </files>
+</package>

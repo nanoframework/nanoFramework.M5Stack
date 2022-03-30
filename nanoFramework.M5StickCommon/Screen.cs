@@ -4,11 +4,9 @@
 using Iot.Device.Axp192;
 using nanoFramework.M5Stack;
 using nanoFramework.UI;
-using System;
-using System.Device.Gpio;
 using UnitsNet;
 
-namespace nanoFramework.M5Stick
+namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// M5 Stack screen class

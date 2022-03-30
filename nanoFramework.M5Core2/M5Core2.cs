@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using Iot.Device.Axp192;
+using Iot.Device.Ft6xx6x;
 using Iot.Device.Rtc;
 using nanoFramework.Hardware.Esp32;
 using nanoFramework.M5Core2;
@@ -9,16 +10,37 @@ using nanoFramework.Runtime.Native;
 using System;
 using System.Device.Adc;
 using System.Device.I2c;
+using System.Device.Gpio;
 using UnitsNet;
+using System.Threading;
+using nanoFramework.Runtime.Events;
 
 namespace nanoFramework.M5Stack
 {
     public static partial class M5Core2
     {
+        private const int TouchPinInterrupt = 39;
         private static Pcf8563 _rtc;
         private static Axp192 _power;
         private static bool _powerLed;
         private static bool _vibrate;
+        private static Ft6xx6x _touchController;
+        private static Thread _callbackThread;
+        private static CancellationTokenSource _cancelThread;
+        private static CancellationTokenSource _startThread;
+        private static Point _lastPoint;
+
+        /// <summary>
+        /// Touch event handler for the touch event.
+        /// </summary>
+        /// <param name="sender">The sender object.</param>
+        /// <param name="e">The touch event argument.</param>
+        public delegate void TouchEventHandler(object sender, TouchEventArgs e);
+
+        /// <summary>
+        /// Touch event handler.
+        /// </summary>
+        public static event TouchEventHandler TouchEvent;
 
         /// <summary>
         /// Gets the power management of the M5Core2.
@@ -61,6 +83,22 @@ namespace nanoFramework.M5Stack
         }
 
         /// <summary>
+        /// Gets the touch controller.
+        /// </summary>
+        public static Ft6xx6x TouchController
+        {
+            get
+            {
+                if (_touchController == null)
+                {
+                    InitializeScreen();
+                }
+
+                return _touchController;
+            }
+        }
+
+        /// <summary>
         /// Gets the screen.
         /// </summary>
         /// <remarks>The screen initialization takes a little bit of time, if you need the screen consider using it as early as possible in your code.</remarks>
@@ -72,7 +110,112 @@ namespace nanoFramework.M5Stack
             {
                 _screen = new();
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
+                _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
+                _touchController.SetInterruptMode(false);
+                _lastPoint = new();
+                _cancelThread = new();
+                _startThread = new();
+                _callbackThread = new(ThreadTouchCallback);
+                _callbackThread.Start();
+                _gpio.OpenPin(TouchPinInterrupt, PinMode.Input);
+                _gpio.RegisterCallbackForPinValueChangedEvent(TouchPinInterrupt, PinEventTypes.Rising | PinEventTypes.Falling, TouchCallback);
             }
+        }
+
+        private static void TouchCallback(object sender, PinValueChangedEventArgs pinValueChangedEventArgs)
+        {
+            if (pinValueChangedEventArgs.ChangeType == PinEventTypes.Falling)
+            {
+                _cancelThread = new();
+                _startThread.Cancel();
+            }
+            else
+            {
+                _startThread = new();
+                _cancelThread.Cancel();
+                var point = _touchController.GetPoint(true);
+                if ((_lastPoint.X != point.X) && (_lastPoint.Y != point.Y))
+                {
+                    _lastPoint = point;
+                    var touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown) | TouchEventCategory.LiftUp;
+                    TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
+                }
+            }
+        }
+
+        private static void ThreadTouchCallback()
+        {
+        start:
+            while (!_startThread.IsCancellationRequested)
+            {
+                _startThread.Token.WaitHandle.WaitOne(1000, true);
+            }
+
+            int touchNumber;
+            TouchEventCategory touchCategory;
+            do
+            {
+                touchNumber = _touchController.GetNumberPoints();
+                if (touchNumber == 1)
+                {
+                    var point = _touchController.GetPoint(true);
+                    _lastPoint = point;
+                    touchCategory = CheckIfInButtons(point.X, point.Y, TouchEventCategory.Unknown);
+                    touchCategory = point.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
+                    TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
+                }
+                else if (touchNumber == 2)
+                {
+                    var dp = _touchController.GetDoublePoints();
+                    touchCategory = CheckIfInButtons(dp.Point1.X, dp.Point1.Y, TouchEventCategory.DoubleTouch);
+                    touchCategory = dp.Point1.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
+                    TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = dp.Point1.X, Y = dp.Point1.Y, Id = dp.Point1.TouchId });
+                    touchCategory = CheckIfInButtons(dp.Point2.X, dp.Point2.Y, TouchEventCategory.DoubleTouch);
+                    touchCategory = dp.Point2.Event == Event.Contact ? touchCategory | TouchEventCategory.Moving : touchCategory;
+                    TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = dp.Point2.X, Y = dp.Point2.Y, Id = dp.Point2.TouchId });
+                }
+
+                // This is necessary to give time to the touch sensor
+                // In theory, the wait should be calculated with the period
+                _cancelThread.Token.WaitHandle.WaitOne(10, true);
+            } while (!_cancelThread.IsCancellationRequested);
+
+            // If both token are cancelled, we exit. This is in case this won't become static and will have a dispose.
+            // Now, with the current logic, it will always run.
+            if (!(_cancelThread.IsCancellationRequested && _startThread.IsCancellationRequested))
+            {
+                goto start;
+            }
+        }
+
+        private static TouchEventCategory CheckIfInButtons(int x, int y, TouchEventCategory touchCategory)
+        {
+            // Positions of the buttons on the X axis
+            const int XLeft = 83;
+            const int XMiddle = 182;
+            const int XRight = 271;
+            // On the Y one (same for all
+            const int YButtons = 263;
+            // The delta in pixel for the button size
+            const int DeltaPixel = 24;
+            // Check if we are in Y
+            if ((y <= YButtons + DeltaPixel) && (y >= YButtons - DeltaPixel))
+            {
+                if ((x <= XLeft + DeltaPixel) && (x >= XLeft - DeltaPixel))
+                {
+                    touchCategory |= TouchEventCategory.LeftButton;
+                }
+                else if ((x <= XMiddle + DeltaPixel) && (x >= XMiddle - DeltaPixel))
+                {
+                    touchCategory |= TouchEventCategory.MiddleButton;
+                }
+                else if ((x <= XRight + DeltaPixel) && (x >= XRight - DeltaPixel))
+                {
+                    touchCategory |= TouchEventCategory.RightButton;
+                }
+            }
+
+            return touchCategory;
         }
 
         static M5Core2()
@@ -110,7 +253,7 @@ namespace nanoFramework.M5Stack
             _power.BatteryTemperatureMonitoring = true;
             _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
             // Set ADC1 Enable
-            _power.AdcPinEnabled= AdcPinEnabled.All;
+            _power.AdcPinEnabled = AdcPinEnabled.All;
             // Switch on the power led
             PowerLed = true;
             // Set GPIO4 as output (rest LCD)
@@ -121,7 +264,7 @@ namespace nanoFramework.M5Stack
             _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
             // Enable bat detection
             _power.SetShutdownBatteryDetectionControl(false, true, ShutdownBatteryPinFunction.HighResistance, true, ShutdownBatteryTiming.S2);
-            // Set Power off voltage 3.0v            
+            // Set Power off voltage 3.0v
             _power.VoffVoltage = VoffVoltage.V3_0;
             // This part of the code will handle the button behavior
             _power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
@@ -143,6 +286,12 @@ namespace nanoFramework.M5Stack
             // Second serial port
             Configuration.SetPinFunction(13, DeviceFunction.COM2_RX);
             Configuration.SetPinFunction(14, DeviceFunction.COM2_TX);
+
+            // Setup second I2C bus (port A) 
+            Configuration.SetPinFunction(33, DeviceFunction.I2C2_CLOCK);
+            Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);
+            // The portA is the second I2C
+            _portANumber = 2;
 
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));

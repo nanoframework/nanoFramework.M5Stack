@@ -8,7 +8,7 @@ using System.Device.Gpio;
 using System.Threading;
 using UnitsNet;
 
-namespace nanoFramework.M5Core2
+namespace nanoFramework.M5Stack
 {
     /// <summary>
     /// M5Core2 screen class
@@ -27,7 +27,7 @@ namespace nanoFramework.M5Core2
         /// </summary>
         public Screen()
         {
-            if(_isInitialized)
+            if (_isInitialized)
             {
                 return;
             }
