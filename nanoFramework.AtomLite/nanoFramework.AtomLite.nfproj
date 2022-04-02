@@ -30,12 +30,14 @@
   <ItemGroup>
     <Compile Include="AtomLite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RgbLed.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Button, Version=0.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.0.300\lib\Iot.Device.Button.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Iot.Device.Ws28xx.Esp32">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.0.300\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.12.0.4, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>

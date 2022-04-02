@@ -4,6 +4,7 @@
 using Iot.Device.Button;
 using Iot.Device.Buzzer;
 using Iot.Device.Ip5306;
+using Iot.Device.Ws28xx.Esp32;
 using nanoFramework.Fire;
 using nanoFramework.Hardware.Esp32;
 using System;
@@ -23,8 +24,25 @@ namespace nanoFramework.M5Stack
         private static GpioButton _center;
         private static GpioButton _right;
         private static Buzzer _buzzer;
+        private static Sk6812 _rgbLed;
 
-        #region properties
+        #region properties        
+
+        /// <summary>
+        /// RGB Led bar containing 10 elements
+        /// </summary>
+        public static Sk6812 LedBar
+        {
+            get
+            {
+                if (_rgbLed == null)
+                {
+                    _rgbLed = new(15, 10);
+                }
+
+                return _rgbLed;
+            }
+        }
 
         /// <summary>
         /// Left button.

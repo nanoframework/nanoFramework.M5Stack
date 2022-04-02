@@ -1,6 +1,7 @@
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+using Iot.Device.Ws28xx.Esp32;
 using nanoFramework.M5Stack;
 using nanoFramework.Presentation.Media;
 using System;
@@ -13,6 +14,27 @@ Debug.WriteLine("Hello from nanoFramework!");
 
 Fire.InitializeScreen();
 Console.Clear();
+
+// Testing colors
+const int Count = 10;
+var neo = Fire.LedBar;
+Console.ForegroundColor = Color.White;
+Console.WriteLine("All led bar White");
+ColorWipe(neo, System.Drawing.Color.White, Count);
+Console.ForegroundColor = Color.Red;
+Console.WriteLine("All led bar Red");
+ColorWipe(neo, System.Drawing.Color.Red, Count);
+Console.ForegroundColor = Color.Green;
+Console.WriteLine("All led bar Green");
+ColorWipe(neo, System.Drawing.Color.Green, Count);
+Console.ForegroundColor = Color.Blue;
+Console.WriteLine("All led bar blue");
+ColorWipe(neo, System.Drawing.Color.Blue, Count);
+Console.ForegroundColor = Color.White;
+Console.WriteLine("All led rainbow");
+Rainbow(neo, Count);
+neo.Image.Clear();
+neo.Update();
 
 // Test the console display
 Console.Write("This is a short text. ");
@@ -122,4 +144,46 @@ while (true)
     Console.CursorTop++;
     Console.Write($"  Full {power.IsBatteryFull} ");
     Thread.Sleep(20);
+}
+
+void ColorWipe(Ws28xx neo, System.Drawing.Color color, int count)
+{
+    BitmapImage img = neo.Image;
+    for (var i = 0; i < count; i++)
+    {
+        img.SetPixel(i, 0, color);
+        neo.Update();
+    }
+}
+
+void Rainbow(Ws28xx neo, int count, int iterations = 1)
+{
+    BitmapImage img = neo.Image;
+    for (var i = 0; i < 255 * iterations; i++)
+    {
+        for (var j = 0; j < count; j++)
+        {
+            img.SetPixel(j, 0, Wheel((i + j) & 255));
+        }
+
+        neo.Update();
+    }
+}
+
+System.Drawing.Color Wheel(int position)
+{
+    if (position < 85)
+    {
+        return System.Drawing.Color.FromArgb(position * 3, 255 - position * 3, 0);
+    }
+    else if (position < 170)
+    {
+        position -= 85;
+        return System.Drawing.Color.FromArgb(255 - position * 3, 0, position * 3);
+    }
+    else
+    {
+        position -= 170;
+        return System.Drawing.Color.FromArgb(0, position * 3, 255 - position * 3);
+    }
 }
