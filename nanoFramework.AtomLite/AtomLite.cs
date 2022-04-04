@@ -1,6 +1,7 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+using Iot.Device.Ws28xx.Esp32;
 using nanoFramework.Hardware.Esp32;
 
 namespace nanoFramework.AtomLite
@@ -10,18 +11,18 @@ namespace nanoFramework.AtomLite
     /// </summary>
     public static partial class AtomLite
     {
-        private static RgbLed _rgbLed;
+        private static Sk6812 _rgbLed;
 
         /// <summary>
         /// RGB NeoPixel led.
         /// </summary>
-        public static RgbLed NeoPixel
+        public static Sk6812 NeoPixel
         {
             get
             {
                 if (_rgbLed == null)
                 {
-                    _rgbLed = new();
+                    _rgbLed = new(27, 1);
                 }
 
                 return _rgbLed;

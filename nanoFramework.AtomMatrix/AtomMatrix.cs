@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using Iot.Device.Mpu6886;
+using Iot.Device.Ws28xx.Esp32;
 using nanoFramework.Hardware.Esp32;
 using System.Device.I2c;
 
@@ -16,7 +17,7 @@ namespace nanoFramework.AtomMatrix
         /// GPIO number of the neo pixel LED (from the datasheet).
         /// </summary>
         private const int _rgbLedGpio = 27;
-        private static PixelController _rgbLed;
+        private static Ws2812c _rgbLed;
         private static Mpu6886AccelerometerGyroscope _mpu6886;
 
         /// <summary>
@@ -39,14 +40,14 @@ namespace nanoFramework.AtomMatrix
         /// <summary>
         /// RGB LED matrix (WS2812C).
         /// </summary>
-        public static PixelController LedMatrix
+        public static Ws2812c LedMatrix
         {
             get
             {
                 if (_rgbLed == null)
                 {
                     // instantiate a new Pixel controller, ATOM Matrix has 5x5 LEDs
-                    _rgbLed = new PixelController(_rgbLedGpio, 5 * 5);
+                    _rgbLed = new Ws2812c(_rgbLedGpio, 5, 5);
                 }
 
                 return _rgbLed;
@@ -67,7 +68,7 @@ namespace nanoFramework.AtomMatrix
             // Setup buttons
             _gpio = new();
 
-            LedMatrix.TurnOff();
+            LedMatrix.Image.Clear();
         }
     }
 }

@@ -45,6 +45,9 @@
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.0.302\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Iot.Device.Ws28xx.Esp32">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.0.300\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib, Version=1.12.0.4, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
@@ -52,6 +55,9 @@
     <Reference Include="nanoFramework.Graphics, Version=1.0.2.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Graphics.1.0.2\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="nanoFramework.Hardware.Esp32.Rmt">
+      <HintPath>..\..\packages\nanoFramework.Hardware.Esp32.Rmt.1.2.2\lib\nanoFramework.Hardware.Esp32.Rmt.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.ResourceManager, Version=1.1.4.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.ResourceManager.1.1.4\lib\nanoFramework.ResourceManager.dll</HintPath>
@@ -100,6 +106,9 @@
     <Reference Include="System.Device.Spi, Version=1.0.5.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Device.Spi.1.0.5\lib\System.Device.Spi.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\packages\nanoFramework.System.Drawing.1.0.289\lib\System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System.Math, Version=1.4.4.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Math.1.4.4\lib\System.Math.dll</HintPath>

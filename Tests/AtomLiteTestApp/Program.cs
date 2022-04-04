@@ -15,7 +15,8 @@ namespace AtomLiteTestApp
         {
             var button = AtomLite.Button;
             var rgb = AtomLite.NeoPixel;
-            rgb.SetColor(Color.FromArgb(255, 255, 0, 0));
+            rgb.Image.SetPixel(0, 0, Color.FromArgb(255, 255, 0, 0));
+            rgb.Update();
 
             button.Press += Button_Press;
 
@@ -26,19 +27,22 @@ namespace AtomLiteTestApp
 
         private static void Button_Press(object sender, EventArgs e)
         {
-            var color = AtomLite.NeoPixel.GetColor();
-            if(color.R > 0)
+            var color = AtomLite.NeoPixel.Image.Data;
+            // Coded as G, R, B
+            if (color[1] > 0)
             {
-                AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 255, 0));
+                AtomLite.NeoPixel.Image.SetPixel(0, 0, Color.FromArgb(255, 0, 255, 0));
             }
-            else if (color.G > 0)
+            else if (color[0] > 0)
             {
-                AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 0, 0, 255));
+                AtomLite.NeoPixel.Image.SetPixel(0, 0, Color.FromArgb(255, 0, 0, 255));
             }
             else
             {
-                AtomLite.NeoPixel.SetColor(Color.FromArgb(255, 255, 0, 0));
+                AtomLite.NeoPixel.Image.SetPixel(0, 0, Color.FromArgb(255, 255, 0, 0));
             }
+
+            AtomLite.NeoPixel.Update();
         }
     }
 }

@@ -372,25 +372,33 @@ M5StickC.Led.Toggle();
 
 The M5StickC/CPlus and Atom Lite/Matrix exposes an infrared led. You can access it thru the `InfraredLed` property. This will give you a `TransmitterChannel`. Check out the [sample pack](https://github.com/nanoframework/Samples/tree/main/samples/Hardware.Esp32.Rmt) to understand how to use it.
 
-### NeoPixel
+### NeoPixel on AtomLite
 
 The Atom Lite exposes a rgb led. You can access it thru the `NeoPixel` property:
 
 ```csharp
 // This will set NeoPixel to green:
-AtomLite.NeoPixel.SetColor(Color.Green);
+AtomLite.NeoPixel.Image.SetPixel(0, 0, Color.Green);
+AtomLite.NeoPixel.Update();
 ```
 
-### RGB LED matrix
+### RGB LED matrix on AtomMatrix and Led bar on Fire
 
 The Atom Matrix has a matrix of 25 RGB LEDs.
 The position of the LEDs in the array follows their placement in the matrix, being 0 the one at the top left corner, growing left to right, top to bottom.
 
-You can access it thru the `LedMatrix` property, like this:
+You can access it thru the `LedMatrix` property on the AtomMatrix, like this:
 
 ```csharp
-// This will set the RGB LED at position 0 to green
-AtomMatrix.LedMatrix.SetColor(0, Color.Green);
+// This will set the RGB LED at position 2, 2 to green
+AtomMatrix.LedMatrix.Image.SetPixel(2, 2, Color.Green);
+```
+
+Similarly, you have access to the `LedBar` property on the Fire:
+
+```csharp
+// This will set the second RGB LED to green
+Fire.LedBar.Image.SetPixel(2, 0, Color.Green);
 ```
 
 After you're done with updating all the LEDs that you want to change, flush the updated to the LEDs, like this:
@@ -398,6 +406,13 @@ After you're done with updating all the LEDs that you want to change, flush the 
 ```csharp
 // This will update all RGB LED 
 AtomMatrix.LedMatrix.Update();
+```
+
+And on the Fire:
+
+```csharp
+// This will update all RGB LED 
+Fire.LedBar.Update();
 ```
 
 ## Feedback and documentation
