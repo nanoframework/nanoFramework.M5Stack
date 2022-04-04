@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.4...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.6...HEAD)
+
+**Implemented enhancements:**
+
+- Adjusting for Ws8xxx and Sk6812 drivers, adding Fire led bar [\#131](https://github.com/nanoframework/nanoFramework.M5Stack/pull/131)
+
+## [v1.0.6](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.6) (2022-04-03)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.4...v1.0.6)
 
 **Documentation and other chores:**
 
