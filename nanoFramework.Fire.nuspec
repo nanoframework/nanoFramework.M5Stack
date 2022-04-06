@@ -30,9 +30,9 @@
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.5" />
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.4" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.127.0" />
-      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.127.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.127.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.128.0" />
+      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.128.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.128.0" />
       <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="1.0.300" />
       <dependency id="nanoFramework.System.Drawing" version="1.0.289" />
     </dependencies>
