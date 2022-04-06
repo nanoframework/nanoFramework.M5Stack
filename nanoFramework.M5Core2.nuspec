@@ -35,10 +35,10 @@
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.0.289" />
       <dependency id="nanoFramework.System.IO.Ports" version="1.0.4" />
       <dependency id="nanoFramework.System.Threading" version="1.0.4" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.127.0" />
-      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.127.0" />
-      <dependency id="UnitsNet.nanoFramework.Power" version="4.127.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.127.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.128.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.128.0" />
+      <dependency id="UnitsNet.nanoFramework.Power" version="4.128.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.128.0" />
     </dependencies>
   </metadata>
   <files>
