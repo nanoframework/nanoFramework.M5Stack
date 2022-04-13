@@ -25,7 +25,7 @@
       <dependency id="nanoFramework.Iot.Device.Button" version="1.0.300" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.0.302" />
       <dependency id="nanoFramework.Iot.Device.Ip5306" version="1.0.302" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.302" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.0.303" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.0.5" />
