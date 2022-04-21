@@ -85,48 +85,26 @@ steps:
    
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
-# create or update GitHub release
+# create GitHub release from main branche
 - task: GithubRelease@1
   condition: >-
     and(
       succeeded(),
       eq(variables['System.PullRequest.PullRequestId'], ''),
-      not(startsWith(variables['Build.SourceBranch'], 'refs/tags/v')),
-      ne(variables['StartReleaseCandidate'], true )
-    )
-  displayName: Create/Update GitHub PREVIEW release
-  inputs:
-    gitHubConnection: 'github.com_nano-$(System.TeamProject)'
-    tagSource: userSpecifiedTag
-    tag: v$(MY_NUGET_VERSION)
-    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
-    releaseNotesSource: inline
-    releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [M5Core](https://www.nuget.org/packages/M5Core/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>package: [M5Core2](https://www.nuget.org/packages/M5Core2/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5Stack Fire](https://www.nuget.org/packages/nanoFramework.Fire/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
-    assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
-    assetUploadMode: replace
-    isPreRelease: true
-    addChangeLog: false
-
-# create or update GitHub release ON tags from release or main branches
-- task: GithubRelease@1
-  condition: >-
-    and(
-      succeeded(),
-      startsWith(variables['Build.SourceBranch'], 'refs/tags/v'),
+      startsWith(variables['Build.SourceBranch'], 'refs/heads/main'),
       not(contains(variables['Build.SourceBranch'], 'preview')),
       ne(variables['StartReleaseCandidate'], true)
     )
-  displayName: Create/Update GitHub stable release
+  displayName: Create GitHub stable release
   inputs:
     action: edit
     gitHubConnection: 'github.com_nano-$(System.TeamProject)'
     tagSource: userSpecifiedTag
     tag: v$(MY_NUGET_VERSION)
-    title: '$(nugetPackageName) Library v$(MY_NUGET_VERSION)'
+    title: '$(nugetPackageName) v$(MY_NUGET_VERSION)'
     releaseNotesSource: inline
     releaseNotesInline: 'Check the [changelog]($(Build.Repository.Uri)/blob/$(Build.SourceBranchName)/CHANGELOG.md).<br><br><h4>Install from NuGet</h4><br>The following NuGet packages are available for download from this release:<br>:package: [M5Core](https://www.nuget.org/packages/M5Core/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5Core2](https://www.nuget.org/packages/M5Core2/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION).<br>:package: [M5StickC](https://www.nuget.org/packages/nanoFramework.M5StickC/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5StickCPlus](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)<br>:package: [M5Stack Fire](https://www.nuget.org/packages/nanoFramework.Fire/$(MY_NUGET_VERSION)) v$(MY_NUGET_VERSION)'
     assets: '$(Build.ArtifactStagingDirectory)/$(nugetPackageName).$(MY_NUGET_VERSION).nupkg'
-    assetUploadMode: replace
     isPreRelease: false
     addChangeLog: false
 
