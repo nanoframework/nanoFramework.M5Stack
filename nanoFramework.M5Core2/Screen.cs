@@ -15,6 +15,11 @@ namespace nanoFramework.M5Stack
     /// </summary>
     public class Screen : ScreenBase
     {
+        /// <summary>
+        /// Default memory allocation
+        /// </summary>
+        public const int DefaultMemoryAllocationBitmap = 320 * 240 * 4;
+
         private const int ChipSelect = 5;
         private const int DataCommand = 15;
         private const int Reset = -1;
@@ -25,7 +30,8 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Initializes the screen
         /// </summary>
-        public Screen()
+        /// <param name="memoryBitMapAllocation">The memory allocation.</param>
+        public Screen(int memoryBitMapAllocation = DefaultMemoryAllocationBitmap)
         {
             if (_isInitialized)
             {
@@ -33,7 +39,7 @@ namespace nanoFramework.M5Stack
             }
 
             // We're allocating anough memory for the full screen as this is a SPRAM board
-            MemoryAllocationBitmap = 320 * 240 * 4;
+            MemoryAllocationBitmap = memoryBitMapAllocation;
             BackLightPin = -1;
             _power = M5Stack.M5Core2.Power;
             // Enable the screen

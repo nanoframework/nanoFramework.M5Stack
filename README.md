@@ -133,7 +133,14 @@ nanoFramework.Console.Write("This is white on black again and on 9th line");
 
 > Note: You can change the default font as well, you need to provide it as a property. The Cursor positions are calculated with the largest possible character.
 
-M5Core2 and Fire have SPRAM, so you can get a full screen buffer as well. Refer to the [Graphics samples](https://github.com/nanoframework/Samples#graphics-for-screens) to understand all you can do with it.
+M5Core2 and Fire have PSRAM, so you can get a full screen buffer as well. Refer to the [Graphics samples](https://github.com/nanoframework/Samples#graphics-for-screens) to understand all you can do with it.
+
+If you have intensive graphic need with any of the M5Stack, you can adjust the memory requested. While both M5Core2 and Fire have PSRAM and can accommodate very large amount like 2 Mb or more, the ones without cannot go more than few Kb or tens of Kb.
+
+```csharp
+// This will allocate 2 Mb of memory for the graphics
+M5Core2.InitializeScreen(2 * 1024 * 1024);
+```
 
 ### Buttons
 
