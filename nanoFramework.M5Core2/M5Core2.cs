@@ -101,14 +101,15 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets the screen.
         /// </summary>
+        /// <param name="memoryBitMapAllocation">The memory allocation.</param>
         /// <remarks>The screen initialization takes a little bit of time, if you need the screen consider using it as early as possible in your code.</remarks>
-        public static void InitializeScreen()
+        public static void InitializeScreen(int memoryBitMapAllocation = Screen.DefaultMemoryAllocationBitmap)
         {
             // If the screen is not needed, it's not going to be created
             // Note: initialization may take a little bit of time
             if (_screen == null)
             {
-                _screen = new();
+                _screen = new(memoryBitMapAllocation);
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
                 _touchController.SetInterruptMode(false);

@@ -11,6 +11,11 @@ namespace nanoFramework.M5Stack
     /// </summary>
     public class Screen : ScreenBase
     {
+        /// <summary>
+        /// Default memory allocation
+        /// </summary>
+        public const int DefaultMemoryAllocationBitmap = 320 * 240 * 4;
+
         private const int ChipSelect = 14;
         private const int DataCommand = 27;
         private const int Reset = 33;
@@ -19,18 +24,15 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Initializes the screen
         /// </summary>
-        public Screen()
+        /// <param name="memoryBitMapAllocation">The memory allocation.</param>
+        public Screen(int memoryBitMapAllocation = DefaultMemoryAllocationBitmap)
         {
             if (_isInitialized)
             {
                 return;
             }
 
-#if M5CORE2 || FIRE
-            MemoryAllocationBitmap = 2 * 1024 * 1024;
-#else
-            MemoryAllocationBitmap = 1024;
-#endif
+            MemoryAllocationBitmap = memoryBitMapAllocation;
             BackLightPin = 32;
             Controller = new();
             Controller.OpenPin(BackLightPin, PinMode.Output);

@@ -13,24 +13,30 @@ namespace nanoFramework.M5Stack
     /// </summary>
     public class Screen : ScreenBase
     {
+        /// <summary>
+        /// Default memory allocation
+        /// </summary>
+        public const int DefaultMemoryAllocationBitmap = 1024;
+
         private const int ChipSelect = 5;
         private const int DataCommand = 23;
         private const int Reset = 18;
         private static Axp192 _power;
         private static int _lumi;
         private static bool _isInitialized = false;
-        
+
         /// <summary>
         /// Initializes the screen
         /// </summary>
-        public Screen()
+        /// <param name="memoryBitMapAllocation">The memory allocation.</param>
+        public Screen(int memoryBitMapAllocation = DefaultMemoryAllocationBitmap)
         {
             if (_isInitialized)
             {
                 return;
             }
 
-            MemoryAllocationBitmap = 1024;
+            MemoryAllocationBitmap = memoryBitMapAllocation;
             // Not used in Stick versions, AXP is doing this
             BackLightPin = -1;
 #if M5STICKC
