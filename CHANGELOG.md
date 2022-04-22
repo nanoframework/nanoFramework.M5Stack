@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.30...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.32...HEAD)
+
+**Implemented enhancements:**
+
+- Surfacing screen memory allocation [\#144](https://github.com/nanoframework/nanoFramework.M5Stack/pull/144)
+
+## [v1.0.32](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.32) (2022-04-22)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.30...v1.0.32)
 
 **Documentation and other chores:**
 
