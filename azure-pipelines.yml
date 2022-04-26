@@ -19,6 +19,7 @@ trigger:
       - assets/*
       - config/*
       - .github/*
+      - Tests/*
 
   tags:
     include: 
