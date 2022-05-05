@@ -18,14 +18,14 @@ const string Ssid = "SSID";
 const string Password = "YourWifiPasswordHere";
 // Give 60 seconds to the wifi join to happen
 CancellationTokenSource cs = new(60000);
-var success = WiFiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
+var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
 if (!success)
 {
     // Something went wrong, you can get details with the ConnectionError property:
-    Debug.WriteLine($"Can't connect to the network, error: {WiFiNetworkHelper.Status}");
-    if (WiFiNetworkHelper.HelperException != null)
+    Debug.WriteLine($"Can't connect to the network, error: {WifiNetworkHelper.Status}");
+    if (WifiNetworkHelper.HelperException != null)
     {
-        Debug.WriteLine($"ex: {WiFiNetworkHelper.HelperException}");
+        Debug.WriteLine($"ex: {WifiNetworkHelper.HelperException}");
     }
 }
 
