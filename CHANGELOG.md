@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.46...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.49.30985...HEAD)
+
+**Fixed bugs:**
+
+- Fix ADC on GPIO35/36 on the M5Core2 [\#152](https://github.com/nanoframework/nanoFramework.M5Stack/pull/152)
+
+## [v1.0.49.30985](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.49.30985) (2022-05-06)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.46...v1.0.49.30985)
 
 **Documentation and other chores:**
 
