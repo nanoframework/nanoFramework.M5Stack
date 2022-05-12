@@ -336,6 +336,9 @@ namespace nanoFramework.M5Stack
                 case 35:
                     Configuration.SetPinFunction(11, DeviceFunction.ADC1_CH7);
                     return _adc.OpenChannel(7);
+                case 36:
+                    Configuration.SetPinFunction(5, DeviceFunction.ADC1_CH0);
+                    return _adc.OpenChannel(0);
                 case 32:
                     Configuration.SetPinFunction(32, DeviceFunction.ADC1_CH4);
                     return _adc.OpenChannel(4);
