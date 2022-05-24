@@ -79,6 +79,10 @@ steps:
 - template: azure-pipelines-templates/class-lib-package.yml@templates
   parameters:
     nugetPackageName: 'nanoFramework.Fire'
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates
+  parameters:
+    nugetPackageName: 'nanoFramework.Tough'
    
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
