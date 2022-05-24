@@ -5,13 +5,13 @@
 
 #if M5CORE2
 using Iot.Device.Ft6xx6x;
+using Iot.Device.Rtc;
 using nanoFramework.M5Core2;
 #elif TOUGH
 using Iot.Device.Chs6540;
 using nanoFramework.Tough;
 #endif
 using Iot.Device.Axp192;
-using Iot.Device.Rtc;
 using nanoFramework.Hardware.Esp32;
 using nanoFramework.Runtime.Native;
 using System;
@@ -31,12 +31,12 @@ namespace nanoFramework.M5Stack
 #endif
     {
         private const int TouchPinInterrupt = 39;
-        private static Pcf8563 _rtc;
         private static Axp192 _power;
         private static bool _powerLed;
         private static bool _vibrate;
 #if M5CORE2
         private static Ft6xx6x _touchController;
+        private static Pcf8563 _rtc;
 #elif TOUGH
         private static Chs6540 _touchController;
 #endif
@@ -58,11 +58,16 @@ namespace nanoFramework.M5Stack
         public static event TouchEventHandler TouchEvent;
 
         /// <summary>
+#if M5CORE2
         /// Gets the power management of the M5Core2.
+#elif TOUGH
+        /// Gets the power management of the Tough.
+#endif
         /// </summary>
         /// <remarks>Please make sure to read the documentation before adjusting any element.</remarks>
         public static Axp192 Power { get => _power; }
 
+#if M5CORE2
         /// <summary>
         /// Gets the real time clock.
         /// </summary>
@@ -71,7 +76,6 @@ namespace nanoFramework.M5Stack
             get => _rtc;
         }
 
-#if M5CORE2
         /// <summary>
         /// Sets on or off the Power Led.
         /// </summary>
@@ -271,7 +275,7 @@ namespace nanoFramework.M5Stack
             I2cDevice i2c = new(new I2cConnectionSettings(1, Axp192.I2cDefaultAddress));
             _power = new(i2c);
 
-            // Configuration for M5Core2
+            // Configuration for M5Core2 and Tough
             // AXP Vbus limit off
             _power.SetVbusSettings(false, false, VholdVoltage.V4_0, true, VbusCurrentLimit.MilliAmper100);
             // AXP192 GPIO1 and 2:OD OUTPUT
@@ -338,6 +342,7 @@ namespace nanoFramework.M5Stack
             // The portA is the second I2C
             _portANumber = 2;
 
+#if M5CORE2
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
 
@@ -361,6 +366,8 @@ namespace nanoFramework.M5Stack
                     Rtc.SetSystemTime(dt);
                 }
             }
+#endif
+
         }
 
         /// <summary>

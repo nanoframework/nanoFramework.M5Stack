@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dependency xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>nanoFramework.Tough</id>
     <version>$version$</version>
@@ -24,7 +24,6 @@
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.1.54.28879" />
       <dependency id="nanoFramework.Iot.Device.Chs6540" version="1.0.16" />
       <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.1.1" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.1.58.10097" />
       <dependency id="nanoFramework.ResourceManager" version="1.1.4" />
       <dependency id="nanoFramework.Runtime.Events" version="1.10.0" />
       <dependency id="nanoFramework.Runtime.Native" version="1.5.4" />
