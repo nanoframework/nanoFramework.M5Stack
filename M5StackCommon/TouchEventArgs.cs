@@ -1,10 +1,17 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+#if TOUGH || M5CORE2
 using nanoFramework.Runtime.Events;
 using System;
+#endif
 
+#if TOUGH
+namespace nanoFramework.Tough
+#elif M5CORE2
 namespace nanoFramework.M5Core2
+#endif
+#if TOUGH || M5CORE2
 {
     /// <summary>
     /// Touch event arguments
@@ -42,3 +49,4 @@ namespace nanoFramework.M5Core2
         public DateTime TimeStamp { get; set; }
     }
 }
+#endif

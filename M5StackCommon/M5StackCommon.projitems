@@ -10,6 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Console.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core2ToughCommon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TouchEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TouchEventCategory.cs" />
   </ItemGroup>
 </Project>

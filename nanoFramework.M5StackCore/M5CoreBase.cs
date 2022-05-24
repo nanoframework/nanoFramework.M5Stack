@@ -1,8 +1,10 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
+#if !TOUGH
 using Iot.Device.Magnetometer;
 using Iot.Device.Mpu6886;
+#endif
 using System.Device.Adc;
 using System.Device.Dac;
 using System.Device.Gpio;
@@ -22,6 +24,11 @@ namespace nanoFramework.M5Stack
     /// Fire board
     /// </summary>
     public static partial class Fire
+#elif TOUGH
+    /// <summary>
+    /// Tough board
+    /// </summary>
+    public static partial class Tough
 #else
     /// <summary>
     /// M5Stack board
@@ -29,8 +36,10 @@ namespace nanoFramework.M5Stack
     public static partial class M5Core
 #endif
     {
+#if !TOUGH
         private static Bmm150 _bmm150;
         private static Mpu6886AccelerometerGyroscope _mpu6886;
+#endif
         private static GpioController _gpio;
         private static DacChannel _dac1;
         private static DacChannel _dac2;
@@ -39,6 +48,7 @@ namespace nanoFramework.M5Stack
         private static AdcController _adc;
         private static int _portANumber;
 
+#if !TOUGH
         /// <summary>
         /// Gets the Magnetometer.
         /// </summary>
@@ -73,6 +83,7 @@ namespace nanoFramework.M5Stack
             }
         }
 
+#endif
 
         /// <summary>
         /// Gets the main GPIO Controller.

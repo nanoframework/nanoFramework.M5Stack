@@ -20,7 +20,6 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
-    <Compile Include="TouchEventCategory.cs" />
     <Compile Include="M5Core2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.Designer.cs">
@@ -28,8 +27,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Screen.cs" />
-    <Compile Include="TouchEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
