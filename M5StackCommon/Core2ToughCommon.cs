@@ -34,11 +34,12 @@ namespace nanoFramework.M5Stack
         private static Pcf8563 _rtc;
         private static Axp192 _power;
         private static bool _powerLed;
-        private static bool _vibrate;
 #if M5CORE2
         private static Ft6xx6x _touchController;
+        private static bool _vibrate;
 #elif TOUGH
         private static Chs6540 _touchController;
+        private static bool _backLight;
 #endif
         private static Thread _callbackThread;
         private static CancellationTokenSource _cancelThread;
@@ -75,7 +76,6 @@ namespace nanoFramework.M5Stack
             get => _rtc;
         }
 
-#if M5CORE2
         /// <summary>
         /// Sets on or off the Power Led.
         /// </summary>
@@ -88,6 +88,8 @@ namespace nanoFramework.M5Stack
                 _power.EnableLDO2(_powerLed);
             }
         }
+
+#if M5CORE2
 
         /// <summary>
         /// Vibrate the M5Core2 when true.
@@ -134,6 +136,21 @@ namespace nanoFramework.M5Stack
                 return _touchController;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the state of the display backlight.
+        /// Set to <see langword="true"/> to turn on and <see langword="false"/> to turn off.
+        /// </summary>
+        public static bool Backlight
+        {
+            get => _backLight;
+            set
+            {
+                _backLight = value;
+                _power.EnableLDO3(_backLight);
+            }
+        }
+
 #endif
 
         /// <summary>
@@ -153,7 +170,7 @@ namespace nanoFramework.M5Stack
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
 #elif TOUGH
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Chs6540.DefaultI2cAddress)));
-#endif                
+#endif
                 _touchController.SetInterruptMode(false);
                 _lastPoint = new();
                 _cancelThread = new();
@@ -290,8 +307,17 @@ namespace nanoFramework.M5Stack
             // Sets the SD Card voltage
             _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
             _power.EnableLDO2(true);
+            // Sets the LCD backlight voltage to 2.8V
+            _power.DcDc3Volvate = ElectricPotential.FromVolts(2.8);
+
+#if M5CORE2
             // Sets the Vibrator voltage
             _power.LDO3OutputVoltage = ElectricPotential.FromVolts(2.0);
+#elif TOUGH
+            // Sets backlight voltage to 3.0
+            _power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
+#endif
+          
             // Bat charge voltage to 4.2, Current 100MA
             _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
             // Set ADC sample rate to 200hz
@@ -301,10 +327,15 @@ namespace nanoFramework.M5Stack
             _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
             // Set ADC1 Enable
             _power.AdcPinEnabled = AdcPinEnabled.All;
-#if M5CORE2
-            // Switch on the power led
+            
+            // Switch on the power
             PowerLed = true;
+
+#if TOUGH
+            // turn on backlight
+            Backlight = true;
 #endif
+
             // Set GPIO4 as output (rest LCD)
             _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
             // 128ms power on, 4s power off
