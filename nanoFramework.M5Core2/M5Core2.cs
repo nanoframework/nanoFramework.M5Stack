@@ -238,9 +238,9 @@ namespace nanoFramework.M5Stack
             // Enable RTC BAT charge 
             _power.SetBackupBatteryChargingControl(true, BackupBatteryCharingVoltage.V3_0, BackupBatteryChargingCurrent.MicroAmperes200);
             // Sets the ESP voltage
-            _power.DcDc1Volvate = ElectricPotential.FromVolts(3.35);
+            _power.DcDc1Voltage = ElectricPotential.FromVolts(3.35);
             // Sets the LCD Voltage to 2.8V
-            _power.DcDc3Volvate = ElectricPotential.FromVolts(2.8);
+            _power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
             // Sets the SD Card voltage
             _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
             _power.EnableLDO2(true);
