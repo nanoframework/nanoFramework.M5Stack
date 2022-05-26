@@ -24,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.64.21380\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.66.33470\lib\Iot.Device.Axp192.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Bmm150, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -111,8 +111,8 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.Spi.1.2.1\lib\System.Device.Spi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Device.Wifi, Version=1.4.0.14, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.4.0.14\lib\System.Device.Wifi.dll</HintPath>
+    <Reference Include="System.Device.Wifi, Version=1.4.0.16, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.4.0.16\lib\System.Device.Wifi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Diagnostics.Stopwatch, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -131,8 +131,8 @@
       <HintPath>..\..\packages\nanoFramework.System.Math.1.4.4\lib\System.Math.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net, Version=1.8.3.1, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Net.1.8.3.1\lib\System.Net.dll</HintPath>
+    <Reference Include="System.Net, Version=1.9.0.1, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Net.1.9.0.1\lib\System.Net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
