@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.68.55953...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.70.15497...HEAD)
+
+**Implemented enhancements:**
+
+- Add M5Stack Tough [\#157](https://github.com/nanoframework/nanoFramework.M5Stack/pull/157)
+
+## [v1.0.70.15497](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.70.15497) (2022-05-31)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.68.55953...v1.0.70.15497)
 
 **Documentation and other chores:**
 
