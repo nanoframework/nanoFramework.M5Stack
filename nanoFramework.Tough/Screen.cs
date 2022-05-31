@@ -11,7 +11,7 @@ using UnitsNet;
 namespace nanoFramework.M5Stack
 {
     /// <summary>
-    /// M5Core2 screen class
+    /// M5Tough screen class
     /// </summary>
     public class Screen : ScreenBase
     {

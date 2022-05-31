@@ -65,9 +65,6 @@ namespace nanoFramework.AtomMatrix
             Configuration.SetPinFunction(33, DeviceFunction.SPI1_MISO);
             Configuration.SetPinFunction(23, DeviceFunction.SPI1_CLOCK);
 
-            // Setup buttons
-            _gpio = new();
-
             LedMatrix.Image.Clear();
         }
     }

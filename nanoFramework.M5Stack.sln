@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
 		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
 		nanoFramework.M5StickCPlus.nuspec = nanoFramework.M5StickCPlus.nuspec
+		nanoFramework.Tough.nuspec = nanoFramework.Tough.nuspec
 		NuGet.Config = NuGet.Config
 		version.json = version.json
 	EndProjectSection
@@ -52,13 +53,11 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "FireTestApp", "Tests\FireTe
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Fire", "nanoFramework.Fire\nanoFramework.Fire.nfproj", "{2550D7FC-BBA7-4173-9071-8606DD600A2C}"
 EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Tough", "nanoFramework.Tough\nanoFramework.Tough.nfproj", "{E867A53E-3849-4AD3-832E-92D126999074}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "ToughTestApp", "Tests\ToughTestApp\ToughTestApp.nfproj", "{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}"
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		M5StackCommon\M5StackCommon.projitems*{00e23322-2401-4087-abae-24f90c8a0422}*SharedItemsImports = 13
-		nanoFramework.M5StickCommon\nanoFramework.M5StickCommon.projitems*{1f49b255-573d-4d02-87da-08c4a95744b0}*SharedItemsImports = 13
-		AtomCommon\AtomCommon.projitems*{79f09006-ab5d-4e3e-ad12-2efbee536ca9}*SharedItemsImports = 13
-		nanoFramework.M5StackCore\nanoFramework.M5StackCore.projitems*{e2a94f3c-ee7f-4075-a98a-a19cabe82c0f}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -142,6 +141,18 @@ Global
 		{2550D7FC-BBA7-4173-9071-8606DD600A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2550D7FC-BBA7-4173-9071-8606DD600A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2550D7FC-BBA7-4173-9071-8606DD600A2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E867A53E-3849-4AD3-832E-92D126999074}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,8 +168,15 @@ Global
 		{88F1D73A-1ADF-4444-A031-024E570945CC} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 		{79F09006-AB5D-4E3E-AD12-2EFBEE536CA9} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 		{5FF00F7C-8ED8-4468-9959-497CE8C5B1AF} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		M5StackCommon\M5StackCommon.projitems*{00e23322-2401-4087-abae-24f90c8a0422}*SharedItemsImports = 13
+		nanoFramework.M5StickCommon\nanoFramework.M5StickCommon.projitems*{1f49b255-573d-4d02-87da-08c4a95744b0}*SharedItemsImports = 13
+		AtomCommon\AtomCommon.projitems*{79f09006-ab5d-4e3e-ad12-2efbee536ca9}*SharedItemsImports = 13
+		nanoFramework.M5StackCore\nanoFramework.M5StackCore.projitems*{e2a94f3c-ee7f-4075-a98a-a19cabe82c0f}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
