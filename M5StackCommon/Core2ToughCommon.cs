@@ -307,27 +307,28 @@ namespace nanoFramework.M5Stack
             _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S4);
             // Set ADC all on
             _power.AdcPinEnabled = AdcPinEnabled.All;
-            // ADC temp on
-            // TODO
             // Set ADC sample rate to 25Hz
             _power.AdcFrequency = AdcFrequency.Frequency25Hz;
             _power.AdcPinCurrent = AdcPinCurrent.MicroAmperes80;
             _power.BatteryTemperatureMonitoring = true;
             _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
-            // GPIO0(LDOio0) floating
-            _power.Gpio0Behavior = Gpio0Behavior.Floating;
-            // GPIO0(LDOio0) 2.8V
+            // GPIO0 is LDO
+            _power.Gpio0Behavior = Gpio0Behavior.LowNoiseLDO;
+            // GPIO0 LDO output 2.8V
             _power.PinOutputVoltage = PinOutputVoltage.V2_8;
+
+#if TOUGH
             // PWM1 X
-            // TODO
+            _power.Pwm1OutputFrequencySetting = 0;
             // PWM1 Y1
-            // TODO
+            _power.Pwm1DutyCycleSetting1 = 0xFF;
             // PWM1 Y2
-            // TODO
+            _power.Pwm1DutyCycleSetting2 = 0xFF;
+#endif
 
             // enable pins
 #if M5CORE2
-            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2;
+            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
 #elif TOUGH
             _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
 #endif
@@ -336,6 +337,7 @@ namespace nanoFramework.M5Stack
             _power.DcDc1Voltage = ElectricPotential.FromVolts(3.35);
             // Switch on the power
             PowerLed = true;
+
             // LCD + SD peripheral power supply
             _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
             _power.EnableLDO2(true);
@@ -345,31 +347,36 @@ namespace nanoFramework.M5Stack
             _power.LDO3OutputVoltage = ElectricPotential.FromVolts(2.0);
             // vibrator off
             Vibrate = false;
+
+            // Sets the LCD Voltage to 2.8V
+            _power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
+
             // GPIO1 PWM
             _power.Gpio1Behavior = Gpio12Behavior.PwmOutput;
+
             // battery = 360mAh
             _power.ChargingCurrent = ChargingCurrent.Current360mA;
 
 #elif TOUGH
             // Sets backlight voltage to 3.0
             //_power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
+            Backlight = true;
             _power.DcDc3Voltage = ElectricPotential.FromVolts(0);
 
+              // GPIO1 Touch Reset
+            _power.Gpio1Behavior = Gpio12Behavior.MnosLeakOpenOutput;
+
 #endif
 
-            //_power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
-            // Sets the LCD Voltage to 2.8V
-            //_power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
-            // Sets the LCD backlight voltage to 2.8V
-            //_power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
+            // GPIO2 speaker enable
+            _power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
 
-#if TOUGH
-            // turn on backlight
-            Backlight = true;
-#endif
+            // GPIO4 LCD reset (and Touch reset on M5Core2)
+            _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
 
             // Set GPIO4 as output (rest LCD)
-           // _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
+            // _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
+
             // Set temperature protection
             _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
 

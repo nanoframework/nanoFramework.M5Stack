@@ -42,25 +42,35 @@ namespace nanoFramework.M5Stack
             // We're allocating anough memory for the full screen as this is a SPRAM board
             MemoryAllocationBitmap = memoryBitMapAllocation;
             BackLightPin = -1;
+
 #if M5CORE2
             _power = M5Stack.M5Core2.Power;
 #elif TOUGH
             _power = M5Stack.Tough.Power;
 #endif
+
             // Enable the screen
             Enabled = true;
+
             // Reset
             _power.Gpio4Value = PinValue.Low;
             Thread.Sleep(100);
             _power.Gpio4Value = PinValue.High;
             Thread.Sleep(100);
+
             // Create the screen
             DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), (uint)MemoryAllocationBitmap);
 
             // For M5Core2, values from 2.5 to 3V are working fine
             // 3.0V for the screen            
             LuminosityPercentage = 100;
+
+#if M5CORE2
             _power.EnableDCDC3(true);
+#elif TOUGH
+            _power.EnableLDO3(true);
+#endif
+
             _isInitialized = true;
         }
 
@@ -88,10 +98,17 @@ namespace nanoFramework.M5Stack
 
             set
             {
+
                 // For M5Core2, values from 2.5 to 3V are working fine
                 // 2.5 V = dark, 3.0 V full luminosity
                 _lumi = (byte)(value > 100 ? 100 : _lumi);
+
+#if TOUGH
+                _power.LDO2OutputVoltage = ElectricPotential.FromVolts(_lumi * 0.5 / 100.0 + 2.0);
+#elif M5CORE2
                 _power.LDO3OutputVoltage = ElectricPotential.FromVolts((byte)(_lumi * 0.5 / 100.0 + 2.5));
+#endif
+
             }
         }
     }
