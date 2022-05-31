@@ -180,9 +180,6 @@ namespace nanoFramework.M5Stack
             _power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
             _power.SetButtonBehavior(LongPressTiming.S2, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S10);
 
-            // Setting up GPIO Controller for the buttons
-            _gpio = new();
-
             // Set the Grove port
             Configuration.SetPinFunction(33, DeviceFunction.I2C2_CLOCK);
             Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);

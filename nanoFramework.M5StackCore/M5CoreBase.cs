@@ -86,10 +86,20 @@ namespace nanoFramework.M5Stack
 #endif
 
         /// <summary>
-        /// Gets the main GPIO Controller.
+        /// Gets the main <see cref="GpioController"/>.
         /// </summary>
-        public static GpioController GpioController => _gpio;
+        public static GpioController GpioController
+        {
+            get
+            {
+                if (_gpio is null)
+                {
+                    _gpio = new();
+                }
 
+                return _gpio;
+            }
+        }
 
         /// <summary>
         /// Gets DAC1 which is GPIO 25.

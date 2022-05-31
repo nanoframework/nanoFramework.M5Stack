@@ -34,9 +34,6 @@ namespace nanoFramework.AtomLite
             // Setup first the I2C bus
             Configuration.SetPinFunction(32, DeviceFunction.I2C1_CLOCK);
             Configuration.SetPinFunction(26, DeviceFunction.I2C1_DATA);
-
-            // Setup buttons
-            _gpio = new();
         }
     }
 }
