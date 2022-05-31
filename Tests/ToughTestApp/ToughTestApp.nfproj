@@ -23,7 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.67.25390\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.72.29765\lib\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Chs6540">
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Chs6540.1.0.16\lib\Iot.Device.Chs6540.dll</HintPath>
@@ -74,16 +74,16 @@
       <HintPath>..\..\packages\nanoFramework.System.Threading.1.0.4\lib\System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet.ElectricCurrent">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.4.131.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.4.132.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet.ElectricPotential">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricPotential.4.131.0\lib\UnitsNet.ElectricPotential.dll</HintPath>
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricPotential.4.132.0\lib\UnitsNet.ElectricPotential.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet.Power">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Power.4.131.0\lib\UnitsNet.Power.dll</HintPath>
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Power.4.132.0\lib\UnitsNet.Power.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet.Temperature">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.4.131.0\lib\UnitsNet.Temperature.dll</HintPath>
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.4.132.0\lib\UnitsNet.Temperature.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
