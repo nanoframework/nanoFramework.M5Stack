@@ -292,44 +292,76 @@ namespace nanoFramework.M5Stack
             I2cDevice i2c = new(new I2cConnectionSettings(1, Axp192.I2cDefaultAddress));
             _power = new(i2c);
 
-            // Configuration for M5Core2 and Tough
-            // AXP Vbus limit off
-            _power.SetVbusSettings(false, false, VholdVoltage.V4_0, true, VbusCurrentLimit.MilliAmper100);
-            // AXP192 GPIO1 and 2:OD OUTPUT
-            _power.Gpio1Behavior = Gpio12Behavior.MnosLeakOpenOutput;
-            _power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
+            // Configuration common for M5Core2 and Tough
+            // VBUS-IPSOUT Pass-Through Management
+            _power.SetVbusSettings(false, false, VholdVoltage.V4_0, true, VbusCurrentLimit.MilliAmper500);
+            // Set Power off voltage 3.0v
+            _power.VoffVoltage = VoffVoltage.V3_0;
+            // Enable bat detection
+            _power.SetShutdownBatteryDetectionControl(false, true, ShutdownBatteryPinFunction.HighResistance, false, ShutdownBatteryTiming.S2);
+            // Bat charge voltage to 4.2, Current 100MA
+            _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
             // Enable RTC BAT charge 
             _power.SetBackupBatteryChargingControl(true, BackupBatteryCharingVoltage.V3_0, BackupBatteryChargingCurrent.MicroAmperes200);
-            // Sets the ESP voltage
+            // 128ms power on, 4s power off
+            _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S4);
+            // Set ADC all on
+            _power.AdcPinEnabled = AdcPinEnabled.All;
+            // ADC temp on
+            // TODO
+            // Set ADC sample rate to 25Hz
+            _power.AdcFrequency = AdcFrequency.Frequency25Hz;
+            _power.AdcPinCurrent = AdcPinCurrent.MicroAmperes80;
+            _power.BatteryTemperatureMonitoring = true;
+            _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
+            // GPIO0(LDOio0) floating
+            _power.Gpio0Behavior = Gpio0Behavior.Floating;
+            // GPIO0(LDOio0) 2.8V
+            _power.PinOutputVoltage = PinOutputVoltage.V2_8;
+            // PWM1 X
+            // TODO
+            // PWM1 Y1
+            // TODO
+            // PWM1 Y2
+            // TODO
+
+            // enable pins
+#if M5CORE2
+            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2;
+#elif TOUGH
+            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
+#endif
+
+            // Sets DCDC1 3350mV (ESP32 VDD)
             _power.DcDc1Voltage = ElectricPotential.FromVolts(3.35);
-            // Sets the LCD Voltage to 2.8V
-            _power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
-            // Sets the SD Card voltage
+            // Switch on the power
+            PowerLed = true;
+            // LCD + SD peripheral power supply
             _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
             _power.EnableLDO2(true);
-            // Sets the LCD backlight voltage to 2.8V
-            _power.DcDc3Volvate = ElectricPotential.FromVolts(2.8);
 
 #if M5CORE2
             // Sets the Vibrator voltage
             _power.LDO3OutputVoltage = ElectricPotential.FromVolts(2.0);
+            // vibrator off
+            Vibrate = false;
+            // GPIO1 PWM
+            _power.Gpio1Behavior = Gpio12Behavior.PwmOutput;
+            // battery = 360mAh
+            _power.ChargingCurrent = ChargingCurrent.Current360mA;
+
 #elif TOUGH
             // Sets backlight voltage to 3.0
-            _power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
+            //_power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
+            _power.DcDc3Voltage = ElectricPotential.FromVolts(0);
+
 #endif
-          
-            // Bat charge voltage to 4.2, Current 100MA
-            _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
-            // Set ADC sample rate to 200hz
-            _power.AdcFrequency = AdcFrequency.Frequency200Hz;
-            _power.AdcPinCurrent = AdcPinCurrent.MicroAmperes80;
-            _power.BatteryTemperatureMonitoring = true;
-            _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
-            // Set ADC1 Enable
-            _power.AdcPinEnabled = AdcPinEnabled.All;
-            
-            // Switch on the power
-            PowerLed = true;
+
+            //_power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
+            // Sets the LCD Voltage to 2.8V
+            //_power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
+            // Sets the LCD backlight voltage to 2.8V
+            //_power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
 
 #if TOUGH
             // turn on backlight
@@ -337,18 +369,13 @@ namespace nanoFramework.M5Stack
 #endif
 
             // Set GPIO4 as output (rest LCD)
-            _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
-            // 128ms power on, 4s power off
-            _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms64, ShutdownTiming.S10);
+           // _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
             // Set temperature protection
             _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
-            // Enable bat detection
-            _power.SetShutdownBatteryDetectionControl(false, true, ShutdownBatteryPinFunction.HighResistance, true, ShutdownBatteryTiming.S2);
-            // Set Power off voltage 3.0v
-            _power.VoffVoltage = VoffVoltage.V3_0;
+
             // This part of the code will handle the button behavior
-            _power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
-            _power.SetButtonBehavior(LongPressTiming.S2, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S10);
+            //_power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
+           // _power.SetButtonBehavior(LongPressTiming.S2, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S10);
 
             // Setup buttons
             _gpio = new();
