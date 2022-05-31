@@ -12,7 +12,11 @@ using UnitsNet;
 namespace nanoFramework.M5Stack
 {
     /// <summary>
-    /// M5Core2 screen class
+#if M5CORE2
+    /// M5Core2 screen class.
+#elif TOUGH
+    /// M5Tough screen class.
+#endif
     /// </summary>
     public class Screen : ScreenBase
     {
@@ -21,11 +25,12 @@ namespace nanoFramework.M5Stack
         /// </summary>
         public const int DefaultMemoryAllocationBitmap = 320 * 240 * 4;
 
+        private const byte DefaultScreenBrightness = 75;
         private const int ChipSelect = 5;
         private const int DataCommand = 15;
         private const int Reset = -1;
         private static Axp192 _power;
-        private static byte _lumi;
+        private static byte _brightness;
         private static bool _isInitialized = false;
 
         /// <summary>
@@ -39,8 +44,9 @@ namespace nanoFramework.M5Stack
                 return;
             }
 
-            // We're allocating anough memory for the full screen as this is a SPRAM board
+            // We're allocating enough memory for the full screen because these targets have PSRAM
             MemoryAllocationBitmap = memoryBitMapAllocation;
+            // backligth is not controlled by the screen driver
             BackLightPin = -1;
 
 #if M5CORE2
@@ -49,10 +55,7 @@ namespace nanoFramework.M5Stack
             _power = M5Stack.Tough.Power;
 #endif
 
-            // Enable the screen
-            Enabled = true;
-
-            // Reset
+            // Reset screen
             _power.Gpio4Value = PinValue.Low;
             Thread.Sleep(100);
             _power.Gpio4Value = PinValue.High;
@@ -61,15 +64,11 @@ namespace nanoFramework.M5Stack
             // Create the screen
             DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), (uint)MemoryAllocationBitmap);
 
-            // For M5Core2, values from 2.5 to 3V are working fine
-            // 3.0V for the screen            
-            LuminosityPercentage = 100;
+            // set initial value for brightness
+            BrightnessPercentage = DefaultScreenBrightness;
 
-#if M5CORE2
-            _power.EnableDCDC3(true);
-#elif TOUGH
-            _power.EnableLDO3(true);
-#endif
+            // enable back-light
+            Enabled = true;
 
             _isInitialized = true;
         }
@@ -77,6 +76,7 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Enables or disables the screen.
         /// </summary>
+        /// <value><see langword="true"/> to enable the screen, <see langword="false"/> to disable it.</value>
         public static new bool Enabled
         {
             get => IsEnabled;
@@ -84,33 +84,37 @@ namespace nanoFramework.M5Stack
             set
             {
                 IsEnabled = value;
-                _power.EnableLDO2(IsEnabled);
+
+#if M5CORE2
+                _power.EnableDCDC3(IsEnabled);
+#elif TOUGH
+            _power.EnableLDO3(IsEnabled);
+#endif
             }
         }
 
         /// <summary>
-        /// Sets or gets the screen luminosity.
+        /// Gets or sets the screen brightness.
         /// </summary>
-        /// <remarks> On M5Core2, anything less than 20% will be fully black</remarks>
-        public static new byte LuminosityPercentage
+        /// <value>Brightness as percentage.</value>
+        public static new byte BrightnessPercentage
         {
-            get => _lumi;
+            get => _brightness;
 
             set
             {
-
-                // For M5Core2, values from 2.5 to 3V are working fine
+                // For M5Core2 and M5Tough, values from 2.5 to 3V are working fine
                 // 2.5 V = dark, 3.0 V full luminosity
-                _lumi = (byte)(value > 100 ? 100 : _lumi);
-
-#if TOUGH
-                _power.LDO2OutputVoltage = ElectricPotential.FromVolts(_lumi * 0.5 / 100.0 + 2.0);
-#elif M5CORE2
-                _power.LDO3OutputVoltage = ElectricPotential.FromVolts((byte)(_lumi * 0.5 / 100.0 + 2.5));
+                _brightness = (byte)(value > 100 ? 100 : value);
+                var backLightVoltage = ElectricPotential.FromVolts(_brightness * 0.5 / 100.0 + 2.5);
+#if M5CORE2
+                _power.LDO3OutputVoltage = backLightVoltage;
+#elif TOUGH
+            _power.LDO3OutputVoltage = backLightVoltage;
 #endif
-
             }
         }
     }
 }
+
 #endif

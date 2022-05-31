@@ -76,8 +76,10 @@ namespace nanoFramework.M5Stack
             get => _rtc;
         }
 
+#if M5CORE2
+
         /// <summary>
-        /// Sets on or off the Power Led.
+        /// Sets on or off the Power LED.
         /// </summary>
         public static bool PowerLed
         {
@@ -85,11 +87,21 @@ namespace nanoFramework.M5Stack
             set
             {
                 _powerLed = value;
-                _power.EnableLDO2(_powerLed);
+
+                if(_powerLed)
+                {
+                    // turn ON by setting duty cycle to 100%
+                    _power.Pwm1DutyCycleSetting1 = 10;
+                    _power.Pwm1DutyCycleSetting2 = 10;
+                }
+                else
+                {
+                    // tuen OFF by setting duty cycle to 0%
+                    _power.Pwm1DutyCycleSetting1 = 0;
+                    _power.Pwm1DutyCycleSetting2 = 0;
+                }
             }
         }
-
-#if M5CORE2
 
         /// <summary>
         /// Vibrate the M5Core2 when true.
@@ -136,21 +148,6 @@ namespace nanoFramework.M5Stack
                 return _touchController;
             }
         }
-
-        /// <summary>
-        /// Gets or sets the state of the display backlight.
-        /// Set to <see langword="true"/> to turn on and <see langword="false"/> to turn off.
-        /// </summary>
-        public static bool Backlight
-        {
-            get => _backLight;
-            set
-            {
-                _backLight = value;
-                _power.EnableLDO3(_backLight);
-            }
-        }
-
 #endif
 
         /// <summary>
@@ -292,7 +289,8 @@ namespace nanoFramework.M5Stack
             I2cDevice i2c = new(new I2cConnectionSettings(1, Axp192.I2cDefaultAddress));
             _power = new(i2c);
 
-            // Configuration common for M5Core2 and Tough
+            // Configuration common for M5Core2 and M5Tough
+
             // VBUS-IPSOUT Pass-Through Management
             _power.SetVbusSettings(false, false, VholdVoltage.V4_0, true, VbusCurrentLimit.MilliAmper500);
             // Set Power off voltage 3.0v
@@ -303,8 +301,7 @@ namespace nanoFramework.M5Stack
             _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
             // Enable RTC BAT charge 
             _power.SetBackupBatteryChargingControl(true, BackupBatteryCharingVoltage.V3_0, BackupBatteryChargingCurrent.MicroAmperes200);
-            // 128ms power on, 4s power off
-            _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S4);
+            
             // Set ADC all on
             _power.AdcPinEnabled = AdcPinEnabled.All;
             // Set ADC sample rate to 25Hz
@@ -312,77 +309,71 @@ namespace nanoFramework.M5Stack
             _power.AdcPinCurrent = AdcPinCurrent.MicroAmperes80;
             _power.BatteryTemperatureMonitoring = true;
             _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
+            
             // GPIO0 is LDO
             _power.Gpio0Behavior = Gpio0Behavior.LowNoiseLDO;
             // GPIO0 LDO output 2.8V
             _power.PinOutputVoltage = PinOutputVoltage.V2_8;
+            // Sets DCDC1 3350mV (ESP32 VDD)
+            _power.DcDc1Voltage = ElectricPotential.FromVolts(3.35);
 
-#if TOUGH
+            // LCD and peripherals power supply
+            _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
+            _power.EnableLDO2(true);
+
+            // GPIO2 enables the speaker 
+            _power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
+
+            // GPIO4 LCD reset (and also Touch controller reset on M5Core2)
+            _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
+
+            // Set temperature protection
+            _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
+
+            // This part of the code will handle the button behavior
+            _power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
+            // 128ms power on, 4s power off
+            _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S4);
+
+#if M5CORE2
+            // enable DCO and LDO outputs
+            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
+
+            // Sets the Vibrator voltage
+            _power.LDO3OutputVoltage = ElectricPotential.FromVolts(2.0);
+            // vibrator off
+            Vibrate = false;
+
+            // Sets the LCD backlight voltage to 2.8V
+            _power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
+
+            // GPIO1 set to PWM to control power LED
+            _power.Gpio1Behavior = Gpio12Behavior.PwmOutput;
+
+            // Switch on the power LED
+            PowerLed = true;
+
+            // battery = 360mAh
+            _power.ChargingCurrent = ChargingCurrent.Current360mA;
+
+#elif TOUGH
             // PWM1 X
             _power.Pwm1OutputFrequencySetting = 0;
             // PWM1 Y1
             _power.Pwm1DutyCycleSetting1 = 0xFF;
             // PWM1 Y2
             _power.Pwm1DutyCycleSetting2 = 0xFF;
-#endif
 
-            // enable pins
-#if M5CORE2
-            _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
-#elif TOUGH
+            // enable DCO and LDO outputs
             _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
-#endif
+            
+            // Sets the LCD backlight voltage to 3V
+            _power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
 
-            // Sets DCDC1 3350mV (ESP32 VDD)
-            _power.DcDc1Voltage = ElectricPotential.FromVolts(3.35);
-            // Switch on the power
-            PowerLed = true;
-
-            // LCD + SD peripheral power supply
-            _power.LDO2OutputVoltage = ElectricPotential.FromVolts(3.3);
-            _power.EnableLDO2(true);
-
-#if M5CORE2
-            // Sets the Vibrator voltage
-            _power.LDO3OutputVoltage = ElectricPotential.FromVolts(2.0);
-            // vibrator off
-            Vibrate = false;
-
-            // Sets the LCD Voltage to 2.8V
-            _power.DcDc3Voltage = ElectricPotential.FromVolts(2.8);
-
-            // GPIO1 PWM
-            _power.Gpio1Behavior = Gpio12Behavior.PwmOutput;
-
-            // battery = 360mAh
-            _power.ChargingCurrent = ChargingCurrent.Current360mA;
-
-#elif TOUGH
-            // Sets backlight voltage to 3.0
-            //_power.LDO3OutputVoltage = ElectricPotential.FromVolts(3.0);
-            Backlight = true;
-            _power.DcDc3Voltage = ElectricPotential.FromVolts(0);
-
-              // GPIO1 Touch Reset
+              // GPIO1 is reset for Touch controller
             _power.Gpio1Behavior = Gpio12Behavior.MnosLeakOpenOutput;
 
 #endif
-
-            // GPIO2 speaker enable
-            _power.Gpio2Behavior = Gpio12Behavior.MnosLeakOpenOutput;
-
-            // GPIO4 LCD reset (and Touch reset on M5Core2)
-            _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
-
-            // Set GPIO4 as output (rest LCD)
-            // _power.Gpio4Behavior = Gpio4Behavior.MnosLeakOpenOutput;
-
-            // Set temperature protection
-            _power.SetBatteryHighTemperatureThreshold(ElectricPotential.FromVolts(3.2256));
-
-            // This part of the code will handle the button behavior
-            //_power.EnableButtonPressed(ButtonPressed.LongPressed | ButtonPressed.ShortPressed);
-           // _power.SetButtonBehavior(LongPressTiming.S2, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S10);
 
             // Setup buttons
             _gpio = new();

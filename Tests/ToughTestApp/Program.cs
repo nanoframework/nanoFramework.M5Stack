@@ -14,20 +14,23 @@ Tough.InitializeScreen();
 
 Debug.WriteLine("Hello from Tough!");
 
-const string Ssid = "SSID";
-const string Password = "YourWifiPasswordHere";
-// Give 60 seconds to the wifi join to happen
-CancellationTokenSource cs = new(60000);
-var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
-if (!success)
-{
-    // Something went wrong, you can get details with the ConnectionError property:
-    Debug.WriteLine($"Can't connect to the network, error: {WifiNetworkHelper.Status}");
-    if (WifiNetworkHelper.HelperException != null)
-    {
-        Debug.WriteLine($"ex: {WifiNetworkHelper.HelperException}");
-    }
-}
+Console.WriteLine("Hello from Tough!");
+
+
+//const string Ssid = "SSID";
+//const string Password = "YourWifiPasswordHere";
+//// Give 60 seconds to the wifi join to happen
+//CancellationTokenSource cs = new(60000);
+//var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
+//if (!success)
+//{
+//    // Something went wrong, you can get details with the ConnectionError property:
+//    Debug.WriteLine($"Can't connect to the network, error: {WifiNetworkHelper.Status}");
+//    if (WifiNetworkHelper.HelperException != null)
+//    {
+//        Debug.WriteLine($"ex: {WifiNetworkHelper.HelperException}");
+//    }
+//}
 
 Tough.TouchEvent += TouchEventCallback;
 

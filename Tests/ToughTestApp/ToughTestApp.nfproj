@@ -23,7 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.72.29765\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.1.74.7591\lib\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Chs6540">
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Chs6540.1.0.16\lib\Iot.Device.Chs6540.dll</HintPath>
