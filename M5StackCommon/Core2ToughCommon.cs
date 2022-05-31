@@ -88,7 +88,7 @@ namespace nanoFramework.M5Stack
             {
                 _powerLed = value;
 
-                if(_powerLed)
+                if (_powerLed)
                 {
                     // turn ON by setting duty cycle to 100%
                     _power.Pwm1DutyCycleSetting1 = 10;
@@ -301,7 +301,7 @@ namespace nanoFramework.M5Stack
             _power.SetChargingFunctions(true, ChargingVoltage.V4_2, ChargingCurrent.Current100mA, ChargingStopThreshold.Percent10);
             // Enable RTC BAT charge 
             _power.SetBackupBatteryChargingControl(true, BackupBatteryCharingVoltage.V3_0, BackupBatteryChargingCurrent.MicroAmperes200);
-            
+
             // Set ADC all on
             _power.AdcPinEnabled = AdcPinEnabled.All;
             // Set ADC sample rate to 25Hz
@@ -309,7 +309,7 @@ namespace nanoFramework.M5Stack
             _power.AdcPinCurrent = AdcPinCurrent.MicroAmperes80;
             _power.BatteryTemperatureMonitoring = true;
             _power.AdcPinCurrentSetting = AdcPinCurrentSetting.AlwaysOn;
-            
+
             // GPIO0 is LDO
             _power.Gpio0Behavior = Gpio0Behavior.LowNoiseLDO;
             // GPIO0 LDO output 2.8V
@@ -375,9 +375,6 @@ namespace nanoFramework.M5Stack
 
 #endif
 
-            // Setup buttons
-            _gpio = new();
-
             // Setup SPI1
             Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
             Configuration.SetPinFunction(38, DeviceFunction.SPI1_MISO);
@@ -416,7 +413,7 @@ namespace nanoFramework.M5Stack
 
                 if (sysDtcore.Year < 2021)
                 {
-                    dt = new DateTime(2021, 11, 03, 12, 00, 00);
+                    dt = new DateTime(2022, 05, 31, 00, 00, 00);
                     _rtc.DateTime = dt;
                     Rtc.SetSystemTime(dt);
                 }

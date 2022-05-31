@@ -110,7 +110,7 @@ namespace nanoFramework.M5Stack
 #if M5CORE2
                 _power.LDO3OutputVoltage = backLightVoltage;
 #elif TOUGH
-            _power.LDO3OutputVoltage = backLightVoltage;
+                _power.LDO3OutputVoltage = backLightVoltage;
 #endif
             }
         }
