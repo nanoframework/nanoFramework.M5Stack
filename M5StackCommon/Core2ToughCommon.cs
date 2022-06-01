@@ -174,8 +174,8 @@ namespace nanoFramework.M5Stack
                 _startThread = new();
                 _callbackThread = new(ThreadTouchCallback);
                 _callbackThread.Start();
-                _gpio.OpenPin(TouchPinInterrupt, PinMode.Input);
-                _gpio.RegisterCallbackForPinValueChangedEvent(TouchPinInterrupt, PinEventTypes.Rising | PinEventTypes.Falling, TouchCallback);
+                GpioController.OpenPin(TouchPinInterrupt, PinMode.Input);
+                GpioController.RegisterCallbackForPinValueChangedEvent(TouchPinInterrupt, PinEventTypes.Rising | PinEventTypes.Falling, TouchCallback);
             }
         }
 
