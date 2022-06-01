@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.70.15497...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.72.43325...HEAD)
+
+**Fixed bugs:**
+
+- Fix accessing gpio controller [\#164](https://github.com/nanoframework/nanoFramework.M5Stack/pull/164)
+
+## [v1.0.72.43325](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.72.43325) (2022-05-31)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.70.15497...v1.0.72.43325)
 
 **Implemented enhancements:**
 
