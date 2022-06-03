@@ -13,14 +13,17 @@ namespace nanoFramework.M5Core2
 #if TOUGH || M5CORE2
 {
     /// <summary>
-    /// Sub event touch catgory
+    /// Sub event touch category.
     /// </summary>
+#if M5CORE2
     [Flags]
+#endif
     public enum TouchEventCategory
     {
-        /// <summary>Unknown</summary>
+        /// <summary>Unknown.</summary>
         Unknown = 0b0000_0000,
 
+#if M5CORE2
         /// <summary>Left Button</summary>
         LeftButton = 0b0000_0001,
 
@@ -38,6 +41,17 @@ namespace nanoFramework.M5Core2
 
         /// <summary>Lift Up</summary>
         LiftUp = 0b0010_0000,
+#else
+        /// <summary>
+        /// Screen touched.
+        /// </summary>
+        ScreenTouch,  
+
+        /// <summary>
+        /// Touch gone.
+        /// </summary>
+        TouchGone,
+#endif
     }
 }
 #endif

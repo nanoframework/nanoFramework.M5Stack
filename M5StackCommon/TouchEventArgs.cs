@@ -38,11 +38,12 @@ namespace nanoFramework.M5Core2
         /// </summary>
         public int Y { get; set; }
 
+#if M5CORE2
         /// <summary>
         /// Gets or sets the contacty point Id. This is useful in a multi point context.
         /// </summary>
         public byte Id { get; set; }
-
+#endif
         /// <summary>
         /// Gets or sets the time stamp.
         /// </summary>
