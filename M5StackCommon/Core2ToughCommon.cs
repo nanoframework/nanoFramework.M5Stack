@@ -7,7 +7,7 @@
 using Iot.Device.Ft6xx6x;
 using nanoFramework.M5Core2;
 #elif TOUGH
-using Iot.Device.Chs6540;
+using Iot.Device.Chsc6540;
 using nanoFramework.Tough;
 #endif
 using Iot.Device.Axp192;
@@ -21,6 +21,7 @@ using System.Device.Gpio;
 using UnitsNet;
 using System.Threading;
 using nanoFramework.Runtime.Events;
+using System.Diagnostics;
 
 namespace nanoFramework.M5Stack
 {
@@ -37,14 +38,15 @@ namespace nanoFramework.M5Stack
 #if M5CORE2
         private static Ft6xx6x _touchController;
         private static bool _vibrate;
-#elif TOUGH
-        private static Chs6540 _touchController;
-        private static bool _backLight;
-#endif
         private static Thread _callbackThread;
         private static CancellationTokenSource _cancelThread;
         private static CancellationTokenSource _startThread;
         private static Point _lastPoint;
+#elif TOUGH
+        private static Chsc6540 _touchController;
+        private static bool _backLight;
+        private static TouchEventCategory _touchCategory;
+#endif
 
         /// <summary>
         /// Touch event handler for the touch event.
@@ -136,7 +138,7 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets the touch controller.
         /// </summary>
-        public static Chs6540 TouchController
+        public static Chsc6540 TouchController
         {
             get
             {
@@ -165,15 +167,16 @@ namespace nanoFramework.M5Stack
                 Console.Font = Resource.GetFont(Resource.FontResources.consolas_regular_16);
 #if M5CORE2
                 _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Ft6xx6x.DefaultI2cAddress)));
-#elif TOUGH
-                _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Chs6540.DefaultI2cAddress)));
-#endif
-                _touchController.SetInterruptMode(false);
                 _lastPoint = new();
                 _cancelThread = new();
                 _startThread = new();
                 _callbackThread = new(ThreadTouchCallback);
                 _callbackThread.Start();
+#elif TOUGH
+                _touchController = new(I2cDevice.Create(new I2cConnectionSettings(1, Chsc6540.DefaultI2cAddress)));
+#endif
+                _touchController.SetInterruptMode(false);
+
                 GpioController.OpenPin(TouchPinInterrupt, PinMode.Input);
                 GpioController.RegisterCallbackForPinValueChangedEvent(TouchPinInterrupt, PinEventTypes.Rising | PinEventTypes.Falling, TouchCallback);
             }
@@ -181,6 +184,8 @@ namespace nanoFramework.M5Stack
 
         private static void TouchCallback(object sender, PinValueChangedEventArgs pinValueChangedEventArgs)
         {
+#if M5CORE2
+
             if (pinValueChangedEventArgs.ChangeType == PinEventTypes.Falling)
             {
                 _cancelThread = new();
@@ -190,6 +195,7 @@ namespace nanoFramework.M5Stack
             {
                 _startThread = new();
                 _cancelThread.Cancel();
+
                 var point = _touchController.GetPoint(true);
                 if ((_lastPoint.X != point.X) && (_lastPoint.Y != point.Y))
                 {
@@ -198,8 +204,26 @@ namespace nanoFramework.M5Stack
                     TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = touchCategory, X = point.X, Y = point.Y, Id = point.TouchId });
                 }
             }
+#else
+            if (pinValueChangedEventArgs.ChangeType == PinEventTypes.Falling)
+            {
+                var dp = _touchController.GetDoublePoints();
+
+                if(dp.Point1.Event == Event.PressDown)
+                {
+                    _touchCategory = TouchEventCategory.ScreenTouch;
+                }
+                else if(dp.Point1.Event == Event.PressDown)
+                {
+                    _touchCategory = TouchEventCategory.TouchGone;
+                }
+               
+                TouchEvent?.Invoke(_touchController, new TouchEventArgs() { TimeStamp = DateTime.UtcNow, EventCategory = EventCategory.Touch, TouchEventCategory = _touchCategory, X = dp.Point1.X, Y = dp.Point1.Y });
+            }
+#endif
         }
 
+#if M5CORE2
         private static void ThreadTouchCallback()
         {
         start:
@@ -210,9 +234,11 @@ namespace nanoFramework.M5Stack
 
             int touchNumber;
             TouchEventCategory touchCategory;
+
             do
             {
                 touchNumber = _touchController.GetNumberPoints();
+
                 if (touchNumber == 1)
                 {
                     var point = _touchController.GetPoint(true);
@@ -235,6 +261,7 @@ namespace nanoFramework.M5Stack
                 // This is necessary to give time to the touch sensor
                 // In theory, the wait should be calculated with the period
                 _cancelThread.Token.WaitHandle.WaitOne(10, true);
+
             } while (!_cancelThread.IsCancellationRequested);
 
             // If both token are cancelled, we exit. This is in case this won't become static and will have a dispose.
@@ -274,6 +301,7 @@ namespace nanoFramework.M5Stack
 
             return touchCategory;
         }
+#endif
 
 #if M5CORE2
         static M5Core2()

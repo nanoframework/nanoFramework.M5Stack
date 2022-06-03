@@ -61,6 +61,14 @@ namespace nanoFramework.M5Stack
             _power.Gpio4Value = PinValue.High;
             Thread.Sleep(100);
 
+#if TOUGH
+            // Reset touch controller
+            _power.Gpio1Value = PinValue.Low;
+            Thread.Sleep(100);
+            _power.Gpio1Value = PinValue.High;
+            Thread.Sleep(100);
+#endif
+
             // Create the screen
             DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), (uint)MemoryAllocationBitmap);
 
