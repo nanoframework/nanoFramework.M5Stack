@@ -27,7 +27,7 @@
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3" />
       <dependency id="nanoFramework.System.Device.Spi" version="1.2.1" />
       <dependency id="nanoFramework.System.Drawing" version="1.1.113.2032" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.134.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.135.0" />
       <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="1.1.118.19693" />
     </dependencies>
   </metadata>
