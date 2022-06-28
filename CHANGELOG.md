@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.98.48733...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.100.17145...HEAD)
+
+**Fixed bugs:**
+
+- M5Core2 and Tough now enable 5V boost [\#181](https://github.com/nanoframework/nanoFramework.M5Stack/pull/181)
+
+## [v1.0.100.17145](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.100.17145) (2022-06-28)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.98.48733...v1.0.100.17145)
 
 **Documentation and other chores:**
 
