@@ -29,9 +29,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Iot.Device.Axp192, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.1.121.35854\lib\Iot.Device.Axp192.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Axp192">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.1.127.28388\lib\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Bmm150, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.1.116.8772\lib\Iot.Device.Bmm150.dll</HintPath>
