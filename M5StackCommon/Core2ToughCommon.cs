@@ -363,6 +363,9 @@ namespace nanoFramework.M5Stack
             // 128ms power on, 4s power off
             _power.SetButtonBehavior(LongPressTiming.S1, ShortPressTiming.Ms128, true, SignalDelayAfterPowerUp.Ms32, ShutdownTiming.S4);
 
+            // enable EXTEN switch control to enable 5V boost
+            _power.EXTENEnable = true;
+
 #if M5CORE2
             // enable DCO and LDO outputs
             _power.LdoDcPinsEnabled = LdoDcPinsEnabled.DcDc1 | LdoDcPinsEnabled.DcDc3 | LdoDcPinsEnabled.Ldo2 | LdoDcPinsEnabled.Ldo3;
