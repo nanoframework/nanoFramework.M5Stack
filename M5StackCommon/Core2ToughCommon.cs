@@ -73,7 +73,7 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets the real time clock.
         /// </summary>
-        public static Pcf8563 ReatTimeClock
+        public static Pcf8563 RealTimeClock
         {
             get => _rtc;
         }
