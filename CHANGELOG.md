@@ -2,7 +2,16 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.100.17145...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.102.851...HEAD)
+
+**Documentation and other chores:**
+
+- Update 10 NuGet dependencies [\#184](https://github.com/nanoframework/nanoFramework.M5Stack/pull/184)
+- Fix Spelling from ReatTimeClock to RealTimeClock [\#183](https://github.com/nanoframework/nanoFramework.M5Stack/pull/183)
+
+## [v1.0.102.851](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.102.851) (2022-06-28)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.100.17145...v1.0.102.851)
 
 **Fixed bugs:**
 
