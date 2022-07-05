@@ -185,10 +185,10 @@ namespace nanoFramework.M5Stack
             Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);
 
             // Set the pins for the screen
-            Configuration.SetPinFunction(15, DeviceFunction.SPI2_MOSI);
-            Configuration.SetPinFunction(13, DeviceFunction.SPI2_CLOCK);
+            Configuration.SetPinFunction(15, DeviceFunction.SPI1_MOSI);
+            Configuration.SetPinFunction(13, DeviceFunction.SPI1_CLOCK);
             // This is not used but must be defined
-            Configuration.SetPinFunction(4, DeviceFunction.SPI2_MISO);
+            Configuration.SetPinFunction(4, DeviceFunction.SPI1_MISO);
 
             // Setup the time if any
             _rtc = new Pcf8563(I2cDevice.Create(new I2cConnectionSettings(1, Pcf8563.DefaultI2cAddress)));
