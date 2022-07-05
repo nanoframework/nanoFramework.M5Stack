@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.105.49254...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.107.13280...HEAD)
+
+**Fixed bugs:**
+
+- Fix GPIO assignments for SPI [\#186](https://github.com/nanoframework/nanoFramework.M5Stack/pull/186)
+
+## [v1.0.107.13280](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.0.107.13280) (2022-07-01)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.0.105.49254...v1.0.107.13280)
 
 **Documentation and other chores:**
 
