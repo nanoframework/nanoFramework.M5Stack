@@ -406,15 +406,10 @@ namespace nanoFramework.M5Stack
 
 #endif
 
-            // Setup SPI1
+            // Setup SPI2 (LCD and SD Card) 
             Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
             Configuration.SetPinFunction(38, DeviceFunction.SPI1_MISO);
             Configuration.SetPinFunction(18, DeviceFunction.SPI1_CLOCK);
-
-            // Setup the screen with SP2 and SD Card
-            Configuration.SetPinFunction(23, DeviceFunction.SPI2_MOSI);
-            Configuration.SetPinFunction(38, DeviceFunction.SPI2_MISO);
-            Configuration.SetPinFunction(18, DeviceFunction.SPI2_CLOCK);
 
             // Second serial port
             Configuration.SetPinFunction(13, DeviceFunction.COM2_RX);
@@ -423,6 +418,7 @@ namespace nanoFramework.M5Stack
             // Setup second I2C bus (port A) 
             Configuration.SetPinFunction(33, DeviceFunction.I2C2_CLOCK);
             Configuration.SetPinFunction(32, DeviceFunction.I2C2_DATA);
+
             // The portA is the second I2C
             _portANumber = 2;
 

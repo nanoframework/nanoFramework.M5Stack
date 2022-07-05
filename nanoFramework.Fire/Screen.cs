@@ -37,7 +37,25 @@ namespace nanoFramework.M5Stack
             Controller = new();
             Controller.OpenPin(BackLightPin, PinMode.Output);
             Enabled = true;
-            DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(0, 0, 320, 240), (uint)MemoryAllocationBitmap);
+
+            var displaySpiConfig = new SpiConfiguration(
+                1,
+                ChipSelect,
+                DataCommand,
+                Reset,
+                BackLightPin);
+
+            var screenConfig = new ScreenConfiguration(
+                    0,
+                    0,
+                    320,
+                    240);
+
+            _ = DisplayControl.Initialize(
+                displaySpiConfig,
+                screenConfig,
+                (uint)MemoryAllocationBitmap);
+
             _isInitialized = true;
         }
     }

@@ -170,9 +170,9 @@ namespace nanoFramework.M5Stack
             _gpio = new();
 
             // Config GPIOs for SPI (screen and SD Card)
-            Configuration.SetPinFunction(23, DeviceFunction.SPI2_MOSI);
-            Configuration.SetPinFunction(19, DeviceFunction.SPI2_MISO);
-            Configuration.SetPinFunction(18, DeviceFunction.SPI2_CLOCK);
+            Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
+            Configuration.SetPinFunction(19, DeviceFunction.SPI1_MISO);
+            Configuration.SetPinFunction(18, DeviceFunction.SPI1_CLOCK);
 
             // Second serial port
             Configuration.SetPinFunction(16, DeviceFunction.COM2_RX);

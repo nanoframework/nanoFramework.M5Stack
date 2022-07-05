@@ -39,15 +39,42 @@ namespace nanoFramework.M5Stack
             MemoryAllocationBitmap = memoryBitMapAllocation;
             // Not used in Stick versions, AXP is doing this
             BackLightPin = -1;
+
 #if M5STICKC
             _power = M5StickC.Power;
-            DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(26, 1, 80, 160), (uint)MemoryAllocationBitmap);
 #else
             _power = M5StickCPlus.Power;
-            DisplayControl.Initialize(new SpiConfiguration(2, ChipSelect, DataCommand, Reset, BackLightPin), new ScreenConfiguration(52, 40, 135, 240), (uint)MemoryAllocationBitmap);
 #endif
+
+            var displaySpiConfig = new SpiConfiguration(
+                1,
+                ChipSelect,
+                DataCommand,
+                Reset,
+                BackLightPin);
+
+#if M5STICKC
+            var screenConfig = new ScreenConfiguration(
+                26,
+                1,
+                80,
+                160);
+#else
+            var screenConfig = new ScreenConfiguration(
+                52,
+                40,
+                135,
+                240);
+#endif
+
+            _ = DisplayControl.Initialize(
+                displaySpiConfig,
+                screenConfig,
+                (uint)MemoryAllocationBitmap);
+
             // Enable the screen
             Enabled = true;
+
             // For M5Stick, values from 2.6 to 3V are working fine
             LuminosityPercentage = 100;
             _power.EnableLDO3(true);
