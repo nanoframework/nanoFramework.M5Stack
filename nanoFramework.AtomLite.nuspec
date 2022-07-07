@@ -25,7 +25,7 @@
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.3" />
-      <dependency id="nanoFramework.System.Device.Spi" version="1.2.1" />
+      <dependency id="nanoFramework.System.Device.Spi" version="1.3.2" />
       <dependency id="nanoFramework.System.Drawing" version="1.1.113.2032" />
       <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="1.1.118.19693" />
     </dependencies>
