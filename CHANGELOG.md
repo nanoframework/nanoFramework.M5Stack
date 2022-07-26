@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.14...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.16...HEAD)
+
+**Fixed bugs:**
+
+- Fix initialization of GpioController in Atom and M5Stick [\#193](https://github.com/nanoframework/nanoFramework.M5Stack/pull/193)
+
+## [v1.1.16](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.16) (2022-07-24)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.14...v1.1.16)
 
 **Documentation and other chores:**
 
