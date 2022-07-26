@@ -53,7 +53,18 @@ namespace nanoFramework.AtomLite
         /// <summary>
         /// Gets the main <see cref="GpioController"/>.
         /// </summary>
-        public static GpioController GpioController => _gpio;
+        public static GpioController GpioController
+        {
+            get
+            {
+                if (_gpio is null)
+                {
+                    _gpio = new();
+                }
+
+                return _gpio;
+            }
+        }
 
         /// <summary>
         /// Gets <see cref="DacChannel"/> connected to GPIO 25.
