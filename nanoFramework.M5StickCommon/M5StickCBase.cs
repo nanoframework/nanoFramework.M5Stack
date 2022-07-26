@@ -134,7 +134,18 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets the main GPIO Controller.
         /// </summary>
-        public static GpioController GpioController => _gpio;
+        public static GpioController GpioController
+        {
+            get
+            {
+                if (_gpio is null)
+                {
+                    _gpio = new();
+                }
+
+                return _gpio;
+            }
+        }
 
 #if M5STICKC
         static M5StickC()
