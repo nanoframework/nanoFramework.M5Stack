@@ -31,10 +31,7 @@ namespace nanoFramework.M5Stack
         private static Axp192 _power;
         private static GpioButton _buttonM5;
         private static GpioButton _buttonRight;
-
-        // lazy loaded - please reference class property GPIOController to ensure instantiation
         private static GpioController _gpio;
-
         private static GpioPin _led;
         private static TransmitterChannel _irLed;
         private static Mpu6886AccelerometerGyroscope _accelerometer;
