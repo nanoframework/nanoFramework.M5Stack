@@ -43,7 +43,7 @@ namespace nanoFramework.AtomLite
             {
                 if (_button == null)
                 {
-                    _button = new(39, _gpio, false);
+                    _button = new(39, GpioController, false);
                 }
 
                 return _button;

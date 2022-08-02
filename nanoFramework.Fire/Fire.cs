@@ -53,7 +53,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_left == null)
                 {
-                    _left = new(39, _gpio, false);
+                    _left = new(39, GpioController, false);
                 }
 
                 return _left;
@@ -69,7 +69,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_center == null)
                 {
-                    _center = new(38, _gpio, false);
+                    _center = new(38, GpioController, false);
                 }
 
                 return _center;
@@ -85,7 +85,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_right == null)
                 {
-                    _right = new(37, _gpio, false);
+                    _right = new(37, GpioController, false);
                 }
 
                 return _right;
@@ -166,9 +166,7 @@ namespace nanoFramework.M5Stack
             _power.ChargingCutOffCurrent = ChargingCutOffCurrent.C500mA;
             _power.ChargingCuttOffVoltage = ChargingCutOffVoltage.V4_2;
 
-            // Setup buttons
-            _gpio = new();
-
+            
             // Config GPIOs for SPI (screen and SD Card)
             Configuration.SetPinFunction(23, DeviceFunction.SPI1_MOSI);
             Configuration.SetPinFunction(19, DeviceFunction.SPI1_MISO);

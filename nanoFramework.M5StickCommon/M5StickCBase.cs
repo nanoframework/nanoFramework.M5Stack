@@ -31,7 +31,10 @@ namespace nanoFramework.M5Stack
         private static Axp192 _power;
         private static GpioButton _buttonM5;
         private static GpioButton _buttonRight;
+
+        // lazy loaded - please reference class property GPIOController to ensure instantiation
         private static GpioController _gpio;
+
         private static GpioPin _led;
         private static TransmitterChannel _irLed;
         private static Mpu6886AccelerometerGyroscope _accelerometer;
@@ -52,7 +55,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_buttonM5 == null)
                 {
-                    _buttonM5 = new(37, _gpio, false);
+                    _buttonM5 = new(37, GpioController, false);
                 }
 
                 return _buttonM5;
@@ -68,7 +71,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_buttonRight == null)
                 {
-                    _buttonRight = new(39, _gpio, false);
+                    _buttonRight = new(39, GpioController, false);
                 }
 
                 return _buttonRight;
@@ -84,7 +87,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_led == null)
                 {
-                    _led = _gpio.OpenPin(10, PinMode.Output);
+                    _led = GpioController.OpenPin(10, PinMode.Output);
                 }
 
                 return _led;
