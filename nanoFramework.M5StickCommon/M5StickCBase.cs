@@ -52,7 +52,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_buttonM5 == null)
                 {
-                    _buttonM5 = new(37, _gpio, false);
+                    _buttonM5 = new(37, GpioController, false);
                 }
 
                 return _buttonM5;
@@ -68,7 +68,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_buttonRight == null)
                 {
-                    _buttonRight = new(39, _gpio, false);
+                    _buttonRight = new(39, GpioController, false);
                 }
 
                 return _buttonRight;
@@ -84,7 +84,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_led == null)
                 {
-                    _led = _gpio.OpenPin(10, PinMode.Output);
+                    _led = GpioController.OpenPin(10, PinMode.Output);
                 }
 
                 return _led;
