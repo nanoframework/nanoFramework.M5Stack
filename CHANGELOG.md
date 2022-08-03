@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.22...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.24...HEAD)
+
+**Fixed bugs:**
+
+- Fix GPIO Controller lazy loading [\#196](https://github.com/nanoframework/nanoFramework.M5Stack/pull/196)
+
+## [v1.1.24](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.24) (2022-08-03)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.22...v1.1.24)
 
 **Documentation and other chores:**
 
