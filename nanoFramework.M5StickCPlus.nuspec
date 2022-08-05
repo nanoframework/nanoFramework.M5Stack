@@ -22,18 +22,18 @@
       <dependency id="nanoFramework.Graphics" version="1.0.3.6" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.4.1" />
       <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="1.2.3.5" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.28" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.38" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.32" />
-      <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.32" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.28" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.28" />
+      <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.38" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.38" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.38" />
       <dependency id="nanoFramework.System.Device.Pwm" version="1.0.1" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.1.113.2032" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.141.0" />
-      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.141.0" />
-      <dependency id="UnitsNet.nanoFramework.Power" version="4.141.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.141.0" />
-      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.141.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.142.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.142.0" />
+      <dependency id="UnitsNet.nanoFramework.Power" version="4.142.0" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.142.0" />
+      <dependency id="UnitsNet.nanoFramework.Frequency" version="4.142.0" />
     </dependencies>
   </metadata>
   <files>
