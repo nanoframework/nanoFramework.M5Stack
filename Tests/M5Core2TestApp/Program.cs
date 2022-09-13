@@ -21,7 +21,8 @@ const string StrGyro = "Gyroscope (x,y,z): ";
 const string StrAcc = "Accelerometer (x,y,z): ";
 const string StrCpuT = "CPU Temperature: ";
 
-M5Core2.Vibrate = false; // Ensure set to false as can otherwise cause a long vibrate on deploy!
+// Ensure set to false as can otherwise cause a long vibrate on deploy!
+M5Core2.Vibrate = false; 
 M5Core2.InitializeScreen();
 
 Debug.WriteLine("Hello from M5Core2!");
@@ -82,8 +83,9 @@ void TouchEventCallback(object sender, TouchEventArgs e)
         Console.WriteLine($"{StrTouchEventCatagory}{StrLiftUp}");
     }
 
-    if ((e.TouchEventCategory & TouchEventCategory.DoubleTouch) == TouchEventCategory.DoubleTouch) //TODO: never seems to fire!
+    if ((e.TouchEventCategory & TouchEventCategory.DoubleTouch) == TouchEventCategory.DoubleTouch)
     {
+        // Note: the M5Core2 does not support this event.
         Debug.WriteLine($"{StrTouchEventCatagory}{StrDoubleTouch}");
         Console.WriteLine($"{StrTouchEventCatagory}{StrDoubleTouch}");
     }
@@ -98,7 +100,8 @@ void TouchEventCallback(object sender, TouchEventArgs e)
     Console.WriteLine($"  ({mpu6886.GetAccelerometer().X:N2},{mpu6886.GetAccelerometer().Y:N2},{mpu6886.GetAccelerometer().Z:N2})");
     
     Debug.WriteLine($"{StrCpuT}{M5Core2.Power.GetInternalTemperature().DegreesCelsius}°C");
-    Console.WriteLine($"{StrCpuT}{M5Core2.Power.GetInternalTemperature().DegreesCelsius}_C"); //TODO: note that we cannot use the proper symbol!
+    //Note: we cannot use the proper symbol on the display with the default font!
+    Console.WriteLine($"{StrCpuT}{M5Core2.Power.GetInternalTemperature().DegreesCelsius}_C");
 
 }
 
