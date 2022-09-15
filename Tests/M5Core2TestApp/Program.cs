@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Threading;
 using nanoFramework.M5Core2;
 using nanoFramework.M5Stack;
+using nanoFramework.Networking;
 using Console = nanoFramework.M5Stack.Console;
 
 const string StrLB = "LEFT BUTTON PRESSED ";
@@ -30,6 +31,30 @@ Console.WriteLine("Hello from M5Core2!");
 Vibrate(500);
 
 
+// It is strongly recommended to connect to the wifi while testing the touch interface
+// as wifi can create discrepancies on the touch interrupt pins.
+// This has been managed in the driver but should be tested as well.
+const string Ssid = "YourWifiSsidHere";
+const string Password = "YourWifiPasswordHere";
+
+// Give 60 seconds to the wifi join to happen
+CancellationTokenSource cs = new(60000);
+var success = WifiNetworkHelper.ConnectDhcp(Ssid, Password, requiresDateTime: true, token: cs.Token);
+if (!success)
+{
+    // Something went wrong, you can get details with the ConnectionError property:
+    Debug.WriteLine($"Can't connect to the network, error: {WifiNetworkHelper.Status}");
+    if (WifiNetworkHelper.HelperException != null)
+    {
+        Debug.WriteLine($"ex: {WifiNetworkHelper.HelperException}");
+    }
+    Console.ForegroundColor = nanoFramework.Presentation.Media.Color.Red;
+    Console.WriteLine($"Error connecting to WiFi SSID: {Ssid}.");
+    Console.WriteLine("Check SSID and Password.");
+    Console.ForegroundColor = nanoFramework.Presentation.Media.Color.White;
+}
+
+
 var mpu6886 = M5Core2.AccelerometerGyroscope;
 
 M5Core2.TouchEvent += TouchEventCallback;
@@ -39,6 +64,7 @@ Console.WriteLine("Press the display or a button to get started!");
 Console.ForegroundColor = nanoFramework.Presentation.Media.Color.White;
 
 Thread.Sleep(Timeout.Infinite);
+
 
 void TouchEventCallback(object sender, TouchEventArgs e)
 {
