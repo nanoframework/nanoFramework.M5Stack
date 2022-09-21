@@ -16,6 +16,8 @@
     <AssemblyName>M5Core2TestApp</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
     <DefineConstants>$(DefineConstants);M5CORE2</DefineConstants>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(TF_BUILD)' == 'True' or '$(ContinuousIntegrationBuild)' == 'True'">true</RestoreLockedMode>
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
