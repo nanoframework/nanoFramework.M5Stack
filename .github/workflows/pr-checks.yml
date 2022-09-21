@@ -15,3 +15,4 @@ jobs:
     uses: nanoframework/nf-tools/.github/workflows/check-packages-updated.yml@main
     with:
       solution: 'nanoFramework.M5Stack.sln'
+
