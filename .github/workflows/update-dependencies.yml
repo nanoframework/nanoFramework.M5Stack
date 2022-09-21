@@ -7,27 +7,15 @@ name: Daily update dependencies
 
 on:
   schedule:
-  # At 03:00 UTC daily.
-  # This has to run after the automated updated in IoT bindings as it depends from several bindings there.
-  - cron:  '00 03 * * *'
+  # At 00:00 UTC every day.
+  - cron:  '00 00 * * *'
   repository_dispatch:
     types: update-dependencies
 
-defaults:
-  run:
-    shell: pwsh
-
 jobs:
-  update-dotnet-preview:
-    name: Update .NET nanoFramework dependencies
-    timeout-minutes: 60 # Non default because this solution has lots of projects to update!
-    runs-on: windows-latest
-    env:
-      GITHUB_TOKEN: ${{ github.token }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Update dependencies
-        uses: nanoframework/nanodu@v1
-        with:
-          solutionsToCheck: 'nanoFramework.M5Stack.sln'
+  update-dependencies:
+    name: nanoFramework
+    uses: nanoframework/nf-tools/.github/workflows/update-dependencies.yml@main
+    with:
+      timeout-minutes: 60 # Non default because this solution has lots of projects to update!
+      solutionsToCheck: 'nanoFramework.M5Stack.sln'
