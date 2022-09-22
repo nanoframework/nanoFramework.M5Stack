@@ -82,9 +82,9 @@
       },
       "nanoFramework.System.Device.Gpio": {
         "type": "Direct",
-        "requested": "[1.1.11, 1.1.11]",
-        "resolved": "1.1.11",
-        "contentHash": "UhEJuox9ZejyfVCJToohE+DcYf/zV2q00/7xlk1PFldDZSus/47HKWCGoXkkRaU72Le14CFRf+xQL2JozuELLw=="
+        "requested": "[1.1.18, 1.1.18]",
+        "resolved": "1.1.18",
+        "contentHash": "XbZflvZi1i6uAzhfGVXdSH4naa2St9AbGi1r+iaC6CjXNohRUdVAaJk5wM69YcBW1Hd+7Y790TmJkeT9JtApnw=="
       },
       "nanoFramework.System.Device.I2c": {
         "type": "Direct",
@@ -118,9 +118,9 @@
       },
       "nanoFramework.System.Threading": {
         "type": "Direct",
-        "requested": "[1.0.4, 1.0.4]",
-        "resolved": "1.0.4",
-        "contentHash": "P/6ZqtSj8/IKMIRMiv3hlDKwo7ExlWqJKyTeoJjF+NDK5NVQ4twAcbIXkV726SQwtEotdc8II8WanLoiGONI/g=="
+        "requested": "[1.1.8, 1.1.8]",
+        "resolved": "1.1.8",
+        "contentHash": "oES5GN3KHoDzifRNr06WM7P9NaQf+kDmIYkr1ETR2awmERHz4sRpECduGEatwyo1vMhMvZY/KoBcEpAyKNbDgQ=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
