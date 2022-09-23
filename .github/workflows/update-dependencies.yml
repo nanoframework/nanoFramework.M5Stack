@@ -19,3 +19,5 @@ jobs:
     with:
       timeout-minutes: 60 # Non default because this solution has lots of projects to update!
       solutionsToCheck: 'nanoFramework.M5Stack.sln'
+    secrets:
+      githubAuth: ${{ secrets.NFBOT_GITHUB_ACTIONS }}
