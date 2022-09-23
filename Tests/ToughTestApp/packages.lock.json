@@ -16,9 +16,9 @@
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
-        "requested": "[1.2.87, 1.2.87]",
-        "resolved": "1.2.87",
-        "contentHash": "H60cU0kCFy3Z1kpayI7IRELxvkwqEMX1UbHDe5STWfYeYvq7gAT1VtOHBl0jsAQcQ5oZjdqMCWoEV+8vAkyeaA=="
+        "requested": "[1.2.95, 1.2.95]",
+        "resolved": "1.2.95",
+        "contentHash": "BTl+RCeyVZhJGvZBZnFUPaXotpyZiRnb3VvPR2xpqCZ2YXMx8ssDbvsGzWvEWooCCFS4EXMymKxozcBAyghysQ=="
       },
       "nanoFramework.Iot.Device.Chsc6540": {
         "type": "Direct",
@@ -70,9 +70,9 @@
       },
       "nanoFramework.System.Device.Wifi": {
         "type": "Direct",
-        "requested": "[1.5.20, 1.5.20]",
-        "resolved": "1.5.20",
-        "contentHash": "O2DCpB5E2ZInxN+g8ODr0pSy9nxPofHmLEzWeWjMPldzC1UONNpXd3abGb9agkEMGWn4BW6+Eoa1gag4eiIJ6Q=="
+        "requested": "[1.5.22, 1.5.22]",
+        "resolved": "1.5.22",
+        "contentHash": "LLyt9x8P0cDibxc0uTmn60vr/ZqosLQGE5D2Iki0K7j9H5Phcj/VYqYvOC0MwjN8TC/wIBAz8xEbaxNgY1dT0Q=="
       },
       "nanoFramework.System.IO.Ports": {
         "type": "Direct",
@@ -88,9 +88,9 @@
       },
       "nanoFramework.System.Net": {
         "type": "Direct",
-        "requested": "[1.10.14, 1.10.14]",
-        "resolved": "1.10.14",
-        "contentHash": "vY6FH/avkBR9YMyKSuR6xidCh2ig9kjNaDNrqVkxxhXHRLOK7m8f7f1oVGLidBD2EH180Lb9nJ6DRXTYMjg6vQ=="
+        "requested": "[1.10.21, 1.10.21]",
+        "resolved": "1.10.21",
+        "contentHash": "7ktL1n8yaz4m3YwQnSNuYqIava1TBAU1AnEQIjzpllhTdxszE6y3fv+h3IbbqdvB3YvqjwDyAOnHKC3ySZQ85Q=="
       },
       "nanoFramework.System.Text": {
         "type": "Direct",
