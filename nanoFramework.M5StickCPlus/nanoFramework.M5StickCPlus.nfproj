@@ -143,6 +143,7 @@
   <ItemGroup>
     <None Include="key.snk" />
     <None Include="packages.config" />
+    <None Include="packages.lock.json" />
     <None Include="Resources\consolas_regular_8.tinyfnt" />
   </ItemGroup>
   <ItemGroup>

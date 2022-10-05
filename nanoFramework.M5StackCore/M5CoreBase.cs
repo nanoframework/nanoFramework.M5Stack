@@ -5,6 +5,7 @@
 using Iot.Device.Magnetometer;
 using Iot.Device.Mpu6886;
 #endif
+using nanoFramework.System.IO.FileSystem;
 using System.Device.Adc;
 using System.Device.Dac;
 using System.Device.Gpio;
@@ -47,6 +48,7 @@ namespace nanoFramework.M5Stack
         private static SerialPort _serialPort;
         private static AdcController _adc;
         private static int _portANumber;
+        private static SDCard _sdCard;
 
 #if !TOUGH
         /// <summary>
@@ -84,6 +86,23 @@ namespace nanoFramework.M5Stack
         }
 
 #endif
+
+        /// <summary>
+        /// Gets the SD Card.
+        /// </summary>
+        public static SDCard SDCard
+        {
+            get
+            {
+                if (_sdCard == null)
+                {
+                    // We always have this configuration for all the M5Core, M5Core2, Fire and even Tough
+                    _sdCard = new SDCard(new SDCard.SDCardSpiParameters() { spiBus = 1, chipSelectPin = 4, enableCardDetectPin = false });
+                }
+
+                return _sdCard;
+            }
+        }
 
         /// <summary>
         /// Gets the main <see cref="GpioController"/>.
