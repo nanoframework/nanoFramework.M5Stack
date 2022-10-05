@@ -8,19 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Resources;
+
 namespace nanoFramework.Fire
 {
     
     internal partial class Resource
     {
-        private static System.Resources.ResourceManager manager;
-        internal static System.Resources.ResourceManager ResourceManager
+        private static ResourceManager manager;
+        internal static ResourceManager ResourceManager
         {
             get
             {
                 if ((Resource.manager == null))
                 {
-                    Resource.manager = new System.Resources.ResourceManager("nanoFramework.Fire.Resource", typeof(Resource).Assembly);
+                    Resource.manager = new ResourceManager("nanoFramework.Fire.Resource", typeof(Resource).Assembly);
                 }
                 return Resource.manager;
             }
@@ -29,7 +32,7 @@ namespace nanoFramework.Fire
         {
             return ((nanoFramework.UI.Font)(nanoFramework.Runtime.Native.ResourceUtility.GetObject(ResourceManager, id)));
         }
-        [System.SerializableAttribute()]
+        [SerializableAttribute()]
         internal enum FontResources : short
         {
             consolas_regular_16 = 10023,
