@@ -140,12 +140,6 @@
         "resolved": "1.2.82",
         "contentHash": "tBke3qk+itf18JNzbCUp3qfI8V+vxmET0d6wja9m9EJW7Pkqyii8tcFJi6/bONjoi2HlKercHZ1YPyqHuUZlog=="
       },
-      "nanoFramework.System.IO.FileSystem": {
-        "type": "Direct",
-        "requested": "[1.1.5, 1.1.5]",
-        "resolved": "1.1.5",
-        "contentHash": "z9ZVybWAtCnAUrlvvyLVBSVT0DqjBq/PBGxAI7C3qhdceF9qHwmLY+UQicvLsmKiGH3Ff0lzey0BlHr5ub8Tew=="
-      },
       "nanoFramework.System.IO.Ports": {
         "type": "Direct",
         "requested": "[1.1.25, 1.1.25]",
