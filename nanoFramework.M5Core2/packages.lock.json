@@ -62,6 +62,12 @@
         "resolved": "1.2.87",
         "contentHash": "FECRNI8T5TYJUD6ch1Ccq9SC9INJ/EmviHEiW7ESF9NQ+RjuRsw1VCqoZnAKIJDwTEcwMKfHcrDzqy+sFyQ1/Q=="
       },
+      "nanoFramework.ResourceManager": {
+        "type": "Direct",
+        "requested": "[1.2.7, 1.2.7]",
+        "resolved": "1.2.7",
+        "contentHash": "1O4vSa97D0YPa+0+A6vZOGaoSi3VcgGT7ByBvPSSmjnEhRitFFNGZQYnbM+aJgcEzKyX7GeIdK4bge2QWXWSPA=="
+      },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
         "requested": "[1.10.0, 1.10.0]",
