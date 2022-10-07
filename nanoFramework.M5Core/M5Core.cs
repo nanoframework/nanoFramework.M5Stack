@@ -4,6 +4,7 @@
 using Iot.Device.Button;
 using Iot.Device.Buzzer;
 using Iot.Device.Ip5306;
+using M5Stack.Resources;
 using nanoFramework.Hardware.Esp32;
 using System;
 using System.Device.Adc;

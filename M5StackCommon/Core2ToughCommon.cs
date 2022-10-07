@@ -22,6 +22,7 @@ using UnitsNet;
 using System.Threading;
 using nanoFramework.Runtime.Events;
 using System.Diagnostics;
+using M5Stack.Resources;
 
 namespace nanoFramework.M5Stack
 {
