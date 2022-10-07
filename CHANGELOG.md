@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.55...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.58...HEAD)
+
+**Documentation and other chores:**
+
+- Update 2 NuGet dependencies [\#216](https://github.com/nanoframework/nanoFramework.M5Stack/pull/216)
+
+## [v1.1.58](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.58) (2022-09-23)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.55...v1.1.58)
 
 **Documentation and other chores:**
 
