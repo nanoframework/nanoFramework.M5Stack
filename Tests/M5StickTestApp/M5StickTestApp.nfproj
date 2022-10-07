@@ -50,7 +50,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Graphics">
-      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.5\lib\nanoFramework.Graphics.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.8\lib\nanoFramework.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.1.63006, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Hardware.Esp32.1.4.1\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
@@ -61,7 +61,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.ResourceManager">
-      <HintPath>..\..\packages\nanoFramework.ResourceManager.1.2.5\lib\nanoFramework.ResourceManager.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.ResourceManager.1.2.7\lib\nanoFramework.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Runtime.Events, Version=1.10.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Runtime.Events.1.10.0\lib\nanoFramework.Runtime.Events.dll</HintPath>

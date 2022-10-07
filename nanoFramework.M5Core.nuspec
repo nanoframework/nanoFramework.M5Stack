@@ -19,7 +19,7 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack M5Core</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.12.0" />
-      <dependency id="nanoFramework.Graphics" version="1.1.5" />
+      <dependency id="nanoFramework.Graphics" version="1.1.8" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.4.1" />
       <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.2.87" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.95" />
@@ -35,8 +35,7 @@
       <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.145.0" />
       <dependency id="UnitsNet.nanoFramework.Frequency" version="4.145.0" />
       <dependency id="UnitsNet.nanoFramework.Temperature" version="4.145.0" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.5" />
-      <dependency id="nanoFramework.ResourceManager" version="1.2.5"/>
+      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.9" />
     </dependencies>
   </metadata>
   <files>

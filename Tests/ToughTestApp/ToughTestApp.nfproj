@@ -36,10 +36,10 @@
       <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Graphics">
-      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.5\lib\nanoFramework.Graphics.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.8\lib\nanoFramework.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.ResourceManager">
-      <HintPath>..\..\packages\nanoFramework.ResourceManager.1.2.5\lib\nanoFramework.ResourceManager.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.ResourceManager.1.2.7\lib\nanoFramework.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Runtime.Events">
       <HintPath>..\..\packages\nanoFramework.Runtime.Events.1.10.0\lib\nanoFramework.Runtime.Events.dll</HintPath>
