@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nanoFramework.Fire
+namespace M5Stack.Resources
 {
     
     internal partial class Resource

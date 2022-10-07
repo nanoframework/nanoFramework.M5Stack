@@ -334,7 +334,7 @@ AdcChannel myChannel = M5Core.GetAdcGpio(35);
 
 Refer to the M5Stack documentation to have the mapping of the ADC channels and the pins.
 
-## I2C Device/Grove
+### I2C Device/Grove
 
 You can get an I2cDevice/Grove like this:
 
@@ -421,6 +421,39 @@ And on the Fire:
 // This will update all RGB LED 
 Fire.LedBar.Update();
 ```
+
+### SD Card
+
+The M5Core, M5Core2, Fire and Tough have a SD Card reader. You can simply access it like:
+
+```csharp
+SDCard sdCard = M5Core.SDCard;
+try
+{
+    // This will actually mount the SD Card, if no card, you will get an exception
+    sdCard.Mount();
+    // Mounting properly a card can take a bit of time, so wait for the card to be mounted
+    // Note: it is recommended to use a cancellation token or equivalent to make sure you are not in a dead loop
+    while (!sdCard.IsMounted)
+    {
+        Thread.Sleep(10);
+    }
+
+    // You can now access the files on the SD Card
+    // As an example you can read a json file and deserialize it
+    // D: is the drive from the SD Card
+    const string ParamFile = "D:\\params.json";
+    using FileStream fs = new FileStream(ParamFile, FileMode.Open, FileAccess.Read);
+    // In this case, you will need to have a class called Configuration and a properly serialized file
+    Configuration config = (Configuration)JsonConvert.DeserializeObject(fs, typeof(Configuration));
+}
+catch
+{
+    // Something wrong happened
+}
+```
+
+More samples on how to use the file system are [available here](https://github.com/nanoframework/Samples/tree/main/samples/System.IO.FileSystem).
 
 ## Feedback and documentation
 

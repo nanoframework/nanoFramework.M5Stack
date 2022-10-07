@@ -22,6 +22,7 @@ using UnitsNet;
 using System.Threading;
 using nanoFramework.Runtime.Events;
 using System.Diagnostics;
+using M5Stack.Resources;
 
 namespace nanoFramework.M5Stack
 {
@@ -462,10 +463,10 @@ namespace nanoFramework.M5Stack
             switch (gpioNumber)
             {
                 case 35:
-                    Configuration.SetPinFunction(11, DeviceFunction.ADC1_CH7);
+                    Configuration.SetPinFunction(35, DeviceFunction.ADC1_CH7);
                     return _adc.OpenChannel(7);
                 case 36:
-                    Configuration.SetPinFunction(5, DeviceFunction.ADC1_CH0);
+                    Configuration.SetPinFunction(36, DeviceFunction.ADC1_CH0);
                     return _adc.OpenChannel(0);
                 case 32:
                     Configuration.SetPinFunction(32, DeviceFunction.ADC1_CH4);
@@ -492,7 +493,7 @@ namespace nanoFramework.M5Stack
                     Configuration.SetPinFunction(25, DeviceFunction.ADC1_CH18);
                     return _adc.OpenChannel(18);
                 case 27:
-                    Configuration.SetPinFunction(26, DeviceFunction.ADC1_CH17);
+                    Configuration.SetPinFunction(27, DeviceFunction.ADC1_CH17);
                     return _adc.OpenChannel(17);
                 default:
                     throw new ArgumentException(nameof(gpioNumber));
