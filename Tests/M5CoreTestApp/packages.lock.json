@@ -118,9 +118,9 @@
       },
       "nanoFramework.System.IO.FileSystem": {
         "type": "Direct",
-        "requested": "[1.1.9, 1.1.9]",
-        "resolved": "1.1.9",
-        "contentHash": "1WKpF0AvypMU6rtbCrHUWfAkp1A12DnJ5VCUrp7XcARVP+1VqUJ6vVKF16g6oG8O7OcSFjP9zTeJzlfpZscKtQ=="
+        "requested": "[1.1.11, 1.1.11]",
+        "resolved": "1.1.11",
+        "contentHash": "qZSqGg/IodAMiq1RDWV3FE537HfchrqEXCrRr4tQXDzLDBuw0DMMCOZFqByX38DVnpQTqPUe20HfxSygGyctFA=="
       },
       "nanoFramework.System.IO.Ports": {
         "type": "Direct",
