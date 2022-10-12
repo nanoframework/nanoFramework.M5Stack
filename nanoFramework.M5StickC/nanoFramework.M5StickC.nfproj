@@ -56,8 +56,9 @@
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nanoFramework.Graphics">
-      <HintPath>..\packages\nanoFramework.Graphics.1.1.8\lib\nanoFramework.Graphics.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics, Version=1.1.13.16792, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.1.1.13\lib\nanoFramework.Graphics.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.4.37891, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.4\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
@@ -86,8 +87,8 @@
       <HintPath>..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.2.82\lib\System.Buffers.Binary.BinaryPrimitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Device.Gpio, Version=1.1.18.20780, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Device.Gpio.1.1.18\lib\System.Device.Gpio.dll</HintPath>
+    <Reference Include="System.Device.Gpio, Version=1.1.22.60169, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Gpio.1.1.22\lib\System.Device.Gpio.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.I2c, Version=1.0.3.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
