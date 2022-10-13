@@ -20,7 +20,7 @@
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.12.0" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.4.4" />
-      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.114" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.122" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.4.3" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.0.2" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.0.3" />
