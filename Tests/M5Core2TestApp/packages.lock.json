@@ -16,9 +16,9 @@
       },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
-        "requested": "[1.4.4, 1.4.4]",
-        "resolved": "1.4.4",
-        "contentHash": "a2GtJKRh1HqzdULcThptvFkqyH71I8SNtdQXXllgj7jpakPjFzHUC7SPjZt6/PjvjtYbnlmjrlnL4pj7vz+2Gw=="
+        "requested": "[1.4.8, 1.4.8]",
+        "resolved": "1.4.8",
+        "contentHash": "bWQBIEWTKyqlJCJCe+Os5jEPBHcGQZGL8tpzD6d69dJRvrQksIMHsIgC73ng/aUgUFwBDI3EVPPiEx80TAsnBw=="
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
@@ -148,9 +148,9 @@
       },
       "nanoFramework.System.IO.Ports": {
         "type": "Direct",
-        "requested": "[1.1.31, 1.1.31]",
-        "resolved": "1.1.31",
-        "contentHash": "yNFLPGwi8FitP1i/m4rubYx4U+iyk7Flj2/vni2tftD6sbnlb9AZMtFfpt6+RNCilydB2n2udbNqj/Bt4o5UgQ=="
+        "requested": "[1.1.34, 1.1.34]",
+        "resolved": "1.1.34",
+        "contentHash": "9wGv8ucdR7Y4oayqdRUQrqnXdjSXTZL+BuUBUMskc7nvPUpsVQMtLVsRXFu7mL5Gsd0zRR6FiZovzYdpxPq87A=="
       },
       "nanoFramework.System.IO.Streams": {
         "type": "Direct",
