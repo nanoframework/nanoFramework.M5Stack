@@ -10,9 +10,9 @@
       },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
-        "requested": "[1.4.4, 1.4.4]",
-        "resolved": "1.4.4",
-        "contentHash": "a2GtJKRh1HqzdULcThptvFkqyH71I8SNtdQXXllgj7jpakPjFzHUC7SPjZt6/PjvjtYbnlmjrlnL4pj7vz+2Gw=="
+        "requested": "[1.4.8, 1.4.8]",
+        "resolved": "1.4.8",
+        "contentHash": "bWQBIEWTKyqlJCJCe+Os5jEPBHcGQZGL8tpzD6d69dJRvrQksIMHsIgC73ng/aUgUFwBDI3EVPPiEx80TAsnBw=="
       },
       "nanoFramework.Hardware.Esp32.Rmt": {
         "type": "Direct",
@@ -28,9 +28,9 @@
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.87, 1.2.87]",
-        "resolved": "1.2.87",
-        "contentHash": "vx4svhIu/cJP8kCdpnaJwQJiik/U2pKP8Htju3dKbffw8qTRWgYj2C7cF2FT5eH2Swl7EwlZaiNQyJQaaO75PQ=="
+        "requested": "[1.2.128, 1.2.128]",
+        "resolved": "1.2.128",
+        "contentHash": "xhEXKwGL6/6kx4vBFSwPRjREfdTYpjYQ5vtp1OqB4yBG/Tj0FRvRhwfp+cgEhO6O85N4uvOFH1wubaq58dOMoQ=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
@@ -94,15 +94,15 @@
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
-        "requested": "[1.4.4, 1.4.4]",
-        "resolved": "1.4.4",
-        "contentHash": "JN4sbt2OBWq6DzlUqaT31zZEtXobUNCXG+ZlztDRVqxqtLs09CH80HIE6bIz5wk/7HsKlB546K69HHGDaVP9Ow=="
+        "requested": "[1.5.10, 1.5.10]",
+        "resolved": "1.5.10",
+        "contentHash": "lG7Tz20TmIaWLRdSK++PJ7wgXXSjBfFsFkAZwb3Vyb2EslfLG7LDn45loWqsspgkutnSMTO5T3cCZS2XLl3Erg=="
       },
       "nanoFramework.System.Numerics": {
         "type": "Direct",
-        "requested": "[1.2.82, 1.2.82]",
-        "resolved": "1.2.82",
-        "contentHash": "j8wSfwPFd+8v3Bbo8zjqxg85bqDUZtQUnLUsSGmQQttycZE7rTUbI7jA5B4CrZfoGL9XEXNUzs09LWBj4kOQ3g=="
+        "requested": "[1.2.130, 1.2.130]",
+        "resolved": "1.2.130",
+        "contentHash": "VF/ON8ULbknuTXJvh6IkEqm98Wxo1DvNNiazNoYU2JBVLGul8H9BPPz3HKZcjF9QbvFytyDDSVKWIKzCVbZzVw=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
