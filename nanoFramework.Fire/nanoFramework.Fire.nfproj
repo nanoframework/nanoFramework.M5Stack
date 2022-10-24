@@ -113,14 +113,16 @@
     <Reference Include="System.Math">
       <HintPath>..\packages\nanoFramework.System.Math.1.4.4\lib\System.Math.dll</HintPath>
     </Reference>
-    <Reference Include="System.Numerics">
+    <Reference Include="System.Numerics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Numerics.1.2.82\lib\System.Numerics.dll</HintPath>
     </Reference>
+    <Reference Include="UnitsNet.ElectricCurrent, Version=4.145.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\UnitsNet.nanoFramework.ElectricCurrent.4.145.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Frequency">
+    <Reference Include="UnitsNet.Frequency, Version=4.145.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnitsNet.nanoFramework.Frequency.4.145.0\lib\UnitsNet.Frequency.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Temperature">
+    <Reference Include="UnitsNet.Temperature, Version=4.145.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.4.145.0\lib\UnitsNet.Temperature.dll</HintPath>
     </Reference>
   </ItemGroup>
