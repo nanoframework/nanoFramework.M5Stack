@@ -35,12 +35,18 @@
   <ItemGroup>
     <Reference Include="Iot.Device.Bmm150">
       <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.87\lib\Iot.Device.Bmm150.dll</HintPath>
+    </Reference>
     <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.122\lib\Iot.Device.Button.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.4.37891, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.4\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
+    </Reference>
     <Reference Include="Iot.Device.Buzzer">
       <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.87\lib\Iot.Device.Buzzer.dll</HintPath>
     </Reference>
+    <Reference Include="Iot.Device.Ip5306, Version=0.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.63\lib\Iot.Device.Ip5306.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886">
@@ -49,16 +55,12 @@
     <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <Private>True</Private>
     </Reference>
-    <Reference Include="mscorlib">
+    <Reference Include="mscorlib, Version=1.12.0.4, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Graphics, Version=1.1.13.16792, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Graphics.1.1.13\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.4.37891, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32.Rmt">
     </Reference>
     <Reference Include="nanoFramework.ResourceManager">
       <HintPath>..\packages\nanoFramework.ResourceManager.1.2.7\lib\nanoFramework.ResourceManager.dll</HintPath>
@@ -77,6 +79,7 @@
     </Reference>
     <Reference Include="System.Buffers.Binary.BinaryPrimitives">
       <HintPath>..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.2.82\lib\System.Buffers.Binary.BinaryPrimitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device.Adc">
       <HintPath>..\packages\nanoFramework.System.Device.Adc.1.0.2\lib\System.Device.Adc.dll</HintPath>
     </Reference>
@@ -89,6 +92,7 @@
     </Reference>
     <Reference Include="System.Device.I2c">
       <HintPath>..\packages\nanoFramework.System.Device.I2c.1.0.3\lib\System.Device.I2c.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device.Model">
       <HintPath>..\packages\nanoFramework.System.Device.Model.1.2.82\lib\System.Device.Model.dll</HintPath>
     </Reference>
@@ -101,6 +105,7 @@
     </Reference>
     <Reference Include="System.Drawing">
       <HintPath>..\packages\nanoFramework.System.Drawing.1.2.82\lib\System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO.FileSystem, Version=1.1.11.41260, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.IO.FileSystem.1.1.11\lib\System.IO.FileSystem.dll</HintPath>
       <Private>True</Private>
@@ -110,6 +115,7 @@
     </Reference>
     <Reference Include="System.IO.Streams">
       <HintPath>..\packages\nanoFramework.System.IO.Streams.1.1.15\lib\System.IO.Streams.dll</HintPath>
+    </Reference>
     <Reference Include="System.Math">
       <HintPath>..\packages\nanoFramework.System.Math.1.4.4\lib\System.Math.dll</HintPath>
     </Reference>
