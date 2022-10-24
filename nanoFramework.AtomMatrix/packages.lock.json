@@ -94,15 +94,15 @@
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
-        "requested": "[1.5.10, 1.5.10]",
-        "resolved": "1.5.10",
-        "contentHash": "lG7Tz20TmIaWLRdSK++PJ7wgXXSjBfFsFkAZwb3Vyb2EslfLG7LDn45loWqsspgkutnSMTO5T3cCZS2XLl3Erg=="
+        "requested": "[1.5.12, 1.5.12]",
+        "resolved": "1.5.12",
+        "contentHash": "97ocr7onQf/hPCAMg2/wAbLDFxQugisDkqT0C4h7qhCrUO8OMxcTTClkJQ5tYqIcmA6+ScbfxRX79WeogdT1bw=="
       },
       "nanoFramework.System.Numerics": {
         "type": "Direct",
-        "requested": "[1.2.130, 1.2.130]",
-        "resolved": "1.2.130",
-        "contentHash": "VF/ON8ULbknuTXJvh6IkEqm98Wxo1DvNNiazNoYU2JBVLGul8H9BPPz3HKZcjF9QbvFytyDDSVKWIKzCVbZzVw=="
+        "requested": "[1.2.132, 1.2.132]",
+        "resolved": "1.2.132",
+        "contentHash": "pK/AQuTibxWhoIhlfj1YYR1BuR66y+5jtiZvYwhAPQ6OawEN55jy7X3DYTxwnxnBN0eU6PEVFFlpR+m0o7pT9Q=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",

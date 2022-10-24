@@ -46,7 +46,7 @@
     <Reference Include="nanoFramework.Graphics, Version=1.1.13.16792, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Graphics.1.1.13\lib\nanoFramework.Graphics.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.8.26232, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+    <Reference Include="nanoFramework.Hardware.Esp32">
       <HintPath>..\..\packages\nanoFramework.Hardware.Esp32.1.4.8\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32.Rmt, Version=1.2.3.5, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -79,8 +79,8 @@
     <Reference Include="System.Diagnostics.Stopwatch, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Diagnostics.Stopwatch.1.2.82\lib\System.Diagnostics.Stopwatch.dll</HintPath>
     </Reference>
-    <Reference Include="System.Math, Version=1.5.10.3518, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Math.1.5.10\lib\System.Math.dll</HintPath>
+    <Reference Include="System.Math">
+      <HintPath>..\..\packages\nanoFramework.System.Math.1.5.12\lib\System.Math.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Numerics.1.2.132\lib\System.Numerics.dll</HintPath>

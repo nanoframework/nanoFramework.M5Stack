@@ -73,8 +73,8 @@
     <Reference Include="nanoFramework.Graphics, Version=1.1.13.16792, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Graphics.1.1.13\lib\nanoFramework.Graphics.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.4.37891, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.4\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
+    <Reference Include="nanoFramework.Hardware.Esp32">
+      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.8\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.ResourceManager">
       <HintPath>..\packages\nanoFramework.ResourceManager.1.2.7\lib\nanoFramework.ResourceManager.dll</HintPath>
@@ -88,8 +88,8 @@
     <Reference Include="nanoFramework.System.Collections, Version=1.4.0.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Collections.1.4.0\lib\nanoFramework.System.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.System.Text, Version=1.2.7.60109, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Text.1.2.7\lib\nanoFramework.System.Text.dll</HintPath>
+    <Reference Include="nanoFramework.System.Text">
+      <HintPath>..\packages\nanoFramework.System.Text.1.2.17\lib\nanoFramework.System.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers.Binary.BinaryPrimitives, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Buffers.Binary.BinaryPrimitives.1.2.82\lib\System.Buffers.Binary.BinaryPrimitives.dll</HintPath>
@@ -121,17 +121,17 @@
     <Reference Include="System.IO.FileSystem, Version=1.1.11.41260, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.IO.FileSystem.1.1.11\lib\System.IO.FileSystem.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Ports, Version=1.1.31.19224, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.1.31\lib\System.IO.Ports.dll</HintPath>
+    <Reference Include="System.IO.Ports">
+      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.1.38\lib\System.IO.Ports.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Streams, Version=1.1.15.36091, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+    <Reference Include="System.IO.Streams">
       <HintPath>..\packages\nanoFramework.System.IO.Streams.1.1.15\lib\System.IO.Streams.dll</HintPath>
     </Reference>
-    <Reference Include="System.Math, Version=1.4.4.3, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Math.1.4.4\lib\System.Math.dll</HintPath>
+    <Reference Include="System.Math">
+      <HintPath>..\packages\nanoFramework.System.Math.1.5.12\lib\System.Math.dll</HintPath>
     </Reference>
-    <Reference Include="System.Numerics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Numerics.1.2.82\lib\System.Numerics.dll</HintPath>
+    <Reference Include="System.Numerics">
+      <HintPath>..\packages\nanoFramework.System.Numerics.1.2.132\lib\System.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="UnitsNet.ElectricCurrent, Version=4.145.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\UnitsNet.nanoFramework.ElectricCurrent.4.145.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
