@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.props" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.props')" />
+  <Import Project="..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.props" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.props')" />
   <PropertyGroup Label="Globals">
     <NanoFrameworkProjectSystemPath>$(MSBuildExtensionsPath)\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
   </PropertyGroup>
@@ -33,16 +33,20 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.2.122\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.2.141\lib\Iot.Device.Axp192.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Chsc6540, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.1.1.82\lib\Iot.Device.Chsc6540.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.1.1.141\lib\Iot.Device.Chsc6540.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.82\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.141\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Rtc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.1.2.125\lib\Iot.Device.Rtc.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.1.2.141\lib\Iot.Device.Rtc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.12.0\lib\mscorlib.dll</HintPath>
@@ -50,8 +54,9 @@
     <Reference Include="nanoFramework.Graphics, Version=1.1.13.16792, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Graphics.1.1.13\lib\nanoFramework.Graphics.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.4.37891, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.4\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
+    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.4.8.26232, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.4.8\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.ResourceManager">
       <HintPath>..\packages\nanoFramework.ResourceManager.1.2.7\lib\nanoFramework.ResourceManager.dll</HintPath>
@@ -65,8 +70,9 @@
     <Reference Include="nanoFramework.System.Collections">
       <HintPath>..\packages\nanoFramework.System.Collections.1.4.0\lib\nanoFramework.System.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.System.Text, Version=1.2.7.60109, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.Text.1.2.7\lib\nanoFramework.System.Text.dll</HintPath>
+    <Reference Include="nanoFramework.System.Text, Version=1.2.22.3995, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Text.1.2.22\lib\nanoFramework.System.Text.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Device.Adc">
       <HintPath>..\packages\nanoFramework.System.Device.Adc.1.0.2\lib\System.Device.Adc.dll</HintPath>
@@ -86,11 +92,13 @@
     <Reference Include="System.IO.FileSystem, Version=1.1.11.41260, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.IO.FileSystem.1.1.11\lib\System.IO.FileSystem.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Ports, Version=1.1.31.19224, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.1.31\lib\System.IO.Ports.dll</HintPath>
+    <Reference Include="System.IO.Ports, Version=1.1.46.59502, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.IO.Ports.1.1.46\lib\System.IO.Ports.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="System.IO.Streams, Version=1.1.15.36091, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.System.IO.Streams.1.1.15\lib\System.IO.Streams.dll</HintPath>
+    <Reference Include="System.IO.Streams, Version=1.1.27.27650, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.IO.Streams.1.1.27\lib\System.IO.Streams.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Threading, Version=1.1.8.6695, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Threading.1.1.8\lib\System.Threading.dll</HintPath>
@@ -132,8 +140,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.props'))" />
-    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.targets'))" />
+    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.props'))" />
+    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.targets'))" />
   </Target>
-  <Import Project="..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.5.113\build\Nerdbank.GitVersioning.targets')" />
+  <Import Project="..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.5.119\build\Nerdbank.GitVersioning.targets')" />
 </Project>
