@@ -94,9 +94,9 @@
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
-        "requested": "[1.5.15, 1.5.15]",
-        "resolved": "1.5.15",
-        "contentHash": "YMSnRV8UNtnoCALtaLPYYwAhpsMnRrZ7ACQBAKFSib8ivaIijcrTAeXVWeMAG8bVePzURYvBAT3UU0TvSvVBnw=="
+        "requested": "[1.5.18, 1.5.18]",
+        "resolved": "1.5.18",
+        "contentHash": "xsqy3+1gblbeItzVuwDeJlFezy5N8V7CHPATsW1941kZiCNqv0cgcjmurFHSvjkQ3JZUPj5y7dLdcWtusds18Q=="
       },
       "nanoFramework.System.Numerics": {
         "type": "Direct",
@@ -112,9 +112,9 @@
       },
       "UnitsNet.nanoFramework.Temperature": {
         "type": "Direct",
-        "requested": "[4.145.0, 4.145.0]",
-        "resolved": "4.145.0",
-        "contentHash": "lhiS0ovxBCVxTBEg9hUzefZ1AXK2X+rncZnMFQ4c165wqstmkyx9evWq5F013FKeya8dLy93a+1LR/PkAcYfKw=="
+        "requested": "[4.146.0, 4.146.0]",
+        "resolved": "4.146.0",
+        "contentHash": "YyeO2lvEbJhXfZIdoaFb3WYrWeebAancd7ZlFQIAlovE8RRtpYLNHQ76BqjaQShKblGETys2kJH+xlVzleLWng=="
       }
     }
   }
