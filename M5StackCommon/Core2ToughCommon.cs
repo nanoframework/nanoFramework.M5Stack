@@ -93,15 +93,15 @@ namespace nanoFramework.M5Stack
 
                 if (_powerLed)
                 {
-                    // turn ON by setting duty cycle to 100%
-                    _power.Pwm1DutyCycleSetting1 = 10;
-                    _power.Pwm1DutyCycleSetting2 = 10;
+                    // turn ON by setting duty cycle to 0%
+                    _power.Pwm1DutyCycleSetting1 = 0;
+                    _power.Pwm1DutyCycleSetting2 = 0;
                 }
                 else
                 {
-                    // tuen OFF by setting duty cycle to 0%
-                    _power.Pwm1DutyCycleSetting1 = 0;
-                    _power.Pwm1DutyCycleSetting2 = 0;
+                    // turn OFF by setting duty cycle to 100%
+                    _power.Pwm1DutyCycleSetting1 = 10;
+                    _power.Pwm1DutyCycleSetting2 = 10;
                 }
             }
         }
