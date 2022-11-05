@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.82...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.84...HEAD)
+
+**Fixed bugs:**
+
+- Fix M5Core2 power LED on/off \(was reversed\) [\#236](https://github.com/nanoframework/nanoFramework.M5Stack/pull/236)
+
+## [v1.1.84](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.84) (2022-11-05)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.82...v1.1.84)
 
 **Documentation and other chores:**
 
