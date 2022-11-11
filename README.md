@@ -366,6 +366,24 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 
 The M5Core, M5Core2, Fire and Atom Lite/Matrix exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
+### I2S (sound)
+On the M5Core2, wav files can be played using I2S by installing the package [nanoFramework.System.Device.I2s](https://github.com/nanoframework/System.Device.I2S). 
+To play wav files on the M5Core2, use following initialization:
+```csharp
+
+int bckPin = 12;
+int dataPin = 2;
+int wsPin = 0;
+I2sWavPlayer.Bus bus = I2sWavPlayer.Bus.One;
+var audioFile = "D:\\Variation-CLJ013901.wav";
+using (var player = new I2sWavPlayer(bus, audioFile, bckPin, dataPin, wsPin))
+{
+    M5Core2.Power.Gpio2Value = PinValue.High; //speaker power on
+    player.Play();
+    M5Core2.Power.Gpio2Value = PinValue.Low; //speaker power off
+}
+```
+
 ### Led
 
 The M5StickC/CPlus exposes a led. You can access it thru the `Led` property:
