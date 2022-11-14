@@ -34,7 +34,7 @@
       <dependency id="UnitsNet.nanoFramework.Frequency" version="4.148.0" />
       <dependency id="UnitsNet.nanoFramework.Temperature" version="4.148.0" />
       <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="1.2.153" />
-      <dependency id="nanoFramework.System.Drawing" version="1.2.141" />
+      <dependency id="nanoFramework.System.Drawing" version="1.2.158" />
       <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.15" />
     </dependencies>
   </metadata>
