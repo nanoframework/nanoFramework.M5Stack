@@ -371,6 +371,7 @@ The M5Core, M5Core2, Fire and Atom Lite/Matrix exposes 2 DAC and you can access 
 
 On the M5Core2, wav files can be played using I2S by installing the package [nanoFramework.System.Device.I2s](https://github.com/nanoframework/System.Device.I2S). 
 To play wav files on the M5Core2, use following initialization:
+
 ```csharp
 int bckPin = 12;
 int dataPin = 2;
