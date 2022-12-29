@@ -2,7 +2,16 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.88...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.90...HEAD)
+
+**Documentation and other chores:**
+
+- Update 33 NuGet dependencies [\#242](https://github.com/nanoframework/nanoFramework.M5Stack/pull/242)
+- Add I2S example for M5Core2 in readme [\#237](https://github.com/nanoframework/nanoFramework.M5Stack/pull/237)
+
+## [v1.1.90](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.90) (2022-11-15)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.88...v1.1.90)
 
 **Documentation and other chores:**
 
