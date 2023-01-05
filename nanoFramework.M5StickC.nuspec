@@ -27,10 +27,10 @@
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.203" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.203" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.195" />
-      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="4.148.0" />
-      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="4.148.0" />
-      <dependency id="UnitsNet.nanoFramework.Power" version="4.148.0" />
-      <dependency id="UnitsNet.nanoFramework.Temperature" version="4.148.0" />
+      <dependency id="UnitsNet.nanoFramework.ElectricCurrent" version="5.0.0-rc009" />
+      <dependency id="UnitsNet.nanoFramework.ElectricPotential" version="5.0.0-rc009" />
+      <dependency id="UnitsNet.nanoFramework.Power" version="5.0.0-rc009" />
+      <dependency id="UnitsNet.nanoFramework.Temperature" version="5.0.0-rc009" />
     </dependencies>
   </metadata>
   <files>
