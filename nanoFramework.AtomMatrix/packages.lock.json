@@ -28,9 +28,9 @@
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.212, 1.2.212]",
-        "resolved": "1.2.212",
-        "contentHash": "OdkZ3L7vIzr5b4lDKxhT12gT34f24WdnfE3NxPIDiFDqKoTr7jXlsf/utQhM/+cmPRbwfVtHDV36lksxLul/IA=="
+        "requested": "[1.2.217, 1.2.217]",
+        "resolved": "1.2.217",
+        "contentHash": "qvQP+VT2Ww5MHRDSn7v1gNTm8wPbnHaGVAABTXeus/iEZkI6EGxwsqBh6V71PEYG7QW9t38QVTtTu4gzEa+GXA=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
