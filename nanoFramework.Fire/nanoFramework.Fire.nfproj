@@ -150,15 +150,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="UnitsNet.ElectricCurrent, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.0.0-rc009\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+      <HintPath>..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.0.0-rc010\lib\UnitsNet.ElectricCurrent.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UnitsNet.Frequency, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\UnitsNet.nanoFramework.Frequency.5.0.0-rc009\lib\UnitsNet.Frequency.dll</HintPath>
+      <HintPath>..\packages\UnitsNet.nanoFramework.Frequency.5.0.0-rc010\lib\UnitsNet.Frequency.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="UnitsNet.Temperature, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.0.0-rc009\lib\UnitsNet.Temperature.dll</HintPath>
+      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.0.0-rc010\lib\UnitsNet.Temperature.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
