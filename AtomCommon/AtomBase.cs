@@ -146,7 +146,7 @@ namespace nanoFramework.AtomLite
             {
                 if (_irLed == null)
                 {
-                    _irLed = new(_irLedSettings);
+                    _irLed = new(InfraredLedSettings);
                 }
 
                 return _irLed;
