@@ -44,9 +44,8 @@
       <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.222\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.212\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Ws28xx.Esp32">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.239\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
