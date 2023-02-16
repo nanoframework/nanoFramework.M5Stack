@@ -32,6 +32,7 @@ namespace nanoFramework.AtomLite
         private static DacChannel _dac1;
         private static DacChannel _dac2;
         private static AdcController _adc;
+        private static TransmitChannelSettings _irLedSettings;
         private static TransmitterChannel _irLed;
 
         /// <summary>
@@ -116,6 +117,27 @@ namespace nanoFramework.AtomLite
         public static I2cDevice GetGrove(int i2cDeviceAddress) => new(new I2cConnectionSettings(1, i2cDeviceAddress));
 
         /// <summary>
+        /// Gets the infrared led settings.
+        /// </summary>
+        /// <remarks>
+        /// All changes made to <see cref="InfraredLedSettings"/> are ignored once the <see cref="InfraredLed"/> is initialized.
+        /// To make additional updates after the infrared channel is initialized, use the properties in <see cref="InfraredLed"/>.
+        /// Disposing of <see cref="InfraredLed"/> will free the channel and all changes made to <see cref="InfraredLedSettings"/> will take effect when <see cref="InfraredLed"/> is initialized again.
+        /// </remarks>
+        public static TransmitChannelSettings InfraredLedSettings
+        {
+            get
+            {
+                if (_irLedSettings == null)
+                {
+                    _irLedSettings = new TransmitChannelSettings(pinNumber: 12);
+                }
+
+                return _irLedSettings;
+            }
+        }
+
+        /// <summary>
         /// Gets the infrared led as a RMT transmitter channel.
         /// </summary>
         public static TransmitterChannel InfraredLed
@@ -124,7 +146,7 @@ namespace nanoFramework.AtomLite
             {
                 if (_irLed == null)
                 {
-                    _irLed = new(12);
+                    _irLed = new(InfraredLedSettings);
                 }
 
                 return _irLed;

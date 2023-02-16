@@ -33,6 +33,7 @@ namespace nanoFramework.M5Stack
         private static GpioButton _buttonRight;
         private static GpioController _gpio;
         private static GpioPin _led;
+        private static TransmitChannelSettings _irLedSettings;
         private static TransmitterChannel _irLed;
         private static Mpu6886AccelerometerGyroscope _accelerometer;
         private static Pcf8563 _rtc;
@@ -92,6 +93,27 @@ namespace nanoFramework.M5Stack
         }
 
         /// <summary>
+        /// Gets the infrared led settings.
+        /// </summary>
+        /// <remarks>
+        /// All changes made to <see cref="InfraredLedSettings"/> are ignored once the <see cref="InfraredLed"/> is initialized.
+        /// To make additional updates after the infrared channel is initialized, use the properties in <see cref="InfraredLed"/>.
+        /// Disposing of <see cref="InfraredLed"/> will free the channel and all changes made to <see cref="InfraredLedSettings"/> will take effect when <see cref="InfraredLed"/> is initialized again.
+        /// </remarks>
+        public static TransmitChannelSettings InfraredLedSettings
+        {
+            get
+            {
+                if (_irLedSettings == null)
+                {
+                    _irLedSettings = new TransmitChannelSettings(pinNumber: 9);
+                }
+
+                return _irLedSettings;
+            }
+        }
+
+        /// <summary>
         /// Gets the infrared led as a RMT transmitter channel.
         /// </summary>
         public static TransmitterChannel InfraredLed
@@ -100,7 +122,7 @@ namespace nanoFramework.M5Stack
             {
                 if (_irLed == null)
                 {
-                    _irLed = new(9);
+                    _irLed = new(InfraredLedSettings);
                 }
 
                 return _irLed;
