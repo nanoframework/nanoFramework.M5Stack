@@ -47,8 +47,9 @@
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.222\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Ws28xx.Esp32">
+    <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.239\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
@@ -134,16 +135,16 @@
       <HintPath>..\..\packages\nanoFramework.System.Numerics.1.2.227\lib\System.Numerics.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.ElectricCurrent, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.1.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+    <Reference Include="UnitsNet.ElectricCurrent, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.2.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.Frequency, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Frequency.5.1.0\lib\UnitsNet.Frequency.dll</HintPath>
+    <Reference Include="UnitsNet.Frequency, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Frequency.5.2.0\lib\UnitsNet.Frequency.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.Temperature, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.1.0\lib\UnitsNet.Temperature.dll</HintPath>
+    <Reference Include="UnitsNet.Temperature, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.2.0\lib\UnitsNet.Temperature.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
