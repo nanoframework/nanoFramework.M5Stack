@@ -2,7 +2,21 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.M5Stack/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.104...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.106...HEAD)
+
+**Implemented enhancements:**
+
+- Update code to nanoFramework.Hardware.Esp32.Rmt version 2.0.1 [\#254](https://github.com/nanoframework/nanoFramework.M5Stack/pull/254)
+
+**Documentation and other chores:**
+
+- Update 7 NuGet dependencies [\#255](https://github.com/nanoframework/nanoFramework.M5Stack/pull/255)
+- Update 6 NuGet dependencies [\#253](https://github.com/nanoframework/nanoFramework.M5Stack/pull/253)
+- Update 1 NuGet dependencies [\#250](https://github.com/nanoframework/nanoFramework.M5Stack/pull/250)
+
+## [v1.1.106](https://github.com/nanoframework/nanoFramework.M5Stack/tree/v1.1.106) (2023-01-10)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.M5Stack/compare/v1.1.104...v1.1.106)
 
 **Documentation and other chores:**
 
