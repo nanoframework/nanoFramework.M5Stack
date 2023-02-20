@@ -72,8 +72,8 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.I2c.1.1.9\lib\System.Device.I2c.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Device.Wifi, Version=1.5.51.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.5.51\lib\System.Device.Wifi.dll</HintPath>
+    <Reference Include="System.Device.Wifi, Version=1.5.54.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.5.54\lib\System.Device.Wifi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.FileSystem, Version=1.1.23.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -96,20 +96,20 @@
       <HintPath>..\..\packages\nanoFramework.System.Threading.1.1.19\lib\System.Threading.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.ElectricCurrent, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.2.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
+    <Reference Include="UnitsNet.ElectricCurrent, Version=5.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.3.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.ElectricPotential, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricPotential.5.2.0\lib\UnitsNet.ElectricPotential.dll</HintPath>
+    <Reference Include="UnitsNet.ElectricPotential, Version=5.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricPotential.5.3.0\lib\UnitsNet.ElectricPotential.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.Power, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Power.5.2.0\lib\UnitsNet.Power.dll</HintPath>
+    <Reference Include="UnitsNet.Power, Version=5.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Power.5.3.0\lib\UnitsNet.Power.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.Temperature, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.2.0\lib\UnitsNet.Temperature.dll</HintPath>
+    <Reference Include="UnitsNet.Temperature, Version=5.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.3.0\lib\UnitsNet.Temperature.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
