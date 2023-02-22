@@ -28,9 +28,9 @@
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
-        "requested": "[1.2.222, 1.2.222]",
-        "resolved": "1.2.222",
-        "contentHash": "qR2Vzq9OmjkU8ZlQoZnbyzdT+3LdEKJuDr4WPbTC0XAgDvq/VGG3ohmtImSD83d/Rzc6qlLU8CRI9hSM7f/4DQ=="
+        "requested": "[1.2.253, 1.2.253]",
+        "resolved": "1.2.253",
+        "contentHash": "RCarhh5dQfNQFyflX6W/L86oRSNTg54mvgIo/rSaq8S2em9qZRfDQ3+1MI94cg5e1gGjtvs4rSUqXjSGpqG1fg=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
@@ -40,21 +40,21 @@
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.222, 1.2.222]",
-        "resolved": "1.2.222",
-        "contentHash": "ziypcWPGbSKVSsUT0Xh3snMDRFOzj9UWCOBj3WYbs+n46pZLOqc0z+T1FOAIN8U5BrcV/g4a3PlsEaoFQCJ0Tw=="
+        "requested": "[1.2.253, 1.2.253]",
+        "resolved": "1.2.253",
+        "contentHash": "STq0zctwk2kLOV+af7iEshhG9gzslfikK3QvD6y19yBKww8HLsiF070DeNcsMC7a4NeA4RPeo885/lIadwyRhg=="
       },
       "nanoFramework.Iot.Device.Ip5306": {
         "type": "Direct",
-        "requested": "[1.2.222, 1.2.222]",
-        "resolved": "1.2.222",
-        "contentHash": "pfBvIZfKXcCienSQe02F8yUZmnr1V+U3zOyUg9zyONSNZ2dX4xHLuQQ0RJOlAP3lOcHujwhMgXKX+CHUC9faiw=="
+        "requested": "[1.2.253, 1.2.253]",
+        "resolved": "1.2.253",
+        "contentHash": "AN3vzPPBUGVHpLeA78bvlC7+/RJLGqe/VAIbB9eWGwSL4I4x3OMqXwB4HujBE6g8b+JNT/X86NEwOObrkkqgJQ=="
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.222, 1.2.222]",
-        "resolved": "1.2.222",
-        "contentHash": "FMteveoZc19Ls77zZpZAk0r2jqFBzoyQ4Cgrx4LsLAhcqP+JbQcbwI1CrfGReuaI9fvxJn9R4RgdaOPTAcanqg=="
+        "requested": "[1.2.253, 1.2.253]",
+        "resolved": "1.2.253",
+        "contentHash": "MYNS5Yxes+AHnMdeBHEr96VSO7Jj1SXW0kKRmagD1tbwS83NbnauesD2lFph+AXh9sx2R2RNGgJSKSz9mTGMng=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
