@@ -42,15 +42,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Buzzer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.263\lib\Iot.Device.Buzzer.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.267\lib\Iot.Device.Buzzer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Ip5306, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.263\lib\Iot.Device.Ip5306.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.267\lib\Iot.Device.Ip5306.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.263\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.267\lib\Iot.Device.Mpu6886.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
@@ -61,8 +61,8 @@
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nanoFramework.Graphics, Version=1.1.17.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Graphics.1.1.17\lib\nanoFramework.Graphics.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics, Version=1.1.21.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.1.1.21\lib\nanoFramework.Graphics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
