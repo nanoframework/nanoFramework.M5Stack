@@ -17,6 +17,7 @@
 | nanoFramework.Fire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Fire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Fire/) |
 | nanoFramework.AtomLite | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 | nanoFramework.AtomMatrix | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomMatrix.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomMatrix/) |
+| nanoFramework.Tough | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Tough.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Tough/) |
 
 ## Usage
 
@@ -29,6 +30,7 @@ These NuGet packages provide a support for M5Stack products:
 - [Fire](https://docs.m5stack.com/en/core/fire)
 - [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
 - [Atom Matrix](https://docs.m5stack.com/en/core/atom_matrix)
+- [Tough](https://docs.m5stack.com/en/core/tough)
 
 > Note 1: Before trying to add NuGet packages to your projects and/or before flashing the devices (see next section) using MS Visual Studio (VS), open VS > Tools > Options > NuGet Package Manager > Package Sources  and make sure that it contains an entry pointing to <https://api.nuget.org/v3/index.json>, otherwise add it.
 > Note 2: When invoking VS > Project > Manage NuGet Packages make sure that in the Package source drop-down menu (right upper corner) "nuget.org" is selected.
@@ -54,7 +56,7 @@ For the M5StickCPlus:
 nanoff --target M5StickCPlus --update --serialport COM3
 ```
 
-For the M5Core2 and Fire:
+For the M5Core2, Tough and Fire:
 
 ```shell
 nanoff --target M5Core2 --update --serialport COM3
@@ -367,7 +369,6 @@ var pin5 = M5StickC.GpioController.OpenPin(36, PinMode.Output);
 The M5Core, M5Core2, Fire and Atom Lite/Matrix exposes 2 DAC and you can access them thru the `Dac1` and `Dac2` properties. Refer to the [DAC documentation](https://github.com/nanoframework/System.Device.Dac) for more information.
 
 ### I2S (sound)
-
 
 On the M5Core2, wav files can be played using I2S by installing the package [nanoFramework.System.Device.I2s](https://github.com/nanoframework/System.Device.I2S). 
 To play wav files on the M5Core2, use following initialization:
