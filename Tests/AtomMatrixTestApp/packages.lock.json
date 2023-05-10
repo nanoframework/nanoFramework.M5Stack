@@ -16,9 +16,9 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.297, 1.2.297]",
-        "resolved": "1.2.297",
-        "contentHash": "TgpiI9AAG5CMNE/Ov5hOoBqQfHHd4w5amu/MjzqrQVxk7ozqCk0EMCeoWXFpvbD2kvnLUIDjOKFBNh0xQLchSw=="
+        "requested": "[1.2.302, 1.2.302]",
+        "resolved": "1.2.302",
+        "contentHash": "qsuyVzcuaZ2Ig32ywbM8z0rAUI3/4T0gbJyKxrcD77FlCpnFbtPI2qpaONE3DvZeD4uU/wWk0Tsp0PwAvMhk0w=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
