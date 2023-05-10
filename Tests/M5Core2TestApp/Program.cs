@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Threading;
 using nanoFramework.M5Core2;
 using nanoFramework.M5Stack;
@@ -48,10 +49,10 @@ if (!success)
     {
         Debug.WriteLine($"ex: {WifiNetworkHelper.HelperException}");
     }
-    Console.ForegroundColor = nanoFramework.Presentation.Media.Color.Red;
+    Console.ForegroundColor = Color.Red;
     Console.WriteLine($"Error connecting to WiFi SSID: {Ssid}.");
     Console.WriteLine("Check SSID and Password.");
-    Console.ForegroundColor = nanoFramework.Presentation.Media.Color.White;
+    Console.ForegroundColor = Color.White;
 }
 
 
@@ -59,9 +60,9 @@ var mpu6886 = M5Core2.AccelerometerGyroscope;
 
 M5Core2.TouchEvent += TouchEventCallback;
 
-Console.ForegroundColor = nanoFramework.Presentation.Media.Color.Green;
+Console.ForegroundColor = Color.Green;
 Console.WriteLine("Press the display or a button to get started!");
-Console.ForegroundColor = nanoFramework.Presentation.Media.Color.White;
+Console.ForegroundColor = Color.White;
 
 Thread.Sleep(Timeout.Infinite);
 

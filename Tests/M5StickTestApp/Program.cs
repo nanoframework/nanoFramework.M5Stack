@@ -2,9 +2,9 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using nanoFramework.M5Stack;
-using nanoFramework.Presentation.Media;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Threading;
 using Console = nanoFramework.M5Stack.Console;
 
@@ -15,10 +15,10 @@ M5StickC.InitializeScreen();
 Debug.WriteLine($"Actual time: {DateTime.UtcNow}");
 
 ushort[] toSend = new ushort[100];
-var blue = ColorUtility.To16Bpp(Color.Blue);
-var red = ColorUtility.To16Bpp(Color.Red);
-var green = ColorUtility.To16Bpp(Color.Green);
-var white = ColorUtility.To16Bpp(Color.White);
+var blue = Color.Blue.ToBgr565();
+var red = Color.Red.ToBgr565();
+var green = Color.Green.ToBgr565();
+var white = Color.White.ToBgr565();
 
 for (int i = 0; i < toSend.Length; i++)
 {
