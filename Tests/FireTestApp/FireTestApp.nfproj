@@ -27,37 +27,33 @@
     <ProjectReference Include="..\..\nanoFramework.Fire\nanoFramework.Fire.nfproj" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Iot.Device.Bmm150, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Bmm150.1.2.297\lib\Iot.Device.Bmm150.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Bmm150">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Bmm150.1.2.308\lib\Iot.Device.Bmm150.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Button.1.2.297\lib\Iot.Device.Button.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Button">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Button.1.2.308\lib\Iot.Device.Button.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Buzzer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Buzzer.1.2.297\lib\Iot.Device.Buzzer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Buzzer">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Buzzer.1.2.302\lib\Iot.Device.Buzzer.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Ip5306, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Ip5306.1.2.297\lib\Iot.Device.Ip5306.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Ip5306">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Ip5306.1.2.302\lib\Iot.Device.Ip5306.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Mpu6886, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.297\lib\Iot.Device.Mpu6886.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Mpu6886">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.302\lib\Iot.Device.Mpu6886.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.297\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Iot.Device.Ws28xx.Esp32">
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.308\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nanoFramework.Graphics, Version=1.1.28.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.28\lib\nanoFramework.Graphics.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nanoFramework.Graphics">
+      <HintPath>..\..\packages\nanoFramework.Graphics.1.1.37\lib\nanoFramework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.Graphics.Core">
+      <HintPath>..\..\packages\nanoFramework.Graphics.Core.1.1.37\lib\nanoFramework.Graphics.Core.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32.Rmt, Version=2.0.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Hardware.Esp32.Rmt.2.0.1\lib\nanoFramework.Hardware.Esp32.Rmt.dll</HintPath>
@@ -115,10 +111,6 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.Spi.1.3.37\lib\System.Device.Spi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Drawing, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Drawing.1.2.295\lib\System.Drawing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.IO.FileSystem, Version=1.1.23.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.IO.FileSystem.1.1.23\lib\System.IO.FileSystem.dll</HintPath>
       <Private>True</Private>
@@ -135,17 +127,14 @@
       <HintPath>..\..\packages\nanoFramework.System.Numerics.1.2.295\lib\System.Numerics.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="UnitsNet.ElectricCurrent, Version=5.12.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.12.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="UnitsNet.ElectricCurrent">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.ElectricCurrent.5.13.0\lib\UnitsNet.ElectricCurrent.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Frequency, Version=5.12.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Frequency.5.12.0\lib\UnitsNet.Frequency.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="UnitsNet.Frequency">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Frequency.5.13.0\lib\UnitsNet.Frequency.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Temperature, Version=5.12.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.12.0\lib\UnitsNet.Temperature.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="UnitsNet.Temperature">
+      <HintPath>..\..\packages\UnitsNet.nanoFramework.Temperature.5.13.0\lib\UnitsNet.Temperature.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
