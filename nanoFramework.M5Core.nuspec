@@ -21,8 +21,8 @@
       <dependency id="nanoFramework.CoreLibrary" version="1.14.2" />
       <dependency id="nanoFramework.Graphics" version="1.1.37" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.6.3" />
-      <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.2.302" />
-      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.302" />
+      <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.2.308" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.308" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.302" />
       <dependency id="nanoFramework.Iot.Device.Ip5306" version="1.2.302" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.302" />
