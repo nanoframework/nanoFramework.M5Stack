@@ -52,20 +52,25 @@
     <None Include="Resources\consolas_regular_16.tinyfnt" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Iot.Device.Bmm150">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.308\lib\Iot.Device.Bmm150.dll</HintPath>
+    <Reference Include="Iot.Device.Bmm150, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.313\lib\Iot.Device.Bmm150.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Button">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.308\lib\Iot.Device.Button.dll</HintPath>
+    <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.313\lib\Iot.Device.Button.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Buzzer">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.302\lib\Iot.Device.Buzzer.dll</HintPath>
+    <Reference Include="Iot.Device.Buzzer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.313\lib\Iot.Device.Buzzer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Ip5306">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.302\lib\Iot.Device.Ip5306.dll</HintPath>
+    <Reference Include="Iot.Device.Ip5306, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.313\lib\Iot.Device.Ip5306.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Iot.Device.Mpu6886">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.302\lib\Iot.Device.Mpu6886.dll</HintPath>
+    <Reference Include="Iot.Device.Mpu6886, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.313\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
