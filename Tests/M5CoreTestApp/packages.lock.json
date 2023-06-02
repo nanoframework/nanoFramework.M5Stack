@@ -28,15 +28,15 @@
       },
       "nanoFramework.Iot.Device.Ip5306": {
         "type": "Direct",
-        "requested": "[1.2.329, 1.2.329]",
-        "resolved": "1.2.329",
-        "contentHash": "+rQrFzWWgTL45GHMkcG0z5l8pdqqjSTxXgu/0alSPe6mePofnw5iAig5ByhWhZsCsrUK+yI0hyJEnJJZivjitQ=="
+        "requested": "[1.2.335, 1.2.335]",
+        "resolved": "1.2.335",
+        "contentHash": "hb6Gy+INcna06V1gp2JN9aqOUdpba/ipDiTV/zcvNaIlChtkIwLSDrwHYGI1XjPFECAFO1mr70EzbtaqS+GBPg=="
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.329, 1.2.329]",
-        "resolved": "1.2.329",
-        "contentHash": "PlT8A44hC27pvHfPlrLMD3VtRbn9jvFIdM4kklnAdsHmayer5320bg3x/DhYz5N8KPH8UBjvglRgZVdsrUU+Dg=="
+        "requested": "[1.2.335, 1.2.335]",
+        "resolved": "1.2.335",
+        "contentHash": "a+5UcaK8LyxpI6gu2ZFy3ojzll7cU4QzNsSTPdFsSzLWJIotvuIkRXuAS8sEoUIEO8cEmOdwLY/q1TnPrbABew=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
