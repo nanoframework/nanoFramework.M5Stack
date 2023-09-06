@@ -20,7 +20,7 @@
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.14.2" />
       <dependency id="nanoFramework.Graphics" version="1.1.37" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.3" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.8" />
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.378" />
       <dependency id="nanoFramework.Iot.Device.Chsc6540" version="1.1.329" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.378" />
