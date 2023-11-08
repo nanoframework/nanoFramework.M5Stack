@@ -34,9 +34,9 @@
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.403, 1.2.403]",
-        "resolved": "1.2.403",
-        "contentHash": "8qWNBQgQ6SKOO410sUdbuQV7zDazZLPiAcR5GlOQjioP3Ve5nqoBWALHyugOEewfDeu+IUWeMA9vUYFiwGZnAQ=="
+        "requested": "[1.2.416, 1.2.416]",
+        "resolved": "1.2.416",
+        "contentHash": "Fi4JOpn7HmABFxnod23d3FaqxkXGEZyVfMRMIbQfHPKlQV81pI2puJjTqN9vbhkEkkh4Ac6biYXPCGtGq22aAQ=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
@@ -52,9 +52,9 @@
       },
       "nanoFramework.System.Buffers.Binary.BinaryPrimitives": {
         "type": "Direct",
-        "requested": "[1.2.325, 1.2.325]",
-        "resolved": "1.2.325",
-        "contentHash": "uwNE0GprnJplF0J238jRa9f7JaXgZxbTJckXMaJEVBxqkmLncw4Mi+rfJdr6mOoLWLQVaE5NevciWZnUja2lJQ=="
+        "requested": "[1.2.415, 1.2.415]",
+        "resolved": "1.2.415",
+        "contentHash": "tYh5rTolLmBGaLdodGvz0ux+hPcxTu/iEVEjUXrHYAwtciZjQNc6277BueVg1yLz+gkYn5YBl2kwfN2q2DhZDA=="
       },
       "nanoFramework.System.Device.Adc": {
         "type": "Direct",
@@ -82,9 +82,9 @@
       },
       "nanoFramework.System.Device.Model": {
         "type": "Direct",
-        "requested": "[1.2.325, 1.2.325]",
-        "resolved": "1.2.325",
-        "contentHash": "0g0ohwuDmBIKm3hycmCnGZC/d/mYhAl2GPMMRcLhcnQJWNeDBvMe3hJlUBpo36tgjfrjniF11n+HkvGy4DzJ5Q=="
+        "requested": "[1.2.415, 1.2.415]",
+        "resolved": "1.2.415",
+        "contentHash": "J6rj1tQz85GfWUcYH+5xSdGMGRqZr3eNgwB8q72b7+VTH0/cVkqnnEnrN+TWbs3vCVrgsEaK86vPcapK3VLpNw=="
       },
       "nanoFramework.System.Device.Spi": {
         "type": "Direct",
@@ -100,9 +100,9 @@
       },
       "nanoFramework.System.Numerics": {
         "type": "Direct",
-        "requested": "[1.2.325, 1.2.325]",
-        "resolved": "1.2.325",
-        "contentHash": "wLXKzO/ZdBuhh8GDXkXMPYIajtaAwPVy5bhyVd5b/Kz4RIgpq3GWU/sAFNyJ9Iqq4VTmZuY8aZVkoMnXbEkxKw=="
+        "requested": "[1.2.415, 1.2.415]",
+        "resolved": "1.2.415",
+        "contentHash": "SWHKeEvxlMumHvFvhJpzG10q+xUqsTS6ss9r3iHbd52hWYpeEw07X+20D8fTHKjF4Jl2phWWqb6+aX8y8AmrhQ=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
