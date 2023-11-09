@@ -19,9 +19,9 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack M5StickC</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
-      <dependency id="nanoFramework.Graphics" version="1.2.2" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.10" />
-      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.5" />
+      <dependency id="nanoFramework.Graphics" version="1.2.4" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.12" />
+      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.7" />
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.403" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.329" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.416" />
