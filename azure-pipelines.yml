@@ -37,11 +37,17 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  DOTNET_NOLOGO: true
-  solution: 'nanoFramework.M5Stack.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-  nugetPackageName: 'nanoFramework.M5Core'
+  - group: sign-client-credentials
+  - name: DOTNET_NOLOGO
+    value: true  
+  - name: buildPlatform
+    value: 'Any CPU'  
+  - name: buildConfiguration
+    value: 'Release'
+  - name: solution
+    value: 'nanoFramework.M5Stack.sln'
+  - name: nugetPackageName
+    value: 'nanoFramework.M5Core'
 
 steps:
 
