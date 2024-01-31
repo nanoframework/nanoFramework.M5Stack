@@ -25,8 +25,8 @@
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.474" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.436" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.474" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.462" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.462" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.478" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.478" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.418" />
     </dependencies>
   </metadata>
