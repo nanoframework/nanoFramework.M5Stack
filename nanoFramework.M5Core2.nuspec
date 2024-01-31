@@ -25,8 +25,8 @@
       <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.2.436" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.436" />
       <dependency id="nanoFramework.Iot.Device.Ft6xx6x" version="1.2.422" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.462" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.462" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.478" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.478" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.11" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.5.13" />
       <dependency id="nanoFramework.System.Device.Pwm" version="1.1.10" />

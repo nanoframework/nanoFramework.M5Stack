@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.462, 1.2.462]",
-        "resolved": "1.2.462",
-        "contentHash": "p58auLihd/0RUFB88CqA2qymex2Cp0AGTAewdfNcEHKcyBQ5EoIc0cWGPFg2rn6nI2Mkcuja5ucj3ZvhuUkQ8A=="
+        "requested": "[1.2.478, 1.2.478]",
+        "resolved": "1.2.478",
+        "contentHash": "8Vyo64wKGuCuGRT5LVJ/CSJ8vtvN+XLr4ZKHZehpD4x4rgjJJ4Zr3EvH+j+c+3YigwymAjsU4/qmxKxEcHEHXQ=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
