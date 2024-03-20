@@ -57,6 +57,8 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Tough", "nano
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "ToughTestApp", "Tests\ToughTestApp\ToughTestApp.nfproj", "{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}"
 EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.CoreInk", "nanoFramework.CoreInk\nanoFramework.CoreInk.nfproj", "{DE7EE9F2-38A0-42B6-945D-6215199EF35F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,12 @@ Global
 		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
