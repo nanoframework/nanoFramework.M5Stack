@@ -22,33 +22,33 @@
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
-        "requested": "[1.2.436, 1.2.436]",
-        "resolved": "1.2.436",
-        "contentHash": "qK0Wt92vazrD35cgDnAa8M+y91y2XW507a1C8CtBU0oA7C/Ax9bUT8a/QZxDVWz28ONznrdKrnhDk+nsuHtBQw=="
+        "requested": "[1.2.514, 1.2.514]",
+        "resolved": "1.2.514",
+        "contentHash": "hxr+O7a6Vo3FmsFrOKQkaIDtj49wyn2jfuQQlEQYsDRbqled1kdKN1DoLS6tCN2XILlHh31GbLcaflGuFx9QvA=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.436, 1.2.436]",
-        "resolved": "1.2.436",
-        "contentHash": "gMNj4Iy0aN+ktGD8ODAoyAF9gbYUnJX2/o9I2rGFS8o4znIq5r4tvu2+beSpgjD5TgHO8slqWYtKNeVv5FZmZw=="
+        "requested": "[1.2.514, 1.2.514]",
+        "resolved": "1.2.514",
+        "contentHash": "FZk48zJvdJRaenNmLbChr5im45goArnKd7iPL4mY8cFXzqmnUZg5n8vvEveonQvoFpDPoaJckLra/GD14IAqtA=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.494, 1.2.494]",
-        "resolved": "1.2.494",
-        "contentHash": "8NdyXHRMlR8wm7BiS8Bn9zsoKaTdZRzmkgYa4ASZObSOKBnmKJo3raA5tWeswqokzwVWk9g1b9A7KRFl55OoEA=="
+        "requested": "[1.2.514, 1.2.514]",
+        "resolved": "1.2.514",
+        "contentHash": "2yzs+IHIsUiKSVAM11pNf0Ctzy0LX9Xc0AAMkikTmQDYBKMh1tXQKK0Q4GPlPXx9qgSvicg6DMsfPRxCLY0pmw=="
       },
       "nanoFramework.Iot.Device.Ip5306": {
         "type": "Direct",
-        "requested": "[1.2.494, 1.2.494]",
-        "resolved": "1.2.494",
-        "contentHash": "mL8i7tN5FzmDxZFsvK3+6Mpkg7kVoi9paFfbZQfQ73AUfdlG2yVrL+J2wwk/xQcSgVDV9EaIFZ6JTiu9N6vcmw=="
+        "requested": "[1.2.514, 1.2.514]",
+        "resolved": "1.2.514",
+        "contentHash": "qXCKca3pMB1V1Y2UMQ2LalHv3pIkcsVDhtq0hacbhUTEsGOD0QACs9Lh0vOGF40SPgRGKqRIm6sPhL422tl4zQ=="
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.494, 1.2.494]",
-        "resolved": "1.2.494",
-        "contentHash": "RqUFGg9f6VqW3FcimLCI9wZaLpyWkk1vwIF0zqXFle1tildEri8eZzVH4YwLPblonH9nPb7Xvy/dkNne5BZG5A=="
+        "requested": "[1.2.514, 1.2.514]",
+        "resolved": "1.2.514",
+        "contentHash": "cp1MmTh4bUnwuLYDENnWUOG06/Zi7Ku7qiDRbZxDVMtTRMRnw96esc9pVQ8JK8XbJlrkkMz8BARVW2N8Fza70Q=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
