@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
-        "requested": "[1.2.536, 1.2.536]",
-        "resolved": "1.2.536",
-        "contentHash": "OELqlM40urlE85SbmCD5N/GWRZ/hINQkOFWLVzH1p9SQr7JMT4hwfgoH99eczPBnhiBA1rHC3sNm8TNxibn86A=="
+        "requested": "[1.2.552, 1.2.552]",
+        "resolved": "1.2.552",
+        "contentHash": "Rv1wzk2TvMx3XFz7ux00GVMbbtQtEZLBfARcr0hGOXT/vdYTuhuA9AwgBMN4qra+DGva0lPodK9zSwenVq3HXw=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.548, 1.2.548]",
-        "resolved": "1.2.548",
-        "contentHash": "t2/x6X6/Sz6k5pXdGUaXc8iGZ0qRHJB64IknxgkwvPWykoweN0YUDlD7vtmiV1uhdp7T4fWOam+5MvbNuo1UkA=="
+        "requested": "[1.2.552, 1.2.552]",
+        "resolved": "1.2.552",
+        "contentHash": "SnaPZ26QDV/bmWqf1koNVBaqFVVUXmZMyCTubf3oQU/D/Hx7pJv7/Iwf6pdu2HuX3xh0/FsXta5kDHaPRYqthg=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
