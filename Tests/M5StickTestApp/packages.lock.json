@@ -28,15 +28,15 @@
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
-        "requested": "[1.2.548, 1.2.548]",
-        "resolved": "1.2.548",
-        "contentHash": "0Ki8grsNr8bhU3U+X0S0O7dc9QBu1kSI0Cngmgw7hCuxUd4oWR9DeBPw1Z7A0D4vg876l4SvsRQpjh/F6v8Mww=="
+        "requested": "[1.2.560, 1.2.560]",
+        "resolved": "1.2.560",
+        "contentHash": "vovW2Sa4bPTpHywlte/9T0kBBEN74GdKhmxaDCwPxrMF8Gabe+wMs93qGct/11dn7na5bzmE/kMMIWT6LwWKZw=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.552, 1.2.552]",
-        "resolved": "1.2.552",
-        "contentHash": "SnaPZ26QDV/bmWqf1koNVBaqFVVUXmZMyCTubf3oQU/D/Hx7pJv7/Iwf6pdu2HuX3xh0/FsXta5kDHaPRYqthg=="
+        "requested": "[1.2.560, 1.2.560]",
+        "resolved": "1.2.560",
+        "contentHash": "sV/g9TgfQZNJNsueo3nhztEIiCahoLKvpOeBXUI3Nc/SrPh6M/K4EuSabDPe2nlsraCIO6ulxInR++qnQk9rhA=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -88,9 +88,9 @@
       },
       "nanoFramework.System.Device.Gpio": {
         "type": "Direct",
-        "requested": "[1.1.38, 1.1.38]",
-        "resolved": "1.1.38",
-        "contentHash": "t2em7yn9sZpWWj52Xh4f4JjzUQX8/UB7C+XMnMiSGileGhRg86IwszA5/0bGUgc/dKC/AYRSqraPiEB0Q6jhBA=="
+        "requested": "[1.1.41, 1.1.41]",
+        "resolved": "1.1.41",
+        "contentHash": "5QnpdfvjxOvka2S5IHSdKudWmkH+CDQ3TFFuXOGuNlgZJFsAx0/k5zuwgJYkxIyGbL8kdcjBWLyDNdihjA1pUg=="
       },
       "nanoFramework.System.Device.I2c": {
         "type": "Direct",
