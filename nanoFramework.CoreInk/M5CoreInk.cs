@@ -3,12 +3,14 @@
 
 using Iot.Device.Button;
 using Iot.Device.Buzzer;
+using Iot.Device.EPaper.Drivers.Jd796xx;
 using Iot.Device.Rtc;
 using nanoFramework.Hardware.Esp32;
 using System;
 using System.Device.Adc;
 using System.Device.Gpio;
 using System.Device.I2c;
+using System.Device.Spi;
 
 namespace nanoFramework.M5Stack
 {
@@ -18,6 +20,7 @@ namespace nanoFramework.M5Stack
     public static class M5CoreInk
     {
         private readonly static I2cDevice _device;
+        private static SpiDevice _spi;
         private static AdcController _adc;
         private static Buzzer _buzzer;
         private static GpioPin _led;
@@ -28,6 +31,11 @@ namespace nanoFramework.M5Stack
         private static GpioButton _power;
         private static GpioController _gpio;
         private static Pcf8563 _rtc;
+        private static Gdew0154m09 _screen;
+
+        private const int ScreenBusyPin = 4;
+        private const int ScreenResetPin = 0;
+        private const int ScreenDCPin = 15;
 
         #region properties
 
@@ -136,6 +144,9 @@ namespace nanoFramework.M5Stack
             }
         }
 
+        /// <summary>
+        /// Gets the internal clock.
+        /// </summary>
         public static Pcf8563 RTC
         {
             get
@@ -143,6 +154,19 @@ namespace nanoFramework.M5Stack
                 _rtc ??= new(_device);
 
                 return _rtc;
+            }
+        }
+
+        /// <summary>
+        /// Get the ePaper screen.
+        /// </summary>
+        public static Gdew0154m09 Screen
+        {
+            get
+            {
+                InitializeScreen();
+
+                return _screen;
             }
         }
 
@@ -204,6 +228,28 @@ namespace nanoFramework.M5Stack
                     return _adc.OpenChannel(6);
                 default:
                     throw new ArgumentException(nameof(gpioNumber));
+            }
+        }
+
+        /// <summary>
+        /// Initialize the eInk screen.
+        /// </summary>
+        /// <returns>An instance of the <see cref="Gdew0154m09"/> driver.</returns>
+        private static void InitializeScreen()
+        {
+            if (_screen == null)
+            {
+                var spiConnectionSettings = new SpiConnectionSettings(busId: 1, chipSelectLine: 9)
+                {
+                    ClockFrequency = Gdew0154m09.SpiClockFrequency,
+                    Mode = Gdew0154m09.SpiMode,
+                    ChipSelectLineActiveState = PinValue.Low,
+                    Configuration = SpiBusConfiguration.HalfDuplex,
+                    DataFlow = DataFlow.MsbFirst,
+                };
+
+                _spi = new SpiDevice(spiConnectionSettings);
+                _screen = new Gdew0154m09(_spi, ScreenResetPin, ScreenBusyPin, ScreenDCPin, _gpio);
             }
         }
     }
