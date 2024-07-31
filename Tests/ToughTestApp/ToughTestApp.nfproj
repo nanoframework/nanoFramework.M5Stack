@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.2.590\lib\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.1.2.601\lib\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Chsc6540, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.Iot.Device.Chsc6540.1.1.580\lib\Iot.Device.Chsc6540.dll</HintPath>
@@ -66,8 +66,8 @@
     <Reference Include="System.Device.I2c, Version=1.1.16.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Device.I2c.1.1.16\lib\System.Device.I2c.dll</HintPath>
     </Reference>
-    <Reference Include="System.Device.Wifi, Version=1.5.85.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.5.85\lib\System.Device.Wifi.dll</HintPath>
+    <Reference Include="System.Device.Wifi, Version=1.5.91.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.1.5.91\lib\System.Device.Wifi.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem, Version=1.1.54.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.IO.FileSystem.1.1.54\lib\System.IO.FileSystem.dll</HintPath>
@@ -78,8 +78,8 @@
     <Reference Include="System.IO.Streams, Version=1.1.59.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.IO.Streams.1.1.59\lib\System.IO.Streams.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net, Version=1.10.79.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Net.1.10.79\lib\System.Net.dll</HintPath>
+    <Reference Include="System.Net, Version=1.11.1.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\..\packages\nanoFramework.System.Net.1.11.1\lib\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading, Version=1.1.32.63105, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Threading.1.1.32\lib\System.Threading.dll</HintPath>
