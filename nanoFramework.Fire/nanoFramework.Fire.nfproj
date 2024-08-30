@@ -34,22 +34,22 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Bmm150, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.590\lib\Iot.Device.Bmm150.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.631\lib\Iot.Device.Bmm150.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.570\lib\Iot.Device.Button.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.631\lib\Iot.Device.Button.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Buzzer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.613\lib\Iot.Device.Buzzer.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.1.2.631\lib\Iot.Device.Buzzer.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Ip5306, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.613\lib\Iot.Device.Ip5306.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ip5306.1.2.631\lib\Iot.Device.Ip5306.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.613\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.631\lib\Iot.Device.Mpu6886.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.595\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.631\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.15.6.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.15.5\lib\mscorlib.dll</HintPath>
