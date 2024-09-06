@@ -22,10 +22,10 @@
       <dependency id="nanoFramework.Graphics" version="1.2.15" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.6.19" />
       <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.13" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.631" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.639" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.631" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.631" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.631" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.639" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.639" />
       <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.628" />
     </dependencies>
   </metadata>
