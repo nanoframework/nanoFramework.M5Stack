@@ -89,7 +89,10 @@ steps:
 - template: azure-pipelines-templates/class-lib-package.yml@templates
   parameters:
     nugetPackageName: 'nanoFramework.Tough'
-   
+
+- template: azure-pipelines-templates/class-lib-package.yml@templates
+  parameters:
+    nugetPackageName: 'nanoFramework.CoreInk'
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
 
 # create GitHub release from main branche

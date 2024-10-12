@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.CoreInk</id>
+    <version>$version$</version>
+    <title>nanoFramework.CoreInk</title>
+    <authors>nanoframework</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <releaseNotes>
+    </releaseNotes>
+    <readme>docs\README.md</readme>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.M5Stack</projectUrl>
+    <icon>images\nf-logo.png</icon>
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.M5Stack" commit="$commit$" />
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
+    <description>This package includes the nanoFramework.CoreInk assembly for .NET nanoFramework C# projects.</description>
+    <tags>nanoFramework C# csharp netmf netnf m5stack CoreInk</tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
+      <dependency id="nanoFramework.Graphics.Core" version="1.2.21" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.19" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.631" />
+      <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.656" />
+      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.2.628" />
+      <dependency id="nanoFramework.Iot.Device.ePaper" version="1.0.487" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.656" />
+      <dependency id="nanoFramework.System.Device.Adc" version="1.1.11" />
+      <dependency id="nanoFramework.System.Device.I2c" version="1.1.16" />
+      <dependency id="nanoFramework.System.Device.Spi" version="1.3.52" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="nanoFramework.CoreInk\bin\Release\nanoFramework.CoreInk.dll" target="lib\nanoFramework.CoreInk.dll" />
+    <file src="nanoFramework.CoreInk\bin\Release\nanoFramework.CoreInk.pdb" target="lib\nanoFramework.CoreInk.pdb" />
+    <file src="nanoFramework.CoreInk\bin\Release\nanoFramework.CoreInk.pdbx" target="lib\nanoFramework.CoreInk.pdbx" />
+    <file src="nanoFramework.CoreInk\bin\Release\nanoFramework.CoreInk.pe" target="lib\nanoFramework.CoreInk.pe" />
+    <file src="nanoFramework.CoreInk\bin\Release\nanoFramework.CoreInk.xml" target="lib\nanoFramework.CoreInk.xml" />
+    <file src="assets\readme.txt" target="" />
+    <file src="README.md" target="docs\" />
+    <file src="assets\nf-logo.png" target="images\" />
+    <file src="LICENSE.md" target="" />
+  </files>
+</package>
