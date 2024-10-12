@@ -188,7 +188,7 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets an ADC channel
         /// </summary>
-        /// <param name="gpioNumber">The GPIO pin number</param>
+        /// <param name="gpioNumber">The GPIO pin number.</param>
         /// <returns>An AdcChannel</returns>
         public static AdcChannel GetAdcGpio(int gpioNumber)
         {
