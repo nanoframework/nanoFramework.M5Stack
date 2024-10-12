@@ -15,7 +15,7 @@ using System.Device.Spi;
 namespace nanoFramework.M5Stack
 {
     /// <summary>
-    /// M5 CoreInk board
+    /// M5 CoreInk board.
     /// </summary>
     public static class M5CoreInk
     {
