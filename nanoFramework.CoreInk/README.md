@@ -36,7 +36,7 @@ Here's a list of the current implementation
 
 <sup>1</sup> The implementation define the buttons as `PinMode.Input` as defined in the [specifications](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/esp32_datasheet_en_v3.9.pdf) Table.26
 
-```
+```text
 GPIO pins 34-39 are input-only.
 These pins do not feature an output driver or internal pull-up/pull-down circuitry.
 The pin names are: SENSOR_VP (GPIO36), SENSOR_CAPP (GPIO37), SENSOR_CAPN (GPIO38), SENSOR_VN (GPIO39), VDET_1 (GPIO34), VDET_2 (GPIO35).
