@@ -36,7 +36,7 @@
       <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.1.2.656\lib\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Chsc6540, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.1.1.651\lib\Iot.Device.Chsc6540.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.1.1.665\lib\Iot.Device.Chsc6540.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.628\lib\Iot.Device.Common.NumberHelper.dll</HintPath>

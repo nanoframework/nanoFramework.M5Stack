@@ -24,7 +24,7 @@
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.631" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.656" />
       <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.2.628" />
-      <dependency id="nanoFramework.Iot.Device.ePaper" version="1.0.487" />
+      <dependency id="nanoFramework.Iot.Device.ePaper" version="1.0.501" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.656" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.11" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.1.16" />

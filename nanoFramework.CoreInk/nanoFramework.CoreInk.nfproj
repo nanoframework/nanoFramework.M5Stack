@@ -41,8 +41,8 @@
     <Reference Include="Iot.Device.Common.NumberHelper">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.628\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.ePaper">
-      <HintPath>..\packages\nanoFramework.Iot.Device.ePaper.1.0.487\lib\Iot.Device.ePaper.dll</HintPath>
+    <Reference Include="Iot.Device.ePaper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.ePaper.1.0.501\lib\Iot.Device.ePaper.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Rtc">
       <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.1.2.656\lib\Iot.Device.Rtc.dll</HintPath>
