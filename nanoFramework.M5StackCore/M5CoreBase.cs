@@ -97,7 +97,7 @@ namespace nanoFramework.M5Stack
                 if (_sdCard == null)
                 {
                     // We always have this configuration for all the M5Core, M5Core2, Fire and even Tough
-                    _sdCard = new SDCard(new SDCard.SDCardSpiParameters() { spiBus = 1, chipSelectPin = 4, enableCardDetectPin = false });
+                    _sdCard = new SDCard(new SDCardSpiParameters() { spiBus = 1, chipSelectPin = 4 });
                 }
 
                 return _sdCard;
