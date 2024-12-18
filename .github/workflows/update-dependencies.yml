@@ -8,6 +8,8 @@ name: Daily update dependencies
 on:
   schedule:
   # At 07:00 UTC.
+  # Note: Schedule aligned with nanoFramework.IoT.Device updates
+  # which is the main source of NuGet updates of target libraries
   - cron: '00 07 * * Mon,Wed'
   repository_dispatch:
     types: update-dependencies
