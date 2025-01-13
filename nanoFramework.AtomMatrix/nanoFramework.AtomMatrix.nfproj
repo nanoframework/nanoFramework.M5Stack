@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.props" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.props')" />
   <PropertyGroup Label="Globals">
     <NanoFrameworkProjectSystemPath>$(MSBuildExtensionsPath)\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
   </PropertyGroup>
@@ -36,13 +37,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.718\lib\Iot.Device.Button.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.737\lib\Iot.Device.Button.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Mpu6886, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.718\lib\Iot.Device.Mpu6886.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Mpu6886.1.2.737\lib\Iot.Device.Mpu6886.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Ws28xx.Esp32, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.696\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ws28xx.Esp32.1.2.737\lib\Iot.Device.Ws28xx.Esp32.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=1.15.6.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.15.5\lib\mscorlib.dll</HintPath>
@@ -106,7 +107,8 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.7.112\build\Nerdbank.GitVersioning.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.7.112\build\Nerdbank.GitVersioning.props'))" />
-    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.7.112\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.7.112\build\Nerdbank.GitVersioning.targets'))" />
+    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.props'))" />
+    <Error Condition="!Exists('..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.targets'))" />
   </Target>
-  <Import Project="..\packages\Nerdbank.GitVersioning.3.7.112\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.6.146\build\Nerdbank.GitVersioning.targets')" />
+  <Import Project="..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.7.115\build\Nerdbank.GitVersioning.targets')" />
 </Project>
