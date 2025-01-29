@@ -1,0 +1,47 @@
+# Copyright (c) .NET Foundation and Contributors
+# See LICENSE file in the project root for full license information.
+
+name: 'Build changelog'
+on:
+  push:
+    tags:
+      - '*'
+  repository_dispatch:
+    types: generate-changelog
+
+jobs:
+  compose_changelog:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get previous release
+        id: previous_release
+        run: |
+          $tags=git tag --sort=committerdate --list v*
+          $previousTag = $tags[$tags.Count - 2]
+          echo "PREVIOUS_TAG=$previousTag" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: Build Changelog
+        id: build_changelog
+        uses: mikepenz/release-changelog-builder-action@v5
+        with:
+          configuration: '.github/.changelog-config.json'
+          fromTag: ${{ env.PREVIOUS_TAG }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update changelog in release
+        id: update_release
+        uses: tubone24/update_release@v1.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{steps.build_changelog.outputs.toTag}}
+        with:
+          body: ${{ steps.build_changelog.outputs.changelog }}
