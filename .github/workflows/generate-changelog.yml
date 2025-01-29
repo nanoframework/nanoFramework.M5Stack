@@ -1,14 +1,13 @@
 # Copyright (c) .NET Foundation and Contributors
 # See LICENSE file in the project root for full license information.
 
-name: Build changelog
+name: Generate Changelog
+run-name: Generate changelog
 
 on:
   push:
     tags:
       - '*'
-  repository_dispatch:
-    types: generate-changelog
 
 jobs:
   compose_changelog:
