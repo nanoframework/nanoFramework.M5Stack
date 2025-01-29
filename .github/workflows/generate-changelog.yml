@@ -1,0 +1,17 @@
+# Copyright (c) .NET Foundation and Contributors
+# See LICENSE file in the project root for full license information.
+
+name: Build changelog
+
+on:
+  push:
+    tags:
+      - '*'
+  repository_dispatch:
+    types: generate-changelog
+
+jobs:
+  compose_changelog:
+    name: nanoFramework
+    uses: nanoframework/nf-tools/.github/workflows/generate-changelog.yml@main
+    secrets: inherit
