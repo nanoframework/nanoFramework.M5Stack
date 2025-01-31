@@ -18,18 +18,18 @@
     <description>This package includes the nanoFramework.Tough assembly for .NET nanoFramework C# projects.</description>
     <tags>nanoFramework C# csharp netmf netnf m5stack Tough</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
-      <dependency id="nanoFramework.Graphics" version="1.2.22" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.23" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.743" />
-      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="1.1.737" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.743" />
-      <dependency id="nanoFramework.System.Device.Adc" version="1.1.11" />
-      <dependency id="nanoFramework.System.Device.Dac" version="1.5.13" />
-      <dependency id="nanoFramework.System.Device.Spi" version="1.3.52" />
-      <dependency id="nanoFramework.System.IO.Ports" version="1.1.107" />
-      <dependency id="nanoFramework.System.Threading" version="1.1.32" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.69" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.16.1" />
+      <dependency id="nanoFramework.Graphics" version="1.2.33" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.28" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.755" />
+      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="1.1.755" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.755" />
+      <dependency id="nanoFramework.System.Device.Adc" version="1.1.20" />
+      <dependency id="nanoFramework.System.Device.Dac" version="1.5.22" />
+      <dependency id="nanoFramework.System.Device.Spi" version="1.3.71" />
+      <dependency id="nanoFramework.System.IO.Ports" version="1.1.112" />
+      <dependency id="nanoFramework.System.Threading" version="1.1.45" />
+      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.74" />
     </dependencies>
   </metadata>
   <files>
