@@ -34,9 +34,9 @@
       },
       "nanoFramework.Iot.Device.Chsc6540": {
         "type": "Direct",
-        "requested": "[1.1.775, 1.1.775]",
-        "resolved": "1.1.775",
-        "contentHash": "jF8sRqnczHiTMMnUSXw0P2MLcjOWSJQpuOvyHpEP+wck0YUPEhoqDVPzrC57V4p/uL8eaMCHtG586FDzvYzwYA=="
+        "requested": "[1.1.785, 1.1.785]",
+        "resolved": "1.1.785",
+        "contentHash": "HhLj+3Pi7sVjbB6uq0/D+pVqBsAYX1MN6CEeY+foLwnMOgR+v4lX5556t/WkYkI9/Wrf6KKolSRKrzAtg90EdA=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",

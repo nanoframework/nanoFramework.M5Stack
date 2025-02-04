@@ -130,9 +130,9 @@
       },
       "nanoFramework.System.IO.Streams": {
         "type": "Direct",
-        "requested": "[1.1.82, 1.1.82]",
-        "resolved": "1.1.82",
-        "contentHash": "SwKS8WaoJG1JPtN8xVRxwi8mHR5mufoNaIv4TEouMMyF9tkbcoThUUuyf4iR7q/192Bt1t73synjnBH9vcChvg=="
+        "requested": "[1.1.85, 1.1.85]",
+        "resolved": "1.1.85",
+        "contentHash": "mMqsdHIPtAomQe322XqAjLBJfT/Kum7vr0Y+W8zRL6q33ubOZFKIEnL6PJNgVwtHzTDsk1eCMPf4rU61dqUFqg=="
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
