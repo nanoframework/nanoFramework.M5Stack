@@ -16,15 +16,15 @@
       },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
-        "requested": "[1.6.29, 1.6.29]",
-        "resolved": "1.6.29",
-        "contentHash": "T1iCv9sr+Ir0SOEX93wz/DoxIZGjGj5ywgG73y3Tk8C96EWdSFzxTFmr/f5MPbrXbYoWL0BUAqnV0Nq9j3jXzw=="
+        "requested": "[1.6.30, 1.6.30]",
+        "resolved": "1.6.30",
+        "contentHash": "7auLpxj5Lyi12tqC2RJOuYQMIhP+zxgZuVrgeq2hSbdE8YaMV65yLWbxzQivxWjyUD3HeLxGHHOgYBPuHjbi2Q=="
       },
       "nanoFramework.Hardware.Esp32.Rmt": {
         "type": "Direct",
-        "requested": "[2.0.22, 2.0.22]",
-        "resolved": "2.0.22",
-        "contentHash": "T1uKYII2DrlWQlx3QPdQknrt0P814pJgLTp19Qk6e0mTv0yRG0NPlHtdJiLiLuN6+gAv06IeYiQ5ljD31X442A=="
+        "requested": "[2.0.23, 2.0.23]",
+        "resolved": "2.0.23",
+        "contentHash": "9xXG19b9rlT9bfMClIRJAxLU8Ag7M5+3kz9y1J9wy+k6PUqGOwCu3lSTWBPHByGNyDgSUBMQhYbMpR/zhMIRwg=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",

@@ -16,9 +16,9 @@
       },
       "nanoFramework.Hardware.Esp32.Rmt": {
         "type": "Direct",
-        "requested": "[2.0.22, 2.0.22]",
-        "resolved": "2.0.22",
-        "contentHash": "T1uKYII2DrlWQlx3QPdQknrt0P814pJgLTp19Qk6e0mTv0yRG0NPlHtdJiLiLuN6+gAv06IeYiQ5ljD31X442A=="
+        "requested": "[2.0.23, 2.0.23]",
+        "resolved": "2.0.23",
+        "contentHash": "9xXG19b9rlT9bfMClIRJAxLU8Ag7M5+3kz9y1J9wy+k6PUqGOwCu3lSTWBPHByGNyDgSUBMQhYbMpR/zhMIRwg=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
