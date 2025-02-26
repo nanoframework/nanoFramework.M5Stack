@@ -19,15 +19,15 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack M5StickCPlus</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.1" />
-      <dependency id="nanoFramework.Graphics" version="1.2.35" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.30" />
-      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.23" />
+      <dependency id="nanoFramework.Graphics" version="1.2.39" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.31" />
+      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.24" />
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.775" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.775" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.775" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.775" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.775" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.807" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.815" />
     </dependencies>
   </metadata>
   <files>

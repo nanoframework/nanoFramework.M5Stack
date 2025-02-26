@@ -10,15 +10,15 @@
       },
       "nanoFramework.Graphics": {
         "type": "Direct",
-        "requested": "[1.2.35, 1.2.35]",
-        "resolved": "1.2.35",
-        "contentHash": "K9Qb+LZUSsDSZNymtlNSKLErXvxTmSVIQo5hIHCpU+dNyXLNEA8AFzBGggcrK3J95hRAOJk75vKLS2YQAXkWag=="
+        "requested": "[1.2.39, 1.2.39]",
+        "resolved": "1.2.39",
+        "contentHash": "o6qQxN8e9O9+btcRuH4GxWyEOT1D+VY4LYQQ3+iNeIlT2ih7/dFIzUy9zpH+bZUZCImW0FA5DivHWpuGIeMmGw=="
       },
       "nanoFramework.Graphics.Core": {
         "type": "Direct",
-        "requested": "[1.2.35, 1.2.35]",
-        "resolved": "1.2.35",
-        "contentHash": "x7G28CjHL5VayU8ID49tR3apQeWQSGkwo85KnLri0zoc2NAN9b5TONaZc5J5OmO6vSE6B3jQRU3QmR+H+pOv2g=="
+        "requested": "[1.2.39, 1.2.39]",
+        "resolved": "1.2.39",
+        "contentHash": "qHg4JBCBqkqxN8omgDC74Rnk7m1cYFkzzpAeJ+57aach3RLhkTLX5bgA9xhVN3HlZ0DPy0r0CymgNQelz9KLXg=="
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
@@ -40,15 +40,15 @@
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
-        "requested": "[1.11.29, 1.11.29]",
-        "resolved": "1.11.29",
-        "contentHash": "y3Y0SNfr1afMor4xrsiB1ETldjKvmnzBTcEH5gizFFXw3RNBB/N8npWqkCJn4HZS0TEENlH2vVrib3bWYMx5+Q=="
+        "requested": "[1.11.30, 1.11.30]",
+        "resolved": "1.11.30",
+        "contentHash": "uhLQLq/CRGCTvmJwbh2vXYVWyBl17jc1FBe3Fq1bKJM1+sO+GyhRRYCmezI7v72bRbQ7tpYZTcplJFs/qkAQSQ=="
       },
       "nanoFramework.Runtime.Native": {
         "type": "Direct",
-        "requested": "[1.7.8, 1.7.8]",
-        "resolved": "1.7.8",
-        "contentHash": "8wWz/dUDJ3BHTVHNZ9VqLjaWyfn9OB1DU2iJgY7WvV/DkVMF3mLw80/3g5I5BfAUUhNq1DgQo8Id5yt4QOZq+g=="
+        "requested": "[1.7.9, 1.7.9]",
+        "resolved": "1.7.9",
+        "contentHash": "ekjQ4lTNVZ5FNrgry6XV0e7ydOSvcDGuAnSaNQewiBQAfSbpTZx3njCwU5SU5wcO+tBqT4wP7K1LNtw7unaUkg=="
       },
       "nanoFramework.System.Collections": {
         "type": "Direct",
@@ -64,9 +64,9 @@
       },
       "nanoFramework.System.Device.Gpio": {
         "type": "Direct",
-        "requested": "[1.1.53, 1.1.53]",
-        "resolved": "1.1.53",
-        "contentHash": "7Pd5iAeWPGdtKUB+OJ0vPjL+d9tQAK0s0JxV1dfjh6PZcU38wykdK64oMqNmCbDFA0aiZl0UyFmz3zXchn39nQ=="
+        "requested": "[1.1.55, 1.1.55]",
+        "resolved": "1.1.55",
+        "contentHash": "0DddX0gxw/WrOVZijok0T1hBr0TBWkpQQkQNjQ8sV/JSWVelluoMkZiMPdxZt7C+U/wxF08buuIKsAbGZQ5xtg=="
       },
       "nanoFramework.System.Device.I2c": {
         "type": "Direct",
@@ -82,15 +82,15 @@
       },
       "nanoFramework.System.IO.FileSystem": {
         "type": "Direct",
-        "requested": "[1.1.78, 1.1.78]",
-        "resolved": "1.1.78",
-        "contentHash": "gQL7MbsENZHTBj84r1x2FshLd1z3QcNeZEo3CvarLop69x+E9y01ZQ4R/NpRiM822AnuOtEyX3KpkqYrc+i9uA=="
+        "requested": "[1.1.80, 1.1.80]",
+        "resolved": "1.1.80",
+        "contentHash": "DQ7o0IDznDJLZ3CwWqIZdixaRDo7KxZktAyfHmD5PCAd1GiFNG6K0E/L6flBN4JypMT1Th+h29vEGyCQbwoGpg=="
       },
       "nanoFramework.System.IO.Ports": {
         "type": "Direct",
-        "requested": "[1.1.122, 1.1.122]",
-        "resolved": "1.1.122",
-        "contentHash": "my0TXgjYuc0Q9RwItPbM0F2pC+MeOKo8eSEh9kzmTOzLqcOug/Ks0MJCcekROlarESKyurxYoJg7CPYNoxUdnQ=="
+        "requested": "[1.1.123, 1.1.123]",
+        "resolved": "1.1.123",
+        "contentHash": "PwA3szwJDsteFexLFppHhuY+IbMRO+DzR7CSKvESJ0a+1YmIMfunrf/N65D+u1D8qdzNrVg4GXjW1Ff1r6kHYw=="
       },
       "nanoFramework.System.IO.Streams": {
         "type": "Direct",
@@ -100,9 +100,9 @@
       },
       "nanoFramework.System.Net": {
         "type": "Direct",
-        "requested": "[1.11.30, 1.11.30]",
-        "resolved": "1.11.30",
-        "contentHash": "FYIWqFjXcCkIq6g85z2wTtFUNZTfNa1Js0vba1V1YiCDK7/y184TD8A3L4RCVZQGn0HiGVQhH2n2z2/WRPy6YQ=="
+        "requested": "[1.11.31, 1.11.31]",
+        "resolved": "1.11.31",
+        "contentHash": "6BaH2cniPCAlW5v/nhY+PqqTB+nzzwjcnaWh96oY9oxk+I1loMVc4UBrbCWxOjuZhGRwWZnZThWK1n263nj7Bw=="
       },
       "nanoFramework.System.Text": {
         "type": "Direct",
