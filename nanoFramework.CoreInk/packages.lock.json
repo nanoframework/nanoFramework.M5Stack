@@ -28,9 +28,9 @@
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.822, 1.2.822]",
-        "resolved": "1.2.822",
-        "contentHash": "EIbF7+Ga3ZcQMmr7Ac33qQIaylAaqalSIQlsNcs7IiK1ojJIBvf9RTf6uIj79wVKrNNF4HMlR+cXJEFmHF/t7A=="
+        "requested": "[1.2.846, 1.2.846]",
+        "resolved": "1.2.846",
+        "contentHash": "aymlYjyrv27oS/Ah+tyUX2xyqsy6AF4jszCi3uyBE88JOkAOFGcT4bc5EKXNg9SK+2jdowIRXFHbHEZ1X1bIuw=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.822, 1.2.822]",
-        "resolved": "1.2.822",
-        "contentHash": "LNg8IfGHLZbAbB5/Y4MTj5tL9JaLraJVjlCovPiv9iUPo54n2HxtRZ3rjWf7dOhqL3l942fvD8Ic/xYLmPb39g=="
+        "requested": "[1.2.846, 1.2.846]",
+        "resolved": "1.2.846",
+        "contentHash": "s+c7e+3wnIufoy64Vq5vEEp/Jv2dOOFRpvoBMU7/iaVb/tJaSkCkyML57+6OB/jZLRHtlL129jJj5BeD668VMw=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -112,15 +112,15 @@
       },
       "UnitsNet.nanoFramework.Frequency": {
         "type": "Direct",
-        "requested": "[5.70.0, 5.70.0]",
-        "resolved": "5.70.0",
-        "contentHash": "x5CDhcVK96T52gnwT9Sx7XU4vtjDVDKkGNb6iXJBEf+qzc25WE1iiHVSTGWaEGF3VpHuk9y/jGsKLyVUPtHLnw=="
+        "requested": "[5.71.0, 5.71.0]",
+        "resolved": "5.71.0",
+        "contentHash": "C6JoIcUijR2CpNoSjw3zI/aZFQLBixs55im+zGH+hiGO8t9WPYy0nHJ9jWUSvPOPg+iQ7RUN4wVpPnbyFlGWig=="
       },
       "UnitsNet.nanoFramework.Temperature": {
         "type": "Direct",
-        "requested": "[5.70.0, 5.70.0]",
-        "resolved": "5.70.0",
-        "contentHash": "uTSq1yiWrUiZSkrD36tzBhWpP1B6llmCP5onmj9TdBZ7D5DLbWe3T0K/VpyFt067NIe5K/Tva8qkPKGp+V0itA=="
+        "requested": "[5.71.0, 5.71.0]",
+        "resolved": "5.71.0",
+        "contentHash": "0Rljuj/AlDMhlNsaR6nkx3oLZt1yWg1athFz5InsGy6gjZDHT7ptKPH5ujK+GR0C8bHDfZStMwVyZLjn8/s2+Q=="
       }
     }
   }
