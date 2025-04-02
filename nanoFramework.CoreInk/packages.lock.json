@@ -22,33 +22,33 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.852, 1.2.852]",
-        "resolved": "1.2.852",
-        "contentHash": "/4w0m4ICgoToAz2aYo+Swp4HmLEIVkDiKzdbqyMXg+hoBl7O62DxlzWJzwh9sd7iiIurSeLGWSXEZyqhAJX0kw=="
+        "requested": "[1.2.864, 1.2.864]",
+        "resolved": "1.2.864",
+        "contentHash": "rRqALJZ2R4f8nZLIndZfAd8QbNzcg5G0XxsX3R/om3IlbMPSGmvV2YMHcX6NDD1Qbqd9Tmk7lmTeL+3HSD97Qg=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.852, 1.2.852]",
-        "resolved": "1.2.852",
-        "contentHash": "QO6JOzO2MNWvE1lumXw24tB0rjOn7mB+Y4v44wkDkrJOmI0/kuzLclKr/30aWm03DEDt5z6qKDDShpH3LJQo/g=="
+        "requested": "[1.2.864, 1.2.864]",
+        "resolved": "1.2.864",
+        "contentHash": "tbSAXqpN1NZYYCFOtBj9f7qhG1lLbpehrmviRN9HOTSvtFRiK2e2pLAwj1OfNFSPbe69EQ7So1aUdFd3a7D1hg=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
-        "requested": "[1.2.848, 1.2.848]",
-        "resolved": "1.2.848",
-        "contentHash": "4f4pgqdFs+sAitadpSf0j9mDW6N7VjgXxB3G5lUYZDOsgFJgmm7B9L9sx9ke6zjlhEHNBHh+wqBrOfh9JEnLmA=="
+        "requested": "[1.2.862, 1.2.862]",
+        "resolved": "1.2.862",
+        "contentHash": "Ax67ee3vmdfH2NdqtdFYawBzxWH5+KsUIvwnTlGHbXR3ko4t5a4mVelEqB4BheJZETRyNMqKcUGWdWFAbO2byQ=="
       },
       "nanoFramework.Iot.Device.ePaper": {
         "type": "Direct",
-        "requested": "[1.0.688, 1.0.688]",
-        "resolved": "1.0.688",
-        "contentHash": "kTrQ6Xf8wYfHhjjHAyrpylW+X9lmMa1egozY7MBWuEMCy/poofd+HWuVR3VB+cwSOpjLfREeGRif/48WsB0Opw=="
+        "requested": "[1.0.700, 1.0.700]",
+        "resolved": "1.0.700",
+        "contentHash": "dK2V6p2z8tmJxrEnYjS+acbU7IgqJsjUZ0faU93q2+5ju51sCVWHt1ABNOORlzkaeDm/jw8Kg9WIkA6PqO64Gg=="
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.852, 1.2.852]",
-        "resolved": "1.2.852",
-        "contentHash": "55cpAWHQgv+ZEEiDXAuvM0YcttxbzJL2JQF9TWLzPQJ3D7SQ6dO6HglHS6cicq1JvJNKxV6vTDkDg0x4KWr1jw=="
+        "requested": "[1.2.864, 1.2.864]",
+        "resolved": "1.2.864",
+        "contentHash": "MFNdxe0/IzfFJh6SKv1bRpZxW75whOOVh5zScwS5hbZX3jjo6CwxHiIr5288OhvnsUnZ3+RNOAEf3m/RUHO41Q=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -76,9 +76,9 @@
       },
       "nanoFramework.System.Device.Model": {
         "type": "Direct",
-        "requested": "[1.2.848, 1.2.848]",
-        "resolved": "1.2.848",
-        "contentHash": "olv8/5499kCbZt4LpwOBX8eKnLcND0V6klguxN7K7RPrrqR/n0ezNmbAqIwJR816rPTZrpKO2guThHjdE4tINQ=="
+        "requested": "[1.2.862, 1.2.862]",
+        "resolved": "1.2.862",
+        "contentHash": "dARhyb8BHkje2P+7VphJpRLynVhMkC0U4pFNecLs6jw8DHRMMJyszcbgo/N0ALeYjilNk9hea+wzBLFrgZpsUQ=="
       },
       "nanoFramework.System.Device.Pwm": {
         "type": "Direct",
@@ -88,9 +88,9 @@
       },
       "nanoFramework.System.Device.Spi": {
         "type": "Direct",
-        "requested": "[1.3.81, 1.3.81]",
-        "resolved": "1.3.81",
-        "contentHash": "KUhMwSRpRHcAWrX/y3amnQ81vdtkq1vOYw0ETQiK9ARQmi8eGdoY+kauTvQyRhF2m0E/XvnHt4aJfkueT1iW/A=="
+        "requested": "[1.3.82, 1.3.82]",
+        "resolved": "1.3.82",
+        "contentHash": "kfYc1CNGB12Dd3UO6sgyesf8dLeuycv3z5B6FWEJWCbjDVb24PAUukoDk8oRgr7cBMtmYl1BNja20N5pJ9yYxQ=="
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
@@ -112,15 +112,15 @@
       },
       "UnitsNet.nanoFramework.Frequency": {
         "type": "Direct",
-        "requested": "[5.73.0, 5.73.0]",
-        "resolved": "5.73.0",
-        "contentHash": "FTHXC9DF2vF8OMhY8CLkgCCSVbxakotitpHLlbiY2zllyMSKAT1hBGcYwk1g0fFy6pFReVAkIGT4kfAVMky+UQ=="
+        "requested": "[5.74.0, 5.74.0]",
+        "resolved": "5.74.0",
+        "contentHash": "Ln7qsxGtVaPHFyzIpzrN9U3NvN0xG1C1Pa5zJGLOJ3fRE6J2MBPLysy5izLLY7gDRAmaZa9RLhtjSWqU05U8GA=="
       },
       "UnitsNet.nanoFramework.Temperature": {
         "type": "Direct",
-        "requested": "[5.73.0, 5.73.0]",
-        "resolved": "5.73.0",
-        "contentHash": "DtvAr+LAt1nyd4Gb/ltdqWMuVALgyWopQd0raON6MigqaZT+0aWNCd4tzmU9wEprzz1CKuiQBBt5+JKS5R0jBA=="
+        "requested": "[5.74.0, 5.74.0]",
+        "resolved": "5.74.0",
+        "contentHash": "n7cACV4+tqlek4oG829XQD2yTlIpVeJnAUWvq1PGj9ywaTQb25W9pqncmsTwmn98bqLF+3Zs7hN13NUFBf5r6Q=="
       }
     }
   }
