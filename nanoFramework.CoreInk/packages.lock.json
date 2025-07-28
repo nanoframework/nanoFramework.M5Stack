@@ -28,9 +28,9 @@
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.869, 1.2.869]",
-        "resolved": "1.2.869",
-        "contentHash": "bsvvN8N/mbPJroMPyEf5mcMA7yjQU7rZWygwwO/wnJG9WYXhZjhEfgaRu4bjh/PXnKEbQqTNYz6lwPRn3QisoA=="
+        "requested": "[1.2.889, 1.2.889]",
+        "resolved": "1.2.889",
+        "contentHash": "IAm3Rr9XbGZI7t0cwdLLKsvEGOO7b20NblRwdKfh2GvzK7y65xAOwKu+HZedhdBrBBthweF/684x6Udq7SUzMg=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.869, 1.2.869]",
-        "resolved": "1.2.869",
-        "contentHash": "cWie+lJof9KwfazDTClFOvjxqdK97GMYZKaDFdc1pNXt8rWeb3LZeYyiMl7bhFRM8ij1r/e3Gp88W9RTsQepxQ=="
+        "requested": "[1.2.889, 1.2.889]",
+        "resolved": "1.2.889",
+        "contentHash": "Qy6XXiijmhNq0zYmO6YghPJ8zUcpALmejs9Qvm2ZhLmvAS5MZKXfdnHrSha6foPh+bZvwqDO9m6VEaQoJL5WRQ=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -112,15 +112,15 @@
       },
       "UnitsNet.nanoFramework.Frequency": {
         "type": "Direct",
-        "requested": "[5.74.0, 5.74.0]",
-        "resolved": "5.74.0",
-        "contentHash": "Ln7qsxGtVaPHFyzIpzrN9U3NvN0xG1C1Pa5zJGLOJ3fRE6J2MBPLysy5izLLY7gDRAmaZa9RLhtjSWqU05U8GA=="
+        "requested": "[5.75.0, 5.75.0]",
+        "resolved": "5.75.0",
+        "contentHash": "xNuseuWitH34lCCac7SyuZWAZV8Nw5XHpFBK7mnHkpLFW6G9+eDEtDFqoZ5niPPJitUds6oo9BJ1WkrZsRJmNg=="
       },
       "UnitsNet.nanoFramework.Temperature": {
         "type": "Direct",
-        "requested": "[5.74.0, 5.74.0]",
-        "resolved": "5.74.0",
-        "contentHash": "n7cACV4+tqlek4oG829XQD2yTlIpVeJnAUWvq1PGj9ywaTQb25W9pqncmsTwmn98bqLF+3Zs7hN13NUFBf5r6Q=="
+        "requested": "[5.75.0, 5.75.0]",
+        "resolved": "5.75.0",
+        "contentHash": "SpA9Z7T1sNaR7YBCYp+L9/ei1bjDkqi8PyPfOWVBjkWInuPSOQaPG9Y7UttIpJ0M2y1GTrCG1kmRCUewGiSFAg=="
       }
     }
   }
