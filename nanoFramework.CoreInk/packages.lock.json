@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.864, 1.2.864]",
-        "resolved": "1.2.864",
-        "contentHash": "rRqALJZ2R4f8nZLIndZfAd8QbNzcg5G0XxsX3R/om3IlbMPSGmvV2YMHcX6NDD1Qbqd9Tmk7lmTeL+3HSD97Qg=="
+        "requested": "[1.2.907, 1.2.907]",
+        "resolved": "1.2.907",
+        "contentHash": "s6ljPucB/d7gJybvotZr6zKmCsVzP+JFT23i/KQn2GY1NuOxBEqr3PIadCBCSkM2lgxv/71mhNRAQw8HioYObw=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.889, 1.2.889]",
-        "resolved": "1.2.889",
-        "contentHash": "IAm3Rr9XbGZI7t0cwdLLKsvEGOO7b20NblRwdKfh2GvzK7y65xAOwKu+HZedhdBrBBthweF/684x6Udq7SUzMg=="
+        "requested": "[1.2.907, 1.2.907]",
+        "resolved": "1.2.907",
+        "contentHash": "uhKpElx2nMArTrXLHVud4KXLoeX91km8ffIeM7SFAro5O0W1aZH42c6KL6cib7K1zIEOeeOxds0mNNE4vLy0Cg=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -40,15 +40,15 @@
       },
       "nanoFramework.Iot.Device.ePaper": {
         "type": "Direct",
-        "requested": "[1.0.700, 1.0.700]",
-        "resolved": "1.0.700",
-        "contentHash": "dK2V6p2z8tmJxrEnYjS+acbU7IgqJsjUZ0faU93q2+5ju51sCVWHt1ABNOORlzkaeDm/jw8Kg9WIkA6PqO64Gg=="
+        "requested": "[1.0.743, 1.0.743]",
+        "resolved": "1.0.743",
+        "contentHash": "+O3yh+PNlnkNNb6MlY8aQZT/LuCnJ9osGQ77EVx0+QW3G5hQHQc5UbV2p6WgM+RI9TVjavswo6+Nf6iOFk0npg=="
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.889, 1.2.889]",
-        "resolved": "1.2.889",
-        "contentHash": "Qy6XXiijmhNq0zYmO6YghPJ8zUcpALmejs9Qvm2ZhLmvAS5MZKXfdnHrSha6foPh+bZvwqDO9m6VEaQoJL5WRQ=="
+        "requested": "[1.2.907, 1.2.907]",
+        "resolved": "1.2.907",
+        "contentHash": "b1I99VbNVk6LbHzo1CnsD6zgkLhzxl/jj5JCDMa6BGcqdKQujt12zIR+ffQF2e3JNfm3vrmdEKgALvotD8Dq4A=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
