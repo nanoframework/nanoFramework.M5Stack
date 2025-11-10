@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.907, 1.2.907]",
-        "resolved": "1.2.907",
-        "contentHash": "s6ljPucB/d7gJybvotZr6zKmCsVzP+JFT23i/KQn2GY1NuOxBEqr3PIadCBCSkM2lgxv/71mhNRAQw8HioYObw=="
+        "requested": "[1.2.931, 1.2.931]",
+        "resolved": "1.2.931",
+        "contentHash": "K2zdMf97qSxvuPECViSvMG1fM13BqBYAQ60k6asCN9S0J3Ibd580H6E3P7bdyHXkJMYUe986SSUMHt5GquBhfg=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.907, 1.2.907]",
-        "resolved": "1.2.907",
-        "contentHash": "uhKpElx2nMArTrXLHVud4KXLoeX91km8ffIeM7SFAro5O0W1aZH42c6KL6cib7K1zIEOeeOxds0mNNE4vLy0Cg=="
+        "requested": "[1.2.931, 1.2.931]",
+        "resolved": "1.2.931",
+        "contentHash": "kHcsXVlsfXi4Gvnl93et5dCIm9pB6fOcuQx81u92s558CPkTZBjGwpEZi5n3bMemATyCwS03VoKDfwLURgbM0g=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -106,9 +106,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.8.118, 3.8.118]",
-        "resolved": "3.8.118",
-        "contentHash": "cRaG+ICcECG+CzbtQyUV2WftH7yl2B02AjYGGNScXx8TwYavZYwhCewBTiC0qTcsac7m6AzBUYna5xzBWmTGYw=="
+        "requested": "[3.9.50, 3.9.50]",
+        "resolved": "3.9.50",
+        "contentHash": "HtOgGF6jZ+WYbXnCUCYPT8Y2d6mIJo9ozjK/FINTRsXdm4Zgv9GehUMa7EFoGQkqrMcDJNOIDwCmENnvXg4UbA=="
       },
       "UnitsNet.nanoFramework.Frequency": {
         "type": "Direct",
