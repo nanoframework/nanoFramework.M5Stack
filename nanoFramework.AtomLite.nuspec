@@ -19,7 +19,7 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack AtomLite</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.34" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.931" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.5.26" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.24" />

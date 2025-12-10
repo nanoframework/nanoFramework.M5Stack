@@ -20,7 +20,7 @@
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
       <dependency id="nanoFramework.Graphics.Core" version="1.2.45" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.34" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.931" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.931" />
       <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.2.862" />
