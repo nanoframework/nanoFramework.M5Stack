@@ -18,15 +18,15 @@
     <description>This package includes the nanoFramework.M5StickC assembly for .NET nanoFramework C# projects.</description>
     <tags>nanoFramework C# csharp netmf netnf m5stack M5StickC</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
-      <dependency id="nanoFramework.Graphics" version="1.2.45" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
-      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.35" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.931" />
-      <dependency id="nanoFramework.Iot.Device.Button" version="1.2.931" />
-      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="1.2.907" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.907" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="1.2.862" />
+      <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.33" />
+      <dependency id="nanoFramework.Graphics" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.5" />
+      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.Iot.Device.Mpu6886" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.1" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.1" />
     </dependencies>
   </metadata>
   <files>
