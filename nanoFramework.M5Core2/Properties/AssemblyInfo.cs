@@ -9,9 +9,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("nanoFramework Contributors")]
 [assembly: AssemblyProduct("nanoFramework.M5Core2")]
 [assembly: AssemblyCopyright("Copyright (c) .NET Foundation and Contributors")]
-
-/////////////////////////////////////////////////////////////////
-// This attribute is mandatory when building Interop libraries //
-// update this whenever the native assembly signature changes  //
-[assembly: AssemblyNativeVersion("0.0.0.0")]
-/////////////////////////////////////////////////////////////////
