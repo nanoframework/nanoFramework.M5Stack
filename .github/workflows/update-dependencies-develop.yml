@@ -1,0 +1,26 @@
+# Copyright (c) .NET Foundation and Contributors
+# See LICENSE file in the project root for full license information.
+
+# This workflow will periodically check .NET nanoFramework dependencies and updates them in the repository it's running.
+
+name: Daily update dependencies (develop)
+
+on:
+  schedule:
+  # At 07:00 UTC.
+  # Note: Schedule aligned with nanoFramework.IoT.Device updates
+  # which is the main source of NuGet updates of target libraries
+  - cron: '00 07 * * Mon,Wed'
+  repository_dispatch:
+    types: update-dependencies-develop
+
+jobs:
+  update-dependencies:
+    name: nanoFramework
+    uses: nanoframework/nf-tools/.github/workflows/update-dependencies.yml@main
+    secrets: inherit
+    with:
+      timeout-minutes: 60 # Non default because this solution has lots of projects to update!
+      solutionsToCheck: 'nanoFramework.M5Stack.sln'
+      previewPackages: true
+      branchToPr: 'develop'
