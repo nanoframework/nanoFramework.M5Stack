@@ -28,15 +28,15 @@
       },
       "nanoFramework.Iot.Device.Ip5306": {
         "type": "Direct",
-        "requested": "[1.2.931, 1.2.931]",
-        "resolved": "1.2.931",
-        "contentHash": "c1KhNoXgIljcETLOmeFN3Fd+uWqiFSgcDK4c97qssySLGKRWaH8kkUlUCEVvTDOTUeGOC1IbKsTbK9uP5pAaRw=="
+        "requested": "[1.2.952, 1.2.952]",
+        "resolved": "1.2.952",
+        "contentHash": "Pc/LJg6NoJcAkghf0fVLSSttsuzA6QBaFkHb1b5zJ1rZQhG/XTRbz+JabJjSlMjn/nDkpv1XeT8KEuCFVpiGAA=="
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[1.2.907, 1.2.907]",
-        "resolved": "1.2.907",
-        "contentHash": "jx3ZICbPr346GBu3z7svVd+/Dz/YbqNCnqwVjQh0fvO92T0nGRw1pUGn91zvU1lBwEYkbpYKzLXLfrCHnfXfKg=="
+        "requested": "[1.2.952, 1.2.952]",
+        "resolved": "1.2.952",
+        "contentHash": "jKfWdUJRQre0qsc6jeOWt+4iIRiw5+5gykZLRD7GiFhoEpIz6NCBkv4KPtdDpTP3kV+NAJhOMFOL/qHdwgDyEA=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
@@ -152,17 +152,17 @@
         "resolved": "1.3.42",
         "contentHash": "68HPjhersNpssbmEMUHdMw3073MHfGTfrkbRk9eILKbNPFfPFck7m4y9BlAi6DaguUJaeKxgyIojXF3SQrF8/A=="
       },
-      "UnitsNet.nanoFramework.ElectricCurrent": {
+      "nanoFramework.UnitsNet.ElectricCurrent": {
         "type": "Direct",
-        "requested": "[5.75.0, 5.75.0]",
-        "resolved": "5.75.0",
-        "contentHash": "DRtUvygEgcwb/gT8pVESz99UT4AsPucVBlIO2fDvAAbHCMXqOLXroijA0IIgFUm3e24K3G0D9XFOYQpUmsQSCg=="
+        "requested": "[5.76.15, 5.76.15]",
+        "resolved": "5.76.15",
+        "contentHash": "PRxOzidaTpezxg947ugHCiwsGR8A0Y+O+T8OOG4yfiUcALWEiUQ/XWLd33dXbfrJqZfSqkHPmaMF55fiUEJM2g=="
       },
-      "UnitsNet.nanoFramework.Temperature": {
+      "nanoFramework.UnitsNet.Temperature": {
         "type": "Direct",
-        "requested": "[5.75.0, 5.75.0]",
-        "resolved": "5.75.0",
-        "contentHash": "SpA9Z7T1sNaR7YBCYp+L9/ei1bjDkqi8PyPfOWVBjkWInuPSOQaPG9Y7UttIpJ0M2y1GTrCG1kmRCUewGiSFAg=="
+        "requested": "[5.76.15, 5.76.15]",
+        "resolved": "5.76.15",
+        "contentHash": "rmgtqp2kdwd1LkWCHy/iabt4HFHPgTSllCc8ex8M1xJ/2n3CH+Udng7M/wbtMP5II2yF5zMqxowzQ2iKOaoX/g=="
       }
     }
   }
