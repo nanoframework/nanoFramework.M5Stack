@@ -18,18 +18,18 @@
     <description>This package includes the nanoFramework.Tough assembly for .NET nanoFramework C# projects.</description>
     <tags>nanoFramework C# csharp netmf netnf m5stack Tough</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.33" />
-      <dependency id="nanoFramework.Graphics" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.5" />
-      <dependency id="nanoFramework.Iot.Device.Axp192" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.3" />
+      <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.35" />
+      <dependency id="nanoFramework.Graphics" version="2.0.0-preview.13" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.7" />
+      <dependency id="nanoFramework.Iot.Device.Axp192" version="2.0.0-preview.16" />
+      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="2.0.0-preview.18" />
+      <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.16" />
+      <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.5" />
       <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.6" />
-      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.7" />
-      <dependency id="nanoFramework.System.Threading" version="2.0.0-preview.5" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.5" />
+      <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.9" />
+      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.9" />
+      <dependency id="nanoFramework.System.Threading" version="2.0.0-preview.6" />
+      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.6" />
     </dependencies>
   </metadata>
   <files>
