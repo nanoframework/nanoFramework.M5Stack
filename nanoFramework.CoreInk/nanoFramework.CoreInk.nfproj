@@ -35,7 +35,7 @@
     <Reference Include="Iot.Device.Button, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.Button.2.0.0-preview.62\lib\Iot.Device.Button.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Buzzer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+    <Reference Include="Iot.Device.Buzzer">
       <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.2.0.0-preview.62\lib\Iot.Device.Buzzer.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper">
@@ -44,7 +44,7 @@
     <Reference Include="Iot.Device.ePaper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.Iot.Device.ePaper.2.0.0-preview.62\lib\Iot.Device.ePaper.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Rtc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+    <Reference Include="Iot.Device.Rtc">
       <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.2.0.0-preview.62\lib\Iot.Device.Rtc.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
@@ -58,6 +58,9 @@
     </Reference>
     <Reference Include="nanoFramework.Runtime.Events">
       <HintPath>..\packages\nanoFramework.Runtime.Events.2.0.0-preview.12\lib\netnano1.0\nanoFramework.Runtime.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.UnitsNet.Frequency">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Frequency.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Frequency.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.UnitsNet.Temperature">
       <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
