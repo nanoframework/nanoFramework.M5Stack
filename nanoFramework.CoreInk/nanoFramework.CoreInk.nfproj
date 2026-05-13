@@ -71,12 +71,6 @@
     <Reference Include="System.Device.I2c">
       <HintPath>..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.10\lib\netnano1.0\System.Device.I2c.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Frequency, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Frequency.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Frequency.dll</HintPath>
-    </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
-    </Reference>
     <Reference Include="System.Device.Model">
       <HintPath>..\packages\nanoFramework.System.Device.Model.2.0.0-preview.54\lib\System.Device.Model.dll</HintPath>
     </Reference>
