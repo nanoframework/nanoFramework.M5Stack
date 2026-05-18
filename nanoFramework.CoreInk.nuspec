@@ -18,19 +18,19 @@
     <description>This package includes the nanoFramework.CoreInk assembly for .NET nanoFramework C# projects.</description>
     <tags>nanoFramework C# csharp netmf netnf m5stack CoreInk</tags>
     <dependencies>
-    <group targetFramework=".NETnanoFramework1.0">
-      <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.35" />
-      <dependency id="nanoFramework.Graphics.Core" version="2.0.0-preview.13" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.7" />
-      <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.16" />
-      <dependency id="nanoFramework.Iot.Device.Buzzer" version="2.0.0-preview.16" />
-      <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="2.0.0-preview.4" />
-      <dependency id="nanoFramework.Iot.Device.ePaper" version="2.0.0-preview.18" />
-      <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.16" />
-      <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.5" />
-      <dependency id="nanoFramework.System.Device.I2c" version="2.0.0-preview.7" />
-      <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.9" />
-</group>
+      <group targetFramework=".NETnanoFramework1.0">
+        <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.49" />
+        <dependency id="nanoFramework.Graphics.Core" version="2.0.0-preview.24" />
+        <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.11" />
+        <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.62" />
+        <dependency id="nanoFramework.Iot.Device.Buzzer" version="2.0.0-preview.62" />
+        <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="2.0.0-preview.54" />
+        <dependency id="nanoFramework.Iot.Device.ePaper" version="2.0.0-preview.62" />
+        <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.62" />
+        <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.9" />
+        <dependency id="nanoFramework.System.Device.I2c" version="2.0.0-preview.11" />
+        <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.16" />
+      </group>
     </dependencies>
   </metadata>
   <files>
