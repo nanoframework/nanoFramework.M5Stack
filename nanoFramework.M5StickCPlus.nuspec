@@ -28,7 +28,7 @@
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="2.0.0-preview.16" />
       <dependency id="nanoFramework.Iot.Device.Mpu6886" version="2.0.0-preview.45" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.45" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.4" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.54" />
     </group>
     </dependencies>
   </metadata>

@@ -30,9 +30,9 @@
       <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.9" />
       <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.1" />
       <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.14" />
-      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.4" />
-      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.9" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.6" />
+      <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.54" />
+      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.23" />
+      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.15" />
 
     </group>
     </dependencies>
