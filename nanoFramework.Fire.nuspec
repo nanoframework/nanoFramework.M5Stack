@@ -21,7 +21,9 @@
     <group targetFramework=".NETnanoFramework1.0">
       <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.49" />
       <dependency id="nanoFramework.Graphics" version="2.0.0-preview.23" />
+      <dependency id="nanoFramework.Graphics.Core" version="2.0.0-preview.23" />
       <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.11" />
+      <dependency id="nanoFramework.Hardware.Esp32.Rmt" version="3.0.0-preview.17" />
       <dependency id="nanoFramework.Iot.Device.Bmm150" version="2.0.0-preview.45" />
       <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.49" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="2.0.0-preview.45" />
