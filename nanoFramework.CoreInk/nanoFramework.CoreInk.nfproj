@@ -59,8 +59,13 @@
     <Reference Include="nanoFramework.Runtime.Events">
       <HintPath>..\packages\nanoFramework.Runtime.Events.2.0.0-preview.12\lib\netnano1.0\nanoFramework.Runtime.Events.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Temperature">
+    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="nanoFramework.UnitsNet.Frequency, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Frequency.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Frequency.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System.Device.Adc">
       <HintPath>..\packages\nanoFramework.System.Device.Adc.2.0.0-preview.9\lib\netnano1.0\System.Device.Adc.dll</HintPath>
