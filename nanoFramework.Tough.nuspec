@@ -27,10 +27,10 @@
       <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.45" />
       <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.9" />
       <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.1" />
-      <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.14" />
-      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.23" />
-      <dependency id="nanoFramework.System.Threading" version="2.0.0-preview.9" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.15" />
+      <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.18" />
+      <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.18" />
+      <dependency id="nanoFramework.System.Threading" version="2.0.0-preview.18" />
+      <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.18" />
 
     </group>
     </dependencies>
