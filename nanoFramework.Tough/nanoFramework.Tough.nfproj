@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Nerdbank.GitVersioning.3.9.50\build\Nerdbank.GitVersioning.props" Condition="Exists('..\packages\Nerdbank.GitVersioning.3.9.50\build\Nerdbank.GitVersioning.props')" />
   <PropertyGroup Label="Globals">
@@ -32,26 +32,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Iot.Device.Axp192">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.2.0.0-preview.49\lib\Iot.Device.Axp192.dll</HintPath>
+    <Reference Include="Iot.Device.Axp192, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Axp192.2.0.0-preview.73\lib\netnano1.0\Iot.Device.Axp192.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Chsc6540">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.2.0.0-preview.62\lib\Iot.Device.Chsc6540.dll</HintPath>
+    <Reference Include="Iot.Device.Chsc6540, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Chsc6540.2.0.0-preview.69\lib\netnano1.0\Iot.Device.Chsc6540.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.2.0.0-preview.54\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Rtc">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.2.0.0-preview.62\lib\Iot.Device.Rtc.dll</HintPath>
+    <Reference Include="Iot.Device.Rtc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.2.0.0-preview.73\lib\netnano1.0\Iot.Device.Rtc.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\packages\nanoFramework.CoreLibrary.2.0.0-preview.49\lib\netnano1.0\mscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Graphics">
-      <HintPath>..\packages\nanoFramework.Graphics.2.0.0-preview.23\lib\netnano1.0\nanoFramework.Graphics.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.2.0.0-preview.24\lib\netnano1.0\nanoFramework.Graphics.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Graphics.Core">
-      <HintPath>..\packages\nanoFramework.Graphics.Core.2.0.0-preview.23\lib\netnano1.0\nanoFramework.Graphics.Core.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.Core.2.0.0-preview.24\lib\netnano1.0\nanoFramework.Graphics.Core.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32">
       <HintPath>..\packages\nanoFramework.Hardware.Esp32.2.0.0-preview.11\lib\netnano1.0\nanoFramework.Hardware.Esp32.dll</HintPath>
@@ -71,39 +71,35 @@
     <Reference Include="nanoFramework.System.Text">
       <HintPath>..\packages\nanoFramework.System.Text.2.0.0-preview.18\lib\netnano1.0\nanoFramework.System.Text.dll</HintPath>
     </Reference>
+    <Reference Include="nanoFramework.UnitsNet.ElectricCurrent, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.ElectricCurrent.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.ElectricCurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.UnitsNet.ElectricPotential, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.ElectricPotential.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.ElectricPotential.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.UnitsNet.Power, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Power.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.Power.dll</HintPath>
+    </Reference>
+    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device.Adc">
       <HintPath>..\packages\nanoFramework.System.Device.Adc.2.0.0-preview.9\lib\netnano1.0\System.Device.Adc.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Dac, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.System.Device.Dac.2.0.0-preview.1\lib\System.Device.Dac.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.UnitsNet.ElectricCurrent, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.ElectricCurrent.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.ElectricCurrent.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="nanoFramework.UnitsNet.ElectricPotential, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.ElectricPotential.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.ElectricPotential.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Power, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Power.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Power.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System.Device.Gpio">
       <HintPath>..\packages\nanoFramework.System.Device.Gpio.2.0.0-preview.16\lib\netnano1.0\System.Device.Gpio.dll</HintPath>
     </Reference>
-    <Reference Include="System.Device.I2c">
-      <HintPath>..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.10\lib\netnano1.0\System.Device.I2c.dll</HintPath>
+    <Reference Include="System.Device.I2c, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.11\lib\netnano1.0\System.Device.I2c.dll</HintPath>
     </Reference>
-    <Reference Include="System.Device.Spi">
-      <HintPath>..\packages\nanoFramework.System.Device.Spi.2.0.0-preview.14\lib\netnano1.0\System.Device.Spi.dll</HintPath>
+    <Reference Include="System.Device.Spi, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Spi.2.0.0-preview.16\lib\netnano1.0\System.Device.Spi.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.FileSystem">
-      <HintPath>..\packages\nanoFramework.System.IO.FileSystem.2.0.0-preview.15\lib\netnano1.0\System.IO.FileSystem.dll</HintPath>
+    <Reference Include="System.IO.FileSystem, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.IO.FileSystem.2.0.0-preview.16\lib\netnano1.0\System.IO.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Ports">
       <HintPath>..\packages\nanoFramework.System.IO.Ports.2.0.0-preview.23\lib\netnano1.0\System.IO.Ports.dll</HintPath>
@@ -111,8 +107,8 @@
     <Reference Include="System.IO.Streams">
       <HintPath>..\packages\nanoFramework.System.IO.Streams.2.0.0-preview.18\lib\netnano1.0\System.IO.Streams.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>..\packages\nanoFramework.System.Threading.2.0.0-preview.9\lib\netnano1.0\System.Threading.dll</HintPath>
+    <Reference Include="System.Threading, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Threading.2.0.0-preview.11\lib\netnano1.0\System.Threading.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
