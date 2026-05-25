@@ -32,26 +32,26 @@
     <None Include="packages.lock.json" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Iot.Device.Button">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Button.2.0.0-preview.49\lib\Iot.Device.Button.dll</HintPath>
+    <Reference Include="Iot.Device.Button, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.2.0.0-preview.73\lib\netnano1.0\Iot.Device.Button.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Buzzer">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.2.0.0-preview.45\lib\Iot.Device.Buzzer.dll</HintPath>
+    <Reference Include="Iot.Device.Buzzer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Buzzer.2.0.0-preview.73\lib\netnano1.0\Iot.Device.Buzzer.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.2.0.0-preview.54\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.ePaper">
-      <HintPath>..\packages\nanoFramework.Iot.Device.ePaper.2.0.0-preview.49\lib\Iot.Device.ePaper.dll</HintPath>
+    <Reference Include="Iot.Device.ePaper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.ePaper.2.0.0-preview.69\lib\netnano1.0\Iot.Device.ePaper.dll</HintPath>
     </Reference>
-    <Reference Include="Iot.Device.Rtc">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.2.0.0-preview.45\lib\Iot.Device.Rtc.dll</HintPath>
+    <Reference Include="Iot.Device.Rtc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Iot.Device.Rtc.2.0.0-preview.73\lib\netnano1.0\Iot.Device.Rtc.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\packages\nanoFramework.CoreLibrary.2.0.0-preview.49\lib\netnano1.0\mscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.Graphics.Core">
-      <HintPath>..\packages\nanoFramework.Graphics.Core.2.0.0-preview.23\lib\netnano1.0\nanoFramework.Graphics.Core.dll</HintPath>
+    <Reference Include="nanoFramework.Graphics.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.Graphics.Core.2.0.0-preview.24\lib\netnano1.0\nanoFramework.Graphics.Core.dll</HintPath>
     </Reference>
     <Reference Include="nanoFramework.Hardware.Esp32">
       <HintPath>..\packages\nanoFramework.Hardware.Esp32.2.0.0-preview.11\lib\netnano1.0\nanoFramework.Hardware.Esp32.dll</HintPath>
@@ -59,13 +59,11 @@
     <Reference Include="nanoFramework.Runtime.Events">
       <HintPath>..\packages\nanoFramework.Runtime.Events.2.0.0-preview.12\lib\netnano1.0\nanoFramework.Runtime.Events.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="nanoFramework.UnitsNet.Frequency, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Frequency.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.Frequency.dll</HintPath>
     </Reference>
-    <Reference Include="nanoFramework.UnitsNet.Frequency, Version=5.77.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\nanoFramework.UnitsNet.Frequency.5.77.0-preview.5\lib\netnano1.0\nanoFramework.UnitsNet.Frequency.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="nanoFramework.UnitsNet.Temperature, Version=5.77.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.UnitsNet.Temperature.5.77.0-preview.14\lib\netnano1.0\nanoFramework.UnitsNet.Temperature.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Adc">
       <HintPath>..\packages\nanoFramework.System.Device.Adc.2.0.0-preview.9\lib\netnano1.0\System.Device.Adc.dll</HintPath>
@@ -73,8 +71,8 @@
     <Reference Include="System.Device.Gpio">
       <HintPath>..\packages\nanoFramework.System.Device.Gpio.2.0.0-preview.16\lib\netnano1.0\System.Device.Gpio.dll</HintPath>
     </Reference>
-    <Reference Include="System.Device.I2c">
-      <HintPath>..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.10\lib\netnano1.0\System.Device.I2c.dll</HintPath>
+    <Reference Include="System.Device.I2c, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.11\lib\netnano1.0\System.Device.I2c.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Model">
       <HintPath>..\packages\nanoFramework.System.Device.Model.2.0.0-preview.54\lib\System.Device.Model.dll</HintPath>
@@ -82,14 +80,14 @@
     <Reference Include="System.Device.Pwm">
       <HintPath>..\packages\nanoFramework.System.Device.Pwm.2.0.0-preview.11\lib\netnano1.0\System.Device.Pwm.dll</HintPath>
     </Reference>
-    <Reference Include="System.Device.Spi">
-      <HintPath>..\packages\nanoFramework.System.Device.Spi.2.0.0-preview.14\lib\netnano1.0\System.Device.Spi.dll</HintPath>
+    <Reference Include="System.Device.Spi, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Device.Spi.2.0.0-preview.16\lib\netnano1.0\System.Device.Spi.dll</HintPath>
     </Reference>
-    <Reference Include="System.Math">
-      <HintPath>..\packages\nanoFramework.System.Math.2.0.0-preview.6\lib\System.Math.dll</HintPath>
+    <Reference Include="System.Math, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Math.2.0.0-preview.13\lib\netnano1.0\System.Math.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>..\packages\nanoFramework.System.Threading.2.0.0-preview.9\lib\netnano1.0\System.Threading.dll</HintPath>
+    <Reference Include="System.Threading, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.System.Threading.2.0.0-preview.11\lib\netnano1.0\System.Threading.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
