@@ -10,21 +10,21 @@
       },
       "nanoFramework.Graphics.Core": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.26, 2.0.0-preview.26]",
-        "resolved": "2.0.0-preview.26",
-        "contentHash": "DtjfN1pCtGCvzk7eUiu7R7dgHdXKAS/XGTlmbk5L283DeyqOGRVy8PXzcR8Y0a71DRBj/JclVGKdfMvti3FtOg=="
+        "requested": "[2.0.0-preview.27, 2.0.0-preview.27]",
+        "resolved": "2.0.0-preview.27",
+        "contentHash": "HEveouEd5dOXuhYCC6BJW1Q46mIFEGoG/62S4fsfrdrWIhrIXpEcqMpS/jQ4ZrtsD+SdfhsKQjvT7wdAVCzDVg=="
       },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.11, 2.0.0-preview.11]",
-        "resolved": "2.0.0-preview.11",
-        "contentHash": "fmVLjUp9A1lUkGCcbZ4Ava0X1lecefwQv6ji+QQ5vv776hQBv2w4zrNbQIzDNILck6x4sf62mCP7i5ZiWRJ82w=="
+        "requested": "[2.0.0-preview.12, 2.0.0-preview.12]",
+        "resolved": "2.0.0-preview.12",
+        "contentHash": "REFam731tAR2xtgoE67eWqZS208vnkPoTpe/5xTRhxeS/chw0w3VUAnP9RUKUehwe+pOIyJmtyU/WzauUXKeDw=="
       },
       "nanoFramework.Hardware.Esp32.Rmt": {
         "type": "Direct",
-        "requested": "[3.0.0-preview.17, 3.0.0-preview.17]",
-        "resolved": "3.0.0-preview.17",
-        "contentHash": "FBdAVYDFpUKXPEz0aHeQxVxj9gqvVuSOnQRZGTik6Bj/zGRTjLTbuSuQh9U60nsWBiQr+t6KVc7NH8JIYMsPGA=="
+        "requested": "[3.0.0-preview.20, 3.0.0-preview.20]",
+        "resolved": "3.0.0-preview.20",
+        "contentHash": "eR73G3o9O/3ieItHZztJVud3ugJG8gO1I9hfhefQFSX0YXAC2U2moC24G7Ua07H5i6aFSXq65IkXF6Zx/RiHAQ=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
@@ -34,15 +34,15 @@
       },
       "nanoFramework.Iot.Device.Mpu6886": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.80, 2.0.0-preview.80]",
-        "resolved": "2.0.0-preview.80",
-        "contentHash": "ekszIB7eWsB5prVQw26W/LCjvb0oJsOXZ5zkDTduDOopLvpJDMMzO8MNR0G0s7NJiDGUlplnCLhGoq2qnvC+gA=="
+        "requested": "[2.0.0-preview.85, 2.0.0-preview.85]",
+        "resolved": "2.0.0-preview.85",
+        "contentHash": "So/ZW13z1WhBhMElyU4tBLhSIVdoDT1L8i9SePNF4fy+bhOKWHjJaGwbHT0LsPW1sYuQBdXTWgYyjESJAROV3g=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.80, 2.0.0-preview.80]",
-        "resolved": "2.0.0-preview.80",
-        "contentHash": "Vk025HZ+09m/7WFXrH4LWJcXUqP7XxaMhNheMsnxXiZCeF90cLd935NTm0rxS/JdfYjBwUU3wq99m2JRUEWw+A=="
+        "requested": "[2.0.0-preview.85, 2.0.0-preview.85]",
+        "resolved": "2.0.0-preview.85",
+        "contentHash": "TOb1JniozIS56qAEQiueqfXNt/vtVkFGuALbXN3Gbv/PJpYwXXvbiL9lLnyMT5O1LYwkJBu/25ih+xgKBlREdA=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -58,9 +58,9 @@
       },
       "nanoFramework.System.Device.Adc": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.9, 2.0.0-preview.9]",
-        "resolved": "2.0.0-preview.9",
-        "contentHash": "cQAJSQJqvvkKVXEOaymSogYD34LHPy1XH7P/3bXXNq4XmHGoNzvvz3+dSInGZR/MfCyBazy/P0EkQW9+R2pF/g=="
+        "requested": "[2.0.0-preview.10, 2.0.0-preview.10]",
+        "resolved": "2.0.0-preview.10",
+        "contentHash": "DudatxXsJ0no8oR39FMyHLE8mJRWAKyTmxZ/u2RqHKcxevwzXIs7ZvJ8H03SGyhhUsWyQja9JRwz7ABui5GbTw=="
       },
       "nanoFramework.System.Device.Dac": {
         "type": "Direct",
@@ -76,9 +76,9 @@
       },
       "nanoFramework.System.Device.I2c": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.11, 2.0.0-preview.11]",
-        "resolved": "2.0.0-preview.11",
-        "contentHash": "bRJzm6P3oDwK78hO8cNncRTfw56c5piXfLWiT+fJBjfegVsfbuvOfXqy3/2odvY2mRZpbDNGjnHTXTsNJk5j+g=="
+        "requested": "[2.0.0-preview.12, 2.0.0-preview.12]",
+        "resolved": "2.0.0-preview.12",
+        "contentHash": "i2saSw4cycURTRIJQyd2jm7y/zvFCXqKHrh7h+uim5tfkboIphRoZzj+G3YJxu+Nz53WNyAyCyv2QEMOPt0fYg=="
       },
       "nanoFramework.System.Device.Model": {
         "type": "Direct",
@@ -88,27 +88,27 @@
       },
       "nanoFramework.System.Device.Spi": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.16, 2.0.0-preview.16]",
-        "resolved": "2.0.0-preview.16",
-        "contentHash": "vzWlR8FBYYTr536ocJb3mXfhvBKc4dPJVM4zYgjD1y/hNPTp7RZjjvx6b2D/7X8I2cItO2N7PiDtcw33BJOeTA=="
+        "requested": "[2.0.0-preview.19, 2.0.0-preview.19]",
+        "resolved": "2.0.0-preview.19",
+        "contentHash": "YHYQykT4lYcyx0f1lyggTd1LWb2CSLK7t/19bzthobzgnzCg/JitH4iS4fBjqhDKI4SUWNbvfayttah91JNSmA=="
       },
       "nanoFramework.System.Math": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.13, 2.0.0-preview.13]",
-        "resolved": "2.0.0-preview.13",
-        "contentHash": "P2AmU71dut8LWyA3/jNiqUhsCmg4ltysuU4JFOFb7xuah4CLaq7LZfRlAIAUmiIxNZEghjp6sXoZUeZRLi61Sw=="
+        "requested": "[2.0.0-preview.19, 2.0.0-preview.19]",
+        "resolved": "2.0.0-preview.19",
+        "contentHash": "rA+f9ooOIDVpHPvvnroV3KifN+uUD7LcGGXBqVhr1cE2YlSnsFtGHrXebOl/GyCSMlK0KsmgcAGVMIMTVas4Eg=="
       },
       "nanoFramework.System.Numerics": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.77, 2.0.0-preview.77]",
-        "resolved": "2.0.0-preview.77",
-        "contentHash": "yWkXstu1a9h/1pZtYnmYV7aFOTl+weiW48wvTmUYpSVKjLL1Y6Y+RTke9TS6R0sh4SbwEdVWIjHB2D8C4VMUPg=="
+        "requested": "[2.0.0-preview.82, 2.0.0-preview.82]",
+        "resolved": "2.0.0-preview.82",
+        "contentHash": "6lcRP+6ZZYh+F5sawWlTuKeMNszcXf2nK7f7C/pxMVc5U4ktp0seOuOB2HthI23wCukY0G7sq33z88QGiM2IgQ=="
       },
       "nanoFramework.UnitsNet.Temperature": {
         "type": "Direct",
-        "requested": "[5.77.0-preview.14, 5.77.0-preview.14]",
-        "resolved": "5.77.0-preview.14",
-        "contentHash": "WShK+Y6Z6b8gV5RqFiPVDxsVxoeGzOBbsmFsJN/ElecIGMDdKYmga6XcoSWiGSx1JdhZGZ5b1+wGm3tPVVxTAw=="
+        "requested": "[5.77.0-preview.16, 5.77.0-preview.16]",
+        "resolved": "5.77.0-preview.16",
+        "contentHash": "fTetAqgtFyk4P0l27t4bvk7HGX2zw95S4+cnYIbTmnykmMBsKgOtj4sOsQSOgJh1YOkl4YkuUXuyCS3xjeLZzQ=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",

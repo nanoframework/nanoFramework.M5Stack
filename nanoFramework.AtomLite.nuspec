@@ -20,13 +20,13 @@
     <dependencies>
       <group targetFramework=".NETnanoFramework1.0">
         <dependency id="nanoFramework.CoreLibrary" version="2.0.0-preview.52" />
-        <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.11" />
+        <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.12" />
         <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.80" />
         <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.1" />
-        <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.9" />
-        <dependency id="nanoFramework.System.Device.I2c" version="2.0.0-preview.11" />
-        <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.16" />
-        <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="2.0.0-preview.80" />
+        <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.10" />
+        <dependency id="nanoFramework.System.Device.I2c" version="2.0.0-preview.12" />
+        <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.19" />
+        <dependency id="nanoFramework.Iot.Device.Ws28xx.Esp32" version="2.0.0-preview.85" />
       </group>
     </dependencies>
   </metadata>
