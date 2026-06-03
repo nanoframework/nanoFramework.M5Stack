@@ -28,11 +28,11 @@
         <dependency id="nanoFramework.Iot.Device.Ip5306" version="2.0.0-preview.85" />
         <dependency id="nanoFramework.Iot.Device.Mpu6886" version="2.0.0-preview.85" />
         <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.10" />
-        <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.1" />
+        <dependency id="nanoFramework.System.Device.Dac" version="2.0.0-preview.3" />
         <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.19" />
         <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.82" />
         <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.28" />
-        <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.20" />
+        <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.21" />
       </group>
     </dependencies>
   </metadata>
