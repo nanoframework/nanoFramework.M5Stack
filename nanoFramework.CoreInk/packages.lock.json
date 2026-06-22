@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.80, 2.0.0-preview.80]",
-        "resolved": "2.0.0-preview.80",
-        "contentHash": "z15/BZVU01MDMCNPu5HNPkjXQIkKZ9U8x/2IA2o1F5vrxmAI/zMJP0nIyk+aWfcm8QQmpY/rDz/3r25fWQ4yGQ=="
+        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
+        "resolved": "2.0.0-preview.94",
+        "contentHash": "t8X/WISjYY4pFsg26ZkdDIm4tNyPWghR3H8vUHRB8TBMoFeobKueDM+G6H/2p8WJANk4wKBb3cFr0FzGlnhQOQ=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.85, 2.0.0-preview.85]",
-        "resolved": "2.0.0-preview.85",
-        "contentHash": "9koil3D/arugWdi3LM7hKoMbEzCsy5zoYrzoCpAaAaOUFAX1gm0aWwsKul9FO1q6EH9gkyHWh5zc+4fhTGBaUQ=="
+        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
+        "resolved": "2.0.0-preview.94",
+        "contentHash": "gXuYCgD2ZmhIwqg85RxZGeH4/+B7C9QwjkpCS34ipcrjyk29tsCh+zxtJQj0JONDaEDmubYOMC2JgA7LaeopmQ=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -40,15 +40,15 @@
       },
       "nanoFramework.Iot.Device.ePaper": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.85, 2.0.0-preview.85]",
-        "resolved": "2.0.0-preview.85",
-        "contentHash": "4KwIvNQW157X/PB94kdMlvFy5uu/xk2dWOwp+ILB7dPBz/BA1+ttg16WFc6G5mszWyatZaCoEPk2ZTVEROaEEA=="
+        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
+        "resolved": "2.0.0-preview.94",
+        "contentHash": "seWxXlxX8SgL4OjZ1AhmklETmPcc4wrXhmQ1gRaIismrpun1t0+EXMhvYn6YtJm1hDLPb7YvquMp+DpOMhWdVg=="
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.85, 2.0.0-preview.85]",
-        "resolved": "2.0.0-preview.85",
-        "contentHash": "17BsLmkkfyzRQKZqmpaOmb2epbFDxjCMIvyIsclJwU/+tOaS/nCRjXhRQcEd7aqN2I9PnodowkCVq+w174ylTw=="
+        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
+        "resolved": "2.0.0-preview.94",
+        "contentHash": "5ueIHtjCS3eswg0SRwlc7rSKP52cIPcdtMJB5L/T7zw8PHAYdAQswstksotd3TwZdeVfgXQiQdh+LVQwFTwB4w=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -118,9 +118,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.9.50, 3.9.50]",
-        "resolved": "3.9.50",
-        "contentHash": "HtOgGF6jZ+WYbXnCUCYPT8Y2d6mIJo9ozjK/FINTRsXdm4Zgv9GehUMa7EFoGQkqrMcDJNOIDwCmENnvXg4UbA=="
+        "requested": "[3.10.85, 3.10.85]",
+        "resolved": "3.10.85",
+        "contentHash": "smhqiTAbnI/6NRn+k7m+a65qKY7nREbnFqFgqxiw3JS8kXiBUOxdCxIZFP9TOpCsoh46DbMlBlcd+dWQYAVVCA=="
       }
     }
   }
