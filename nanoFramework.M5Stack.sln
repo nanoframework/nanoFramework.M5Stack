@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		nanoFramework.AtomLite.nuspec = nanoFramework.AtomLite.nuspec
 		nanoFramework.AtomMatrix.nuspec = nanoFramework.AtomMatrix.nuspec
+		nanoFramework.M5CoreS3.nuspec = nanoFramework.M5CoreS3.nuspec
 		nanoFramework.M5Core.nuspec = nanoFramework.M5Core.nuspec
 		nanoFramework.M5Core2.nuspec = nanoFramework.M5Core2.nuspec
 		nanoFramework.M5StickC.nuspec = nanoFramework.M5StickC.nuspec
@@ -58,6 +59,10 @@ EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "ToughTestApp", "Tests\ToughTestApp\ToughTestApp.nfproj", "{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1}"
 EndProject
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.CoreInk", "nanoFramework.CoreInk\nanoFramework.CoreInk.nfproj", "{DE7EE9F2-38A0-42B6-945D-6215199EF35F}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.M5CoreS3", "nanoFramework.M5CoreS3\nanoFramework.M5CoreS3.nfproj", "{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}"
+EndProject
+Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "M5CoreS3TestApp", "Tests\M5CoreS3TestApp\M5CoreS3TestApp.nfproj", "{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +166,18 @@ Global
 		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE7EE9F2-38A0-42B6-945D-6215199EF35F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E3D1D7-7E0C-4B62-8D1F-4C7B6F8AE632}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -177,6 +194,7 @@ Global
 		{79F09006-AB5D-4E3E-AD12-2EFBEE536CA9} = {FFF3F871-7600-480E-B378-95AD0F9FC0F1}
 		{5FF00F7C-8ED8-4468-9959-497CE8C5B1AF} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 		{F5BF3DA4-B92E-46C6-A135-37E6A7E002A1} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
+		{B3A0FB0D-44A3-4B09-A9A7-DF8BA963A4C1} = {5972CDE6-43B4-42F0-9276-6B70B7EF6437}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD82D7FF-B798-48A4-8506-2FBA0001D32F}
