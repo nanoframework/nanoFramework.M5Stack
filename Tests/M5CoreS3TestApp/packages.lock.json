@@ -10,9 +10,9 @@
       },
       "nanoFramework.Graphics": {
         "type": "Direct",
-        "requested": "[1.2.45, 1.2.45]",
-        "resolved": "1.2.45",
-        "contentHash": "JqcPZ1Tr0rZgUPmaR0/4OL/ToTznYFq3+3Km1YPNnbhWShyTqqzBvQyX5f2sGIgF5nv3MGG7vNANuGRUXNfJ4w=="
+        "requested": "[1.2.52, 1.2.52]",
+        "resolved": "1.2.52",
+        "contentHash": "7DfRe0iJWZBH3UREIyZxzDTEItUqz3llfVXGzh2xBVkGZzTqzVDIcK7mI7u1h8GEP7uCC4LM5kKey6xiImHf/Q=="
       },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
@@ -62,17 +62,35 @@
         "resolved": "1.2.991",
         "contentHash": "O2bq4ajkzpKfx65H+ILU7gii9s//mj8C9qNjGSCatzYkuZ+lyD0mlkML25NAtNGojMGBS62EbTDIG0xIZABMVA=="
       },
+      "nanoFramework.ResourceManager": {
+        "type": "Direct",
+        "requested": "[1.2.32, 1.2.32]",
+        "resolved": "1.2.32",
+        "contentHash": "hpBiZ7yx5AnT/0T37cr2ySQwQDLKP+KaWu+O7ln9J43M/WaKFSCZFVsqXeJGby3/JDfm1cxhfOaQ1MMsevrdiA=="
+      },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
         "requested": "[1.11.32, 1.11.32]",
         "resolved": "1.11.32",
         "contentHash": "NyLUIwJDlpl5VKSd+ljmdDtO2WHHBvPvruo1ccaL+hd79z+6XMYze1AccOVXKGiZenLBCwDmFHwpgIQyHkM7GA=="
       },
+      "nanoFramework.Runtime.Native": {
+        "type": "Direct",
+        "requested": "[1.7.11, 1.7.11]",
+        "resolved": "1.7.11",
+        "contentHash": "XPSTltZ9KeBruogVmjQpCphi1nLoJH49mpyp2eGBs8BTjKuL5TkMO20MoI8r73F/PW5AppTq49HvIZZavU5nPQ=="
+      },
       "nanoFramework.System.Buffers.Binary.BinaryPrimitives": {
         "type": "Direct",
         "requested": "[1.2.862, 1.2.862]",
         "resolved": "1.2.862",
         "contentHash": "O+jmbbw2h2cjCTShsvWCzjqn/kmRacJE4Ena9gJt5xF5D7XHyYh/uE/qbZ4LhlmlN6JCZjLRNiEfHyM1YUjyxg=="
+      },
+      "nanoFramework.System.Collections": {
+        "type": "Direct",
+        "requested": "[1.5.75, 1.5.75]",
+        "resolved": "1.5.75",
+        "contentHash": "OiMpKo8RWbjZq1594YjdRnOGNN2aT4nowa+ET7scK0frGCux0a8LGaPkG56mmSfBCKzLlVs13LIlla3XLhXaMA=="
       },
       "nanoFramework.System.Device.Adc": {
         "type": "Direct",

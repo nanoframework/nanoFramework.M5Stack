@@ -19,8 +19,7 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack M5CoreS3 CoreS3</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.12" />
-      <dependency id="nanoFramework.Graphics" version="1.2.45" />
-      <dependency id="nanoFramework.Graphics.Core" version="1.2.45" />
+      <dependency id="nanoFramework.Graphics" version="1.2.52" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
       <dependency id="nanoFramework.Iot.Device.Axp2101" version="1.0.33" />
       <dependency id="nanoFramework.Iot.Device.Aw9523x" version="1.0.8" />
