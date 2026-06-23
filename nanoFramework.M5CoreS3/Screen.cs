@@ -88,7 +88,7 @@ namespace nanoFramework.M5Stack
             set
             {
                 _brightness = value > 100 ? (byte)100 : value;
-                if (_isEnabled || _isInitialized)
+                if (_isEnabled)
                 {
                     M5CoreS3.SetScreenBacklight(_brightness);
                 }

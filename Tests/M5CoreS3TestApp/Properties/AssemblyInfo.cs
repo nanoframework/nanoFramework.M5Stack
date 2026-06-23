@@ -1,12 +1,12 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("CSharp.BlankApplication")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("M5CoreS3TestApp")]
+[assembly: AssemblyDescription("M5Stack CoreS3 test application")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSharp.BlankApplication")]
-[assembly: AssemblyCopyright("Copyright © ")]
+[assembly: AssemblyCompany("nanoframework")]
+[assembly: AssemblyProduct("M5CoreS3TestApp")]
+[assembly: AssemblyCopyright("Copyright (c) .NET Foundation and Contributors")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

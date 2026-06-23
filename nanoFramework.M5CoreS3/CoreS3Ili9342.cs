@@ -16,8 +16,10 @@ namespace nanoFramework.M5Stack
         {
             Nop = 0x00,
             PowerState = 0x10,
-            SleepOut = 0x11,            InversionOff = 0x20,
-            InversionOn = 0x21,            IdleModeOff = 0x38,
+            SleepOut = 0x11,
+            InversionOff = 0x20,
+            InversionOn = 0x21,
+            IdleModeOff = 0x38,
             DisplayOn = 0x29,
             ColumnAddressSet = 0x2A,
             PageAddressSet = 0x2B,
