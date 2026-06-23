@@ -124,9 +124,6 @@
     <Reference Include="nanoFramework.UnitsNet.ElectricPotential, Version=5.76.15.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.UnitsNet.ElectricPotential.5.76.15\lib\netnano1.0\nanoFramework.UnitsNet.ElectricPotential.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Temperature">
-      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.75.0\lib\UnitsNet.Temperature.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
