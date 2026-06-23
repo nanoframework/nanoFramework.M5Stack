@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.931, 1.2.931]",
-        "resolved": "1.2.931",
-        "contentHash": "K2zdMf97qSxvuPECViSvMG1fM13BqBYAQ60k6asCN9S0J3Ibd580H6E3P7bdyHXkJMYUe986SSUMHt5GquBhfg=="
+        "requested": "[1.2.991, 1.2.991]",
+        "resolved": "1.2.991",
+        "contentHash": "cgln7gOjgSERaLFzndYmunVVw4ZqiMzXbzuLwYaMEn+75nM18szgKPEfeXUI/Br4hixaaT6fGgzJt8mmfbLRXA=="
       },
       "nanoFramework.Iot.Device.Buzzer": {
         "type": "Direct",
-        "requested": "[1.2.952, 1.2.952]",
-        "resolved": "1.2.952",
-        "contentHash": "J68IcymWnaDxjOlZR1fmVXuZoCWVsUtRK4UDA/ujQgGbh/Lx4UmwvFRCZoTtgKDYdV8tP5QU1U0NXdFZH5WltQ=="
+        "requested": "[1.2.991, 1.2.991]",
+        "resolved": "1.2.991",
+        "contentHash": "L6DION9m/3eoZCjoTljdFeNTSqsYRbS0LskhxXwuO7CNsjoXqwQjzZAYS8P+hG+9JJ05FRLRNwXPerv8UClzAA=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -40,15 +40,15 @@
       },
       "nanoFramework.Iot.Device.ePaper": {
         "type": "Direct",
-        "requested": "[1.0.743, 1.0.743]",
-        "resolved": "1.0.743",
-        "contentHash": "+O3yh+PNlnkNNb6MlY8aQZT/LuCnJ9osGQ77EVx0+QW3G5hQHQc5UbV2p6WgM+RI9TVjavswo6+Nf6iOFk0npg=="
+        "requested": "[1.0.827, 1.0.827]",
+        "resolved": "1.0.827",
+        "contentHash": "Eeksvnr1YuBaOEV5pVDyUZvLS3wNhSxPJmM78Bho6XFDGPY39djQeX84oJ/I0DGawwwGYZHP2Do8e1L0Ghx9pg=="
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[1.2.952, 1.2.952]",
-        "resolved": "1.2.952",
-        "contentHash": "10hslGijeUGfYF2NSgpmmLrMUrBgi6Mbzs9UxBwj7IRbkiyHMtKHOCUqIt5cJ9yKsps8eX1VPiEvJQdn+lcCTA=="
+        "requested": "[1.2.991, 1.2.991]",
+        "resolved": "1.2.991",
+        "contentHash": "O2bq4ajkzpKfx65H+ILU7gii9s//mj8C9qNjGSCatzYkuZ+lyD0mlkML25NAtNGojMGBS62EbTDIG0xIZABMVA=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -118,9 +118,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.9.50, 3.9.50]",
-        "resolved": "3.9.50",
-        "contentHash": "HtOgGF6jZ+WYbXnCUCYPT8Y2d6mIJo9ozjK/FINTRsXdm4Zgv9GehUMa7EFoGQkqrMcDJNOIDwCmENnvXg4UbA=="
+        "requested": "[3.10.85, 3.10.85]",
+        "resolved": "3.10.85",
+        "contentHash": "smhqiTAbnI/6NRn+k7m+a65qKY7nREbnFqFgqxiw3JS8kXiBUOxdCxIZFP9TOpCsoh46DbMlBlcd+dWQYAVVCA=="
       }
     }
   }
