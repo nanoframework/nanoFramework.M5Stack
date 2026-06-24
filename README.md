@@ -14,6 +14,7 @@
 | nanoFramework.M5Stick | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5StickC.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickC/) |
 | nanoFramework.M5StickCPlus | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5StickCPlus.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5StickCPlus/) |
 | nanoFramework.M5Core2 | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5Core2.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5Core2/) |
+| nanoFramework.M5CoreS3 | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.M5CoreS3.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.M5CoreS3/) |
 | nanoFramework.Fire | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Fire.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Fire/) |
 | nanoFramework.AtomLite | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomLite.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomLite/) |
 | nanoFramework.AtomMatrix | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_apis/build/status/nanoFramework.M5Stack?repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.M5Stack/_build/latest?definitionId=52&repoName=nanoframework%2FnanoFramework.M5Stack&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.AtomMatrix.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.AtomMatrix/) |
@@ -28,6 +29,7 @@ These NuGet packages provide a support for M5Stack products:
 - [M5StickC](https://docs.m5stack.com/en/core/m5stickc)
 - [M5StickCPlus](https://docs.m5stack.com/en/core/m5stickc_plus)
 - [M5Core2](https://docs.m5stack.com/en/core/core2)
+- [CoreS3](https://docs.m5stack.com/en/core/CoreS3)
 - [Fire](https://docs.m5stack.com/en/core/fire)
 - [Atom Lite](https://docs.m5stack.com/en/core/atom_lite)
 - [Atom Matrix](https://docs.m5stack.com/en/core/atom_matrix)
@@ -63,6 +65,14 @@ For the M5Core2, Tough and Fire:
 ```shell
 nanoff --target M5Core2 --update --serialport COM3
 ```
+
+For the CoreS3:
+
+```shell
+nanoff --target ESP32_S3_OCTAL --update --serialport COM3
+```
+
+For the CoreS3, the package provides board bring-up helpers for the internal I2C bus on GPIO12/GPIO11, the onboard power routing needed by the CoreS3 peripherals, and managed-screen initialization for the ILI9342C through `nanoFramework.Graphics.Ili9342`. The test application in `Tests/M5CoreS3TestApp` shows the expected initialization sequence and demonstrates the screen, the BMI270, the BMM150 through the BMI270 auxiliary bus, the BM8563-compatible RTC support from `Iot.Device.Rtc`, and the LTR-553ALS-WA ambient light and proximity sensor. Because CoreS3 shares GPIO35 between LCD D/C and the SPI MISO line, this managed screen support is focused on the display path and does not try to coordinate LCD and SD-card bus sharing.
 
 For the Atom Lite, Matrix and CoreInk:
 
