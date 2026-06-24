@@ -14,6 +14,12 @@
         "resolved": "1.2.52",
         "contentHash": "7DfRe0iJWZBH3UREIyZxzDTEItUqz3llfVXGzh2xBVkGZzTqzVDIcK7mI7u1h8GEP7uCC4LM5kKey6xiImHf/Q=="
       },
+      "nanoFramework.Graphics.Core": {
+        "type": "Direct",
+        "requested": "[1.2.52, 1.2.52]",
+        "resolved": "1.2.52",
+        "contentHash": "hcauc3KKus+ri0UBkNkIu+Fd1qPDx/97HIv1CXoHDs1P2Eqg82qSk0QP7ytRfaAS6+3dtz20IBm1OK0QHEtPhg=="
+      },
       "nanoFramework.Hardware.Esp32": {
         "type": "Direct",
         "requested": "[1.6.37, 1.6.37]",
