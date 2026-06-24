@@ -44,7 +44,7 @@
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.862\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Ft6xx6x">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Ft6xx6x.1.2.992\lib\Iot.Device.Ft6xx6x.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Ft6xx6x.1.2.995\lib\Iot.Device.Ft6xx6x.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Ltr553AlsWa">
       <HintPath>..\packages\nanoFramework.Iot.Device.Ltr553AlsWa.1.0.10\lib\Iot.Device.Ltr553AlsWa.dll</HintPath>
