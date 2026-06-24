@@ -94,7 +94,10 @@ steps:
 - template: azure-pipelines-templates/class-lib-package.yml@templates
   parameters:
     nugetPackageName: 'nanoFramework.CoreInk'
+
 - template: azure-pipelines-templates/class-lib-publish.yml@templates  
+  parameters:
+    baseBranchName: 'develop'
 
 # create GitHub release from main branche
 - task: GithubRelease@1
