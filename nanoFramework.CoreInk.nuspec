@@ -19,12 +19,12 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack CoreInk</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
-      <dependency id="nanoFramework.Graphics.Core" version="1.2.45" />
+      <dependency id="nanoFramework.Graphics.Core" version="1.2.52" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
       <dependency id="nanoFramework.Iot.Device.Button" version="1.2.991" />
       <dependency id="nanoFramework.Iot.Device.Buzzer" version="1.2.991" />
       <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.2.862" />
-      <dependency id="nanoFramework.Iot.Device.ePaper" version="1.0.827" />
+      <dependency id="nanoFramework.Iot.Device.ePaper" version="1.0.830" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.991" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.24" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.1.29" />
