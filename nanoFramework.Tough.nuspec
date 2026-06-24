@@ -19,10 +19,10 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack Tough</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
-      <dependency id="nanoFramework.Graphics" version="1.2.45" />
+      <dependency id="nanoFramework.Graphics" version="1.2.52" />
       <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
       <dependency id="nanoFramework.Iot.Device.Axp192" version="1.2.991" />
-      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="1.1.991" />
+      <dependency id="nanoFramework.Iot.Device.Chsc6540" version="1.1.994" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.991" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.24" />
       <dependency id="nanoFramework.System.Device.Dac" version="1.5.26" />
