@@ -19,28 +19,28 @@
     <tags>nanoFramework C# csharp netmf netnf m5stack M5CoreS3 CoreS3</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.17.12" />
-      <dependency id="nanoFramework.Graphics" version="1.2.52" />
-      <dependency id="nanoFramework.Graphics.Core" version="1.2.52" />
-      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.37" />
+      <dependency id="nanoFramework.Graphics" version="1.2.53" />
+      <dependency id="nanoFramework.Graphics.Core" version="1.2.53" />
+      <dependency id="nanoFramework.Hardware.Esp32" version="1.6.40" />
       <dependency id="nanoFramework.Iot.Device.Aw9523x" version="1.0.8" />
-      <dependency id="nanoFramework.Iot.Device.Axp2101" version="1.0.33" />
+      <dependency id="nanoFramework.Iot.Device.Axp2101" version="1.0.44" />
       <dependency id="nanoFramework.Iot.Device.Bmi270" version="1.0.9" />
       <dependency id="nanoFramework.Iot.Device.Bmm150" version="1.2.991" />
       <dependency id="nanoFramework.Iot.Device.Common.NumberHelper" version="1.2.862" />
-      <dependency id="nanoFramework.Iot.Device.Ft6xx6x" version="1.2.995" />
+      <dependency id="nanoFramework.Iot.Device.Ft6xx6x" version="1.2.1003" />
       <dependency id="nanoFramework.Iot.Device.Ltr553AlsWa" version="1.0.10" />
       <dependency id="nanoFramework.Iot.Device.Rtc" version="1.2.991" />
       <dependency id="nanoFramework.ResourceManager" version="1.2.32" />
-      <dependency id="nanoFramework.Runtime.Events" version="1.11.32" />
+      <dependency id="nanoFramework.Runtime.Events" version="1.11.37" />
       <dependency id="nanoFramework.Runtime.Native" version="1.7.11" />
       <dependency id="nanoFramework.System.Buffers.Binary.BinaryPrimitives" version="1.2.862" />
       <dependency id="nanoFramework.System.Collections" version="1.5.75" />
       <dependency id="nanoFramework.System.Device.Adc" version="1.1.24" />
-      <dependency id="nanoFramework.System.Device.Gpio" version="1.1.57" />
+      <dependency id="nanoFramework.System.Device.Gpio" version="1.1.62" />
       <dependency id="nanoFramework.System.Device.I2c" version="1.1.29" />
       <dependency id="nanoFramework.System.Device.Model" version="1.2.862" />
-      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.87" />
-      <dependency id="nanoFramework.System.IO.Ports" version="1.1.132" />
+      <dependency id="nanoFramework.System.IO.FileSystem" version="1.1.93" />
+      <dependency id="nanoFramework.System.IO.Ports" version="1.1.139" />
       <dependency id="nanoFramework.System.IO.Streams" version="1.1.96" />
       <dependency id="nanoFramework.System.Math" version="1.5.116" />
       <dependency id="nanoFramework.System.Numerics" version="1.2.862" />
