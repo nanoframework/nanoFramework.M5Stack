@@ -23,7 +23,7 @@
         <dependency id="nanoFramework.Hardware.Esp32" version="2.0.0-preview.12" />
         <dependency id="nanoFramework.Iot.Device.Button" version="2.0.0-preview.94" />
         <dependency id="nanoFramework.Iot.Device.Buzzer" version="2.0.0-preview.94" />
-        <dependency id="nanoFramework.Iot.Device.ePaper" version="2.0.0-preview.94" />
+        <dependency id="nanoFramework.Iot.Device.ePaper" version="2.0.0-preview.102" />
         <dependency id="nanoFramework.Iot.Device.Rtc" version="2.0.0-preview.94" />
         <dependency id="nanoFramework.System.Device.Adc" version="2.0.0-preview.10" />
       </group>
