@@ -29,7 +29,7 @@ namespace nanoFramework.M5Stack
         private const int Height = 240;
         private const int OffsetX = 52;
         private const int OffsetY = 40;
-        private const int ScreenMiso = 39;
+        private const int ScreenMosi = 39;
         private const int ScreenClock = 40;
 
         private static bool _isInitialized;
@@ -46,7 +46,7 @@ namespace nanoFramework.M5Stack
                 return;
             }
 
-            Configuration.SetPinFunction(ScreenMiso, DeviceFunction.SPI1_MOSI);
+            Configuration.SetPinFunction(ScreenMosi, DeviceFunction.SPI1_MOSI);
             Configuration.SetPinFunction(ScreenClock, DeviceFunction.SPI1_CLOCK);
             Configuration.SetPinFunction(DummyMisoPin, DeviceFunction.SPI1_MISO);
 
