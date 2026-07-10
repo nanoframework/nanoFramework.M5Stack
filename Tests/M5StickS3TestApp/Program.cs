@@ -216,7 +216,7 @@ void DrawTelemetryLine(ushort y, string text, Color foreground, Color background
         }
     }
 
-    Screen.Write(0, y, width, (ushort)height, lineBuffer);
+    Screen.Write(0, y, (ushort)width, (ushort)height, lineBuffer);
 }
 
 byte[] GetGlyph(char c)

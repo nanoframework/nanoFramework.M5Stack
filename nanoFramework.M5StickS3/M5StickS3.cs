@@ -192,12 +192,14 @@ namespace nanoFramework.M5Stack
         /// <summary>
         /// Gets a device on the internal I2C bus.
         /// </summary>
-        public static I2cDevice GetI2cDevice(int i2cDeviceAddress) => new I2cDevice(new I2cConnectionSettings(InternalI2cBusId, i2cDeviceAddress));
+        public static I2cDevice GetI2cDevice(int i2cDeviceAddress)
+            => new I2cDevice(new I2cConnectionSettings(InternalI2cBusId, i2cDeviceAddress, I2cBusSpeed.StandardMode));
 
         /// <summary>
         /// Gets a device on the Grove I2C bus.
         /// </summary>
-        public static I2cDevice GetGrove(int i2cDeviceAddress) => new I2cDevice(new I2cConnectionSettings(GroveI2cBusId, i2cDeviceAddress));
+        public static I2cDevice GetGrove(int i2cDeviceAddress)
+            => new I2cDevice(new I2cConnectionSettings(GroveI2cBusId, i2cDeviceAddress, I2cBusSpeed.FastMode));
 
         internal static void SetLcdPower(bool enabled)
         {
