@@ -25,10 +25,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Axp192, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.2.0.0-preview.94\lib\netnano1.0\Iot.Device.Axp192.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Axp192.2.0.0-preview.109\lib\netnano1.0\Iot.Device.Axp192.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Chsc6540, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.Iot.Device.Chsc6540.2.0.0-preview.102\lib\netnano1.0\Iot.Device.Chsc6540.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.Iot.Device.Chsc6540.2.0.0-preview.109\lib\netnano1.0\Iot.Device.Chsc6540.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.CoreLibrary.2.0.0-preview.52\lib\netnano1.0\mscorlib.dll</HintPath>
