@@ -28,15 +28,15 @@
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
-        "resolved": "2.0.0-preview.94",
-        "contentHash": "55lqEp/eOA11NZVIRrqRS9fOhXuAKkG1bUCFrSYUmTelHv/Gm1dkcB7KhakN7yi2vBjSSfV/Weg9x7AHjsz1hw=="
+        "requested": "[2.0.0-preview.109, 2.0.0-preview.109]",
+        "resolved": "2.0.0-preview.109",
+        "contentHash": "LqLCKJxOLrOjRLgwjZK+y6yHmCfoEOjb5ICy06tXZFnA2IA2s/Cb9jMGF3KoB6yvfGP9HTN73QL9pgBKhoBj+A=="
       },
       "nanoFramework.Iot.Device.Chsc6540": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.102, 2.0.0-preview.102]",
-        "resolved": "2.0.0-preview.102",
-        "contentHash": "pwz+5AHbo3QK61AeqX1h1GM/TB5R3BcecUw4MQvHjw7VNPW8w9Z+f/P1RbHjpPZ4CIAP/Of+X/OZ4JqrpOc7Ig=="
+        "requested": "[2.0.0-preview.109, 2.0.0-preview.109]",
+        "resolved": "2.0.0-preview.109",
+        "contentHash": "ddm4GtLua+Cwk1ucH5SkYYmAVqAbUSsi+r95WnwK8WzeNdotIUI44UR5pdEF3CL+giICSVavROSlTtU2hBh00w=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.Rtc": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
-        "resolved": "2.0.0-preview.94",
-        "contentHash": "5ueIHtjCS3eswg0SRwlc7rSKP52cIPcdtMJB5L/T7zw8PHAYdAQswstksotd3TwZdeVfgXQiQdh+LVQwFTwB4w=="
+        "requested": "[2.0.0-preview.109, 2.0.0-preview.109]",
+        "resolved": "2.0.0-preview.109",
+        "contentHash": "qGSfLQ1lO3Sl/t3Hi00BvNvh0oG0byJlpXSMBwC/iwxCUQiYyoRDTuzn8+aaeHyG4isPmOhotEum6fgwwWjIsA=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
@@ -160,9 +160,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.10.85, 3.10.85]",
-        "resolved": "3.10.85",
-        "contentHash": "smhqiTAbnI/6NRn+k7m+a65qKY7nREbnFqFgqxiw3JS8kXiBUOxdCxIZFP9TOpCsoh46DbMlBlcd+dWQYAVVCA=="
+        "requested": "[3.10.91, 3.10.91]",
+        "resolved": "3.10.91",
+        "contentHash": "9MtEXm/um2lQAEoek1EkF4CXNH4JuXxv2jV3Ew2XlzP0LXxFaFiECS7ji8zf1ZaMnPGYbbom+Nm6y4ADc5HNHQ=="
       }
     }
   }

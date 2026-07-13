@@ -22,15 +22,15 @@
       },
       "nanoFramework.Iot.Device.Axp192": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.94, 2.0.0-preview.94]",
-        "resolved": "2.0.0-preview.94",
-        "contentHash": "55lqEp/eOA11NZVIRrqRS9fOhXuAKkG1bUCFrSYUmTelHv/Gm1dkcB7KhakN7yi2vBjSSfV/Weg9x7AHjsz1hw=="
+        "requested": "[2.0.0-preview.109, 2.0.0-preview.109]",
+        "resolved": "2.0.0-preview.109",
+        "contentHash": "LqLCKJxOLrOjRLgwjZK+y6yHmCfoEOjb5ICy06tXZFnA2IA2s/Cb9jMGF3KoB6yvfGP9HTN73QL9pgBKhoBj+A=="
       },
       "nanoFramework.Iot.Device.Chsc6540": {
         "type": "Direct",
-        "requested": "[2.0.0-preview.102, 2.0.0-preview.102]",
-        "resolved": "2.0.0-preview.102",
-        "contentHash": "pwz+5AHbo3QK61AeqX1h1GM/TB5R3BcecUw4MQvHjw7VNPW8w9Z+f/P1RbHjpPZ4CIAP/Of+X/OZ4JqrpOc7Ig=="
+        "requested": "[2.0.0-preview.109, 2.0.0-preview.109]",
+        "resolved": "2.0.0-preview.109",
+        "contentHash": "ddm4GtLua+Cwk1ucH5SkYYmAVqAbUSsi+r95WnwK8WzeNdotIUI44UR5pdEF3CL+giICSVavROSlTtU2hBh00w=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
