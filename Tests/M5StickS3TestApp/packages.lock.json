@@ -22,21 +22,21 @@
       },
       "nanoFramework.Iot.Device.Bmi270": {
         "type": "Direct",
-        "requested": "[1.0.9, 1.0.9]",
-        "resolved": "1.0.9",
-        "contentHash": "yG01UK1LH66dHOfic1nMJiQKRR2a7yNi/T9QGPaPpwmRNapIw1tjizCmZv/5pZbIhGtLgIl7EyazYVTbxLzQ6A=="
+        "requested": "[1.0.31, 1.0.31]",
+        "resolved": "1.0.31",
+        "contentHash": "EyAuIq6Yhqe/5QvnwEgZZIxM6Y+umQqKlazg22ReJFwpGjfv5kJFBO2DEf3JTyi+rZpI2CwGsCjsKOsQen69gA=="
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
-        "requested": "[1.2.991, 1.2.991]",
-        "resolved": "1.2.991",
-        "contentHash": "/xgUJPjbTQMM4ei94cr/s46WvU1+1zBJwGicUnwSQPXNEZBG30iS4osaAnc4J3owc9Y0U2EYkCFX01/0V8HDAg=="
+        "requested": "[1.2.1016, 1.2.1016]",
+        "resolved": "1.2.1016",
+        "contentHash": "s4sm96wfm9FFsGaMxI+8bsGQj7mrn+3pDiNDbLzSVZfTfTWy3LfAIqjU1i4/QcuTeTw7iRFSJnBMV/OdvWYUoQ=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.1002, 1.2.1002]",
-        "resolved": "1.2.1002",
-        "contentHash": "AG4810GRfXKihn97fAdsQOYneHLNQzl+xHuDcS/JQhNJLbjhpkAzl85k9HO8Tjz1ajWtpUACib8lJSo+l4l3AA=="
+        "requested": "[1.2.1016, 1.2.1016]",
+        "resolved": "1.2.1016",
+        "contentHash": "d31cnbmwrJYusu/yk8cuv+7/SLA4wBCoutHUCmaJjCy2ycs3NSq/nV+ji6STXTH0TqtpS+ksL4+IGwAcrEHLrw=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.M5Pm1": {
         "type": "Direct",
-        "requested": "[1.0.1, 1.0.1]",
-        "resolved": "1.0.1",
-        "contentHash": "aK4T8ojPfvG7T76s/nN5PzyyBOTKvvbDZ03TeRmRFwluCd+2e1pwj8YO/7o6cX0RJjyMIF02Qyx7O7usC17hEg=="
+        "requested": "[1.0.6, 1.0.6]",
+        "resolved": "1.0.6",
+        "contentHash": "njagITRxuQvXVUXWtKdRyAZi1fEEERxjlaFBeTRzkhwkmcQMDHlLcc+kAmH4Sgm9cEdQzLLtVJq74tl/ljzp/g=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",
