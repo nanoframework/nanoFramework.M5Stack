@@ -40,9 +40,9 @@
       },
       "nanoFramework.Iot.Device.Bmi270": {
         "type": "Direct",
-        "requested": "[1.0.31, 1.0.31]",
-        "resolved": "1.0.31",
-        "contentHash": "EyAuIq6Yhqe/5QvnwEgZZIxM6Y+umQqKlazg22ReJFwpGjfv5kJFBO2DEf3JTyi+rZpI2CwGsCjsKOsQen69gA=="
+        "requested": "[1.0.34, 1.0.34]",
+        "resolved": "1.0.34",
+        "contentHash": "uGTdlw8hS3ztZ5S1SIQqLcfU6DpVEQpsD6VCGlB54vOf9VukskiNd7k/UY/tTZ/nYVKAZZKf1cnyVr9HBHnZRw=="
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
