@@ -76,7 +76,7 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.I2c.2.0.0-preview.12\lib\netnano1.0\System.Device.I2c.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Wifi, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.2.0.0-preview.30\lib\netnano1.0\System.Device.Wifi.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.2.0.0-preview.32\lib\netnano1.0\System.Device.Wifi.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.IO.FileSystem.2.0.0-preview.21\lib\netnano1.0\System.IO.FileSystem.dll</HintPath>
@@ -88,7 +88,7 @@
       <HintPath>..\..\packages\nanoFramework.System.IO.Streams.2.0.0-preview.22\lib\netnano1.0\System.IO.Streams.dll</HintPath>
     </Reference>
     <Reference Include="System.Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Net.2.0.0-preview.25\lib\netnano1.0\System.Net.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Net.2.0.0-preview.32\lib\netnano1.0\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Threading.2.0.0-preview.14\lib\netnano1.0\System.Threading.dll</HintPath>

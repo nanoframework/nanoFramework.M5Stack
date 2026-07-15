@@ -107,7 +107,7 @@
       <HintPath>..\..\packages\nanoFramework.System.Device.Spi.2.0.0-preview.19\lib\netnano1.0\System.Device.Spi.dll</HintPath>
     </Reference>
     <Reference Include="System.Device.Wifi, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.2.0.0-preview.30\lib\netnano1.0\System.Device.Wifi.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Device.Wifi.2.0.0-preview.32\lib\netnano1.0\System.Device.Wifi.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Stopwatch, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Diagnostics.Stopwatch.2.0.0-preview.82\lib\netnano1.0\System.Diagnostics.Stopwatch.dll</HintPath>
@@ -125,7 +125,7 @@
       <HintPath>..\..\packages\nanoFramework.System.Math.2.0.0-preview.19\lib\netnano1.0\System.Math.dll</HintPath>
     </Reference>
     <Reference Include="System.Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\..\packages\nanoFramework.System.Net.2.0.0-preview.25\lib\netnano1.0\System.Net.dll</HintPath>
+      <HintPath>..\..\packages\nanoFramework.System.Net.2.0.0-preview.32\lib\netnano1.0\System.Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\..\packages\nanoFramework.System.Numerics.2.0.0-preview.82\lib\netnano1.0\System.Numerics.dll</HintPath>
