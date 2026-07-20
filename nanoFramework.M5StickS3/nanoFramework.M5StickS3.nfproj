@@ -98,8 +98,8 @@
     <Reference Include="System.Threading">
       <HintPath>..\packages\nanoFramework.System.Threading.1.1.52\lib\System.Threading.dll</HintPath>
     </Reference>
-    <Reference Include="UnitsNet.Temperature">
-      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.75.0\lib\UnitsNet.Temperature.dll</HintPath>
+    <Reference Include="UnitsNet.Temperature, Version=5.75.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnitsNet.nanoFramework.Temperature.5.75.1\lib\UnitsNet.Temperature.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
