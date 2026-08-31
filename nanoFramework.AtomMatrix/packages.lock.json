@@ -40,9 +40,9 @@
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
-        "requested": "[1.2.1027, 1.2.1027]",
-        "resolved": "1.2.1027",
-        "contentHash": "rZj2ppwSRjR6MvIAhuZMuZbvTkZogUeUjavJTwkdyg+LdvyBq/Mc8hW11ScA75434TC+9HEUbEH54hUBRkLJdA=="
+        "requested": "[1.2.1038, 1.2.1038]",
+        "resolved": "1.2.1038",
+        "contentHash": "UJhGTRMp2Fe9+7hWhhg04C/PUvuEvnKttdY/Q/csreI9umS6/rXMSFOqrAYGRqAf7iZKyBNJSfL1BLsJSbZlCg=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
@@ -112,9 +112,9 @@
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
-        "requested": "[3.10.91, 3.10.91]",
-        "resolved": "3.10.91",
-        "contentHash": "9MtEXm/um2lQAEoek1EkF4CXNH4JuXxv2jV3Ew2XlzP0LXxFaFiECS7ji8zf1ZaMnPGYbbom+Nm6y4ADc5HNHQ=="
+        "requested": "[3.10.94, 3.10.94]",
+        "resolved": "3.10.94",
+        "contentHash": "sn6gFIx6bwFj3Me0XGmek3gLZi/MZC8C4tRLwslXGeBcXcVxvFpZyDrQA93G8TiYgxTS7J7triKB7hj5wXzSxA=="
       }
     }
   }
