@@ -22,21 +22,21 @@
       },
       "nanoFramework.Iot.Device.Bmi270": {
         "type": "Direct",
-        "requested": "[1.0.34, 1.0.34]",
-        "resolved": "1.0.34",
-        "contentHash": "uGTdlw8hS3ztZ5S1SIQqLcfU6DpVEQpsD6VCGlB54vOf9VukskiNd7k/UY/tTZ/nYVKAZZKf1cnyVr9HBHnZRw=="
+        "requested": "[1.0.57, 1.0.57]",
+        "resolved": "1.0.57",
+        "contentHash": "D4Z2cEMtGPVGqlnajfeRM1OHlwXRE6h3ym9p+87NUi9YyLvwyX1LGgnJbu+7RzimXuvkZcv85QE7yqCvKhJqGA=="
       },
       "nanoFramework.Iot.Device.Bmm150": {
         "type": "Direct",
-        "requested": "[1.2.1016, 1.2.1016]",
-        "resolved": "1.2.1016",
-        "contentHash": "s4sm96wfm9FFsGaMxI+8bsGQj7mrn+3pDiNDbLzSVZfTfTWy3LfAIqjU1i4/QcuTeTw7iRFSJnBMV/OdvWYUoQ=="
+        "requested": "[1.2.1040, 1.2.1040]",
+        "resolved": "1.2.1040",
+        "contentHash": "AEESP55+plW7TP6Wwp8T3xHaesUdRH+EOXDGNgVQ3X1RjufdWDUnjWnyT4oJShRUuNwcY7C88yqvfuKHy6BLlA=="
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.1027, 1.2.1027]",
-        "resolved": "1.2.1027",
-        "contentHash": "SJ4c4+x5LU1OTa0Ps+3Xp7uNgzD6M8w/BJyxEDzeicDlYnlF15vbvnqjTDpl/Qf/uc+rfNIer5XVn7XBDpuLWw=="
+        "requested": "[1.2.1040, 1.2.1040]",
+        "resolved": "1.2.1040",
+        "contentHash": "hyxxuM3mw4c0h4QcqOKJ0JW3qhbtTVQsBucUs4y0FUZGGGT1ou97g964d/ok1OGE9bZvz6jOIgShSMcIcpF3bA=="
       },
       "nanoFramework.Iot.Device.Common.NumberHelper": {
         "type": "Direct",
@@ -46,9 +46,9 @@
       },
       "nanoFramework.Iot.Device.M5Pm1": {
         "type": "Direct",
-        "requested": "[1.0.17, 1.0.17]",
-        "resolved": "1.0.17",
-        "contentHash": "NdtHjfu/EvNgjI0NBDYQv2a38zlaQi8XY1sGXJwjTlNMQI2WWKiFvm2oaod62nk/DPZaXHEpzEThFcl1v2k4SA=="
+        "requested": "[1.0.30, 1.0.30]",
+        "resolved": "1.0.30",
+        "contentHash": "Wsoafp7F9EO47YmL74yrbI/0xZ+Xm/I9YExmCYAv2jrlIYS1waagsD8HVOG5eC4s+j9bBjpAp05snDvKCCil9Q=="
       },
       "nanoFramework.ResourceManager": {
         "type": "Direct",

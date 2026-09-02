@@ -30,19 +30,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.Bmi270, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Bmi270.1.0.34\lib\Iot.Device.Bmi270.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Bmi270.1.0.57\lib\Iot.Device.Bmi270.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Bmm150, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.1016\lib\Iot.Device.Bmm150.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Bmm150.1.2.1040\lib\Iot.Device.Bmm150.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Button, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.1027\lib\Iot.Device.Button.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.Button.1.2.1040\lib\Iot.Device.Button.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.Common.NumberHelper">
       <HintPath>..\packages\nanoFramework.Iot.Device.Common.NumberHelper.1.2.862\lib\Iot.Device.Common.NumberHelper.dll</HintPath>
     </Reference>
     <Reference Include="Iot.Device.M5Pm1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.M5Pm1.1.0.17\lib\Iot.Device.M5Pm1.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.M5Pm1.1.0.30\lib\Iot.Device.M5Pm1.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.17.12\lib\mscorlib.dll</HintPath>
