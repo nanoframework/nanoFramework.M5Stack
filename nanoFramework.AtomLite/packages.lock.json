@@ -28,15 +28,15 @@
       },
       "nanoFramework.Iot.Device.Button": {
         "type": "Direct",
-        "requested": "[1.2.1027, 1.2.1027]",
-        "resolved": "1.2.1027",
-        "contentHash": "SJ4c4+x5LU1OTa0Ps+3Xp7uNgzD6M8w/BJyxEDzeicDlYnlF15vbvnqjTDpl/Qf/uc+rfNIer5XVn7XBDpuLWw=="
+        "requested": "[1.2.1040, 1.2.1040]",
+        "resolved": "1.2.1040",
+        "contentHash": "hyxxuM3mw4c0h4QcqOKJ0JW3qhbtTVQsBucUs4y0FUZGGGT1ou97g964d/ok1OGE9bZvz6jOIgShSMcIcpF3bA=="
       },
       "nanoFramework.Iot.Device.Ws28xx.Esp32": {
         "type": "Direct",
-        "requested": "[1.2.1038, 1.2.1038]",
-        "resolved": "1.2.1038",
-        "contentHash": "UJhGTRMp2Fe9+7hWhhg04C/PUvuEvnKttdY/Q/csreI9umS6/rXMSFOqrAYGRqAf7iZKyBNJSfL1BLsJSbZlCg=="
+        "requested": "[1.2.1040, 1.2.1040]",
+        "resolved": "1.2.1040",
+        "contentHash": "AoWZC/f21oLT5GrlvRz5Yvl6RouRU+waPqkzLuq6HDbKe7zFdVzIyAdVrUggfHMUu1TODAeYLbRqLWfipXJ10w=="
       },
       "nanoFramework.Runtime.Events": {
         "type": "Direct",
