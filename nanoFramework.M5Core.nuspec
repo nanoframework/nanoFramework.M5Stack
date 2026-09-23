@@ -32,7 +32,7 @@
         <dependency id="nanoFramework.System.Device.Spi" version="2.0.0-preview.19" />
         <dependency id="nanoFramework.System.Diagnostics.Stopwatch" version="2.0.0-preview.82" />
         <dependency id="nanoFramework.System.IO.Ports" version="2.0.0-preview.29" />
-        <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.21" />
+        <dependency id="nanoFramework.System.IO.FileSystem" version="2.0.0-preview.24" />
       </group>
     </dependencies>
   </metadata>
