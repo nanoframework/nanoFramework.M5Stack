@@ -4,21 +4,21 @@
     ".NETnanoFramework,Version=v1.0": {
       "Microsoft.Build.Tasks.Git": {
         "type": "Direct",
-        "requested": "[10.0.403, 10.0.403]",
-        "resolved": "10.0.403",
-        "contentHash": "1furteBFeemMmZ4s+ORjQb7YtO+wG63NJahbQbRUi91FV6V87BdV0U3vX1jbMC6iKSELYYoXWssSzLu3mx0i2w=="
+        "requested": "[10.0.404, 10.0.404]",
+        "resolved": "10.0.404",
+        "contentHash": "SMywJ542jorXpeGtJUMSYmZ9i/FxT8tc0qkbIGI3amqh0Wl7AKDYRfFNzImVGeLT8mkUPTRgpoWHgxoZQT1b5A=="
       },
       "Microsoft.SourceLink.Common": {
         "type": "Direct",
-        "requested": "[10.0.403, 10.0.403]",
-        "resolved": "10.0.403",
-        "contentHash": "SvzUeqFGrcQxlIgjmcoSGiV5UWcPa0NCTuH69/40uSDsSD/26c6p9cH7XLAxpn+I8+2Zhl1qp+WMugl0oOwBMg=="
+        "requested": "[10.0.404, 10.0.404]",
+        "resolved": "10.0.404",
+        "contentHash": "jQuH8U7EpZEO7XrV3Ql7PvgpyQGsytm74HNawvOdgKGQc97x8bLDlxGx4pT2kCU+3lLu/f42jEoKixGMkm8Ynw=="
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
-        "requested": "[10.0.403, 10.0.403]",
-        "resolved": "10.0.403",
-        "contentHash": "T4WYxWydJGNQRe/EgURFlhPZ1cHYgivrCCHSomCcfQzGzhkDYGNn5bUwwjs4/PHuMxsmGaLvPv2puG8lluA1IA=="
+        "requested": "[10.0.404, 10.0.404]",
+        "resolved": "10.0.404",
+        "contentHash": "2zWwk1VVU66YJeCkKbZbEuc3I9quqWrd8u7jQrj87y89Cb21QRcua04rX60u6hXUZvCs7w8vLbh6BwRzVtoG7g=="
       },
       "nanoFramework.CoreLibrary": {
         "type": "Direct",
